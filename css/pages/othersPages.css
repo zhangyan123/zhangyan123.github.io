@@ -1,0 +1,305 @@
+/*base on Netease _reset.less*/
+/* GeekaholicLin edited */
+/*variable*/
+#about {
+  padding-bottom: 0.8rem;
+}
+#about .video-container {
+  text-align: center;
+  height: 380px;
+}
+#about .video-container iframe {
+  margin: 0 auto;
+  width: 70%;
+  height: 100%;
+}
+#about p {
+  line-height: 1.9;
+}
+#about h1,
+#about h2,
+#about h3,
+#about h4,
+#about h5,
+#about h6 {
+  cursor: pointer;
+  position: relative;
+  margin: 0.1rem 0;
+  display: block;
+  border-bottom: 1px solid rgba(206, 206, 206, 0.18);
+}
+#about h1:after,
+#about h2:after,
+#about h3:after,
+#about h4:after,
+#about h5:after,
+#about h6:after {
+  content: "#";
+  float: right;
+}
+#about h1:hover,
+#about h2:hover,
+#about h3:hover,
+#about h4:hover,
+#about h5:hover,
+#about h6:hover {
+  color: #6699cc;
+}
+#about blockquote {
+  margin: 0.15rem 0;
+  border-left: 5px solid #cecece;
+  padding: 0.05rem 0.15rem 0.05rem 0.3rem;
+  background-color: #eaeaea;
+  color: #666666;
+}
+#about blockquote cite:before {
+  content: "---";
+  padding: .1rem;
+}
+#about strong {
+  color: #666666;
+}
+#about figure {
+  font-family: "Source Code Pro", Consolas, "Liberation Mono", Monaco, Menlo, monospace;
+  margin: 0.3rem 0;
+  border: 1px solid #cecece;
+  border-top: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  font-size: 0.14rem;
+}
+#about figure:before {
+  content: "";
+  display: block;
+  height: 0.4rem;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #E3E3E3;
+  border-top: 1px solid #cecece;
+}
+#about figure:after {
+  content: " ";
+  position: absolute;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #fc625d;
+  width: 0.12rem;
+  height: 0.12rem;
+  top: 0.15rem;
+  left: 0.17rem;
+  -webkit-box-shadow: 0.2rem 0 #fdbc40, 0.4rem 0 #35cd4b;
+  box-shadow: 0.2rem 0 #fdbc40, 0.4rem 0 #35cd4b;
+}
+#about figure figcaption {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  text-align: center;
+}
+#about figure figcaption a {
+  position: absolute;
+  right: .17rem;
+}
+#about figure .gutter {
+  padding: 0.1rem;
+  color: #cecece;
+  border-right: 1px solid #e0e0e0;
+}
+#about figure .code {
+  padding-left: .1rem;
+}
+#about figure .code .line {
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+#about figure .line {
+  font-family: "Source Code Pro", Consolas, "Liberation Mono", Monaco, Menlo, monospace;
+}
+#about img {
+  display: block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 5px solid #cecece;
+  margin: 0.3rem auto;
+  max-width: 95%;
+}
+#about .caption {
+  display: block;
+  text-align: center;
+  font-size: 0.14rem;
+  color: #666666;
+  margin: -0.2rem 0 0.2rem;
+}
+#about a {
+  padding: 0 0.05rem;
+  color: #6699cc !important;
+}
+#about sup,
+#about sub {
+  margin-right: .1rem;
+}
+#about ul,
+#about ol {
+  padding-left: 0.4rem;
+  margin: .1rem 0 .3rem 0;
+}
+#about ul li,
+#about ol li {
+  line-height: 1.9;
+}
+#about ul li {
+  list-style-type: disc;
+}
+#about ol li {
+  list-style-type: decimal;
+}
+#about hr {
+  display: block;
+  border: 1px dashed #cecece;
+  margin: 0.3rem 0;
+}
+#about li > code,
+#about p > code {
+  font-family: "Source Code Pro", Consolas, "Liberation Mono", Monaco, Menlo, monospace;
+  padding: 0.01rem 0.05rem;
+  margin: 0 0.05rem;
+  background-color: #EbEbEb;
+  border: 1px solid #cecece;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#about > table {
+  border-collapse: collapse;
+  margin: .15rem auto;
+  border: 1px solid #cecece;
+  max-width: 90%;
+}
+#about > table thead {
+  background-color: #E3E3E3;
+  font-weight: bold;
+  padding: 0.1rem 0;
+}
+#about > table th,
+#about > table td {
+  padding: 0 0.2rem;
+  border: 1px solid #cecece;
+  line-height: 1.5;
+  height: 0.4rem;
+}
+#about dt {
+  font-weight: bold;
+}
+#about dd {
+  padding-left: 0.3rem;
+}
+#about acronym,
+#about abbr {
+  color: #6699cc;
+}
+#demo {
+  text-align: center;
+  position: relative;
+}
+#demo .demo-title {
+  color: #666666;
+  text-align: left;
+  border-bottom: 1px solid rgba(206, 206, 206, 0.18);
+  margin-bottom: 20px;
+}
+#demo .demo-title .fa {
+  margin-right: 5px;
+}
+#demo .demo-title .warning {
+  font-weight: 200;
+  font-size: 14px;
+  color: #BA5C5A;
+}
+#demo .demo-list-item {
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 2px 1px #666666;
+  -moz-box-shadow: 0 2px 1px #666666;
+  box-shadow: 0 2px 1px #666666;
+  width: 45%;
+  margin: 20px 10px;
+  padding-bottom: 10px;
+}
+#demo .demo-list-item:hover {
+  -webkit-box-shadow: 0 5px 10px #666666;
+  -moz-box-shadow: 0 5px 10px #666666;
+  box-shadow: 0 5px 10px #666666;
+}
+#demo .demo-list-item .fa {
+  position: absolute;
+  left: 50%;
+  font-size: 1.3rem;
+  color: #cecece;
+  top: 50%;
+  margin-top: -100px;
+  margin-left: -50px;
+}
+#demo .demo-list-item a {
+  color: #666666;
+  text-align: left;
+  display: block;
+}
+#demo .demo-list-item a:hover {
+  color: #6699cc;
+}
+#demo .demo-list-item .demo-item-bg {
+  overflow: hidden;
+  height: 260px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #cecece;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+#demo .demo-list-item .demo-item-title {
+  line-height: 1.8;
+  font-weight: bold;
+}
+#demo .demo-list-item .demo-item-desc {
+  font-size: 14px;
+}
+#demo .demo-list-item .demo-item-title,
+#demo .demo-list-item .demo-item-desc {
+  padding: 0 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#about .line {
+  line-height: 2.8!important;
+}
