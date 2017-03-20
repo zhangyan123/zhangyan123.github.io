@@ -1,3 +1,4 @@
+
 ;(function () {
     document.body.insertAdjacentHTML("beforeend", '<div id="loading"><i class="load-info"></i></div>');
     document.addEventListener('readystatechange', function () {

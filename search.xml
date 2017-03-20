@@ -16,11 +16,35 @@
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
         
+        <categories>
+            
+            <category> test </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> test </tag>
+            
+        </tags>
         
     </entry>
     
     
     
+    
+    <entry>
+        <title><![CDATA[about]]></title>
+        <url>http://zhangyan123.github.io/about/index.html</url>
+        <content type="html"></content>
+    </entry>
+    
+    <entry>
+        <title><![CDATA[demo]]></title>
+        <url>http://zhangyan123.github.io/demo/index.html</url>
+        <content type="html"></content>
+    </entry>
     
     
 </search>
