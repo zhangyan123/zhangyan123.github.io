@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/musicAlbum.css">
+</head>
+<style>
+    body{
+        background: url("../images/bg.jpg");
+        background-attachment: fixed;
+        background-size: 100% auto;
+    }
+    #background{
+        position: fixed;
+        bottom:11%;
+        left: 53%;
+        z-index: -100000;
+        width: 500px;
+        height: 500px;
+    }
+</style>
+<body>
+    <img id="background" src="../images/butterfly.jpg" alt="">
+    <div class='media' data-setting={"preload":"true","loop":"loop","autoplay":"true","CDpattern":"true"}>
+        <audio autoplay>
+            <!--此处添加用户自己的音乐-->
+            <source src="../music/demo.mp3" type="audio/mp3" />
+        </audio>
+    </div>
+
+    <script src="../js/lib/jquery-3.1.1.js"></script>
+    <script src="../js/musicAlbum.js"></script>
+    <script>
+        Album.init($(".media"));
+    </script>
+</body>
+
+</html>

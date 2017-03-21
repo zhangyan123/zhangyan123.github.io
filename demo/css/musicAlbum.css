@@ -1,0 +1,187 @@
+/*音乐播放组件*/
+.media {
+    margin: 10% auto;
+    width: 600px;
+    /* overflow:hidden; */
+}
+/* 进度条 */  
+.range {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    width: 8.875rem;
+    height: 0.5rem;
+    background:#ccc;
+    box-shadow: 0.2rem 0.2rem 0.2rem black inset;
+    border-radius: 0.25rem;
+    -webkit-appearance: none !important;
+}
+input.range:focus {
+    outline: none;
+}   
+/* 进度滑块 */  
+.range::-webkit-slider-thumb {   
+    width: 1rem;   
+    height: 1rem;   
+    background: #fff;
+    border: 1px solid #ccc;   
+    cursor: pointer;   
+    border-radius: 50%;   
+    -webkit-appearance: none !important;   
+}  
+.play{
+    margin-left: 122px;
+    margin-right:10px;
+    display:inline-block;
+    vertical-align: middle;
+    background: url("../images/play.png") no-repeat;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.play.CDpattern{
+    margin-left: 122px;
+    margin-right:10px;
+    display:inline-block;
+    vertical-align: middle;
+    background: url("../images/cd.jpg") 49.9% 49.9%  no-repeat;
+    background-size: 140px;
+    width: 26.9px;
+    height: 26.9px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.cur{
+       display:inline-block;
+ 
+}
+
+.soundCtrl{
+  cursor: pointer;
+  margin-right: 100px;
+  float:right;
+  z-index: 100;
+}
+
+.cd-container {
+    display: inline-block;
+    background: url("../images/cdbackground.png") -79px -60px no-repeat;
+    background-size: 753px;
+    width: 600px;
+    height: 600px;
+    position: relative;
+}
+.cd {
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    width: 81px;
+    height: 84px;
+    margin: 242px 377px;
+    color: #8a6f1c;
+    border-radius: 50%;
+    border: 10px solid rgba(0,0,0,0);
+    box-shadow: 0 0 0 4px rgba(247, 247, 247, 0.53) , 0 0 0 100px rgb(150, 116, 30), 0 0 0 104px rgb(94, 83, 83), 0 0 10px 104px rgba(33, 31, 31, 0.64), 0 0 0 60px rgba(0,0,0,0) inset, 0 0 10px 60px rgba(14, 14, 14, 0.73) inset;
+}
+.cd.rotate{
+   animation: spinner 10s linear 0s infinite;
+    /*-webkit-animation: spinner 10s linear 0s infinite;*/
+}
+@-webkit-keyframes spinner {
+  from{
+    -webkit-transform: rotate(0deg);
+  }
+    
+  to{
+    -webkit-transform: rotate(360deg);
+  }
+}
+  
+.cd:before {
+    content: "音乐";
+    position: absolute;
+    top: -75px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    margin-left: 10px;
+    font-weight: bold;
+    text-shadow: 0 0 40px #000, 0 -1px 0 #f3f3f3, 0 -2px 0 #f3f3f3;
+}
+.cd:after{
+    content: "Copyright © 2017 author. \A All rights reserved.";
+    position: absolute;
+    top: 125px;
+    margin-left: -36px;
+    white-space: pre;
+    word-wrap: break-word;
+    font-size: 13px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.81);
+    text-shadow: 0 0 15px #000;
+}
+.music{
+    position: absolute;
+    width: 0;
+    top: 250px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.music:before{
+    content: "♫";
+    position: absolute;
+    bottom: 60px;
+    opacity: 0;
+    left: -220px;
+    font-size: 40px;
+    /*animation: music 2.5s infinite ease;*/
+}
+.music:after{
+    content: "♪";
+    position: absolute;
+    bottom: -9px;
+    opacity: 0;
+    left: -120px;
+    font-size: 40px;
+    /*animation: music 3.3s infinite ease;*/
+    /*-webkit-animation: music 3.3s infinite ease;*/
+}
+.music.rotate:before,.music.rotate:after{
+      animation: music 3.3s infinite ease;
+     -webkit-animation: music 3.3s infinite ease;
+}
+@-webkit-keyframes music {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0px,50px);
+  }
+
+  30% {
+        opacity: 0.6;
+
+    -webkit-transform: rotate(12deg) translate(-30px,0px);
+  }
+  45% {
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: rotate(-12deg) translate(30px,-100px);
+  }
+ 
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(-12deg) translate(30px,-100px);
+
+  }
+ 
+}
+#mute {
+    margin-right:5px; 
+    display:inline-block;
+    vertical-align: middle;
+    background:url("../images/toMute.png") no-repeat;
+    width:22px;
+    height:22px; 
+}  
