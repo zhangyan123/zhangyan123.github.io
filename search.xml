@@ -29,6 +29,80 @@
     </entry>
     
     <entry>
+        <title><![CDATA[markdown个人常用语法总结建]]></title>
+        <url>http://zhangyan123.github.io/2016/09/01/markdown%E4%B8%AA%E4%BA%BA%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/</url>
+        <content type="html"><![CDATA[<blockquote>
+<p>为了方便写作查找，查阅文档之后总结出自己常用的markdown语法如下  </p>
+</blockquote>
+<h1 id="使用-标记标题"><a href="#使用-标记标题" class="headerlink" title="使用#标记标题"></a>使用#标记标题</h1><p>##无序列表  </p>
+<ul>
+<li>星号*可以标记列表</li>
+</ul>
+<ul>
+<li>加号+也可以标记列表</li>
+</ul>
+<ul>
+<li>减号-也可以标记列表</li>
+</ul>
+<p>##有序列表  </p>
+<ol>
+<li>数字接英文点号，每项后面记得加至少两个空格   </li>
+</ol>
+<blockquote>
+<p>在首行出现数字-英文句点-空白时  </p>
+<p>eg:<code>1987. </code>应写为<code>1987\.</code>以与列表格式进行区分  </p>
+</blockquote>
+<p>##代码及区块 </p>
+<ul>
+<li><blockquote>
+<p>>区块引用</p>
+</blockquote>
+</li>
+<li><p>分行方式为每行结尾至少两个空格键+回车键    </p>
+</li>
+<li><p>使用<code>\<pre>\<code>…\</code>\</pre></code>包裹，可以保持代码粘贴时的缩进格式   </p>
+<h2 id=""><a href="#" class="headerlink" title="*"></a><em>*</em></h2></li>
+<li><p>如上的分割线使用<code><em>*</em></code>或者<code>—</code>单独一行制成,符号之间可以自由添加空格</p>
+</li>
+<li><code>html</code>可以直接使用tab上面的<code>`</code>包裹小段代码作为代码引用的标志，注意不要与<code>‘</code>英文单引号混淆</li>
+</ul>
+<p>##嵌入带连接的元素  </p>
+<ul>
+<li><p><a href="https://zhangyan123.github.io/&quot;dailyblog&quot;">myBlog</a><br>以上内联链接制作方式如下<br><code>[myBlog](<a href="https://zhangyan123.github.io/&quot;dailyblog">https://zhangyan123.github.io/&quot;dailyblog</a>“)</code>支持相对路径<br>相似的图片嵌入，形式上只是在链接前面加一个感叹号!</p>
+</li>
+<li><p><img src="https://zhangyan123.github.io/images/default-1.jpg/&quot;dailyblog&quot;" alt="myBlog"><br>以上图片嵌入的制作方式如下<br><code>![myBlog](<a href="https://zhangyan123.github.io/images/default-1.jpg/&quot;dailyblog">https://zhangyan123.github.io/images/default-1.jpg/&quot;dailyblog</a>“)</code></p>
+</li>
+<li>直接嵌入一个暴露的连接<a href="http://example.com" target="_blank" rel="external">http://example.com</a> 可以使用<code>\<a href="http://example.com" target="_blank" rel="external">http://example.com</a></code>方式，同样的嵌入邮箱地址可以使用直接使用<code>\<a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x61;&#100;&#100;&#x72;&#101;&#115;&#x73;&#x40;&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#x6d;">&#x61;&#100;&#100;&#x72;&#101;&#115;&#x73;&#x40;&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#x6d;</a></code>  </li>
+</ul>
+<p>##强调</p>
+<blockquote>
+<p>我们会发现markdown语法中<code>*</code>与<code>-</code>具有很多互通的功能，上文中提到的无序列表、分割线均如此，此处要说明的强调标记方式中易与此规律混淆，请务必分清减号-与下滑线_的适用场景。   </p>
+</blockquote>
+<ul>
+<li><code> *需要强调的文字*</code>与 <code> _需要强调的文字_</code>都可以实现<em>需要强调的文字</em>的效果，注意是下划线不是减号。  </li>
+<li><code> **需要强调的文字**</code>与 <code> __需要强调的文字__</code>都可以实现<strong>需要强调的文字</strong>的效果，再次强调是下划线不是减号。  </li>
+<li><del>删除线</del></li>
+</ul>
+<p>##表格</p>
+<p><pre><code>| 列 | 列 | 列 |  //表头<br>| — | :—: | —: | //左对齐  居中对齐 右对齐<br>| aaa | bbb | ccc |</code></pre><br>| 列 | 列 | 列 |<br>| — | :—: | —: |<br>| aaa | bbb | ccc |</p>
+]]></content>
+        
+        <categories>
+            
+            <category> markdown </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 写作 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
         <title><![CDATA[lavarel<一>环境搭建]]></title>
         <url>http://zhangyan123.github.io/2016/08/31/laravel%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
         <content type="html"><![CDATA[<a id="more"></a>
@@ -61,16 +135,16 @@
     
     
     <entry>
+        <title><![CDATA[demo]]></title>
+        <url>http://zhangyan123.github.io/demo/index.html</url>
+        <content type="html"></content>
+    </entry>
+    
+    <entry>
         <title><![CDATA[about]]></title>
         <url>http://zhangyan123.github.io/about/index.html</url>
         <content type="html"><![CDATA[<p>to be continued</p>
 ]]></content>
-    </entry>
-    
-    <entry>
-        <title><![CDATA[demo]]></title>
-        <url>http://zhangyan123.github.io/demo/index.html</url>
-        <content type="html"></content>
     </entry>
     
     
