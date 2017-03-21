@@ -35,15 +35,22 @@
     
     
     <entry>
-        <title><![CDATA[about]]></title>
-        <url>http://zhangyan123.github.io/about/index.html</url>
+        <title><![CDATA[demo]]></title>
+        <url>http://zhangyan123.github.io/demo/index.html</url>
         <content type="html"></content>
     </entry>
     
     <entry>
+        <title><![CDATA[about]]></title>
+        <url>http://zhangyan123.github.io/about/index.html</url>
+        <content type="html"><![CDATA[<p>to be continued</p>
+]]></content>
+    </entry>
+    
+    <entry>
         <title><![CDATA[demo]]></title>
-        <url>http://zhangyan123.github.io/demo/index.html</url>
-        <content type="html"></content>
+        <url>http://zhangyan123.github.io/demo/Netease/index.html</url>
+        <content type="html"><![CDATA[<body><br><div><p>to be continue</p></div><br></body>]]></content>
     </entry>
     
     
