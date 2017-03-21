@@ -7,8 +7,9 @@
         <url>http://zhangyan123.github.io/2016/09/01/javaScript%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0%E4%B8%80/</url>
         <content type="html"><![CDATA[<a id="more"></a>
 <ol>
-<li><code>retrn false;</code>表示停止对用户触发事件的默认处理。</li>
-<li>如果不对布尔值进行初始化，其值默认为false;</li>
+<li><code>return false;</code>表示停止对用户触发事件的默认处理;</li>
+<li>如果只return未标明布尔值，默认为false;</li>
+<li>js中每一个function()都有返回值，如果未显示注明则return undefined.</li>
 </ol>
 ]]></content>
         

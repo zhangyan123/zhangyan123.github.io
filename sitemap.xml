@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zhangyan123.github.io/2016/09/01/javaScript%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0%E4%B8%80/</loc>
+    
+    <lastmod>2017-03-21T08:20:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zhangyan123.github.io/demo/index.html</loc>
     
     <lastmod>2017-03-21T04:57:22.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://zhangyan123.github.io/about/index.html</loc>
     
     <lastmod>2017-03-20T08:37:50.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhangyan123.github.io/2016/09/01/javaScript%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0%E4%B8%80/</loc>
-    
-    <lastmod>2016-10-20T08:40:38.000Z</lastmod>
     
   </url>
   
