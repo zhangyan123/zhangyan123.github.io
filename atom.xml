@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangyan123.github.io/"/>
-  <updated>2017-03-20T03:25:59.000Z</updated>
+  <updated>2016-10-20T08:40:38.000Z</updated>
   <id>http://zhangyan123.github.io/</id>
   
   <author>
@@ -16,33 +16,69 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://zhangyan123.github.io/2017/03/17/hello-world/"/>
-    <id>http://zhangyan123.github.io/2017/03/17/hello-world/</id>
-    <published>2017-03-17T07:12:14.000Z</published>
-    <updated>2017-03-20T03:25:59.000Z</updated>
+    <title>javaScript基础教程笔记（一）</title>
+    <link href="http://zhangyan123.github.io/2016/09/01/javaScript%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0%E4%B8%80/"/>
+    <id>http://zhangyan123.github.io/2016/09/01/javaScript基础教程笔记一/</id>
+    <published>2016-09-01T08:22:10.000Z</published>
+    <updated>2016-10-20T08:40:38.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+    <content type="html"><![CDATA[<a id="more"></a>
+<ol>
+<li><code>retrn false;</code>表示停止对用户触发事件的默认处理。</li>
+<li>如果不对布尔值进行初始化，其值默认为false;</li>
+</ol>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;retrn false;&lt;/code&gt;表示停止对用户触发事件的默认处理。&lt;/li&gt;
+&lt;li&gt;如果不对布尔值进行初始化，其值默认为false;&lt;/li&gt;
+&lt;/ol&gt;
+
     
     </summary>
     
-      <category term="test" scheme="http://zhangyan123.github.io/categories/test/"/>
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
     
-      <category term="test" scheme="http://zhangyan123.github.io/tags/test/"/>
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>lavarel&lt;一&gt;环境搭建</title>
+    <link href="http://zhangyan123.github.io/2016/08/31/laravel%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <id>http://zhangyan123.github.io/2016/08/31/laravel环境搭建/</id>
+    <published>2016-08-31T08:22:10.000Z</published>
+    <updated>2016-08-31T10:54:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<p>lavarel学习场所<a href="http://laravelacademy.org/" target="_blank" rel="external">lavarel学院</a>下载文档查看安装与配置方法</p>
+
+<ol>
+<li>安装wamp，确保php版本要大于等于5.59；</li>
+<li>安装composer，通过composer安装laravel<code>。composer global require &quot;laravel/installer&quot;</code>确保~/.composer/vendor/bin在系统路径中，否则不能在任意路径调用 laravel 命令。；</li>
+<li>安装好以上环境，可以使用git clone已有的项目到本地，将public指定为服务器的根目录，便可以在本地查看项目，并使用git分布式管理项目了。</li>
+<li>更改完服务器根目录之后，localhost页面显示缺少依赖文件，进入项目文件夹，<code>composer update</code>可以解决此问题。<br></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;lavarel学习场所&lt;a href=&quot;http://laravelacademy.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;lavarel学院&lt;/a&gt;下载文档查看安装与配置方法&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li
+    
+    </summary>
+    
+      <category term="框架" scheme="http://zhangyan123.github.io/categories/%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="larabel" scheme="http://zhangyan123.github.io/tags/larabel/"/>
     
   </entry>
   
