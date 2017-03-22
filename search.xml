@@ -165,7 +165,7 @@
         
         <categories>
             
-            <category> markdown </category>
+            <category> 写作 </category>
             
         </categories>
         
@@ -193,6 +193,8 @@
 ]]></content>
         
         <categories>
+            
+            <category> 前端开发 </category>
             
             <category> 框架 </category>
             
