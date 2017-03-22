@@ -4,9 +4,9 @@
   <subtitle>记录前端开发学习与积累</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://zhangyan123.github.io/about/"/>
+  <link href="http://zhangyan123.github.io/"/>
   <updated>2017-03-21T08:20:04.000Z</updated>
-  <id>http://zhangyan123.github.io/about/</id>
+  <id>http://zhangyan123.github.io/</id>
   
   <author>
     <name>张言</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>javaScript基础教程笔记（一）</title>
-    <link href="http://zhangyan123.github.io/about/2016/09/01/javaScript%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0%E4%B8%80/"/>
-    <id>http://zhangyan123.github.io/about/2016/09/01/javaScript基础教程笔记一/</id>
+    <link href="http://zhangyan123.github.io/2016/09/01/javaScript%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0%E4%B8%80/"/>
+    <id>http://zhangyan123.github.io/2016/09/01/javaScript基础教程笔记一/</id>
     <published>2016-09-01T08:22:10.000Z</published>
     <updated>2017-03-21T08:20:04.000Z</updated>
     
@@ -40,17 +40,17 @@
     
     </summary>
     
-      <category term="前端开发" scheme="http://zhangyan123.github.io/about/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
     
-      <category term="javaScript" scheme="http://zhangyan123.github.io/about/tags/javaScript/"/>
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
     
   </entry>
   
   <entry>
     <title>markdown个人常用语法总结建</title>
-    <link href="http://zhangyan123.github.io/about/2016/09/01/markdown%E4%B8%AA%E4%BA%BA%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"/>
-    <id>http://zhangyan123.github.io/about/2016/09/01/markdown个人常用语法总结/</id>
+    <link href="http://zhangyan123.github.io/2016/09/01/markdown%E4%B8%AA%E4%BA%BA%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"/>
+    <id>http://zhangyan123.github.io/2016/09/01/markdown个人常用语法总结/</id>
     <published>2016-09-01T08:22:05.000Z</published>
     <updated>2017-03-22T04:36:17.000Z</updated>
     
@@ -195,17 +195,17 @@
     
     </summary>
     
-      <category term="写作" scheme="http://zhangyan123.github.io/about/categories/%E5%86%99%E4%BD%9C/"/>
+      <category term="写作" scheme="http://zhangyan123.github.io/categories/%E5%86%99%E4%BD%9C/"/>
     
     
-      <category term="写作" scheme="http://zhangyan123.github.io/about/tags/%E5%86%99%E4%BD%9C/"/>
+      <category term="写作" scheme="http://zhangyan123.github.io/tags/%E5%86%99%E4%BD%9C/"/>
     
   </entry>
   
   <entry>
     <title>lavarel&lt;一&gt;环境搭建</title>
-    <link href="http://zhangyan123.github.io/about/2016/08/31/laravel%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
-    <id>http://zhangyan123.github.io/about/2016/08/31/laravel环境搭建/</id>
+    <link href="http://zhangyan123.github.io/2016/08/31/laravel%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <id>http://zhangyan123.github.io/2016/08/31/laravel环境搭建/</id>
     <published>2016-08-31T08:22:10.000Z</published>
     <updated>2017-03-22T04:38:17.000Z</updated>
     
@@ -230,12 +230,12 @@
     
     </summary>
     
-      <category term="前端开发" scheme="http://zhangyan123.github.io/about/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="框架" scheme="http://zhangyan123.github.io/about/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%A1%86%E6%9E%B6/"/>
+      <category term="框架" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%A1%86%E6%9E%B6/"/>
     
     
-      <category term="larabel" scheme="http://zhangyan123.github.io/about/tags/larabel/"/>
+      <category term="larabel" scheme="http://zhangyan123.github.io/tags/larabel/"/>
     
   </entry>
   
