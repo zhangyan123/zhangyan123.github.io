@@ -4,7 +4,7 @@
     
     <entry>
         <title><![CDATA[javaScript基础教程笔记（一）]]></title>
-        <url>http://zhangyan123.github.io/2016/09/01/javaScript%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0%E4%B8%80/</url>
+        <url>http://zhangyan123.github.io/about/2016/09/01/javaScript%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0%E4%B8%80/</url>
         <content type="html"><![CDATA[<a id="more"></a>
 <ol>
 <li><code>return false;</code>表示停止对用户触发事件的默认处理;</li>
@@ -30,7 +30,7 @@
     
     <entry>
         <title><![CDATA[markdown个人常用语法总结建]]></title>
-        <url>http://zhangyan123.github.io/2016/09/01/markdown%E4%B8%AA%E4%BA%BA%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/</url>
+        <url>http://zhangyan123.github.io/about/2016/09/01/markdown%E4%B8%AA%E4%BA%BA%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/</url>
         <content type="html"><![CDATA[<blockquote>
 <p>为了方便写作查找，查阅文档之后总结出自己常用的markdown语法如下  </p>
 </blockquote>
@@ -180,7 +180,7 @@
     
     <entry>
         <title><![CDATA[lavarel<一>环境搭建]]></title>
-        <url>http://zhangyan123.github.io/2016/08/31/laravel%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
+        <url>http://zhangyan123.github.io/about/2016/08/31/laravel%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
         <content type="html"><![CDATA[<a id="more"></a>
 <p>lavarel学习场所<a href="http://laravelacademy.org/" target="_blank" rel="external">lavarel学院</a>下载文档查看安装与配置方法</p>
 
@@ -214,15 +214,8 @@
     
     <entry>
         <title><![CDATA[demo]]></title>
-        <url>http://zhangyan123.github.io/demo/index.html</url>
+        <url>http://zhangyan123.github.io/about/demo/index.html</url>
         <content type="html"></content>
-    </entry>
-    
-    <entry>
-        <title><![CDATA[about]]></title>
-        <url>http://zhangyan123.github.io/about/index.html</url>
-        <content type="html"><![CDATA[<p>to be continued</p>
-]]></content>
     </entry>
     
     
