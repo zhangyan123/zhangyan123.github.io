@@ -75,6 +75,9 @@
             $(".cd").on("click", function () {
                 $(".play").trigger("click");
             });
+            $("#code").click(function(){
+                window.open("https://github.com/zhangyan123/study-log/tree/master/基于H5-audio模拟光盘播放插件");
+            });
             $("#mute").click(function () {
                 if (audio.muted) {
                     $(this).css("background", "url('../images/toMute.png') no-repeat");
@@ -110,6 +113,7 @@
                 "<div class='soundCtrl'>" +
                 "<span id='mute'></span>" +
                 "<input type='button' value='-' id='downVol' />音量<input type='button' value='+' id='upVol'>" +
+                "<input type='button' value='获取源码' id='code'/>"+
                 "</div>" +
                 "<div class='cd-container'>" +
                 "<div class='cd'></div>" +
@@ -122,6 +126,7 @@
                 "<div class='soundCtrl'>" +
                 "<span id='mute'></span>" +
                 "<input type='button' value='-' id='downVol' />音量<input type='button' value='+' id='upVol'>" +
+                "<input type='button' value='获取源码' id='code'/>"+
                 "</div>";
             }
             this.media.append($(dom));
