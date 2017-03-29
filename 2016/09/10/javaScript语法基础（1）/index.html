@@ -22,7 +22,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>标签: javaScript | 张言的博客</title>
+<title>javaScript 语法基础（1） | 张言的博客</title>
 
 <link rel="alternate" href="/atom.xml" title="张言的博客" type="application/atom+xml">
 
@@ -31,7 +31,7 @@
 
     
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/pages/archive.css">
+<link rel="stylesheet" href="/css/pages/post.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
     <!--script-->
@@ -158,45 +158,15 @@
 
 
         <div id="main">
-    <div id="post-list">
-        <ul class="archives-post-list">
-            
-            <li class="post-items" _href="/2016/09/11/javaScript语法基础（2）/">
-                
-                <p class="info">javaScript</p>
-                <h2 class="post-item-title">javaScript 语法基础（2）</h2>
-                <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>前端开发</span>
-    </span>
-    
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2016/09/11</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="javaScript 语法基础（2）"
-              data-leadcloud-url="/2016/09/11/javaScript语法基础（2）/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
+    <article id="post">
+        <div id="post-header">
 
-            </li>
-            
-            <li class="post-items" _href="/2016/09/10/javaScript语法基础（1）/">
+            <h1 id="javaScript 语法基础（1）">
                 
-                <p class="info">javaScript</p>
-                <h2 class="post-item-title">javaScript 语法基础（1）</h2>
-                <div class="article-meta">
+                javaScript 语法基础（1）
+                
+            </h1>
+            <div class="article-meta">
     
     
     <span class="categories-meta fa-wrap">
@@ -204,11 +174,26 @@
         <span>前端开发</span>
     </span>
     
+    
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            javaScript
+            
+        </span>
+    </span>
     
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
         <span class="date-meta ">2016/09/10</span>
+    </span>
+    
+    <span  class=" fa-wrap">
+        <i class="fa fa-comment-o"></i>
+        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2016/09/10/javaScript语法基础（1）/" data-thread-key="/2016/09/10/javaScript语法基础（1）/"
+           data-count-type="comments"></span>
     </span>
     
     
@@ -221,44 +206,119 @@
     
 </div>
 
-            </li>
             
-            <li class="post-items" _href="/2016/09/01/javaScript基础教程笔记一/">
+            
+        </div>
+        
+        <div id="post-body">
+            <h1 id="你应该知道的：变量、表达式与语句"><a href="#你应该知道的：变量、表达式与语句" class="headerlink" title="你应该知道的：变量、表达式与语句"></a>你应该知道的：变量、表达式与语句</h1><h2 id="变量使用"><a href="#变量使用" class="headerlink" title="变量使用"></a>变量使用</h2><ul>
+<li><code>var a ;</code> 声明（分配栈空间命名为a）。</li>
+<li>定义（也称作初始化）<code>a = 1;</code>（为声明的变量赋【值】）。  </li>
+</ul>
+<blockquote>
+<p><strong>注：</strong></p>
+<ul>
+<li>只声明未定义与未声明的变量在使用时均为undefined（JS的一种基本数据类型，JS是一段一段执行的（以script标签来分割），执行每一段之前，都有一个“预编译”，预编译干的活是：声明所有var变量（初始为undefined），解析定义式函数语句。）。</li>
+<li>最佳时间的声明语句发生在作用域（函数）最开始位置，且使用一个var及逗号分隔的一条语句，方便查看此作用域中变量也避免【变量提升】机制带来的意外事件。</li>
+<li>JS的变量名是区分大小写的，可包含字母，数字，下划线和$，但不能以数字开头。            </li>
+</ul>
+</blockquote>
+<h2 id="表达式与语句"><a href="#表达式与语句" class="headerlink" title="表达式与语句"></a>表达式与语句</h2><p>表达式中使用运算符产生结果值，多个表达式之间使用逗号分隔；语句是代码执行的最小单元组成，程序就是由一系列语句组成的代码执行块，语句之间使用分号分隔。</p>
+<blockquote>
+<p><strong>注：</strong>   </p>
+<ul>
+<li>表达式可以作为值出现在任何位置；</li>
+<li>表达式是求值运算个中变量在运行前不得而知，故在JS预编译期间不进行解释，直接跳过；语句中声明的部分是会在预编译中进行解释的，执行过程中不再理会已解释部分的语句；</li>
+<li>因为现在的JS有插入分号机制，已经不要求代码中的语句必须使用分号结尾了，为了方便区分表达式与表达式语句，JS规定，使用（）包裹以{}包裹或者以function开头的代码理解为表达式；以一元运算符，比如！或者+开头的代码被理解为表达式，与（）不之处是运算符会改变表达式结果。</li>
+</ul>
+</blockquote>
+
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="/images/default-1.jpg" alt="avatar"/>
                 
-                <p class="info">javaScript</p>
-                <h2 class="post-item-title">javaScript基础教程笔记（一）</h2>
-                <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>前端开发</span>
-    </span>
-    
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2016/09/01</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="javaScript基础教程笔记（一）"
-              data-leadcloud-url="/2016/09/01/javaScript基础教程笔记一/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
-
-            </li>
-            
-        </ul>
+                <a href="javascript:void(0)" class="high-song">high起来 &#128541;</a>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">赠我一杯 &#128536;</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>作者:
+                    
+                    <a href="/about">张言</a>
+                </li>
+                <li>发表日期: <span>2016-09-10  04:22:10</span></li>
+                
+                <li>最后编辑日期: <span>2017-03-28  10:19:24</span></li>
+                
+                <li class="post-category">
+                    文章分类:
+                    
+                    <a href="/categories/前端开发/">前端开发</a>
+                    
+                </li>
+                <li class="post-tags">
+                    文章标签:
+                    
+                    <a href="/tags/javaScript/">javaScript</a>
+                    
+                </li>
+                
+                <li> 版权声明: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="/images/default-1.jpg" alt="支付宝付款" class="donate-img">
+                
+                <img src="/images/default-1.jpg" alt="微信付款" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
+        
+        <a href="/2016/09/11/javaScript语法基础（2）/" class="pre-post fa fa-caret-left">javaScript 语法基础（2）</a>
+        
+        
+        <a href="/2016/09/01/javaScript基础教程笔记一/" class="next-post fa">javaScript基础教程笔记（一）</a>
+        
     </div>
+    
+    <div id="comments">
+        
+
+<section id="duoshuo_comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="/2016/09/10/javaScript语法基础（1）/" data-title="javaScript 语法基础（1）" data-url="http://zhangyan123.github.io/2016/09/10/javaScript语法基础（1）/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:'zhangyan123'};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';
+            ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</section>
+
+
+
+    </div>
+    
 </div>
-
-
 
 
     </div>
@@ -296,8 +356,14 @@
     <ul id="tools">
     <li class="totop-btn fa fa-angle-up"></li>
     
+    <li class="toc-btn fa fa-list-ul"></li>
+    
     
 
+    
+    <li class="comment-btn fa fa-comments-o">
+        <a href="#comments" title="comments"></a>
+    </li>
     
 </ul>
 <p id="process"></p>
@@ -315,6 +381,8 @@
         </div>
     </div>
 </div>
+
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#你应该知道的：变量、表达式与语句"><span class="toc-number">1.</span> <span class="toc-text">你应该知道的：变量、表达式与语句</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#变量使用"><span class="toc-number">1.1.</span> <span class="toc-text">变量使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表达式与语句"><span class="toc-number">1.2.</span> <span class="toc-text">表达式与语句</span></a></li></ol></li></ol>
 
 
     <script src="/js/highsong.js"></script>

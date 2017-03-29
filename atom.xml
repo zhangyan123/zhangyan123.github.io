@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangyan123.github.io/"/>
-  <updated>2017-03-21T08:20:04.000Z</updated>
+  <updated>2017-03-29T14:23:26.000Z</updated>
   <id>http://zhangyan123.github.io/</id>
   
   <author>
@@ -14,6 +14,98 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>javaScript 语法基础（2）</title>
+    <link href="http://zhangyan123.github.io/2016/09/11/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%882%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/09/11/javaScript语法基础（2）/</id>
+    <published>2016-09-11T08:20:10.000Z</published>
+    <updated>2017-03-29T14:23:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="你应该知道的：基本数据类型常用技巧"><a href="#你应该知道的：基本数据类型常用技巧" class="headerlink" title="你应该知道的：基本数据类型常用技巧"></a>你应该知道的：基本数据类型常用技巧</h1><h2 id="基本数据类型指哪些"><a href="#基本数据类型指哪些" class="headerlink" title="基本数据类型指哪些"></a>基本数据类型指哪些</h2><ul>
+<li>Number、String、Boolean、null、undefined剩下的都是复杂类型</li>
+<li>原生9种构造函数：Number、String、Boolean、Array、Object、Error、function、RegExp、Date</li>
+<li>使用typeof操作符可以检测数据类型，new出来的任何种类的对象都呈现为[object object]，尽量使用字面量创建方式以便检测类型</li>
+<li>3e+3=3000</li>
+<li>数字中有两个特例 NaN!==NaN  Infinity+（-Infinity）===NaN  </li>
+<li>字符串转为数字 parseInt(“10Shjksah”)===10  简便方式：  +”10”</li>
+<li>数字转字符串 “”+123===“123”</li>
+<li>双重取反操作可以取到任何值对应的布尔值 eg:！！1===true</li>
+<li>6种falsy值：<ul>
+<li>“”</li>
+<li>null</li>
+<li>undefined</li>
+<li>0</li>
+<li>NaN</li>
+<li>false<br>除以上falsy值之外的数据都是truthy值包括对象和falsy值字符串eg:”false”===true  数字%0==Infinity</li>
+</ul>
+</li>
+<li>经常使用的惰性求值法：<ul>
+<li>||用于检测对象是否存在若不存在赋予初始值</li>
+<li>a() &amp;&amp; b() :如果执行a()后返回true，则执行b()并返回b的值,此用法与？：三元运算符经常用于简化运算步骤；如果执行a()后返回false，则整个表达式返回a()的值，b()不执行；<br>a() || b() :如果执行a()后返回true，则整个表达式返回a()的值，b()不执行；如果执行a()后返回false，则执行b()并返回b()的值；<br>&amp;&amp; 优先级高于 ||</li>
+</ul>
+</li>
+<li>typeop null===object ;typeof undefined===undefined</li>
+<li>数组可以用于取字符串的某位字符’123’[1]===”2”,数组其实为key值从0开始递增的对象</li>
+<li>for-in方法是为了遍历对象而设计，会遍历原型链，注意使用hasOwnProperty()  </li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;你应该知道的：基本数据类型常用技巧&quot;&gt;&lt;a href=&quot;#你应该知道的：基本数据类型常用技巧&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：基本数据类型常用技巧&quot;&gt;&lt;/a&gt;你应该知道的：基本数据类型常用技巧&lt;/h1&gt;&lt;h2 id=&quot;基本数据类
+    
+    </summary>
+    
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javaScript 语法基础（1）</title>
+    <link href="http://zhangyan123.github.io/2016/09/10/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%881%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/09/10/javaScript语法基础（1）/</id>
+    <published>2016-09-10T08:22:10.000Z</published>
+    <updated>2017-03-28T14:19:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="你应该知道的：变量、表达式与语句"><a href="#你应该知道的：变量、表达式与语句" class="headerlink" title="你应该知道的：变量、表达式与语句"></a>你应该知道的：变量、表达式与语句</h1><h2 id="变量使用"><a href="#变量使用" class="headerlink" title="变量使用"></a>变量使用</h2><ul>
+<li><code>var a ;</code> 声明（分配栈空间命名为a）。</li>
+<li>定义（也称作初始化）<code>a = 1;</code>（为声明的变量赋【值】）。  </li>
+</ul>
+<blockquote>
+<p><strong>注：</strong></p>
+<ul>
+<li>只声明未定义与未声明的变量在使用时均为undefined（JS的一种基本数据类型，JS是一段一段执行的（以script标签来分割），执行每一段之前，都有一个“预编译”，预编译干的活是：声明所有var变量（初始为undefined），解析定义式函数语句。）。</li>
+<li>最佳时间的声明语句发生在作用域（函数）最开始位置，且使用一个var及逗号分隔的一条语句，方便查看此作用域中变量也避免【变量提升】机制带来的意外事件。</li>
+<li>JS的变量名是区分大小写的，可包含字母，数字，下划线和$，但不能以数字开头。            </li>
+</ul>
+</blockquote>
+<h2 id="表达式与语句"><a href="#表达式与语句" class="headerlink" title="表达式与语句"></a>表达式与语句</h2><p>表达式中使用运算符产生结果值，多个表达式之间使用逗号分隔；语句是代码执行的最小单元组成，程序就是由一系列语句组成的代码执行块，语句之间使用分号分隔。</p>
+<blockquote>
+<p><strong>注：</strong>   </p>
+<ul>
+<li>表达式可以作为值出现在任何位置；</li>
+<li>表达式是求值运算个中变量在运行前不得而知，故在JS预编译期间不进行解释，直接跳过；语句中声明的部分是会在预编译中进行解释的，执行过程中不再理会已解释部分的语句；</li>
+<li>因为现在的JS有插入分号机制，已经不要求代码中的语句必须使用分号结尾了，为了方便区分表达式与表达式语句，JS规定，使用（）包裹以{}包裹或者以function开头的代码理解为表达式；以一元运算符，比如！或者+开头的代码被理解为表达式，与（）不之处是运算符会改变表达式结果。</li>
+</ul>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;你应该知道的：变量、表达式与语句&quot;&gt;&lt;a href=&quot;#你应该知道的：变量、表达式与语句&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：变量、表达式与语句&quot;&gt;&lt;/a&gt;你应该知道的：变量、表达式与语句&lt;/h1&gt;&lt;h2 id=&quot;变量使用&quot;&gt;&lt;a 
+    
+    </summary>
+    
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>javaScript基础教程笔记（一）</title>

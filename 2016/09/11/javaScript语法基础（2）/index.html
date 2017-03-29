@@ -22,7 +22,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>标签: javaScript | 张言的博客</title>
+<title>javaScript 语法基础（2） | 张言的博客</title>
 
 <link rel="alternate" href="/atom.xml" title="张言的博客" type="application/atom+xml">
 
@@ -31,7 +31,7 @@
 
     
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/pages/archive.css">
+<link rel="stylesheet" href="/css/pages/post.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
     <!--script-->
@@ -158,14 +158,15 @@
 
 
         <div id="main">
-    <div id="post-list">
-        <ul class="archives-post-list">
-            
-            <li class="post-items" _href="/2016/09/11/javaScript语法基础（2）/">
+    <article id="post">
+        <div id="post-header">
+
+            <h1 id="javaScript 语法基础（2）">
                 
-                <p class="info">javaScript</p>
-                <h2 class="post-item-title">javaScript 语法基础（2）</h2>
-                <div class="article-meta">
+                javaScript 语法基础（2）
+                
+            </h1>
+            <div class="article-meta">
     
     
     <span class="categories-meta fa-wrap">
@@ -174,10 +175,25 @@
     </span>
     
     
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            javaScript
+            
+        </span>
+    </span>
+    
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
         <span class="date-meta ">2016/09/11</span>
+    </span>
+    
+    <span  class=" fa-wrap">
+        <i class="fa fa-comment-o"></i>
+        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2016/09/11/javaScript语法基础（2）/" data-thread-key="/2016/09/11/javaScript语法基础（2）/"
+           data-count-type="comments"></span>
     </span>
     
     
@@ -190,75 +206,123 @@
     
 </div>
 
-            </li>
             
-            <li class="post-items" _href="/2016/09/10/javaScript语法基础（1）/">
-                
-                <p class="info">javaScript</p>
-                <h2 class="post-item-title">javaScript 语法基础（1）</h2>
-                <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>前端开发</span>
-    </span>
-    
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2016/09/10</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="javaScript 语法基础（1）"
-              data-leadcloud-url="/2016/09/10/javaScript语法基础（1）/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
+            
+        </div>
+        
+        <div id="post-body">
+            <h1 id="你应该知道的：基本数据类型常用技巧"><a href="#你应该知道的：基本数据类型常用技巧" class="headerlink" title="你应该知道的：基本数据类型常用技巧"></a>你应该知道的：基本数据类型常用技巧</h1><h2 id="基本数据类型指哪些"><a href="#基本数据类型指哪些" class="headerlink" title="基本数据类型指哪些"></a>基本数据类型指哪些</h2><ul>
+<li>Number、String、Boolean、null、undefined剩下的都是复杂类型</li>
+<li>原生9种构造函数：Number、String、Boolean、Array、Object、Error、function、RegExp、Date</li>
+<li>使用typeof操作符可以检测数据类型，new出来的任何种类的对象都呈现为[object object]，尽量使用字面量创建方式以便检测类型</li>
+<li>3e+3=3000</li>
+<li>数字中有两个特例 NaN!==NaN  Infinity+（-Infinity）===NaN  </li>
+<li>字符串转为数字 parseInt(“10Shjksah”)===10  简便方式：  +”10”</li>
+<li>数字转字符串 “”+123===“123”</li>
+<li>双重取反操作可以取到任何值对应的布尔值 eg:！！1===true</li>
+<li>6种falsy值：<ul>
+<li>“”</li>
+<li>null</li>
+<li>undefined</li>
+<li>0</li>
+<li>NaN</li>
+<li>false<br>除以上falsy值之外的数据都是truthy值包括对象和falsy值字符串eg:”false”===true  数字%0==Infinity</li>
+</ul>
+</li>
+<li>经常使用的惰性求值法：<ul>
+<li>||用于检测对象是否存在若不存在赋予初始值</li>
+<li>a() &amp;&amp; b() :如果执行a()后返回true，则执行b()并返回b的值,此用法与？：三元运算符经常用于简化运算步骤；如果执行a()后返回false，则整个表达式返回a()的值，b()不执行；<br>a() || b() :如果执行a()后返回true，则整个表达式返回a()的值，b()不执行；如果执行a()后返回false，则执行b()并返回b()的值；<br>&amp;&amp; 优先级高于 ||</li>
+</ul>
+</li>
+<li>typeop null===object ;typeof undefined===undefined</li>
+<li>数组可以用于取字符串的某位字符’123’[1]===”2”,数组其实为key值从0开始递增的对象</li>
+<li>for-in方法是为了遍历对象而设计，会遍历原型链，注意使用hasOwnProperty()  </li>
+</ul>
 
-            </li>
-            
-            <li class="post-items" _href="/2016/09/01/javaScript基础教程笔记一/">
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="/images/default-1.jpg" alt="avatar"/>
                 
-                <p class="info">javaScript</p>
-                <h2 class="post-item-title">javaScript基础教程笔记（一）</h2>
-                <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>前端开发</span>
-    </span>
-    
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2016/09/01</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="javaScript基础教程笔记（一）"
-              data-leadcloud-url="/2016/09/01/javaScript基础教程笔记一/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
-
-            </li>
-            
-        </ul>
+                <a href="javascript:void(0)" class="high-song">high起来 &#128541;</a>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">赠我一杯 &#128536;</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>作者:
+                    
+                    <a href="/about">张言</a>
+                </li>
+                <li>发表日期: <span>2016-09-11  04:20:10</span></li>
+                
+                <li>最后编辑日期: <span>2017-03-29  10:23:26</span></li>
+                
+                <li class="post-category">
+                    文章分类:
+                    
+                    <a href="/categories/前端开发/">前端开发</a>
+                    
+                </li>
+                <li class="post-tags">
+                    文章标签:
+                    
+                    <a href="/tags/javaScript/">javaScript</a>
+                    
+                </li>
+                
+                <li> 版权声明: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="/images/default-1.jpg" alt="支付宝付款" class="donate-img">
+                
+                <img src="/images/default-1.jpg" alt="微信付款" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
+        
+        
+        <a href="/2016/09/10/javaScript语法基础（1）/" class="next-post fa">javaScript 语法基础（1）</a>
+        
     </div>
+    
+    <div id="comments">
+        
+
+<section id="duoshuo_comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="/2016/09/11/javaScript语法基础（2）/" data-title="javaScript 语法基础（2）" data-url="http://zhangyan123.github.io/2016/09/11/javaScript语法基础（2）/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:'zhangyan123'};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';
+            ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</section>
+
+
+
+    </div>
+    
 </div>
-
-
 
 
     </div>
@@ -296,8 +360,14 @@
     <ul id="tools">
     <li class="totop-btn fa fa-angle-up"></li>
     
+    <li class="toc-btn fa fa-list-ul"></li>
+    
     
 
+    
+    <li class="comment-btn fa fa-comments-o">
+        <a href="#comments" title="comments"></a>
+    </li>
     
 </ul>
 <p id="process"></p>
@@ -315,6 +385,8 @@
         </div>
     </div>
 </div>
+
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#你应该知道的：基本数据类型常用技巧"><span class="toc-number">1.</span> <span class="toc-text">你应该知道的：基本数据类型常用技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本数据类型指哪些"><span class="toc-number">1.1.</span> <span class="toc-text">基本数据类型指哪些</span></a></li></ol></li></ol>
 
 
     <script src="/js/highsong.js"></script>
