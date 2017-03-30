@@ -5,8 +5,8 @@
     <entry>
         <title><![CDATA[javaScript 语法基础（2）]]></title>
         <url>http://zhangyan123.github.io/2016/09/11/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%882%EF%BC%89/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：基本数据类型常用技巧"><a href="#你应该知道的：基本数据类型常用技巧" class="headerlink" title="你应该知道的：基本数据类型常用技巧"></a>你应该知道的：基本数据类型常用技巧</h1><h2 id="基本数据类型指哪些"><a href="#基本数据类型指哪些" class="headerlink" title="基本数据类型指哪些"></a>基本数据类型指哪些</h2><ul>
-<li>Number、String、Boolean、null、undefined剩下的都是复杂类型</li>
+        <content type="html"><![CDATA[<h1 id="你应该知道的：基本数据类型常用技巧"><a href="#你应该知道的：基本数据类型常用技巧" class="headerlink" title="你应该知道的：基本数据类型常用技巧"></a>你应该知道的：基本数据类型常用技巧</h1><ul>
+<li>5种基本数据类型 Number、String、Boolean、null、undefined剩下的都是复杂类型</li>
 <li>原生9种构造函数：Number、String、Boolean、Array、Object、Error、function、RegExp、Date</li>
 <li>使用typeof操作符可以检测数据类型，new出来的任何种类的对象都呈现为[object object]，尽量使用字面量创建方式以便检测类型</li>
 <li>3e+3=3000</li>
