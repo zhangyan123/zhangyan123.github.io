@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangyan123.github.io/"/>
-  <updated>2017-03-30T01:47:18.000Z</updated>
+  <updated>2017-04-01T09:07:09.000Z</updated>
   <id>http://zhangyan123.github.io/</id>
   
   <author>
@@ -16,18 +16,63 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>javaScript 语法基础（3）</title>
+    <link href="http://zhangyan123.github.io/2016/09/13/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%883%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/09/13/javaScript语法基础（3）/</id>
+    <published>2016-09-13T08:18:10.000Z</published>
+    <updated>2017-04-01T09:07:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="你应该知道的：函数"><a href="#你应该知道的：函数" class="headerlink" title="你应该知道的：函数"></a>你应该知道的：函数</h1><ul>
+<li>函数声明的组成部分：关键字function、函数名、参数、函数体、return（如果没有显示的返回值，JS默认返回undefined）</li>
+<li>函数声明与函数表达式区别在于声明会提升，而表达式在预编译中会被跳过，只有var a =function(){//函数体}中的变量a得到了变量声明提升，a===undefined;</li>
+<li>函数的参数分为形参和实参，eg:function add(a,b){return a+b;}  中形参的个数为add.length，而使用时传入实参的个数为arguments.length，arguments是函数内建变量，它是一个承装实际参数的类数组而非真正的数组，一般为了方便使用数组的方法我们会使用var args=Array.prototype.slice.call(arguments);将类数组转换为真正的数组。</li>
+<li><p>枚举JS内建函数注意事项</p>
+<ul>
+<li>parseInt(requireArg,radix)第二个参数用于指定解析整数的进制，默认十进制，ES5之前有fix=0x||0时候易造成默认进制改变为十六或八导致的错误。ES5已经修复了八进制的默认表示法，但是使用此函数时仍需注意,不能解析为整数时返回NaN。</li>
+<li>parseFloat()只支持解析为十进制数</li>
+<li>isNaN()确定输入值是否为可参与计算的数字，因此此函数可以用来检测parseInt()和parseFloat()返回调用成功与否。</li>
+<li>isFinite()用于检测既非Infinit又非NaN的数字</li>
+<li>URI的编码与反编码 encodeURI()/encodeURIComponent()/decodeURI()/decodeURIComponent</li>
+</ul>
+</li>
+<li><p>函数的两大特征：</p>
+<ul>
+<li>函数是对象，唯一的不同是它可以被调用；</li>
+<li>函数定义局部作用域；</li>
+</ul>
+</li>
+<li>强烈建议使用“单一var”模式在函数顶部声明函数用的局部变量，方便已近函数遍阅读到该区域所有用的变量的定义。避免变量声明提升带来的变量使用不恰当的混淆问题。</li>
+<li></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;你应该知道的：函数&quot;&gt;&lt;a href=&quot;#你应该知道的：函数&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：函数&quot;&gt;&lt;/a&gt;你应该知道的：函数&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;函数声明的组成部分：关键字function、函数名、参数、函数体、ret
+    
+    </summary>
+    
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>javaScript 语法基础（2）</title>
     <link href="http://zhangyan123.github.io/2016/09/11/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%882%EF%BC%89/"/>
     <id>http://zhangyan123.github.io/2016/09/11/javaScript语法基础（2）/</id>
     <published>2016-09-11T08:20:10.000Z</published>
-    <updated>2017-03-30T01:47:18.000Z</updated>
+    <updated>2017-03-30T01:54:16.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="你应该知道的：基本数据类型常用技巧"><a href="#你应该知道的：基本数据类型常用技巧" class="headerlink" title="你应该知道的：基本数据类型常用技巧"></a>你应该知道的：基本数据类型常用技巧</h1><ul>
 <li>5种基本数据类型 Number、String、Boolean、null、undefined剩下的都是复杂类型</li>
 <li>原生9种构造函数：Number、String、Boolean、Array、Object、Error、function、RegExp、Date</li>
 <li>使用typeof操作符可以检测数据类型，new出来的任何种类的对象都呈现为[object object]，尽量使用字面量创建方式以便检测类型</li>
 <li>3e+3=3000</li>
-<li>数字中有两个特例 NaN!==NaN  Infinity+（-Infinity）===NaN  </li>
+<li>数字中有两个特例 NaN!==NaN  Infinity+（-Infinity）===NaN  数字%0==Infinity</li>
 <li>字符串转为数字 parseInt(“10Shjksah”)===10  简便方式：  +”10”</li>
 <li>数字转字符串 “”+123===“123”</li>
 <li>双重取反操作可以取到任何值对应的布尔值 eg:！！1===true</li>
@@ -37,15 +82,15 @@
 <li>undefined</li>
 <li>0</li>
 <li>NaN</li>
-<li>false<br>除以上falsy值之外的数据都是truthy值包括对象和falsy值字符串eg:”false”===true  数字%0==Infinity</li>
+<li>false<br>除以上falsy值之外的数据都是truthy值包括对象和falsy值字符串eg:”false”===true  </li>
 </ul>
 </li>
 <li>经常使用的惰性求值法：<ul>
-<li>||用于检测对象是否存在若不存在赋予初始值</li>
+<li>||用于检测对象是否存在若不存在赋予初始值eg:  var a = b||{};</li>
 <li>a() &amp;&amp; b() :如果执行a()后返回true，则执行b()并返回b的值,此用法与？：三元运算符经常用于简化运算步骤；如果执行a()后返回false，则整个表达式返回a()的值，b()不执行；<br>a() || b() :如果执行a()后返回true，则整个表达式返回a()的值，b()不执行；如果执行a()后返回false，则执行b()并返回b()的值；<br>&amp;&amp; 优先级高于 ||</li>
 </ul>
 </li>
-<li>typeop null===object ;typeof undefined===undefined</li>
+<li>typeof null===object ;typeof undefined===undefined</li>
 <li>数组可以用于取字符串的某位字符’123’[1]===”2”,数组其实为key值从0开始递增的对象</li>
 <li>for-in方法是为了遍历对象而设计，会遍历原型链，注意使用hasOwnProperty()  </li>
 </ul>
