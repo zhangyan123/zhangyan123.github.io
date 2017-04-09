@@ -137,7 +137,7 @@
   <h3 class="fa fa-tags widget-title">标签云</h3>
   <div class="tagcloud-content">
     
-      <a href="/tags/javaScript/" style="font-size: 0.2rem; color: #0a407c">javaScript</a> <a href="/tags/写作/" style="font-size: 0.14rem; color: #69c">写作</a> <a href="/tags/larabel/" style="font-size: 0.14rem; color: #69c">larabel</a>
+      <a href="/tags/javaScript/" style="font-size: 0.2rem; color: #0a407c">javaScript</a> <a href="/tags/larabel/" style="font-size: 0.14rem; color: #69c">larabel</a> <a href="/tags/写作/" style="font-size: 0.14rem; color: #69c">写作</a>
   </div>
 </li>
 
@@ -165,6 +165,76 @@
     
     
     
+    
+    
+    <li  class="article-excerpt-wrap " _href = "/2016/09/20/javaScript语法基础（4）/">
+        <div class="article-img img-ajax" data-src= /images/default-1.jpg>
+           <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
+        </div>
+        <div class="article-excerpt">
+            
+            <a class="article-title-link" href="/2016/09/20/javaScript语法基础（4）/">
+                <h2 class="article-title">javaScript 语法基础（4）</h2>
+            </a>
+            
+            <p class="article-content">
+                你应该知道的: javaScript是基于原型(prototype)面向对象的动态语言（对象）
+JS对象中的属性可以 动态 得进行增、删(delete)、修改；
+JS中的数组实质为键值由0开始自增的特殊对象，数组一般用来存放有规律的一组数据，无需特殊的索引；
+对象与数组的不同在于键值可以自定义；
+对象的创建：
+使用字面量{}创建
+使用new+构造函数创建
+
+
+
+构造函数举例    function Constr(name){this.name=name;
+this.say=function(){
+    return this.name;
+};
+  }  
+实例化举例     var instance = new Constr(“zhangyan”);  instance.say();//“zhangyan”       
+实例化过程 模拟当我们使用new操作符调用函数时，js默默完...
+            </p>
+            <div class="article-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+        <span>前端开发</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            javaScript
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta ">2016/09/20</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+            <i class="fa fa-thermometer-three-quarters"></i>
+        <span class="hits hits-meta " data-leadcloud-title="javaScript 语法基础（4）"
+              data-leadcloud-url="/2016/09/20/javaScript语法基础（4）/"><i class="fa fa-spinner fa-spin"></i></span>
+    </span>
+    
+    
+    <a href="/2016/09/20/javaScript语法基础（4）/" class="read-article">阅读全文</a>
+    
+</div>
+
+        </div>
+        
+    </li>
     
     
     <li  class="article-excerpt-wrap " _href = "/2016/09/13/javaScript语法基础（3）/">
@@ -240,14 +310,18 @@ pa...
             <p class="article-content">
                 你应该知道的：基本数据类型常用技巧
 5种基本数据类型 Number、String、Boolean、null、undefined剩下的都是复杂类型
-原生9种构造函数：Number、String、Boolean、Array、Object、Error、function、RegExp、Date
+原生9种内建构造函数：
+数据封装类对象：Number、String、Boolean、Object、Array
+工具类对象：Math、Date、RegExp
+错误类对象：error
+
+
 使用typeof操作符可以检测数据类型，new出来的任何种类的对象都呈现为[object object]，尽量使用字面量创建方式以便检测类型
 3e+3=3000
 数字中有两个特例 NaN!==NaN  Infinity+（-Infinity）===NaN  数字%0==Infinity
 字符串转为数字 parseInt(“10Shjksah”)===10  简便方式：  +”10”
 数字转字符串 “”+123===“123”
-双重取反操作可以取到任何值对应的布尔值 eg:！！1===true
-6种fa...
+双重取反操作可以取到任何值对应的布...
             </p>
             <div class="article-meta">
     
@@ -348,66 +422,6 @@ JS的变量名是区分大小写的，可包含字母，数字，下划线和$�
     
     
     <a href="/2016/09/10/javaScript语法基础（1）/" class="read-article">阅读全文</a>
-    
-</div>
-
-        </div>
-        
-    </li>
-    
-    
-    <li  class="article-excerpt-wrap " _href = "/2016/09/01/javaScript基础教程笔记一/">
-        <div class="article-img img-ajax" data-src= /images/default-1.jpg>
-           <div class="loading-img"><i class="fa fa-pulse fa-spinner"></i></div>
-        </div>
-        <div class="article-excerpt">
-            
-            <a class="article-title-link" href="/2016/09/01/javaScript基础教程笔记一/">
-                <h2 class="article-title">javaScript基础教程笔记（一）</h2>
-            </a>
-            
-            <p class="article-content">
-                
-
-return false;表示停止对用户触发事件的默认处理;
-如果只return未标明布尔值，默认为false;
-js中每一个function()都有返回值，如果未显示注明则return undefined.
-
-
-            </p>
-            <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>前端开发</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            javaScript
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2016/09/01</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="javaScript基础教程笔记（一）"
-              data-leadcloud-url="/2016/09/01/javaScript基础教程笔记一/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-    <a href="/2016/09/01/javaScript基础教程笔记一/" class="read-article">阅读全文</a>
     
 </div>
 
