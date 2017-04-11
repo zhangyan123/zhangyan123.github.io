@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangyan123.github.io/"/>
-  <updated>2017-04-09T07:23:25.000Z</updated>
+  <updated>2017-04-10T14:00:59.000Z</updated>
   <id>http://zhangyan123.github.io/</id>
   
   <author>
@@ -16,11 +16,311 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>javaScript 语法基础（9）</title>
+    <link href="http://zhangyan123.github.io/2016/10/10/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%889%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/10/10/javaScript语法基础（9）/</id>
+    <published>2016-10-10T08:45:09.000Z</published>
+    <updated>2017-04-10T14:00:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="你应该知道的：pollyfills解决方案"><a href="#你应该知道的：pollyfills解决方案" class="headerlink" title="你应该知道的：pollyfills解决方案"></a>你应该知道的：pollyfills解决方案</h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;你应该知道的：pollyfills解决方案&quot;&gt;&lt;a href=&quot;#你应该知道的：pollyfills解决方案&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：pollyfills解决方案&quot;&gt;&lt;/a&gt;你应该知道的：pollyfills解决方案&lt;/
+    
+    </summary>
+    
+      <category term="pollyfills" scheme="http://zhangyan123.github.io/categories/pollyfills/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javaScript 语法基础（8）</title>
+    <link href="http://zhangyan123.github.io/2016/10/10/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%888%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/10/10/javaScript语法基础（8）/</id>
+    <published>2016-10-10T08:40:09.000Z</published>
+    <updated>2017-04-10T14:01:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="你应该知道的：观察者模式"><a href="#你应该知道的：观察者模式" class="headerlink" title="你应该知道的：观察者模式"></a>你应该知道的：观察者模式</h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;你应该知道的：观察者模式&quot;&gt;&lt;a href=&quot;#你应该知道的：观察者模式&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：观察者模式&quot;&gt;&lt;/a&gt;你应该知道的：观察者模式&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://zhangyan123.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javaScript 语法基础（7）</title>
+    <link href="http://zhangyan123.github.io/2016/10/09/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%887%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/10/09/javaScript语法基础（7）/</id>
+    <published>2016-10-09T08:00:10.000Z</published>
+    <updated>2017-04-10T13:44:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="你应该知道的：浏览器兼容性处理"><a href="#你应该知道的：浏览器兼容性处理" class="headerlink" title="你应该知道的：浏览器兼容性处理"></a>你应该知道的：浏览器兼容性处理</h1><ul>
+<li>事件处理</li>
+<li>异步请求</li>
+<li>css机制</li>
+<li>SSE</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;你应该知道的：浏览器兼容性处理&quot;&gt;&lt;a href=&quot;#你应该知道的：浏览器兼容性处理&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：浏览器兼容性处理&quot;&gt;&lt;/a&gt;你应该知道的：浏览器兼容性处理&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;事件处理&lt;/li&gt;
+&lt;l
+    
+    </summary>
+    
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javaScript 语法基础（6）</title>
+    <link href="http://zhangyan123.github.io/2016/10/08/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%886%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/10/08/javaScript语法基础（6）/</id>
+    <published>2016-10-08T08:00:10.000Z</published>
+    <updated>2017-04-11T02:13:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="你应该知道的：浏览器环境"><a href="#你应该知道的：浏览器环境" class="headerlink" title="你应该知道的：浏览器环境"></a>你应该知道的：浏览器环境</h1><p><img src="/images/browser.png" alt="myBlog"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;你应该知道的：浏览器环境&quot;&gt;&lt;a href=&quot;#你应该知道的：浏览器环境&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：浏览器环境&quot;&gt;&lt;/a&gt;你应该知道的：浏览器环境&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/browser.png&quot;
+    
+    </summary>
+    
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javaScript 语法基础（5）</title>
+    <link href="http://zhangyan123.github.io/2016/09/30/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%885%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/09/30/javaScript语法基础（5）/</id>
+    <published>2016-09-30T08:20:10.000Z</published>
+    <updated>2017-04-10T13:24:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="你应该知道的：继承实现原理（从上到下由浅入深）"><a href="#你应该知道的：继承实现原理（从上到下由浅入深）" class="headerlink" title="你应该知道的：继承实现原理（从上到下由浅入深）"></a>你应该知道的：继承实现原理（从上到下由浅入深）</h1><ol>
+<li><p>原型链继承模式<br><pre>function Shape(){</pre></p>
+<pre><code>this.name=&apos;shape&apos;;
+</code></pre><p>};</p>
+<p>Shape.prototype.toString=function(){</p>
+<pre><code>return this.name;
+</code></pre><p>};</p>
+<p>function Triangle(side,height){</p>
+<pre><code>this.name=&apos;triangle&apos;;
+this.side=side;
+this.height=height;
+</code></pre><p>}<br>Triangle.prototype.getArea=function(){</p>
+<pre><code>return this.side*this.height/2;
+</code></pre><p>};<br>Triangle.prototype=new Shape();<br>Triangle.prototype.constructor=Triangle;</p>
+<blockquote>
+<p>这种继承模式除了共享了“父类”（模拟说法，后面部分均直白表示为父类和子类）原型中的属性和方法之外，在原型上父类个性拥有的name属性，造成不必要资源浪费。  </p>
+</blockquote>
+</li>
+<li><p>临时构造器继承模式<br> 根据之前的分析知道<code>Triangle.prototype=new Shape();</code>语句造成了对多余父类属性的拷贝，为避免不共享的成员不被拷贝，我们可以启用临时“空”（只扮演传递父类原型指针的角色）构造器，并指定其原型属性指向父类原型。以此解决上述问题。</p>
+  <pre>function Shape(){
+    this.name='shape';
+};
+
+Shape.prototype.toString=function(){
+    return this.name;
+};
+
+function Triangle(side,height){
+    this.name='triangle';
+    this.side=side;
+    this.height=height;
+}
+ <strong>var F=function (){};
+ F.prototype=Shape.prototype;
+ Triangle.prototype=new F();
+ Triangle.prototype.constructor=Triangle;
+ </strong>
+
+Triangle.prototype.getArea=function(){
+    return this.side*this.height/2;
+};</pre>进一步优化   
+
+   <pre>function Shape(){
+    this.name='shape';
+}
+
+Shape.prototype.toString=function(){
+    return this.name;
+};
+
+function Triangle(side,height){
+    this.name='triangle';
+    this.side=side;
+    this.height=height;
+}
+ <strong>var F=function (){
+     this.getArea=function(){
+         return this.side*this.height/2;
+     };
+ };
+ F.prototype=Shape.prototype;
+ Triangle.prototype=new F();
+ Triangle.prototype.constructor=Triangle;
+ </strong></pre>现在我们已经具备了一种比较良好的继承模式，既可以继承到父类的共享内容，又可以在子类中添加个性的成员而不对其父类造成影响，下面我们在核心功能的基础上增强继承的能力，增加子类访问父类成员的通道（模拟java super,super是js保留字故采用德语中的同义词uber替代）。            
+<pre>function Shape(){
+    this.name='shape';
+}
+
+Shape.prototype.toString=function(){
+    return this.name;
+};
+
+function Triangle(side,height){
+    this.name='triangle';
+    this.side=side;
+    this.height=height;
+}
+     var F=function (){
+         this.getArea=function(){
+         return this.side*this.height/2;
+         };
+         this.uber=Shape.prototype;
+     };
+     F.prototype=Shape.prototype;
+     F.uber=Shape.prototype;
+     Triangle.prototype=new F();
+     Triangle.prototype.constructor=Triangle;</pre>       
+
+<p> <strong>工具集:</strong>       </p>
+ <pre>function extend(Child,Parent){
+     var F=function(){};
+     F.prototype=Parent.prototype;
+     Child.prototype=new F();
+     Child.prototype.constructor=Child;
+     Child.uber=Parent.prototype;
+ }</pre>
+</li>
+<li><p>前面介绍了原型链继承模式，在模拟传统继承方式时还可以简单粗暴的将父类的原型中成员直接拷贝到子类原型中。<br><strong>工具集:</strong>     </p>
+<pre>function extend2(Child,Parent){
+    var c=Child.prototype,p=Parent.prototype;
+    for(var i in p){
+        c[i]=p[i]
+    }
+    c.uber=p;
+}</pre>        
+值得注意的是prototype中的constructor属性是不可枚举的，在for-in循环中不会被拷贝，子类保有自己正确的constructor指向。      
+以上拷贝很明显是浅拷贝，当父类中有对象成员，甚至对象成员中还有对象子成员时，以上拷贝会造成引用传递，子类在修改属性时引发父类属性同时变化，下面介绍深拷贝工具集。         
+<strong>工具集:</strong>
+<pre>function deepcopy(p,c){
+    c = c||{};
+    for(var i in p){
+        if(p.hasOwnProperty(i)){
+            if(typeOf p[i] ==== 'object'){
+                c[i] =Array.isArray(p[i])?[]:{};
+                deepCopy(p[i],c[i]);
+            }else{
+                c[i]=p[i];
+            }
+        }
+    }
+    return c;
+}</pre>       
+<pre>ES5中实现了isArray，为了向下兼容补充工具集如下(全局)：       
+if(Array.isArray !=='function'){
+    Array.isArray = function(args){
+        return Object.prototype.toString.call(args) === '[object Array]';
+    };
+}</pre>       </li>
+<li><p>前面介绍了原型链继承模型和简单的成员拷贝模式，我们在继承当中不仅要复用父类的方法还会有增加新方法的需求，因此结合两种方式模式增强我们的继承工具集如下：<br><strong>工具集(基于构造器模式):</strong>       </p>
+<pre>function extendX(P,stuff){
+var n;
+function F(){};
+F.prototype=P.prototype;
+n=new F();
+n.uber=P.prototype;
+
+for(var i in stuff){
+    n[i]=stuff[i]
+}
+return n;
+}</pre>             
+
+</li>
+</ol>
+<p><strong>工具集(基于对象模式):</strong>       </p>
+<pre>function extendX(o,stuff){
+    var n;
+    function F(){};
+    F.prototype=o;
+    n=new F();
+    n.uber=o;
+
+    for(var i in stuff){
+        n[i]=stuff[i]
+    }
+    return n;
+}</pre>   
+
+<ol>
+<li>借用构造器+原型复制 模式实现继承<br>借用构造器使得我们可以在子类构造器中调用福构造器，但是此处apply调用是方法调用，不会继承父类的原型属性，为了补充这块空缺，可以使用extend2或者deepCopy函数进行原型拷贝，让子类继承到父类的成员与原型成员。<br>借用构造器形式举例:        <pre>function Triangle(){
+    Shape.apply(this,arguments);
+}</pre>
+
+
+
+
+
+
+
+
+
+
+
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;你应该知道的：继承实现原理（从上到下由浅入深）&quot;&gt;&lt;a href=&quot;#你应该知道的：继承实现原理（从上到下由浅入深）&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：继承实现原理（从上到下由浅入深）&quot;&gt;&lt;/a&gt;你应该知道的：继承实现原理（从上到
+    
+    </summary>
+    
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>javaScript 语法基础（4）</title>
     <link href="http://zhangyan123.github.io/2016/09/20/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%884%EF%BC%89/"/>
     <id>http://zhangyan123.github.io/2016/09/20/javaScript语法基础（4）/</id>
     <published>2016-09-20T08:00:10.000Z</published>
-    <updated>2017-04-09T07:23:25.000Z</updated>
+    <updated>2017-04-10T02:10:45.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="你应该知道的-javaScript是基于原型-prototype-面向对象的动态语言（对象）"><a href="#你应该知道的-javaScript是基于原型-prototype-面向对象的动态语言（对象）" class="headerlink" title="你应该知道的: javaScript是基于原型(prototype)面向对象的动态语言（对象）"></a>你应该知道的: javaScript是基于原型(prototype)面向对象的动态语言（对象）</h1><ul>
 <li>JS对象中的属性可以 <strong>动态</strong> 得进行增、删(delete)、修改；</li>
@@ -42,6 +342,10 @@
 <li><pre>instance instanceOf Constr;//true<br>typeOf instance===”object”;<br>instance.constructor===Constr//true constructor</pre>属性继承自Object</li>
 </ul>
 </li>
+<li>你应该记住的关于内建对象扩展的讨论：<blockquote>
+<p>最常用例子：实现让老式浏览器支持新功能，而且应该是ECMAScript委员会标准化了的，为现代浏览器支持的新功能，例如让IE支持ES5中的方法，这类扩展叫做shims或者polyfills.<strong>在进行原型扩展之前需要先检查该方法是否已存在</strong></p>
+</blockquote>
+</li>
 <li>你应该记住的内建对象方法：<br> 1.Date<br> 属性(1):<br> constructor      所建立对象的函数参考<br> prototype       能够为对象加入的属性和方法<br> 方法(43):<br> getDay()        返回一周中的第几天(0-6)<br> getYear()       返回年份.2000年以前为2位,2000(包含)以后为4位<br> getFullYear()     返回完整的4位年份数<br> getMonth()      返回月份数(0-11)<br> getDate()       返回日(1-31)<br> getHours()       返回小时数(0-23)<br> getMinutes()      返回分钟(0-59)<br> getSeconds()      返回秒数(0-59)<br> getMilliseconds() 返回毫秒(0-999)<br> getUTCDay()      依据国际时间来得到现在是星期几(0-6)<br> getUTCFullYear()    依据国际时间来得到完整的年份<br> getUTCMonth()     依据国际时间来得到月份(0-11)<br> getUTCDate()      依据国际时间来得到日(1-31)<br> getUTCHours()     依据国际时间来得到小时(0-23)<br> getUTCMinutes()    依据国际时间来返回分钟(0-59)<br> getUTCSeconds()    依据国际时间来返回秒(0-59)<br> getUTCMilliseconds()依据国际时间来返回毫秒(0-999)<br> getTime()       返回从1970年1月1号0:0:0到现在一共花去的毫秒数<br> getTimezoneoffset() 返回时区偏差值,即格林威治平均时间(GMT)与运行脚本的计算机所处时区设置之间相差的分钟数)<br> parse(dateString)   返回在Date字符串中自从1970年1月1日00:00:00以来的毫秒数<br> setYear(yearInt)    设置年份.2位数或4位数<br> setFullYear(yearInt)设置年份.4位数<br> setMonth(monthInt) 设置月份(0-11)<br> setDate(dateInt)    设置日(1-31)<br> setHours(hourInt) 设置小时数(0-23)<br> setMinutes(minInt) 设置分钟数(0-59)<br> setSeconds(secInt) 设置秒数(0-59)<br> setMilliseconds(milliInt) 设置毫秒(0-999)<br> setUTCFullYear(yearInt) 依据国际时间来设置年份<br> setUTCMonth(monthInt) 依据国际时间来设置月(0-11)<br> setUTCDate(dateInt)     依据国际时间来设置日(1-31)<br> setUTCHours(hourInt)    依据国际时间来设置小时<br> setUTCMinutes(minInt) 依据国际时间来设置分钟<br> setUTCSeconds(secInt)    依据国际时间来设置秒<br> setUTCMilliseconds(milliInt)依据国际时间来设置毫秒<br> setTime(timeInt)    设置从1970年1月1日开始的时间.毫秒数<br> toGMTString()     根据格林威治时间将Date对象的日期(一个数值)转变成一个GMT时间字符串,如:Weds,15 June l997 14:02:02 GMT<br> toUTCString()     根据通用时间将一个Date对象的日期转换为一个字符串<br> toLocaleString()    把Date对象的日期(一个数值)转变成一个字符串,使用所在计算机上配置使用的特定日期格式<br> toSource()       显示对象的源代码<br> toString()       将日期对象转换为字符串<br> UTC(yyyy, mm, dd, hh, mm, ss, msec)返回从格林威治标准时间到指定时间的差距,单位为毫秒<br> valueOf()       返回日期对象的原始值<br> 2.Math<br> 属性:<br> constructor      所建立对象的函数参考<br> prototype       能够为对象加入的属性和方法<br> E           欧拉常量,自然对数的底(约等于2.718)<br> LN2          2的自然对数(约等于0.693)<br> LN10          10的自然对数(约等于2.302)<br> LOG2E         以2为底的e的对数.(约等于1.442)<br> LOG10E         以10为底的e的对数(约等于0.434)<br> PI           ∏的值(约等于3.14159)<br> SQRT1_2        1/2(0.5)的平方根(即l除以2的平方根,约等于o.707)<br> SQRT2         2的平方根(约等于1.414)<br> 方法:<br> abs(x)     返回数字的绝对值<br> acos(x)    返回数字的反余弦值<br> asin(x)    返回数字的反正弦值<br> atan(x)    返回位于-PI/2 和 PI/2 的反正切值<br> atan2(y,x) 返回（x,y）位于 -PI 到 PI 之间的角度<br> ceil(x)    返回 x 四舍五入后的最大整数<br> cos(x)     返回一个数字的余弦值<br> exp(x)     返回 E^x 值<br> floor(x)    返回 x 四舍五入后的最小整数<br> log(x)     返回底数为E的自然对数<br> max(x,y)    返回 x 和 y 之间较大的数<br> min(x,y)    返回 x 和 y 之间较小的数<br> pow(x,y)    返回 y^x 的值<br> random()    返回位于 0 到 1 之间的随机函数<br> round(x)    四舍五入后取整<br> sin(x)     返回数字的正弦值<br> sqrt(x)    返回数字的平方根<br> tan(x)     返回一个角度的正切值<br> toSource() 显示对象的源代码<br> valueOf() 返回数学对象的原始值<br> 3.Number<br> 属性:<br> MAX_VALUE       The largest possible value a number in JavaScript can have 1.7976931348623157E+308<br> MIN_VALUE       The smallest possible value a number in JavaScript can have 5E-324<br> NaN          Equal to a value that is not a number.<br> NEGATIVE_INFINITY A value that is less than MIN_VALUE.<br> POSOTIVE_INFINITY A value that is greater than <code>MAX<em>VALUE</em></code>.<br> prototype       A static property of the Number object<br> 方法:<br> toString       Returns a string representing the specified object<br> valueOf()      返回数学对象的原始值<br> 4.Boolean<br> 属性:<br> constructor 所建立对象的函数参考<br> prototype    能够为对象加入的属性和方法<br> 方法:<br> toSource()    显示对象的源代码<br> toString()    将布尔值转换为字符串,并且返回结果<br> valueOf()    返回布尔对象的原始值<br> 5.String<br> 属性:<br> constructor 所建立对象的函数参考<br> prototype    能够为对象加入的属性和方法<br> length      返回字符串的字符长度<br> 方法(20):<br> anchor(“name”)用来把字符串转换为HTML锚点标记内<code>(&lt;A NAME=&gt;)</code><br> big()      把字符串中的文本变成大字体<code>(&lt;BIG&gt;)</code><br> blink()     把字符串中的文本变成闪烁字体<code>(&lt;BLINK&gt;)</code><br> bold()      把字符串中的文本变成黑字体<code>(&lt;B&gt;)</code><br> fixed()     把字符串中的文本变成固定间距字体,即电报形式<code>(&lt;TT&gt;)</code><br> fontcolor(color)设置字符串中文本的颜色<code>(&lt;FONT COLOR=&gt;)</code><br> Fontsize(size) 把字符串中的文本变成指定大小<code>(&lt;FONTSIZE=&gt;)</code><br> italics()    把字符串中的文本变成斜字体<code>(&lt;I&gt;)</code><br> Link(url)用来把字符串转换-HTML链接标记中<code>(&lt;A HREF=&gt;)</code><br> small()     把字符串中的文本变成小字体<code>(&lt;SMALL&gt;)</code><br> strike()     把字符串中的文本变成划掉字体<code>(&lt;STRIKE&gt;)</code><br> sub()      把字符串中的文本变成下标(subscript)字体<code>(&lt;SUB&gt;)</code><br> sup()      把字符串中的文本变成上标(superscript)字体<code>(&lt;SUP&gt;)</code><br> charAt(index) 返回指定索引处的字符<br> charCodeAt(index)返回一个整数,该整数表示String对象中指定位置处的字符的Unicode编码<br> concat(string2)连接两条或多条字符串<br> fromCharCode(num1, num2, …, numN)获取指定的Unicode值并返回字符串<br> indexOf(searchString, startIndex) 返回字符串中第一个出现指定字符串的位置<br> lastlndexOf(searchString, startIndex) 返回字符串中最后一个出现指定字符串的位置<br> match(regex) 在字符串中查找指定值<br> replace(regex, newString)将字符串中的某些字符替换成其它字符<br> search(regex) 针对某执行值对字符串进行查找<br> slice(startIndex, endIndex)将部分字符抽出并在新的字符串中返回剩余部分<br> split(delimiter)将字符串分配为数组<br> substr(startIndex, length) 从startIndex取,取length个字符<br> substring(startIndex, endIndex) 从startIndex和endIndex之间的字符,不包括endIndex<br> toLowerCase() 把字符串中的文本变成小写<br> toUpperCase() 把字符串中的文本变成大写<br> toSource()    显示对象的源代码<br> valueOf()    返回字符串对象的原始值<br> 6.Array<br> 属性:<br> constructor 所建立对象的函数参考<br> prototype    能够为对象加入的属性和方法<br> index      For an array created by a regular expression match, the zero-based index of the match in the string.<br> input      For an array created by a regular expression match, reflects the original string against which the regular expression was matched.<br> length      获取数组元素的个数,即最大下标加1<br> 方法(13):<br> concat(array1,arrayn)将两个或两个以上的数组值连接起来,合并后返回结果<br> join(string) 将数组中元素合并为字符串,string为分隔符.如省略参数则直接合并,不再分隔<br> pop()      移除数组中的最后一个元素并返回该元素<br> push(value) 在数组的末尾加上一个或多个元素,并且返回新的数组长度值<br> reverse()    颠倒数组中元素的顺序,反向排列<br> shift()     移除数组中的第一个元素并返回该元素<br> slice(start, deleteCount, [item1[, item2[,…[,itemN]]]]) 返从一个数组中移除一个或多个元素,如果必要,在所移除元素的位置上插入新元素,返回所移除的元素<br> sort(compare Function) 在未指定排序号的情况下,按照元素的字母顺序排列,如果不是字符串类型则转换成字符串再排序,返回排序后的数组<br> splice()     为数组删除并添加新的元素<br> toSource()    显示对象的源代码<br> toString()    将数组所有元素返回一个字符串,其间用逗号分隔<br> unshift(value)为数组的开始部分加上一个或多个元素,并且返回该数组的新长度<br> valueOf()    返回数组对象的原始值<br> 7.RegExp<br> 属性:<br> $1, …, $9 Parenthesized substring matches, if any.<br> $        See input.<br> $*        See multiline.<br> $&amp;        See lastMatch.<br> $+        See lastParen.<br> $`        See leftContext.<br> $’        See rightContext.<br> global      Whether or not to test the regular expression against all possible matches in a string, or only against the first.<br> ignoreCase    Whether or not to ignore case while attempting a match in a string.<br> input      The string against which a regular expression is matched.<br> lastIndex    The index at which to start the next match.<br> lastMatch    The last matched characters.<br> lastParen    The last parenthesized substring match, if any.<br> leftContext The substring preceding the most recent match.<br> multiline    Whether or not to search in strings across multiple lines.<br> rightContext The substring following the most recent match.<br> source      The text of the pattern.<br> 方法:<br> compile     Compiles a regular expression object.<br> exec       Executes a search for a match in its string parameter.<br> test       Tests for a match in its string parameter<br> 8.Function<br> 属性:<br> arguments    An array corresponding to the arguments passed to a function.<br> arity      Indicates the number of arguments expected by the function.<br> caller      Specifies which function called the current function.<br> prototype    Allows the addition of properties to a Function object.<br> 方法:<br> toString     Returns a string representing the specified object.<br> 9.Object<br> 属性:<br> constructor Specifies the function that creates an object’s prototype.<br> prototype    Allows the addition of properties to all objects.<br> 方法:<br> eval       Evaluates a string of JavaScript code in the context of the specified object.<br> toString     Returns a string representing the specified object.<br> unwatch     Removes a watchpoint from a 属性源 the object.<br> valueOf     Returns the primitive value of the specified object.<br> watch      Adds a watchpoint to a 属性源 the object.<br> 10.全局<br> 属性:<br> Infinity     指定一个正负无穷大的数值<br> NaN       指定一个 “非数字” 值<br> undefined    指定一个未被赋值的变量<br> 方法:<br> decodeURI()       为加密的URI进行解码<br> decodeURIComponent() 为加密的URI组件解码<br> encodeURI()       将字符串加密为URI<br> encodeURIComponent() 将字符串加密为URI组件<br> escape(string)      加密一个字符串<br> unescape()        使用escape()对一个字符串进行解码<br> eval(string)       判断一个字符串并将其以脚本代码的形式执行<br> isFinite(number)     检测一个值是否为一个有限数字,返回True或False<br> isNaN(string)      检测一个值是否不是一个有限数字<br> Number()         将一个对象的值转换为一个数字<br> parseFloat(string)    将一个字符串解析为一个浮点数字<br> parseInt(string)     将一个字符串解析为一个整数,不是四舍五入操作,而是切尾<br> String(object)      将一个对象值转换为一个字符串<br> number(object)<br> 11.事件<br> 属性:<br> a.窗口事件,只在body和frameset元素中才有效<br> onload      页面或图片加载完成时<br> onunload     用户离开页面时<br> b.表单元素事件,在表单元素中才有效<br> onchange     框内容改变时<br> onsubmit     点击提交按钮时<br> onreset     重新点击鼠标按键时<br> onselect     文本被选择时<br> onblur      元素失去焦点时<br> onfocus     当元素获取焦点时<br> c.键盘事件,在base,bdo,br,frame,frameset,head,html,iframe,meta,param,script,style,title元素里都无效<br> onkeydown    按下键盘按键时<br> onkeypress    按下或按住键盘按键时<br> onkeyup     放开键盘按键时<br> d.在base,bdo,br,frame,frameset,head,html,iframe,meta,param,script,style,title元素里都无效<br> onclick     鼠标点击一个对象时<br> ondblclick    鼠标双击一个对象时<br> onmousedown 鼠标被按下时<br> onmousemove 鼠标被移动时<br> onmouseout    鼠标离开元素时<br> onmouseover 鼠标经过元素时<br> onmouseup    释放鼠标按键时<br> e.其他<br> onresize     当窗口或框架被重新定义尺寸时<br> onabort     图片下载被打断时<br> onerror     当加载文档或图片时发生错误时</li>
 </ul>
 ]]></content>
@@ -54,6 +358,8 @@
     
       <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
+      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9F%BA%E7%A1%80/"/>
+    
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
     
@@ -64,7 +370,7 @@
     <link href="http://zhangyan123.github.io/2016/09/13/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%883%EF%BC%89/"/>
     <id>http://zhangyan123.github.io/2016/09/13/javaScript语法基础（3）/</id>
     <published>2016-09-13T08:18:10.000Z</published>
-    <updated>2017-04-05T09:00:06.000Z</updated>
+    <updated>2017-04-09T07:25:58.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="你应该知道的：函数"><a href="#你应该知道的：函数" class="headerlink" title="你应该知道的：函数"></a>你应该知道的：函数</h1><ul>
 <li>函数声明的组成部分：关键字function、函数名、参数、函数体、return（如果没有显示的返回值，JS默认返回undefined）</li>
@@ -113,6 +419,8 @@
     
       <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
+      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9F%BA%E7%A1%80/"/>
+    
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
     
@@ -123,7 +431,7 @@
     <link href="http://zhangyan123.github.io/2016/09/11/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%882%EF%BC%89/"/>
     <id>http://zhangyan123.github.io/2016/09/11/javaScript语法基础（2）/</id>
     <published>2016-09-11T08:20:10.000Z</published>
-    <updated>2017-04-06T13:28:31.000Z</updated>
+    <updated>2017-04-09T07:26:16.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="你应该知道的：基本数据类型常用技巧"><a href="#你应该知道的：基本数据类型常用技巧" class="headerlink" title="你应该知道的：基本数据类型常用技巧"></a>你应该知道的：基本数据类型常用技巧</h1><ul>
 <li>5种基本数据类型 Number、String、Boolean、null、undefined剩下的都是复杂类型</li>
@@ -168,6 +476,8 @@
     
       <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
+      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9F%BA%E7%A1%80/"/>
+    
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
     
@@ -178,7 +488,7 @@
     <link href="http://zhangyan123.github.io/2016/09/10/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%881%EF%BC%89/"/>
     <id>http://zhangyan123.github.io/2016/09/10/javaScript语法基础（1）/</id>
     <published>2016-09-10T08:22:10.000Z</published>
-    <updated>2017-03-28T14:19:24.000Z</updated>
+    <updated>2017-04-09T07:26:23.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="你应该知道的：变量、表达式与语句"><a href="#你应该知道的：变量、表达式与语句" class="headerlink" title="你应该知道的：变量、表达式与语句"></a>你应该知道的：变量、表达式与语句</h1><h2 id="变量使用"><a href="#变量使用" class="headerlink" title="变量使用"></a>变量使用</h2><ul>
 <li><code>var a ;</code> 声明（分配栈空间命名为a）。</li>
@@ -211,17 +521,19 @@
     
       <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
+      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9F%BA%E7%A1%80/"/>
+    
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
     
   </entry>
   
   <entry>
-    <title>markdown个人常用语法总结建</title>
+    <title>markdown个人常用语法总结</title>
     <link href="http://zhangyan123.github.io/2016/09/01/markdown%E4%B8%AA%E4%BA%BA%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"/>
     <id>http://zhangyan123.github.io/2016/09/01/markdown个人常用语法总结/</id>
     <published>2016-09-01T08:22:05.000Z</published>
-    <updated>2017-03-22T04:36:17.000Z</updated>
+    <updated>2017-04-09T07:35:42.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>为了方便写作查找，查阅文档之后总结出自己常用的markdown语法如下  </p>
@@ -365,6 +677,8 @@
     </summary>
     
       <category term="写作" scheme="http://zhangyan123.github.io/categories/%E5%86%99%E4%BD%9C/"/>
+    
+      <category term="markdown" scheme="http://zhangyan123.github.io/categories/%E5%86%99%E4%BD%9C/markdown/"/>
     
     
       <category term="写作" scheme="http://zhangyan123.github.io/tags/%E5%86%99%E4%BD%9C/"/>
