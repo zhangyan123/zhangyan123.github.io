@@ -1,0 +1,449 @@
+<!doctype html>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable"  content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    
+    
+    <!--Simple SEO-->
+
+<meta name="description" content=前端学习记录/>
+
+
+<meta name="robots" content=all />
+<meta name="google" content=all />
+<meta name="googlebot" content=all />
+<meta name="verify" content=all />
+    <!--Title-->
+
+<title>啃掉IE低版本这块硬骨头（二） | 张言的博客</title>
+
+<link rel="alternate" href="/atom.xml" title="张言的博客" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/pages/post.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
+    <!--script-->
+
+
+
+<script src="//cdn1.lncld.net/static/js/2.1.3/av-min.js"></script>
+<script>
+    var appId = "A5uFwcx8xbECYfSMRXiEUoVU-gzGzoHsz";
+    var appKey = "vIeiO5xV1mdSbzJxN48KSumD";
+    var region = 'null';
+    AV.init({
+        appId: appId,
+        appKey: appKey,
+        region: region
+    });
+</script>
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    
+    
+</head>
+
+<body>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<style>
+    header{ top: 71px; position: absolute!important;}
+    #container{padding-top: 151px!important;}
+</style>
+<div style="position:fixed;z-index:9999;left:0;top:0;width:100%;height:70px;background-color:#e0e0e0;color:#396CA5;border-bottom:1px solid #cecece;text-align:center;line-height:70px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<div id="wrap">
+    <header  style="position: absolute;" >
+    <div id="site-meta">
+        <a href="/" id="logo">
+            <h1 class="title">张言的博客</h1>
+        </a>
+        
+        <h2 class="subtitle">记录前端开发学习与积累</h2>
+        
+    </div>
+    <ul id="nav">
+        
+            <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+        
+            <li><a href="/demo"><i class="fa fa-code"></i>作品</a></li>
+        
+            <li><a href="/about"><i class="fa fa-user"></i>About</a></li>
+        
+        <li id="search"><a href="javascript:void(0)"><i class="fa fa-search"></i>Search</a></li>
+    </ul>
+</header>
+
+    <div id="container">
+        
+<ul id="sidebar">
+    
+    
+<li class="widget notification">
+    <i class="fa fa-bell-o"></i>
+    <div>
+        <p>希望每周可以出两篇高质量文章</p>
+    </div>
+</li>
+
+    
+    
+<li class="widget widget-normal category">
+    <h3 class="fa fa-th widget-title">Categories</h3>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/写作/"><i class="fa" aria-hidden="true">写作</i></a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/写作/markdown/"><i class="fa" aria-hidden="true">markdown</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/"><i class="fa" aria-hidden="true">前端开发</i></a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/"><i class="fa" aria-hidden="true">javaScript</i></a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/JS进步史/"><i class="fa" aria-hidden="true">JS进步史</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/基础/"><i class="fa" aria-hidden="true">基础</i></a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/闭包/"><i class="fa" aria-hidden="true">闭包</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/兼容性问题/"><i class="fa" aria-hidden="true">兼容性问题</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/框架/"><i class="fa" aria-hidden="true">框架</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/正则表达式/"><i class="fa" aria-hidden="true">正则表达式</i></a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/正则表达式/方法/"><i class="fa" aria-hidden="true">方法</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/"><i class="fa" aria-hidden="true">设计模式</i></a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/策略模式/"><i class="fa" aria-hidden="true">策略模式</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/观察者模式/"><i class="fa" aria-hidden="true">观察者模式</i></a><span class="category-list-count">1</span></li></ul></li></ul>
+</li>
+
+
+    
+    
+<li class="widget widget-normal archive">
+  <h3 class="fa fa-archive widget-title">Archives</h3>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/"><i class="fa" aria-hidden="true">October 2016</i></a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/"><i class="fa" aria-hidden="true">September 2016</i></a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/"><i class="fa" aria-hidden="true">August 2016</i></a><span class="archive-list-count">1</span></li></ul>
+</li>
+
+
+    
+    
+<li class="widget widget-normal popular-posts" id="popular-posts">
+    <h3 class="fa fa-thermometer-3 widget-title">Popular Posts</h3>
+    <ul id="popular-content">
+        <li class="load-first"><i class="fa fa-spinner fa-pulse"></i></li>
+    </ul>
+</li>
+
+    
+    
+<li class="widget widget-normal tags">
+  <h3 class="fa fa-tags widget-title">Tag Cloud</h3>
+  <div class="tagcloud-content">
+    
+      <a href="/tags/javaScript/" style="font-size: 0.2rem; color: #0a407c">javaScript</a> <a href="/tags/写作/" style="font-size: 0.14rem; color: #69c">写作</a> <a href="/tags/larabel/" style="font-size: 0.14rem; color: #69c">larabel</a>
+  </div>
+</li>
+
+    
+    
+<li class="widget widget-normal friends-link">
+    <h3 class="fa fa-globe widget-title">Friends</h3><br/>
+
+    
+        <a href="http://geekaholiclin.github.io" class="fa" target="_blank">主题作者</a>
+
+    
+
+</li>
+
+    
+</ul>
+
+
+        <div id="main">
+    <article id="post">
+        <div id="post-header">
+
+            <h1 id="啃掉IE低版本这块硬骨头（二）">
+                
+                啃掉IE低版本这块硬骨头（二）
+                
+            </h1>
+            <div class="article-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+        <span>兼容性问题</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            javaScript
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta ">2016/10/11</span>
+    </span>
+    
+    <span  class=" fa-wrap">
+        <i class="fa fa-comment-o"></i>
+        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2016/10/11/浏览器兼容性问题（2）/" data-thread-key="/2016/10/11/浏览器兼容性问题（2）/"
+           data-count-type="comments"></span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+            <i class="fa fa-thermometer-three-quarters"></i>
+        <span class="hits hits-meta " data-leadcloud-title="啃掉IE低版本这块硬骨头（二）"
+              data-leadcloud-url="/2016/10/11/浏览器兼容性问题（2）/"><i class="fa fa-spinner fa-spin"></i></span>
+    </span>
+    
+    
+</div>
+
+            
+            
+        </div>
+        
+        <div id="post-body">
+            <h1 id="你应该知道的：CSS浏览器兼容性处理"><a href="#你应该知道的：CSS浏览器兼容性处理" class="headerlink" title="你应该知道的：CSS浏览器兼容性处理"></a>你应该知道的：CSS浏览器兼容性处理</h1><p>一、document.formName.item(”itemName”) 问题 </p>
+<p>问题说明：IE下，可以使用 document.formName.item(”itemName”) 或 document.formName.elements [“elementName”]；Firefox 下，只能使用document.formName.elements[“elementName”]。<br>解决方法：统一使用document.formName.elements[“elementName”]。 </p>
+<p>二、集合类对象问题 </p>
+<p>问题说明：IE下，可以使用 () 或 [] 获取集合类对象；Firefox下，只能使用 [ ]获取集合类对象。<br>解决方法：统一使用 [] 获取集合类对象。 </p>
+<p>三、自定义属性问题 </p>
+<p>问题说明：IE下，可以使用获取常规属性的方法来获取自定义属性，也可以使用 getAttribute() 获取自定义属性；Firefox下，只能使用 getAttribute() 获取自定义属性。<br>解决方法：统一通过 getAttribute() 获取自定义属性。 </p>
+<p>四、eval(”idName”)问题 </p>
+<p>问题说明：IE下，可以使用 eval(”idName”) 或 getElementById(”idName”) 来取得 id 为 idName 的HTML对象；Firefox下，只能使用 getElementById(”idName”) 来取得 id 为 idName 的HTML对象。<br>解决方法：统一用 getElementById(”idName”) 来取得 id 为 idName 的HTML对象。 </p>
+<p>五、变量名与某HTML对象ID相同的问题 </p>
+<p>问题说明：IE下，HTML对象的ID可以作为 document 的下属对象变量名直接使用，Firefox下则不能；Firefox下，可以使用与HTML对象ID相同的变量名，IE下则不能。<br>解决方法：使用 document.getElementById(”idName”) 代替 document.idName。最好不要取HTML对象ID相同的变量名，以减少错误；在声明变量时，一律加上var关键字，以避免歧义。 </p>
+<p>六、const问题 </p>
+<p>问题说明：Firefox下，可以使用const关键字或var关键字来定义常量；IE下，只能使用var关键字来定义常量。<br>解决方法：统一使用var关键字来定义常量。 </p>
+<p>七、input.type属性问题 </p>
+<p>问题说明：IE下 input.type 属性为只读；但是Firefox下 input.type 属性为读写。<br>解决办法：不修改 input.type 属性。如果必须要修改，可以先隐藏原来的input，然后在同样的位置再插入一个新的input元素。 </p>
+<p>八、window.event问题 </p>
+<p>问题说明：window.event 只能在IE下运行，而不能在Firefox下运行，这是因为Firefox的event只能在事件发生的现场使用。<br>解决方法：在事件发生的函数上加上event参数，在函数体内(假设形参为evt)使用 var myEvent = evt?evt:(window.event?window.event:null)<br>示例： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;button&quot; onclick=&quot;doSomething(event)&quot;/&gt; </div><div class="line">&lt;script language=&quot;javascript&quot;&gt; </div><div class="line">function doSomething(evt) &#123; </div><div class="line">var myEvent = evt?evt:(window.event?window.event:null) </div><div class="line">... </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>九、event.x与event.y问题 </p>
+<p>问题说明：IE下，even对象有x、y属性，但是没有pageX、pageY属性；Firefox下，even对象有pageX、pageY属性，但是没有x、y属性。<br>解决方法：var myX = event.x ? event.x : event.pageX; var myY = event.y ? event.y:event.pageY;<br>如果考虑第8条问题，就改用myEvent代替event即可。 </p>
+<p>十、event.srcElement问题 </p>
+<p>问题说明：IE下，even对象有srcElement属性，但是没有target属性；Firefox下，even对象有target属性，但是没有srcElement属性。<br>解决方法：使用srcObj = event.srcElement ? event.srcElement : event.target;<br>如果考虑第8条问题，就改用myEvent代替event即可。 </p>
+<p>十一、window.location.href问题 </p>
+<p>问题说明：IE或者Firefox2.0.x下，可以使用window.location或window.location.href；Firefox1.5.x下，只能使用window.location。<br>解决方法：使用 window.location 来代替 window.location.href。当然也可以考虑使用 location.replace()方法。 </p>
+<p>十二、模态和非模态窗口问题 </p>
+<p>问题说明：IE下，可以通过showModalDialog和showModelessDialog打开模态和非模态窗口；Firefox下则不能。<br>解决方法：直接使用 window.open(pageURL,name,parameters) 方式打开新窗口。<br>如果需要将子窗口中的参数传递回父窗口，可以在子窗口中使用window.opener来访问父窗口。如果需要父窗口控制子窗口的话，使用 var subWindow = window.open(pageURL,name,parameters); 来获得新开的窗口对象。 </p>
+<p>十三、frame和iframe问题 </p>
+<p>以下面的frame为例： </p>
+<p>(1)访问frame对象<br>IE：使用window.frameId或者window.frameName来访问这个frame对象；<br>Firefox：使用window.frameName来访问这个frame对象；<br>解决方法：统一使用 window.document.getElementById(”frameId”) 来访问这个frame对象；<br>(2)切换frame内容<br>在IE和Firefox中都可以使用 window.document.getElementById(”frameId”).src = “webjx.com.html”或 window.frameName.location = “webjx.com.html”来切换frame的内容；<br>如果需要将frame中的参数传回父窗口，可以在frame中使用parent关键字来访问父窗口。 </p>
+<p>十四、body载入问题 </p>
+<p>问题说明：Firefox的body对象在body标签没有被浏览器完全读入之前就存在；而IE的body对象则必须在body标签被浏览器完全读入之后才存在。<br>[注] 这个问题尚未实际验证，待验证后再来修改。<br>[注] 经验证，IE6、Opera9以及FireFox2中不存在上述问题，单纯的JS脚本可以访问在脚本之前已经载入的所有对象和元素，即使这个元素还没有载入完成。 </p>
+<p>十五、事件委托方法 </p>
+<p>问题说明：IE下，使用 <code>document.body.onload = inject;</code> 其中<code>function inject()</code>在这之前已被实现；在Firefox下，使用 <code>document.body.onload = inject()</code>;<br>解决方法：统一使用 <code>document.body.onload=new Function(&#39;inject()&#39;);</code>或者 <code>document.body.onload = function(){/* 这里是代码 */}</code><br>[注意] Function和function的区别 </p>
+<p>十六、访问的父元素的区别 </p>
+<p>问题说明：在IE下，使用 obj.parentElement 或 obj.parentNode 访问obj的父结点；在firefox下，使用 obj.parentNode 访问obj的父结点。<br>解决方法：因为firefox与IE都支持DOM，因此统一使用obj.parentNode 来访问obj的父结点。 </p>
+<p>十七、innerText的问题. </p>
+<p>问题说明：innerText在IE中能正常工作，但是innerText在FireFox中却不行。<br>解决方法：在非IE浏览器中使用textContent代替innerText。<br>示例： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if(navigator.appName.indexOf(&quot;Explorer&quot;) &gt;-1)&#123; </div><div class="line">document.getElementById(&apos;element&apos;).innerText = &quot;my text&quot;; </div><div class="line">&#125; else&#123; </div><div class="line">document.getElementById(&apos;element&apos;).textContent = &quot;;my text&quot;; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>[注] innerHTML 同时被ie、firefox等浏览器支持，其他的，如outerHTML等只被ie支持，最好不用。 </p>
+<p>十八、Table操作问题 </p>
+<p>问题说明：ie、firefox以及其它浏览器对于 table 标签的操作都各不相同，在ie中不允许对table和tr的innerHTML赋值，使用js增加一个tr时，使用appendChild方法也不管用。document.appendChild在往表里插入行时FIREFOX支持，IE不支持<br>解决办法：把行插入到TBODY中，不要直接插入到表<br>解决方法： </p>
+<p>//向table追加一个空行： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var row = otable.insertRow(-1); </div><div class="line">var cell = document.createElement(&quot;td&quot;); </div><div class="line">cell.innerHTML = &quot;&quot;; </div><div class="line">cell.className = &quot;XXXX&quot;; </div><div class="line">row.appendChild(cell);</div></pre></td></tr></table></figure>
+<p>[注] 建议使用JS框架集来操作table，如JQuery。 </p>
+<p>十九、对象宽高赋值问题 </p>
+<p>问题说明：FireFox中类似 obj.style.height = imgObj.height 的语句无效。<br>解决方法：统一使用 obj.style.height = imgObj.height + ‘px’; </p>
+<p>二十、setAttribute(‘style’,’color:red;’)<br>FIREFOX支持(除了IE，现在所有浏览器都支持)，IE不支持<br>解决办法：不用setAttribute(‘style’,’color:red’)<br>而用object.style.cssText = ‘color:red;’(这写法也有例外)<br>最好的办法是上面种方法都用上，万无一失 </p>
+<p>二一、类名设置<br>setAttribute(‘class’,’styleClass’)<br>FIREFOX支持，IE不支持(指定属性名为class，IE不会设置元素的class属性，相反只使用setAttribute时IE自动识CLASSNAME属性)<br>解决办法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">setAttribute(&apos;class&apos;,&apos;styleClass&apos;) </div><div class="line"></div><div class="line">setAttribute(&apos;className&apos;,&apos;styleClass&apos;)</div></pre></td></tr></table></figure></p>
+<p>或者直接 <code>object.className=&#39;styleClass&#39;</code>; </p>
+<p>IE和FF都支持object.className。 </p>
+<p>二二、用setAttribute设置事件<br><code>var obj = document.getElementById(&#39;objId&#39;)</code>;<br><code>obj.setAttribute(&#39;onclick&#39;,&#39;funcitonname();&#39;)</code>;<br>FIREFOX支持，IE不支持<br>解决办法：<br>IE中必须用点记法来引用所需的事件处理程序,并且要用赋予匿名函数<br>如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var obj = document.getElementById(&apos;objId&apos;); </div><div class="line">obj.onclick=function()&#123;fucntionname();&#125;;</div></pre></td></tr></table></figure></p>
+<p>这种方法所有浏览器都支持 </p>
+<p>二三、建立单选钮<br>IE以外的浏览器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var rdo = document.createElement(&apos;input&apos;); </div><div class="line">rdo.setAttribute(&apos;type&apos;,&apos;radio&apos;); </div><div class="line">rdo.setAttribute(&apos;name&apos;,&apos;radiobtn&apos;); </div><div class="line">rdo.setAttribute(&apos;value&apos;,&apos;checked&apos;);</div></pre></td></tr></table></figure></p>
+<p>IE:<br><code>var rdo =document.createElement(”&lt;input name=”radiobtn” type=”radio” value=”checked” /&gt;”);</code><br>解决办法：<br>这一点区别和前面的都不一样。这次完全不同，所以找不到共同的办法来解决，那么只有IF-ELSE了<br>万幸的是，IE可以识别出document的uniqueID属性，别的浏览器都不可以识别出这一属性。问题解决。</p>
+
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="/images/author.png" alt="avatar"/>
+                
+                <a href="javascript:void(0)" class="high-song">high起来 &#128541;</a>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">赠我一杯 &#128536;</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>Author:
+                    
+                    <a href="/about">张言</a>
+                </li>
+                <li>Published Date: <span>2016-10-11  04:40:09</span></li>
+                
+                <li>Updated Date: <span>2017-04-12  09:27:40</span></li>
+                
+                <li class="post-category">
+                    Categories:
+                    
+                    <a href="/categories/前端开发/">前端开发</a>
+                    
+                    <a href="/categories/前端开发/兼容性问题/">兼容性问题</a>
+                    
+                </li>
+                <li class="post-tags">
+                    Tags:
+                    
+                    <a href="/tags/javaScript/">javaScript</a>
+                    
+                </li>
+                
+                <li> License: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="/images/Ali-pay.png" alt="支付宝付款" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
+        
+        <a href="/2016/10/12/JS发展史（1）/" class="pre-post fa fa-caret-left">ES5新增常用特性</a>
+        
+        
+        <a href="/2016/10/10/浏览器兼容性问题（1）/" class="next-post fa">啃掉IE低版本这块硬骨头（一）</a>
+        
+    </div>
+    
+    <div id="comments">
+        
+
+<section id="duoshuo_comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="/2016/10/11/浏览器兼容性问题（2）/" data-title="啃掉IE低版本这块硬骨头（二）" data-url="http://zhangyan123.github.io/2016/10/11/浏览器兼容性问题（2）/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:'zhangyan123'};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';
+            ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</section>
+
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+    <footer id="footer">
+    
+    <div class="social">
+        
+        <a href="http://www.imooc.com/u/1974751" class="fa fa-free-code-camp" target="_blank" title="immoc"></a>
+        
+        <a href="https://github.com/zhangyan123" class="fa fa-github" target="_blank" title="github"></a>
+        
+        <a href="https://leetcode.com/problemset/algorithms/" class="fa fa-code" target="_blank" title="todo"></a>
+        
+    </div>
+    
+    <div>
+        
+        <a href="/" class="copyright-links">张言</a>&copy;2017 - 2017.All Rights
+        Reserved.
+    </div>
+    <p>Powered by <a href="https://hexo.io" class="copyright-links" target="_blank">Hexo</a> | Theme by <a
+                href="https://github.com/GeekaholicLin" class="copyright-links" target="_blank">GeekaholicLin</a>
+    </p>
+    
+    
+    <p>
+        <span id="busuanzi_container_site_uv" class="fa fa-bar-chart">
+        欢迎第<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>位小伙伴~
+        </span>
+    </p>
+    
+</footer>
+
+</div>
+    <ul id="tools">
+    <li class="totop-btn fa fa-angle-up"></li>
+    
+    <li class="toc-btn fa fa-list-ul"></li>
+    
+    
+
+    
+    <li class="comment-btn fa fa-comments-o">
+        <a href="#comments" title="comments"></a>
+    </li>
+    
+</ul>
+<p id="process"></p>
+<div id="search-overlay">
+    <div class="search-area-wrap">
+        <div id="search-area">
+            <div class="input-wrap focus">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input id="search-input" autofocus autocomplete="off" type="text"
+                       placeholder="search this website..."/>
+            </div>
+            <ul id="search-result">
+                <li class="load-first"><i class="fa fa-spinner fa-spin"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#你应该知道的：CSS浏览器兼容性处理"><span class="toc-number">1.</span> <span class="toc-text">你应该知道的：CSS浏览器兼容性处理</span></a></li></ol>
+
+
+    <script src="/js/highsong.js"></script>
+
+
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    //theme config datas
+    var copyrightObj = {};
+    copyrightObj.enable = 'true';
+    copyrightObj.triggerCopyLength = '200';
+    copyrightObj.appendText = '商业转载请联系作者获得授权,非商业转载请注明出处 © example';
+    var leancloudObj = {};
+    leancloudObj.enable = 'true';
+    leancloudObj.className = 'BlogCounter';
+    leancloudObj.limits = '10';
+</script>
+<script type="text/javascript">
+    var search = {};
+    var search_path = "search.xml";
+    if (!search_path) {
+        search_path = "search.xml";
+    }
+    search.path = "/" + search_path;
+    search.func =  _ajax.init();
+</script>
+<script src="/js/app.js"></script>
+
+
+</body>
+</html>

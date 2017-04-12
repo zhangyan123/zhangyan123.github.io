@@ -1,0 +1,450 @@
+<!doctype html>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable"  content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    
+    
+    <!--Simple SEO-->
+
+<meta name="description" content=前端学习记录/>
+
+
+<meta name="robots" content=all />
+<meta name="google" content=all />
+<meta name="googlebot" content=all />
+<meta name="verify" content=all />
+    <!--Title-->
+
+<title>ES5新增常用特性 | 张言的博客</title>
+
+<link rel="alternate" href="/atom.xml" title="张言的博客" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/pages/post.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
+    <!--script-->
+
+
+
+<script src="//cdn1.lncld.net/static/js/2.1.3/av-min.js"></script>
+<script>
+    var appId = "A5uFwcx8xbECYfSMRXiEUoVU-gzGzoHsz";
+    var appKey = "vIeiO5xV1mdSbzJxN48KSumD";
+    var region = 'null';
+    AV.init({
+        appId: appId,
+        appKey: appKey,
+        region: region
+    });
+</script>
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    
+    
+</head>
+
+<body>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<style>
+    header{ top: 71px; position: absolute!important;}
+    #container{padding-top: 151px!important;}
+</style>
+<div style="position:fixed;z-index:9999;left:0;top:0;width:100%;height:70px;background-color:#e0e0e0;color:#396CA5;border-bottom:1px solid #cecece;text-align:center;line-height:70px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<div id="wrap">
+    <header  style="position: absolute;" >
+    <div id="site-meta">
+        <a href="/" id="logo">
+            <h1 class="title">张言的博客</h1>
+        </a>
+        
+        <h2 class="subtitle">记录前端开发学习与积累</h2>
+        
+    </div>
+    <ul id="nav">
+        
+            <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
+        
+            <li><a href="/demo"><i class="fa fa-code"></i>作品</a></li>
+        
+            <li><a href="/about"><i class="fa fa-user"></i>About</a></li>
+        
+        <li id="search"><a href="javascript:void(0)"><i class="fa fa-search"></i>Search</a></li>
+    </ul>
+</header>
+
+    <div id="container">
+        
+<ul id="sidebar">
+    
+    
+<li class="widget notification">
+    <i class="fa fa-bell-o"></i>
+    <div>
+        <p>希望每周可以出两篇高质量文章</p>
+    </div>
+</li>
+
+    
+    
+<li class="widget widget-normal category">
+    <h3 class="fa fa-th widget-title">Categories</h3>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/写作/"><i class="fa" aria-hidden="true">写作</i></a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/写作/markdown/"><i class="fa" aria-hidden="true">markdown</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/"><i class="fa" aria-hidden="true">前端开发</i></a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/"><i class="fa" aria-hidden="true">javaScript</i></a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/JS进步史/"><i class="fa" aria-hidden="true">JS进步史</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/基础/"><i class="fa" aria-hidden="true">基础</i></a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/闭包/"><i class="fa" aria-hidden="true">闭包</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/兼容性问题/"><i class="fa" aria-hidden="true">兼容性问题</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/框架/"><i class="fa" aria-hidden="true">框架</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/正则表达式/"><i class="fa" aria-hidden="true">正则表达式</i></a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/正则表达式/方法/"><i class="fa" aria-hidden="true">方法</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/"><i class="fa" aria-hidden="true">设计模式</i></a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/策略模式/"><i class="fa" aria-hidden="true">策略模式</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/观察者模式/"><i class="fa" aria-hidden="true">观察者模式</i></a><span class="category-list-count">1</span></li></ul></li></ul>
+</li>
+
+
+    
+    
+<li class="widget widget-normal archive">
+  <h3 class="fa fa-archive widget-title">Archives</h3>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/"><i class="fa" aria-hidden="true">October 2016</i></a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/"><i class="fa" aria-hidden="true">September 2016</i></a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/"><i class="fa" aria-hidden="true">August 2016</i></a><span class="archive-list-count">1</span></li></ul>
+</li>
+
+
+    
+    
+<li class="widget widget-normal popular-posts" id="popular-posts">
+    <h3 class="fa fa-thermometer-3 widget-title">Popular Posts</h3>
+    <ul id="popular-content">
+        <li class="load-first"><i class="fa fa-spinner fa-pulse"></i></li>
+    </ul>
+</li>
+
+    
+    
+<li class="widget widget-normal tags">
+  <h3 class="fa fa-tags widget-title">Tag Cloud</h3>
+  <div class="tagcloud-content">
+    
+      <a href="/tags/javaScript/" style="font-size: 0.2rem; color: #0a407c">javaScript</a> <a href="/tags/写作/" style="font-size: 0.14rem; color: #69c">写作</a> <a href="/tags/larabel/" style="font-size: 0.14rem; color: #69c">larabel</a>
+  </div>
+</li>
+
+    
+    
+<li class="widget widget-normal friends-link">
+    <h3 class="fa fa-globe widget-title">Friends</h3><br/>
+
+    
+        <a href="http://geekaholiclin.github.io" class="fa" target="_blank">主题作者</a>
+
+    
+
+</li>
+
+    
+</ul>
+
+
+        <div id="main">
+    <article id="post">
+        <div id="post-header">
+
+            <h1 id="ES5新增常用特性">
+                
+                ES5新增常用特性
+                
+            </h1>
+            <div class="article-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+        <span>JS进步史</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            javaScript
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta ">2016/10/12</span>
+    </span>
+    
+    <span  class=" fa-wrap">
+        <i class="fa fa-comment-o"></i>
+        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2016/10/12/JS发展史（1）/" data-thread-key="/2016/10/12/JS发展史（1）/"
+           data-count-type="comments"></span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+            <i class="fa fa-thermometer-three-quarters"></i>
+        <span class="hits hits-meta " data-leadcloud-title="ES5新增常用特性"
+              data-leadcloud-url="/2016/10/12/JS发展史（1）/"><i class="fa fa-spinner fa-spin"></i></span>
+    </span>
+    
+    
+</div>
+
+            
+            
+        </div>
+        
+        <div id="post-body">
+            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>ECMAScript 5.1 (或仅 ES5) 是ECMAScript(基于JavaScript的规范)标准最新修正。 与HTML5规范进程本质类似，ES5通过对现有JavaScript方法添加语句和原生ECMAScript对象做合并实现标准化。ES5还引入了一个语法的严格变种，被称为”严格模式(strict mode)”。</p>
+<p>本文介绍一些有用的改变和添加。</p>
+<h2 id="浏览器支持"><a href="#浏览器支持" class="headerlink" title="浏览器支持"></a>浏览器支持</h2><p>随着Opera 11.60的发布, 所有5大浏览器都支持ES5, 除了一些实现的bugs. 除非另有说明，本文中提到的的一切可以用在以下浏览器版本（或更高）：</p>
+<ul>
+<li>Opera 11.60</li>
+<li>Internet Explorer 9*</li>
+<li>Firefox 4</li>
+<li>Safari 5.1**</li>
+<li>Chrome 13</li>
+<li>IE9不支持严格模式 — IE10 添加</li>
+<li>Safari 5.1 仍不支持 Function.prototype.bind, 尽管 Function.prototype.bind现在已经被Webkit所支持。</li>
+</ul>
+<h2 id="ES5的严格模式"><a href="#ES5的严格模式" class="headerlink" title="ES5的严格模式"></a>ES5的严格模式</h2><p>严格模式给作者提供了选择一个限制性更强语言变种的方式——给作者提供额外的可靠性给用户提供额外的安全性。在JS文件或是函数的顶部添加”use strict”即可启用严格模式。因为”use strict”就是个字符串，因此其会被旧版浏览器安全地忽视。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&quot;use strict&quot;;</div><div class="line">function strict()&#123;</div><div class="line">  &quot;use strict&quot;;</div><div class="line">  //...</div><div class="line">&#125;</div><div class="line"></div><div class="line">function sloppy()&#123;</div><div class="line">  eval(&quot;window.foo = &apos;bar&apos;&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在严格模式下运行脚本，不少导致提醒或buggy行为的事情会抛出错误，例如：</p>
+<p>未声明的变量赋值抛出一个ReferenceError, 而不是创建一个全局变量。<br>不止一次对对象字面量分配相同的属性会抛出SyntaxError.<br>使用with语句抛出SyntaxError.<br>MDSN的严格模式文章有个关于所有这些差异很有用的总结表格。</p>
+<h2 id="新增JSON"><a href="#新增JSON" class="headerlink" title="新增JSON"></a>新增JSON</h2><p>ES5提供一个全局的JSON对象，用来序列化(JSON.stringify)和反序列化(JSON.parse)对象为JSON格式。</p>
+<p>对于老的浏览器，可以考虑使用Douglas Crockford的json2.js, 可以让旧的浏览器实现同样的功能（原始支持功能测试后）。</p>
+<p>JSON.parse(text [, reviver])</p>
+<p>JSON.parse接受文本(JSON格式)并转换成一个ECMAScript值。该可选的reviver参数是有带有key和value两个参数的函数，其作用于结果——让过滤和转换返回值成为可能。</p>
+<figure class="highlight plain"><figcaption><span>result = JSON.parse('&#123;"a": 1, "b": "2"&#125;');</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//Object</div><div class="line"> result.b</div><div class="line">//&quot;2&quot;</div></pre></td></tr></table></figure>
+<p>如果我们想确保解析的值是个整数，我们可以使用reviver方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var result = JSON.parse(&apos;&#123;&quot;a&quot;: 1, &quot;b&quot;: &quot;2&quot;&#125;&apos;, function(key, value)&#123;</div><div class="line">  if (typeof value == &apos;string&apos;)&#123;</div><div class="line">    return parseInt(value);</div><div class="line">  &#125; else &#123;</div><div class="line">    return value; </div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">&gt;&gt; result.b</div><div class="line">2</div><div class="line">JSON.stringify(value [, replacer [, space]])</div></pre></td></tr></table></figure></p>
+<p>JSON.stringify允许作者接受一个ECMAScript值然后转换成JSON格式的字符串。 在其最简单的形式中，JSON.stringify接受一个值返回一个字符串，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> var mike = JSON.stringify(&#123;mike: &quot;taylor&quot;&#125;)</div><div class="line">//undefined</div><div class="line"></div><div class="line">mike</div><div class="line">//&apos;&#123;&quot;mike&quot;: &quot;taylor&quot;&#125;&apos;</div><div class="line"></div><div class="line">typeof mike</div><div class="line">//&quot;string&quot;</div></pre></td></tr></table></figure></p>
+<p>如果我们需要改变值字符串化的方式，或是对我们选择的提供过滤，我们可以将其传给replacer函数。例如，我们想过滤出即将被字符串化的对象中值为13的属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var nums = &#123;</div><div class="line">  &quot;first&quot;: 7,</div><div class="line">  &quot;second&quot;: 14,</div><div class="line">  &quot;third&quot;: 13</div><div class="line">&#125;</div><div class="line"></div><div class="line">var luckyNums = JSON.stringify(nums, function(key, value)&#123;</div><div class="line">  if (value == 13) &#123;</div><div class="line">    return undefined;</div><div class="line">  &#125; else &#123;</div><div class="line">    return value;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">&gt;&gt; luckyNums</div><div class="line">&apos;&#123;&quot;first&quot;: 7, &quot;second&quot;: 14&#125;&apos;</div></pre></td></tr></table></figure></p>
+<p>如果replacer方法返回undefined, 则键值对就不会包含在最终的JSON中。我们同样可以传递一个space参数以便获得返回结果的可读性帮助。space参数可以是个数字，表明了作缩进的JSON字符串或字符串每个水平上缩进的空格数。如果参数是个超过10的数值，或是超过10个字符的字符串，将导致取数值10或是截取前10个字符。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var luckyNums = JSON.stringify(nums, function(key, value) &#123;</div><div class="line">  if (value == 13) &#123;</div><div class="line">    return undefined;</div><div class="line">  &#125; else &#123;</div><div class="line">    return value;</div><div class="line">  &#125;</div><div class="line">&#125;, 2);</div><div class="line"></div><div class="line">&gt;&gt; luckyNums</div><div class="line">&apos;&#123;</div><div class="line">  &quot;first&quot;:7,</div><div class="line">  &quot;second&quot;:14</div><div class="line">&#125;&apos;</div></pre></td></tr></table></figure></p>
+<h2 id="对象新增方法"><a href="#对象新增方法" class="headerlink" title="对象新增方法"></a>对象新增方法</h2><p>下面的方法是添加到Object上的构造器：</p>
+<p>Object.getPrototypeOf<br>Object.getOwnPropertyDescriptor<br>Object.getOwnPropertyNames<br>Object.create<br>Object.defineProperty(定义属性描述)</p>
+<ul>
+<li>在ES3中，除了一些内置属性（例如Math.PI），对象的属性是可以在任何时候都进行增删改查的，在ES5中，这种原本内建属性才有的特权被普适话，ES5引入属性描述符的概念，我们可以通过它对定义的属性有更大的控制权。属性描述符是每个属性都具备的一个描述对象，是对象就可以有属性和方法，但属性描述符对象的成员是确定的，为避免歧义，我们可以叫这些成员为特性；</li>
+<li>了解下属性描述符中的特性：<ul>
+<li>value 存放属性值</li>
+<li>writable  是否可写</li>
+<li>enumberable 是否可枚举</li>
+<li>configurable 是否可删除</li>
+<li>set() 更新属性时调用</li>
+<li>get() 获取属性时调用</li>
+</ul>
+</li>
+<li><p>举例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var person=&#123;&#125;;</div><div class="line">person.leds=2;</div></pre></td></tr></table></figure>
+<p>以上ES3风格的代码等价为     </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var person=&#123;&#125;;</div><div class="line">Object.defineProperty(person,&quot;legs&quot;,&#123;</div><div class="line">  value:2,</div><div class="line">  writable:true,</div><div class="line">  configurable:true,</div><div class="line">  enumrable:true</div><div class="line"></div><div class="line">&#125;);如上所示，除了value默认为undefined其他特性均默认为false,这意味着，通过这种方式定义属性时需显示设定他们值为true。</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Object.defineProperties<br>Object.seal<br>Object.freeze<br>Object.preventExtensions<br>Object.isSealed<br>Object.isFrozen<br>Object.isExtensible<br>Object.keys<br>这些新增的好处之一是对象的属性有了更多控制，例如哪些是允许被修改的，哪些是可以枚举的，哪些是可以删除的等。这个的实现通过程序访问对象的属性描述符(property descriptors). 例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var cat = &#123;&#125;;</div><div class="line"></div><div class="line">Object.defineProperty(cat, &quot;name&quot;, &#123;</div><div class="line">  value: &quot;Maru&quot;,</div><div class="line">  writable: false,</div><div class="line">  enumerable: true,</div><div class="line">  configurable: false</div><div class="line">&#125;);</div><div class="line"></div><div class="line">Object.defineProperty(cat, &quot;skill&quot;, &#123;</div><div class="line">  value: &quot;exploring boxes&quot;,</div><div class="line">  writable: true,</div><div class="line">  enumerable: true,</div><div class="line">  configurable: true</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>对于我们的cat对象, 其名字name不能被改变，但是会出现在for-in循环中。在其他方面，Maru擅长探索盒子(exploring boxes), 但是可以在将来改变，因为skill属性是writable和configurable的。</p>
+<p>在之后的文章我们将详细探讨所有附加的对象。</p>
+<h2 id="数组新增方法"><a href="#数组新增方法" class="headerlink" title="数组新增方法"></a>数组新增方法</h2><p>以下方法添加到了Arrayprototype对象上:<br>Array.prototype.indexOf<br>Array.prototype.lastIndexOf<br>Array.prototype.every<br>Array.prototype.some<br>Array.prototype.forEach<br>Array.prototype.map<br>Array.prototype.filter<br>Array.prototype.reduce<br>Array.prototype.reduceRight<br>关于ES5数组”extras” Dmitry Soshnikov写过一篇有深度的参考文章。</p>
+<p>Dmitry的文章中有一个没有提到，就是Array.isArray, 正如你看到的，这厮直接写在了Array构造器上，而不是prototype对象上。Array.isArray会按照你所期待的那样去做 — 这是一个根据参数的[[Class]]内部属性是否是”Array”返回true或false.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Array.isArray(&quot;NO U&quot;)</div><div class="line">&gt;&gt; false</div><div class="line"></div><div class="line">Array.isArray([&quot;NO&quot;, &quot;U&quot;])</div><div class="line">&gt;&gt; true</div></pre></td></tr></table></figure></p>
+<p>在ES3中，唯一可靠的确定一个值是数组的方式就是使用“the Miller Device”, 即比对一个数组其内在的[[Class]]属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">Object.prototype.toString.apply(value) === &apos;[object Array]&apos;</div><div class="line">Function.prototype.bind(thisArg [, arg1 [, arg2, …]])</div><div class="line">Function.prototype.bind返回一个新的函数对象，该函数对象的this绑定到了thisArg参数上。从本质上讲，这允许你在其他对象链中执行一个函数。</div><div class="line"></div><div class="line">function locate()&#123;</div><div class="line">  console.log(this.location);</div><div class="line">&#125;</div><div class="line"></div><div class="line">function Maru(location)&#123;</div><div class="line">  this.location = location;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var kitty = new Maru(&quot;cardboard box&quot;);</div><div class="line"></div><div class="line">var locateMaru = locate.bind(kitty);</div><div class="line"></div><div class="line">locateMaru();</div></pre></td></tr></table></figure></p>
+<p>在这个例子中，我们将Maru对象的上下文应用在location函数中。因为location是个全局对象的属性，其this值就是全局对象(window)。在这种情况下，我们向上寻找cat, 并不是Location对象，因为我们可以通过绑定的总是kitty的this值创建一个新方法locateMaru.</p>
+<h2 id="补充参考"><a href="#补充参考" class="headerlink" title="补充参考"></a>补充参考</h2><p>ECMAScript 5 对象和属性 by John Resig<br>理解JavaScript函数调用和”this” by Yehuda Katz<br>JavaScript严格模式 by Angus Croll<br>ECMA-262-5详细 介绍 by Dmitry Soshnikov<br>ECMAScript 5 兼容性表 by Juriy Zaytsev<br>本文许可自Creative Commons Attribution 3.0 Unported许可。</p>
+<p>本文转载自张鑫旭-鑫空间-鑫生活<a href="http://www.zhangxinxu.com/wordpress/?p=2148" target="_blank" rel="external">http://www.zhangxinxu.com</a></p>
+
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="/images/author.png" alt="avatar"/>
+                
+                <a href="javascript:void(0)" class="high-song">high起来 &#128541;</a>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">赠我一杯 &#128536;</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>Author:
+                    
+                    <a href="/about">张言</a>
+                </li>
+                <li>Published Date: <span>2016-10-12  04:47:09</span></li>
+                
+                <li>Updated Date: <span>2017-04-12  09:29:04</span></li>
+                
+                <li class="post-category">
+                    Categories:
+                    
+                    <a href="/categories/前端开发/">前端开发</a>
+                    
+                    <a href="/categories/前端开发/javaScript/">javaScript</a>
+                    
+                    <a href="/categories/前端开发/javaScript/JS进步史/">JS进步史</a>
+                    
+                </li>
+                <li class="post-tags">
+                    Tags:
+                    
+                    <a href="/tags/javaScript/">javaScript</a>
+                    
+                </li>
+                
+                <li> License: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="/images/Ali-pay.png" alt="支付宝付款" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
+        
+        <a href="/2016/10/14/正则表达式（1）/" class="pre-post fa fa-caret-left">正则表达式是提高效率的利器（一）</a>
+        
+        
+        <a href="/2016/10/11/浏览器兼容性问题（2）/" class="next-post fa">啃掉IE低版本这块硬骨头（二）</a>
+        
+    </div>
+    
+    <div id="comments">
+        
+
+<section id="duoshuo_comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="/2016/10/12/JS发展史（1）/" data-title="ES5新增常用特性" data-url="http://zhangyan123.github.io/2016/10/12/JS发展史（1）/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:'zhangyan123'};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';
+            ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</section>
+
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+    <footer id="footer">
+    
+    <div class="social">
+        
+        <a href="http://www.imooc.com/u/1974751" class="fa fa-free-code-camp" target="_blank" title="immoc"></a>
+        
+        <a href="https://github.com/zhangyan123" class="fa fa-github" target="_blank" title="github"></a>
+        
+        <a href="https://leetcode.com/problemset/algorithms/" class="fa fa-code" target="_blank" title="todo"></a>
+        
+    </div>
+    
+    <div>
+        
+        <a href="/" class="copyright-links">张言</a>&copy;2017 - 2017.All Rights
+        Reserved.
+    </div>
+    <p>Powered by <a href="https://hexo.io" class="copyright-links" target="_blank">Hexo</a> | Theme by <a
+                href="https://github.com/GeekaholicLin" class="copyright-links" target="_blank">GeekaholicLin</a>
+    </p>
+    
+    
+    <p>
+        <span id="busuanzi_container_site_uv" class="fa fa-bar-chart">
+        欢迎第<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>位小伙伴~
+        </span>
+    </p>
+    
+</footer>
+
+</div>
+    <ul id="tools">
+    <li class="totop-btn fa fa-angle-up"></li>
+    
+    <li class="toc-btn fa fa-list-ul"></li>
+    
+    
+
+    
+    <li class="comment-btn fa fa-comments-o">
+        <a href="#comments" title="comments"></a>
+    </li>
+    
+</ul>
+<p id="process"></p>
+<div id="search-overlay">
+    <div class="search-area-wrap">
+        <div id="search-area">
+            <div class="input-wrap focus">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input id="search-input" autofocus autocomplete="off" type="text"
+                       placeholder="search this website..."/>
+            </div>
+            <ul id="search-result">
+                <li class="load-first"><i class="fa fa-spinner fa-spin"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#浏览器支持"><span class="toc-number">2.</span> <span class="toc-text">浏览器支持</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ES5的严格模式"><span class="toc-number">3.</span> <span class="toc-text">ES5的严格模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新增JSON"><span class="toc-number">4.</span> <span class="toc-text">新增JSON</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象新增方法"><span class="toc-number">5.</span> <span class="toc-text">对象新增方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组新增方法"><span class="toc-number">6.</span> <span class="toc-text">数组新增方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#补充参考"><span class="toc-number">7.</span> <span class="toc-text">补充参考</span></a></li></ol>
+
+
+    <script src="/js/highsong.js"></script>
+
+
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    //theme config datas
+    var copyrightObj = {};
+    copyrightObj.enable = 'true';
+    copyrightObj.triggerCopyLength = '200';
+    copyrightObj.appendText = '商业转载请联系作者获得授权,非商业转载请注明出处 © example';
+    var leancloudObj = {};
+    leancloudObj.enable = 'true';
+    leancloudObj.className = 'BlogCounter';
+    leancloudObj.limits = '10';
+</script>
+<script type="text/javascript">
+    var search = {};
+    var search_path = "search.xml";
+    if (!search_path) {
+        search_path = "search.xml";
+    }
+    search.path = "/" + search_path;
+    search.func =  _ajax.init();
+</script>
+<script src="/js/app.js"></script>
+
+
+</body>
+</html>

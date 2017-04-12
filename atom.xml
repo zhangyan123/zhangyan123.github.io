@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangyan123.github.io/"/>
-  <updated>2017-04-10T14:00:59.000Z</updated>
+  <updated>2017-04-12T13:25:48.000Z</updated>
   <id>http://zhangyan123.github.io/</id>
   
   <author>
@@ -16,75 +16,133 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>javaScript 语法基础（9）</title>
-    <link href="http://zhangyan123.github.io/2016/10/10/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%889%EF%BC%89/"/>
-    <id>http://zhangyan123.github.io/2016/10/10/javaScript语法基础（9）/</id>
-    <published>2016-10-10T08:45:09.000Z</published>
-    <updated>2017-04-10T14:00:59.000Z</updated>
+    <title>策略模式在前端开发中的应用</title>
+    <link href="http://zhangyan123.github.io/2016/10/18/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%882%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/10/18/设计模式（2）/</id>
+    <published>2016-10-18T08:50:04.000Z</published>
+    <updated>2017-04-12T13:25:48.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="你应该知道的：pollyfills解决方案"><a href="#你应该知道的：pollyfills解决方案" class="headerlink" title="你应该知道的：pollyfills解决方案"></a>你应该知道的：pollyfills解决方案</h1>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;你应该知道的：pollyfills解决方案&quot;&gt;&lt;a href=&quot;#你应该知道的：pollyfills解决方案&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：pollyfills解决方案&quot;&gt;&lt;/a&gt;你应该知道的：pollyfills解决方案&lt;/
-    
-    </summary>
-    
-      <category term="pollyfills" scheme="http://zhangyan123.github.io/categories/pollyfills/"/>
-    
-    
-      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>javaScript 语法基础（8）</title>
-    <link href="http://zhangyan123.github.io/2016/10/10/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%888%EF%BC%89/"/>
-    <id>http://zhangyan123.github.io/2016/10/10/javaScript语法基础（8）/</id>
-    <published>2016-10-10T08:40:09.000Z</published>
-    <updated>2017-04-10T14:01:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="你应该知道的：观察者模式"><a href="#你应该知道的：观察者模式" class="headerlink" title="你应该知道的：观察者模式"></a>你应该知道的：观察者模式</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="你应该知道的：JS闭包在开发实战中的应用"><a href="#你应该知道的：JS闭包在开发实战中的应用" class="headerlink" title="你应该知道的：JS闭包在开发实战中的应用"></a>你应该知道的：JS闭包在开发实战中的应用</h1>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;你应该知道的：观察者模式&quot;&gt;&lt;a href=&quot;#你应该知道的：观察者模式&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：观察者模式&quot;&gt;&lt;/a&gt;你应该知道的：观察者模式&lt;/h1&gt;
+      &lt;h1 id=&quot;你应该知道的：JS闭包在开发实战中的应用&quot;&gt;&lt;a href=&quot;#你应该知道的：JS闭包在开发实战中的应用&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：JS闭包在开发实战中的应用&quot;&gt;&lt;/a&gt;你应该知道的：JS闭包在开发实战中的应用&lt;/h1&gt;
     
     </summary>
     
       <category term="设计模式" scheme="http://zhangyan123.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
+      <category term="策略模式" scheme="http://zhangyan123.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
+    
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
     
   </entry>
   
   <entry>
-    <title>javaScript 语法基础（7）</title>
-    <link href="http://zhangyan123.github.io/2016/10/09/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%887%EF%BC%89/"/>
-    <id>http://zhangyan123.github.io/2016/10/09/javaScript语法基础（7）/</id>
-    <published>2016-10-09T08:00:10.000Z</published>
-    <updated>2017-04-10T13:44:39.000Z</updated>
+    <title>剖析闭包的战场</title>
+    <link href="http://zhangyan123.github.io/2016/10/17/%E9%97%AD%E5%8C%85%E5%BA%94%E7%94%A8%EF%BC%881%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/10/17/闭包应用（1）/</id>
+    <published>2016-10-17T08:46:04.000Z</published>
+    <updated>2017-04-12T13:28:27.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="你应该知道的：浏览器兼容性处理"><a href="#你应该知道的：浏览器兼容性处理" class="headerlink" title="你应该知道的：浏览器兼容性处理"></a>你应该知道的：浏览器兼容性处理</h1><ul>
-<li>事件处理</li>
-<li>异步请求</li>
-<li>css机制</li>
-<li>SSE</li>
+    <content type="html"><![CDATA[<h1 id="你应该知道的：JS闭包在开发实战中的应用"><a href="#你应该知道的：JS闭包在开发实战中的应用" class="headerlink" title="你应该知道的：JS闭包在开发实战中的应用"></a>你应该知道的：JS闭包在开发实战中的应用</h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;你应该知道的：JS闭包在开发实战中的应用&quot;&gt;&lt;a href=&quot;#你应该知道的：JS闭包在开发实战中的应用&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：JS闭包在开发实战中的应用&quot;&gt;&lt;/a&gt;你应该知道的：JS闭包在开发实战中的应用&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
+    
+      <category term="闭包" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/%E9%97%AD%E5%8C%85/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>观察者模式在前端开发中的应用</title>
+    <link href="http://zhangyan123.github.io/2016/10/16/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%881%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/10/16/设计模式（1）/</id>
+    <published>2016-10-16T08:45:09.000Z</published>
+    <updated>2017-04-12T13:25:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="你应该知道的：前端开发中观察者模式实践"><a href="#你应该知道的：前端开发中观察者模式实践" class="headerlink" title="你应该知道的：前端开发中观察者模式实践"></a>你应该知道的：前端开发中观察者模式实践</h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;你应该知道的：前端开发中观察者模式实践&quot;&gt;&lt;a href=&quot;#你应该知道的：前端开发中观察者模式实践&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：前端开发中观察者模式实践&quot;&gt;&lt;/a&gt;你应该知道的：前端开发中观察者模式实践&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://zhangyan123.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="观察者模式" scheme="http://zhangyan123.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正则表达式是提高效率的利器（一）</title>
+    <link href="http://zhangyan123.github.io/2016/10/14/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%881%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/10/14/正则表达式（1）/</id>
+    <published>2016-10-14T08:30:09.000Z</published>
+    <updated>2017-04-12T13:28:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="你应该知道的：RegExp"><a href="#你应该知道的：RegExp" class="headerlink" title="你应该知道的：RegExp"></a>你应该知道的：RegExp</h1><p>对于正则表达式，不同的语言有着不同的实现（每种语言的正则表达式互相之间的关系类似方言，同理不同表达），js采用的是Perl5的语法。</p>
+<ul>
+<li>构造正则对象的方式：<ul>
+<li>优选字面量方式：<code>var re = /^j.*t$/gim</code>     </li>
+<li>构造器方式：<code>var re = RegExp(‘^j.*t$’,’gim’)</code></li>
+</ul>
+</li>
+<li>正则对象的属性：<ul>
+<li>global 全局检测，默认false;</li>
+<li>ignoreCase  忽略大小写，默认false;</li>
+<li>multiline 跨行搜索，默认false;</li>
+<li>lastIndex 搜索开始位置索引值，默认0;</li>
+<li>source 存储了正则对象的pattern<br>以上属性均在对象创建时设置，使用对象过程中不可修改（除了lastIndex）.</li>
+</ul>
+</li>
+<li><p>应用正则对象的方法:</p>
+<ul>
+<li>test() 返回布尔值，被测字符串符合模式true</li>
+<li>exec() 返回匹配到字符串组成的数据<br>以上为正则对象自带方法，下面总结字符串对象中应用正则对象的场景     </li>
+<li>match() 返回匹配内容的数组</li>
+<li>search() 返回第一个匹配内容所在的位置索引值</li>
+<li><p>replace() 将匹配的文本替换为指定的字符串</p>
+<ol>
+<li><p>回调式替换     </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">s.replace(&quot;/(.*)@(.*)\.(.*)/g&quot;,callback);</div><div class="line">  function callback(匹配到的内容(例子函数体内使用match表示)，模式分组匹配到的字符串组，匹配内容所在位置索引值，被搜索的字符串)&#123;</div><div class="line">    return &quot;_&quot;+match;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>(pattern)当匹配模式被放在括号中时，标明该匹配模式的匹配串是可获取的，这种模式成为捕获模式，使用<code>$1…$9</code>等参数来指代<br>(?:pattern)相对与捕获模式可以理解这种非捕获模式，捕获过程中直接跳过这些模式，eg:    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&quot;regular expression&quot;.replace(&apos;/(?:r)(e)/g&apos;,&apos;$1$1&apos;);</div><div class="line">//&quot;eegular expeession&quot;匹配到了所有的‘re’并用ee替换,可见r没有被捕获进$1</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><div style="display:inline-block;"><img src="/images/replace.png" alt="myBlog">&lt;/div</div></p>
+</li>
+<li>split() 以模式匹配的内容为分隔点，将字符串分割为数组</li>
+</ul>
+</li>
 </ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;你应该知道的：浏览器兼容性处理&quot;&gt;&lt;a href=&quot;#你应该知道的：浏览器兼容性处理&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：浏览器兼容性处理&quot;&gt;&lt;/a&gt;你应该知道的：浏览器兼容性处理&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;事件处理&lt;/li&gt;
-&lt;l
+      &lt;h1 id=&quot;你应该知道的：RegExp&quot;&gt;&lt;a href=&quot;#你应该知道的：RegExp&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：RegExp&quot;&gt;&lt;/a&gt;你应该知道的：RegExp&lt;/h1&gt;&lt;p&gt;对于正则表达式，不同的语言有着不同的实现（每种语言的
     
     </summary>
     
-      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+      <category term="正则表达式" scheme="http://zhangyan123.github.io/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
-      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9F%BA%E7%A1%80/"/>
+      <category term="方法" scheme="http://zhangyan123.github.io/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/%E6%96%B9%E6%B3%95/"/>
     
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
@@ -92,24 +150,77 @@
   </entry>
   
   <entry>
-    <title>javaScript 语法基础（6）</title>
-    <link href="http://zhangyan123.github.io/2016/10/08/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%886%EF%BC%89/"/>
-    <id>http://zhangyan123.github.io/2016/10/08/javaScript语法基础（6）/</id>
-    <published>2016-10-08T08:00:10.000Z</published>
-    <updated>2017-04-11T02:13:54.000Z</updated>
+    <title>ES5新增常用特性</title>
+    <link href="http://zhangyan123.github.io/2016/10/12/JS%E5%8F%91%E5%B1%95%E5%8F%B2%EF%BC%881%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/10/12/JS发展史（1）/</id>
+    <published>2016-10-12T08:47:09.000Z</published>
+    <updated>2017-04-12T13:29:04.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="你应该知道的：浏览器环境"><a href="#你应该知道的：浏览器环境" class="headerlink" title="你应该知道的：浏览器环境"></a>你应该知道的：浏览器环境</h1><p><img src="/images/browser.png" alt="myBlog"></p>
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>ECMAScript 5.1 (或仅 ES5) 是ECMAScript(基于JavaScript的规范)标准最新修正。 与HTML5规范进程本质类似，ES5通过对现有JavaScript方法添加语句和原生ECMAScript对象做合并实现标准化。ES5还引入了一个语法的严格变种，被称为”严格模式(strict mode)”。</p>
+<p>本文介绍一些有用的改变和添加。</p>
+<h2 id="浏览器支持"><a href="#浏览器支持" class="headerlink" title="浏览器支持"></a>浏览器支持</h2><p>随着Opera 11.60的发布, 所有5大浏览器都支持ES5, 除了一些实现的bugs. 除非另有说明，本文中提到的的一切可以用在以下浏览器版本（或更高）：</p>
+<ul>
+<li>Opera 11.60</li>
+<li>Internet Explorer 9*</li>
+<li>Firefox 4</li>
+<li>Safari 5.1**</li>
+<li>Chrome 13</li>
+<li>IE9不支持严格模式 — IE10 添加</li>
+<li>Safari 5.1 仍不支持 Function.prototype.bind, 尽管 Function.prototype.bind现在已经被Webkit所支持。</li>
+</ul>
+<h2 id="ES5的严格模式"><a href="#ES5的严格模式" class="headerlink" title="ES5的严格模式"></a>ES5的严格模式</h2><p>严格模式给作者提供了选择一个限制性更强语言变种的方式——给作者提供额外的可靠性给用户提供额外的安全性。在JS文件或是函数的顶部添加”use strict”即可启用严格模式。因为”use strict”就是个字符串，因此其会被旧版浏览器安全地忽视。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&quot;use strict&quot;;</div><div class="line">function strict()&#123;</div><div class="line">  &quot;use strict&quot;;</div><div class="line">  //...</div><div class="line">&#125;</div><div class="line"></div><div class="line">function sloppy()&#123;</div><div class="line">  eval(&quot;window.foo = &apos;bar&apos;&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在严格模式下运行脚本，不少导致提醒或buggy行为的事情会抛出错误，例如：</p>
+<p>未声明的变量赋值抛出一个ReferenceError, 而不是创建一个全局变量。<br>不止一次对对象字面量分配相同的属性会抛出SyntaxError.<br>使用with语句抛出SyntaxError.<br>MDSN的严格模式文章有个关于所有这些差异很有用的总结表格。</p>
+<h2 id="新增JSON"><a href="#新增JSON" class="headerlink" title="新增JSON"></a>新增JSON</h2><p>ES5提供一个全局的JSON对象，用来序列化(JSON.stringify)和反序列化(JSON.parse)对象为JSON格式。</p>
+<p>对于老的浏览器，可以考虑使用Douglas Crockford的json2.js, 可以让旧的浏览器实现同样的功能（原始支持功能测试后）。</p>
+<p>JSON.parse(text [, reviver])</p>
+<p>JSON.parse接受文本(JSON格式)并转换成一个ECMAScript值。该可选的reviver参数是有带有key和value两个参数的函数，其作用于结果——让过滤和转换返回值成为可能。</p>
+<figure class="highlight plain"><figcaption><span>result = JSON.parse('&#123;"a": 1, "b": "2"&#125;');</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//Object</div><div class="line"> result.b</div><div class="line">//&quot;2&quot;</div></pre></td></tr></table></figure>
+<p>如果我们想确保解析的值是个整数，我们可以使用reviver方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var result = JSON.parse(&apos;&#123;&quot;a&quot;: 1, &quot;b&quot;: &quot;2&quot;&#125;&apos;, function(key, value)&#123;</div><div class="line">  if (typeof value == &apos;string&apos;)&#123;</div><div class="line">    return parseInt(value);</div><div class="line">  &#125; else &#123;</div><div class="line">    return value; </div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">&gt;&gt; result.b</div><div class="line">2</div><div class="line">JSON.stringify(value [, replacer [, space]])</div></pre></td></tr></table></figure></p>
+<p>JSON.stringify允许作者接受一个ECMAScript值然后转换成JSON格式的字符串。 在其最简单的形式中，JSON.stringify接受一个值返回一个字符串，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> var mike = JSON.stringify(&#123;mike: &quot;taylor&quot;&#125;)</div><div class="line">//undefined</div><div class="line"></div><div class="line">mike</div><div class="line">//&apos;&#123;&quot;mike&quot;: &quot;taylor&quot;&#125;&apos;</div><div class="line"></div><div class="line">typeof mike</div><div class="line">//&quot;string&quot;</div></pre></td></tr></table></figure></p>
+<p>如果我们需要改变值字符串化的方式，或是对我们选择的提供过滤，我们可以将其传给replacer函数。例如，我们想过滤出即将被字符串化的对象中值为13的属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var nums = &#123;</div><div class="line">  &quot;first&quot;: 7,</div><div class="line">  &quot;second&quot;: 14,</div><div class="line">  &quot;third&quot;: 13</div><div class="line">&#125;</div><div class="line"></div><div class="line">var luckyNums = JSON.stringify(nums, function(key, value)&#123;</div><div class="line">  if (value == 13) &#123;</div><div class="line">    return undefined;</div><div class="line">  &#125; else &#123;</div><div class="line">    return value;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">&gt;&gt; luckyNums</div><div class="line">&apos;&#123;&quot;first&quot;: 7, &quot;second&quot;: 14&#125;&apos;</div></pre></td></tr></table></figure></p>
+<p>如果replacer方法返回undefined, 则键值对就不会包含在最终的JSON中。我们同样可以传递一个space参数以便获得返回结果的可读性帮助。space参数可以是个数字，表明了作缩进的JSON字符串或字符串每个水平上缩进的空格数。如果参数是个超过10的数值，或是超过10个字符的字符串，将导致取数值10或是截取前10个字符。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var luckyNums = JSON.stringify(nums, function(key, value) &#123;</div><div class="line">  if (value == 13) &#123;</div><div class="line">    return undefined;</div><div class="line">  &#125; else &#123;</div><div class="line">    return value;</div><div class="line">  &#125;</div><div class="line">&#125;, 2);</div><div class="line"></div><div class="line">&gt;&gt; luckyNums</div><div class="line">&apos;&#123;</div><div class="line">  &quot;first&quot;:7,</div><div class="line">  &quot;second&quot;:14</div><div class="line">&#125;&apos;</div></pre></td></tr></table></figure></p>
+<h2 id="对象新增方法"><a href="#对象新增方法" class="headerlink" title="对象新增方法"></a>对象新增方法</h2><p>下面的方法是添加到Object上的构造器：</p>
+<p>Object.getPrototypeOf<br>Object.getOwnPropertyDescriptor<br>Object.getOwnPropertyNames<br>Object.create<br>Object.defineProperty(定义属性描述)</p>
+<ul>
+<li>在ES3中，除了一些内置属性（例如Math.PI），对象的属性是可以在任何时候都进行增删改查的，在ES5中，这种原本内建属性才有的特权被普适话，ES5引入属性描述符的概念，我们可以通过它对定义的属性有更大的控制权。属性描述符是每个属性都具备的一个描述对象，是对象就可以有属性和方法，但属性描述符对象的成员是确定的，为避免歧义，我们可以叫这些成员为特性；</li>
+<li>了解下属性描述符中的特性：<ul>
+<li>value 存放属性值</li>
+<li>writable  是否可写</li>
+<li>enumberable 是否可枚举</li>
+<li>configurable 是否可删除</li>
+<li>set() 更新属性时调用</li>
+<li>get() 获取属性时调用</li>
+</ul>
+</li>
+<li><p>举例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var person=&#123;&#125;;</div><div class="line">person.leds=2;</div></pre></td></tr></table></figure>
+<p>以上ES3风格的代码等价为     </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var person=&#123;&#125;;</div><div class="line">Object.defineProperty(person,&quot;legs&quot;,&#123;</div><div class="line">  value:2,</div><div class="line">  writable:true,</div><div class="line">  configurable:true,</div><div class="line">  enumrable:true</div><div class="line"></div><div class="line">&#125;);如上所示，除了value默认为undefined其他特性均默认为false,这意味着，通过这种方式定义属性时需显示设定他们值为true。</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Object.defineProperties<br>Object.seal<br>Object.freeze<br>Object.preventExtensions<br>Object.isSealed<br>Object.isFrozen<br>Object.isExtensible<br>Object.keys<br>这些新增的好处之一是对象的属性有了更多控制，例如哪些是允许被修改的，哪些是可以枚举的，哪些是可以删除的等。这个的实现通过程序访问对象的属性描述符(property descriptors). 例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var cat = &#123;&#125;;</div><div class="line"></div><div class="line">Object.defineProperty(cat, &quot;name&quot;, &#123;</div><div class="line">  value: &quot;Maru&quot;,</div><div class="line">  writable: false,</div><div class="line">  enumerable: true,</div><div class="line">  configurable: false</div><div class="line">&#125;);</div><div class="line"></div><div class="line">Object.defineProperty(cat, &quot;skill&quot;, &#123;</div><div class="line">  value: &quot;exploring boxes&quot;,</div><div class="line">  writable: true,</div><div class="line">  enumerable: true,</div><div class="line">  configurable: true</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>对于我们的cat对象, 其名字name不能被改变，但是会出现在for-in循环中。在其他方面，Maru擅长探索盒子(exploring boxes), 但是可以在将来改变，因为skill属性是writable和configurable的。</p>
+<p>在之后的文章我们将详细探讨所有附加的对象。</p>
+<h2 id="数组新增方法"><a href="#数组新增方法" class="headerlink" title="数组新增方法"></a>数组新增方法</h2><p>以下方法添加到了Arrayprototype对象上:<br>Array.prototype.indexOf<br>Array.prototype.lastIndexOf<br>Array.prototype.every<br>Array.prototype.some<br>Array.prototype.forEach<br>Array.prototype.map<br>Array.prototype.filter<br>Array.prototype.reduce<br>Array.prototype.reduceRight<br>关于ES5数组”extras” Dmitry Soshnikov写过一篇有深度的参考文章。</p>
+<p>Dmitry的文章中有一个没有提到，就是Array.isArray, 正如你看到的，这厮直接写在了Array构造器上，而不是prototype对象上。Array.isArray会按照你所期待的那样去做 — 这是一个根据参数的[[Class]]内部属性是否是”Array”返回true或false.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Array.isArray(&quot;NO U&quot;)</div><div class="line">&gt;&gt; false</div><div class="line"></div><div class="line">Array.isArray([&quot;NO&quot;, &quot;U&quot;])</div><div class="line">&gt;&gt; true</div></pre></td></tr></table></figure></p>
+<p>在ES3中，唯一可靠的确定一个值是数组的方式就是使用“the Miller Device”, 即比对一个数组其内在的[[Class]]属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">Object.prototype.toString.apply(value) === &apos;[object Array]&apos;</div><div class="line">Function.prototype.bind(thisArg [, arg1 [, arg2, …]])</div><div class="line">Function.prototype.bind返回一个新的函数对象，该函数对象的this绑定到了thisArg参数上。从本质上讲，这允许你在其他对象链中执行一个函数。</div><div class="line"></div><div class="line">function locate()&#123;</div><div class="line">  console.log(this.location);</div><div class="line">&#125;</div><div class="line"></div><div class="line">function Maru(location)&#123;</div><div class="line">  this.location = location;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var kitty = new Maru(&quot;cardboard box&quot;);</div><div class="line"></div><div class="line">var locateMaru = locate.bind(kitty);</div><div class="line"></div><div class="line">locateMaru();</div></pre></td></tr></table></figure></p>
+<p>在这个例子中，我们将Maru对象的上下文应用在location函数中。因为location是个全局对象的属性，其this值就是全局对象(window)。在这种情况下，我们向上寻找cat, 并不是Location对象，因为我们可以通过绑定的总是kitty的this值创建一个新方法locateMaru.</p>
+<h2 id="补充参考"><a href="#补充参考" class="headerlink" title="补充参考"></a>补充参考</h2><p>ECMAScript 5 对象和属性 by John Resig<br>理解JavaScript函数调用和”this” by Yehuda Katz<br>JavaScript严格模式 by Angus Croll<br>ECMA-262-5详细 介绍 by Dmitry Soshnikov<br>ECMAScript 5 兼容性表 by Juriy Zaytsev<br>本文许可自Creative Commons Attribution 3.0 Unported许可。</p>
+<p>本文转载自张鑫旭-鑫空间-鑫生活<a href="http://www.zhangxinxu.com/wordpress/?p=2148" target="_blank" rel="external">http://www.zhangxinxu.com</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;你应该知道的：浏览器环境&quot;&gt;&lt;a href=&quot;#你应该知道的：浏览器环境&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：浏览器环境&quot;&gt;&lt;/a&gt;你应该知道的：浏览器环境&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/browser.png&quot;
+      &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;ECMAScript 5.1 (或仅 ES5) 是ECMAScript(基于JavaScript的规范)标准最新修正。 与HTML5规范进程
     
     </summary>
     
       <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9F%BA%E7%A1%80/"/>
+      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
+    
+      <category term="JS进步史" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/JS%E8%BF%9B%E6%AD%A5%E5%8F%B2/"/>
     
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
@@ -117,11 +228,289 @@
   </entry>
   
   <entry>
-    <title>javaScript 语法基础（5）</title>
+    <title>啃掉IE低版本这块硬骨头（二）</title>
+    <link href="http://zhangyan123.github.io/2016/10/11/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98%EF%BC%882%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/10/11/浏览器兼容性问题（2）/</id>
+    <published>2016-10-11T08:40:09.000Z</published>
+    <updated>2017-04-12T13:27:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="你应该知道的：CSS浏览器兼容性处理"><a href="#你应该知道的：CSS浏览器兼容性处理" class="headerlink" title="你应该知道的：CSS浏览器兼容性处理"></a>你应该知道的：CSS浏览器兼容性处理</h1><p>一、document.formName.item(”itemName”) 问题 </p>
+<p>问题说明：IE下，可以使用 document.formName.item(”itemName”) 或 document.formName.elements [“elementName”]；Firefox 下，只能使用document.formName.elements[“elementName”]。<br>解决方法：统一使用document.formName.elements[“elementName”]。 </p>
+<p>二、集合类对象问题 </p>
+<p>问题说明：IE下，可以使用 () 或 [] 获取集合类对象；Firefox下，只能使用 [ ]获取集合类对象。<br>解决方法：统一使用 [] 获取集合类对象。 </p>
+<p>三、自定义属性问题 </p>
+<p>问题说明：IE下，可以使用获取常规属性的方法来获取自定义属性，也可以使用 getAttribute() 获取自定义属性；Firefox下，只能使用 getAttribute() 获取自定义属性。<br>解决方法：统一通过 getAttribute() 获取自定义属性。 </p>
+<p>四、eval(”idName”)问题 </p>
+<p>问题说明：IE下，可以使用 eval(”idName”) 或 getElementById(”idName”) 来取得 id 为 idName 的HTML对象；Firefox下，只能使用 getElementById(”idName”) 来取得 id 为 idName 的HTML对象。<br>解决方法：统一用 getElementById(”idName”) 来取得 id 为 idName 的HTML对象。 </p>
+<p>五、变量名与某HTML对象ID相同的问题 </p>
+<p>问题说明：IE下，HTML对象的ID可以作为 document 的下属对象变量名直接使用，Firefox下则不能；Firefox下，可以使用与HTML对象ID相同的变量名，IE下则不能。<br>解决方法：使用 document.getElementById(”idName”) 代替 document.idName。最好不要取HTML对象ID相同的变量名，以减少错误；在声明变量时，一律加上var关键字，以避免歧义。 </p>
+<p>六、const问题 </p>
+<p>问题说明：Firefox下，可以使用const关键字或var关键字来定义常量；IE下，只能使用var关键字来定义常量。<br>解决方法：统一使用var关键字来定义常量。 </p>
+<p>七、input.type属性问题 </p>
+<p>问题说明：IE下 input.type 属性为只读；但是Firefox下 input.type 属性为读写。<br>解决办法：不修改 input.type 属性。如果必须要修改，可以先隐藏原来的input，然后在同样的位置再插入一个新的input元素。 </p>
+<p>八、window.event问题 </p>
+<p>问题说明：window.event 只能在IE下运行，而不能在Firefox下运行，这是因为Firefox的event只能在事件发生的现场使用。<br>解决方法：在事件发生的函数上加上event参数，在函数体内(假设形参为evt)使用 var myEvent = evt?evt:(window.event?window.event:null)<br>示例： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;button&quot; onclick=&quot;doSomething(event)&quot;/&gt; </div><div class="line">&lt;script language=&quot;javascript&quot;&gt; </div><div class="line">function doSomething(evt) &#123; </div><div class="line">var myEvent = evt?evt:(window.event?window.event:null) </div><div class="line">... </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>九、event.x与event.y问题 </p>
+<p>问题说明：IE下，even对象有x、y属性，但是没有pageX、pageY属性；Firefox下，even对象有pageX、pageY属性，但是没有x、y属性。<br>解决方法：var myX = event.x ? event.x : event.pageX; var myY = event.y ? event.y:event.pageY;<br>如果考虑第8条问题，就改用myEvent代替event即可。 </p>
+<p>十、event.srcElement问题 </p>
+<p>问题说明：IE下，even对象有srcElement属性，但是没有target属性；Firefox下，even对象有target属性，但是没有srcElement属性。<br>解决方法：使用srcObj = event.srcElement ? event.srcElement : event.target;<br>如果考虑第8条问题，就改用myEvent代替event即可。 </p>
+<p>十一、window.location.href问题 </p>
+<p>问题说明：IE或者Firefox2.0.x下，可以使用window.location或window.location.href；Firefox1.5.x下，只能使用window.location。<br>解决方法：使用 window.location 来代替 window.location.href。当然也可以考虑使用 location.replace()方法。 </p>
+<p>十二、模态和非模态窗口问题 </p>
+<p>问题说明：IE下，可以通过showModalDialog和showModelessDialog打开模态和非模态窗口；Firefox下则不能。<br>解决方法：直接使用 window.open(pageURL,name,parameters) 方式打开新窗口。<br>如果需要将子窗口中的参数传递回父窗口，可以在子窗口中使用window.opener来访问父窗口。如果需要父窗口控制子窗口的话，使用 var subWindow = window.open(pageURL,name,parameters); 来获得新开的窗口对象。 </p>
+<p>十三、frame和iframe问题 </p>
+<p>以下面的frame为例： </p>
+<p>(1)访问frame对象<br>IE：使用window.frameId或者window.frameName来访问这个frame对象；<br>Firefox：使用window.frameName来访问这个frame对象；<br>解决方法：统一使用 window.document.getElementById(”frameId”) 来访问这个frame对象；<br>(2)切换frame内容<br>在IE和Firefox中都可以使用 window.document.getElementById(”frameId”).src = “webjx.com.html”或 window.frameName.location = “webjx.com.html”来切换frame的内容；<br>如果需要将frame中的参数传回父窗口，可以在frame中使用parent关键字来访问父窗口。 </p>
+<p>十四、body载入问题 </p>
+<p>问题说明：Firefox的body对象在body标签没有被浏览器完全读入之前就存在；而IE的body对象则必须在body标签被浏览器完全读入之后才存在。<br>[注] 这个问题尚未实际验证，待验证后再来修改。<br>[注] 经验证，IE6、Opera9以及FireFox2中不存在上述问题，单纯的JS脚本可以访问在脚本之前已经载入的所有对象和元素，即使这个元素还没有载入完成。 </p>
+<p>十五、事件委托方法 </p>
+<p>问题说明：IE下，使用 <code>document.body.onload = inject;</code> 其中<code>function inject()</code>在这之前已被实现；在Firefox下，使用 <code>document.body.onload = inject()</code>;<br>解决方法：统一使用 <code>document.body.onload=new Function(&#39;inject()&#39;);</code>或者 <code>document.body.onload = function(){/* 这里是代码 */}</code><br>[注意] Function和function的区别 </p>
+<p>十六、访问的父元素的区别 </p>
+<p>问题说明：在IE下，使用 obj.parentElement 或 obj.parentNode 访问obj的父结点；在firefox下，使用 obj.parentNode 访问obj的父结点。<br>解决方法：因为firefox与IE都支持DOM，因此统一使用obj.parentNode 来访问obj的父结点。 </p>
+<p>十七、innerText的问题. </p>
+<p>问题说明：innerText在IE中能正常工作，但是innerText在FireFox中却不行。<br>解决方法：在非IE浏览器中使用textContent代替innerText。<br>示例： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if(navigator.appName.indexOf(&quot;Explorer&quot;) &gt;-1)&#123; </div><div class="line">document.getElementById(&apos;element&apos;).innerText = &quot;my text&quot;; </div><div class="line">&#125; else&#123; </div><div class="line">document.getElementById(&apos;element&apos;).textContent = &quot;;my text&quot;; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>[注] innerHTML 同时被ie、firefox等浏览器支持，其他的，如outerHTML等只被ie支持，最好不用。 </p>
+<p>十八、Table操作问题 </p>
+<p>问题说明：ie、firefox以及其它浏览器对于 table 标签的操作都各不相同，在ie中不允许对table和tr的innerHTML赋值，使用js增加一个tr时，使用appendChild方法也不管用。document.appendChild在往表里插入行时FIREFOX支持，IE不支持<br>解决办法：把行插入到TBODY中，不要直接插入到表<br>解决方法： </p>
+<p>//向table追加一个空行： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var row = otable.insertRow(-1); </div><div class="line">var cell = document.createElement(&quot;td&quot;); </div><div class="line">cell.innerHTML = &quot;&quot;; </div><div class="line">cell.className = &quot;XXXX&quot;; </div><div class="line">row.appendChild(cell);</div></pre></td></tr></table></figure>
+<p>[注] 建议使用JS框架集来操作table，如JQuery。 </p>
+<p>十九、对象宽高赋值问题 </p>
+<p>问题说明：FireFox中类似 obj.style.height = imgObj.height 的语句无效。<br>解决方法：统一使用 obj.style.height = imgObj.height + ‘px’; </p>
+<p>二十、setAttribute(‘style’,’color:red;’)<br>FIREFOX支持(除了IE，现在所有浏览器都支持)，IE不支持<br>解决办法：不用setAttribute(‘style’,’color:red’)<br>而用object.style.cssText = ‘color:red;’(这写法也有例外)<br>最好的办法是上面种方法都用上，万无一失 </p>
+<p>二一、类名设置<br>setAttribute(‘class’,’styleClass’)<br>FIREFOX支持，IE不支持(指定属性名为class，IE不会设置元素的class属性，相反只使用setAttribute时IE自动识CLASSNAME属性)<br>解决办法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">setAttribute(&apos;class&apos;,&apos;styleClass&apos;) </div><div class="line"></div><div class="line">setAttribute(&apos;className&apos;,&apos;styleClass&apos;)</div></pre></td></tr></table></figure></p>
+<p>或者直接 <code>object.className=&#39;styleClass&#39;</code>; </p>
+<p>IE和FF都支持object.className。 </p>
+<p>二二、用setAttribute设置事件<br><code>var obj = document.getElementById(&#39;objId&#39;)</code>;<br><code>obj.setAttribute(&#39;onclick&#39;,&#39;funcitonname();&#39;)</code>;<br>FIREFOX支持，IE不支持<br>解决办法：<br>IE中必须用点记法来引用所需的事件处理程序,并且要用赋予匿名函数<br>如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var obj = document.getElementById(&apos;objId&apos;); </div><div class="line">obj.onclick=function()&#123;fucntionname();&#125;;</div></pre></td></tr></table></figure></p>
+<p>这种方法所有浏览器都支持 </p>
+<p>二三、建立单选钮<br>IE以外的浏览器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var rdo = document.createElement(&apos;input&apos;); </div><div class="line">rdo.setAttribute(&apos;type&apos;,&apos;radio&apos;); </div><div class="line">rdo.setAttribute(&apos;name&apos;,&apos;radiobtn&apos;); </div><div class="line">rdo.setAttribute(&apos;value&apos;,&apos;checked&apos;);</div></pre></td></tr></table></figure></p>
+<p>IE:<br><code>var rdo =document.createElement(”&lt;input name=”radiobtn” type=”radio” value=”checked” /&gt;”);</code><br>解决办法：<br>这一点区别和前面的都不一样。这次完全不同，所以找不到共同的办法来解决，那么只有IF-ELSE了<br>万幸的是，IE可以识别出document的uniqueID属性，别的浏览器都不可以识别出这一属性。问题解决。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;你应该知道的：CSS浏览器兼容性处理&quot;&gt;&lt;a href=&quot;#你应该知道的：CSS浏览器兼容性处理&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：CSS浏览器兼容性处理&quot;&gt;&lt;/a&gt;你应该知道的：CSS浏览器兼容性处理&lt;/h1&gt;&lt;p&gt;一、docu
+    
+    </summary>
+    
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="兼容性问题" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>啃掉IE低版本这块硬骨头（一）</title>
+    <link href="http://zhangyan123.github.io/2016/10/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98%EF%BC%881%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/10/10/浏览器兼容性问题（1）/</id>
+    <published>2016-10-10T07:00:10.000Z</published>
+    <updated>2017-04-12T13:27:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="你应该知道的：JS浏览器兼容性处理"><a href="#你应该知道的：JS浏览器兼容性处理" class="headerlink" title="你应该知道的：JS浏览器兼容性处理"></a>你应该知道的：JS浏览器兼容性处理</h1><ul>
+<li><p>兼容事件处理</p>
+<blockquote>
+<p>按照DOM Level2的建议，事件传播分三个阶段（现代浏览器统一实现了这三个阶段）：先是捕获标签，然后到达对象，再冒泡。document出发寻找到事件源之后再返回到document，但是实际捕获事件时我们使用冒泡机制，在<code>addEventListener()</code>方法中体现为第三个参数置为<code>false</code>。<br>由于绝大多数浏览器完全实现了DOM1标准,但事件方面的标准化是在DOM2中才完成的,导致IE9之前的版本与其他浏览器在这方面表现存在差异.      </p>
+</blockquote>
+<ul>
+<li>IE9之前的事件监听<br>添加监听器：IE5开始使用attachEvent()方法，更早版本只能使用内嵌在html中的属性方法，eg:<code>element.onclick=function(){//这是事件处理器}</code></li>
+<li>事件源 <code>srcElement</code></li>
+<li>阻止冒泡 <code>cancelBubble=ture;</code>IE只支持冒泡机制</li>
+<li>阻止默认行为 <code>returnValue=false;</code></li>
+<li>取消事件监听 <code>detachEvent()</code>相对于现代浏览器中的<code>removeEventListener()</code><br>基于以上分析,整理跨浏览器事件处理器如下:     <pre>function callback(e){
+var e=e||window.event;
+var target=e.target||e.srcElement;
+console.log(target.nodeName);
+}
+if(document.addEventListener){
+document.addEventListener('click',callback,false);
+}else if(document.attachEvent){
+document.attachEvent('click',callback);
+}else{
+document.onclick=callback;
+}</pre>
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>异步请求<br>我们知道目前非常熟悉的Ajax是通过XMLHttpRequest对象来进行Http请求的，在IE7之前这个对象不存在，我们可以使用的类似对象是ActiveXobject,eq:<code>var xhr = new ActiveXobject(‘MSXML2.XMLHTTP.3.0’)</code>   参数中的字符串是一个版本标识符，实际上XHR对象有几个不同的版本，应该根据用户客户端对版本的支持情况创建不同的XHR对象.<br>根据以上分析编写异步请求AJAX工具集如下：     </p>
+<pre>function request(url,message,callback()){
+  var versions=[
+    'MSXML2.XMLHTTP.3.0',
+    'MSXML2.XMLHTTP',
+    'Microsoft.XMLHTTP'
+  ];
+  var xhr;
+  if(XHRHttpRequest){
+    xhr=new XMLHttpRequest();
+  }else{
+    for(var i=0;i< versions.length;i++){
+      try{
+        xhr=new ActiveXobject(versions[i]);
+        break;
+      }catch(e){}
+    }
+  }
+  xhr.onreadystatechange = (function(myxhr){
+     return function(){
+       if(myxhr.readyState ====4 && myxhr.status ===200){
+         callback(xhr);
+       }
+     }
+  })(xhr);
+  xhr.open('post',url,true);//true代表了异步请求
+  xhr.send(message);
+}</pre> 
+</li>
+<li><p>css机制      </p>
+<ul>
+<li><p><strong> 兼容性处理要点 ：</strong></p>
+<ol>
+<li><p>DOCTYPE 影响 CSS 处理 </p>
+</li>
+<li><p>FF: 设置 padding 后， div 会增加 height 和 width， 但 IE 不会， 故需要用 !important 多设一个 height 和 width </p>
+</li>
+<li><p>FF: 支持 !important， IE 则忽略， 可用 !important 为 FF 特别设置样式 </p>
+</li>
+<li><p>div 的垂直居中问题: vertical-align:middle; 将行距增加到和整个DIV一样高 line-height:200px; 然后插入文字，就垂直居中了。缺点是要控制内容不要换行 </p>
+</li>
+<li><p>在mozilla firefox和IE中的BOX模型解释不一致导致相差2px解决方法： </p>
+<p>div{margin:30px!important;margin:28px;} </p>
+<p>注意这两个margin的顺序一定不能写反，!important这个属性IE不能识别，但别的浏览器可以识别。所以在IE下其实解释成这样： </p>
+<p>div{maring:30px;margin:28px} </p>
+<p>重复定义的话按照最后一个来执行，所以不可以只写margin:XXpx!important; </p>
+</li>
+</ol>
+</li>
+<li><p><strong>浏览器差异:</strong> </p>
+<ol>
+<li><p>ul和ol列表缩进问题 </p>
+<p>消除ul、ol等列表的缩进时，样式应写成：list-style:none;margin:0px;padding:0px;<br>其中margin属性对IE有效，padding属性对FireFox有效。 </p>
+<p>[注]经验证，在IE中，设置margin:0px可以去除列表的上下左右缩进、空白以及列表编号或圆点，设置padding对样式没有影响；在 Firefox 中，设置margin:0px仅仅可以去除上下的空白，设置padding:0px后仅仅可以去掉左右缩进，还必须设置list- style:none才 能去除列表编号或圆点。也就是说，在IE中仅仅设置margin:0px即可达到最终效果，而在Firefox中必须同时设置margin:0px、 padding:0px以及list-style:none三项才能达到最终效果。 </p>
+</li>
+<li><p>CSS透明问题 </p>
+<p>IE：filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=60)。<br>FF：opacity:0.6。<br>[注] 最好两个都写，并将opacity属性放在下面。 </p>
+</li>
+<li><p>CSS圆角问题 </p>
+<p>IE：ie7以下版本不支持圆角。<br>FF： -moz-border-radius:4px，或者-moz-border-radius-topleft:4px;-moz- border- radius-topright:4px;-moz-border-radius-bottomleft:4px;-moz- border- radius- bottomright:4px;。<br>[注] 圆角问题是CSS中的经典问题，建议使用JQuery框架集来设置圆角，让这些复杂的问题留给别人去想吧。不过jQuery的圆角只看到支持整个区域的圆角，没有支持边框的圆角，不过这个边框的圆角可以通过一些简单的手段来实现，下次有机会介绍下。 </p>
+</li>
+<li><p>cursor:hand VS cursor:pointer </p>
+<p>问题说明：firefox不支持hand，但ie支持pointer ，两者都是手形指示。<br>解决方法：统一使用pointer。 </p>
+</li>
+<li><p>字体大小定义不同 </p>
+<p>对字体大小small的定义不同，Firefox中为13px，而IE中为16px，差别挺大。 </p>
+<p>解决方法：使用指定的字体大小如14px。 </p>
+<p>并列排列的多个元素（图片或者链接）的div和div之间，代码中的空格和回车在firefox中都会被忽略，而IE中却默认显示为空格（约3px）。 </p>
+</li>
+<li><p>CSS双线凹凸边框<br>IE：border:2px outset;。<br>FF： -moz-border-top-colors: #d4d0c8 white;-moz-border-left-colors: #d4d0c8 white;-moz-border-right-colors:#404040 #808080;-moz-border-bottom-colors:#404040 #808080; </p>
+</li>
+</ol>
+</li>
+<li><p><strong>浏览器bug:</strong> </p>
+<ol>
+<li><p>IE的双边距bug </p>
+<p>设置为float的div在ie下设置的margin会加倍。这是一个ie6都存在的bug。 </p>
+<p>解决方案：在这个div里面加上display:inline; </p>
+<p>例如： </p>
+<p><code>&lt;#div id=”imfloat”&gt;</code> </p>
+<p>相应的css为 </p>
+<pre>#IamFloat{ 
+float:left; 
+margin:5px;/*IE下理解为10px*/ 
+display:inline;/*IE下再理解为5px*/ 
+} 
+#IamFloat{ 
+float:left; 
+margin:5px;/*IE下理解为10px*/ 
+display:inline;/*IE下再理解为5px*/ 
+}</pre> 
+
+<p>关于CSS中的问题实在太多了，甚至同样的CSS定义在不同的页面标准中的显示效果都是不一样的。一个合乎发展的建议是，页面采用标准XHTML标准编写，较少使用table，CSS定义尽量依照标准DOM，同时兼顾IE、Firefox、Opera等主流浏览器。很多情况下，FF和 Opera的CSS解释标准更贴近CSS标准，也更具有规范性。 </p>
+</li>
+<li><p>IE选择符空格BUG<br>一个空格也可以使样式失效。 </p>
+<figure class="highlight plain"><figcaption><span>html PUBLIC "-//W3C//DTD XHTML 1.0</span><a href="/Transitional//EN//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">">link</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns=&quot;//www.w3.org/1999/xhtml&quot;&gt; </div><div class="line">&lt;head&gt; </div><div class="line">&lt;title&gt;&lt;/title&gt; </div><div class="line">&lt;style type=&quot;text/css&quot;&gt; </div><div class="line">&lt;!-- </div><div class="line">p&#123;font-size:12px;&#125; </div><div class="line">p:first-letter&#123;font-size:300%&#125; </div><div class="line">--&gt; </div><div class="line">&lt;/style&gt; </div><div class="line">&lt;/head&gt; </div><div class="line">&lt;body&gt; </div><div class="line">&lt;p&gt;对于世界而言，你是一个人；但是对于某个人，你是他的整个世界。纵然伤心，也不要愁眉不展，因为你不知是谁会爱上你的笑容。&lt;/p&gt; </div><div class="line">&lt;/body&gt; </div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>这段代码对<code>&lt;p&gt;</code>的首字符样式定义在IE6上看是没有效果的（IE7没测试），而在p:first-letter和{font-size:300%}加上空格，也就是p:first-letter {font-size:300%}后，显示就正常了。但是同样的代码，在FireFox下看是正常的。按道理说，p:first-letter{font-size:300%}的写法是没错的。那么问题出在哪里呢？答案是伪类中的连字符”-”。IE有个BUG，在处理伪类时，如果伪类的名称中带有连字符”-”，伪类名称后面就得跟一个空格，不然样式的定义就无效。而在FF中，加不加空格都可以正常处理。</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>SSE(Server-sent Events)全新HTML5服务器推送事件技术，很明显只有现代浏览器才支持</p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;你应该知道的：JS浏览器兼容性处理&quot;&gt;&lt;a href=&quot;#你应该知道的：JS浏览器兼容性处理&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：JS浏览器兼容性处理&quot;&gt;&lt;/a&gt;你应该知道的：JS浏览器兼容性处理&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;兼
+    
+    </summary>
+    
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="兼容性问题" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浏览器环境</title>
+    <link href="http://zhangyan123.github.io/2016/10/08/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%886%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/10/08/javaScript语法基础（6）/</id>
+    <published>2016-10-08T08:00:10.000Z</published>
+    <updated>2017-04-11T09:19:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="你应该知道的：浏览器环境"><a href="#你应该知道的：浏览器环境" class="headerlink" title="你应该知道的：浏览器环境"></a>你应该知道的：浏览器环境</h1><p><div style="display:inline-block;"><img src="/images/browser.png" alt="myBlog"></div><br>我们所说的内建方法与内建对象都可以理解为是全局对象的方法与成员。我们之后将全局对象称为head对象，举例子来说，node.js中的head对象是global对象，而浏览器中的head对象则是window，在console控制台中打印window可以看到全局的方法和属性,从图中可以看出window对象中会包含js原生对象，会包含DOM对象集合，同时还会包含一个可访问浏览器和计算机屏幕的对象集合。</p>
+<p><strong> BOM能做哪些事情？</strong></p>
+<ul>
+<li>navigator属性：访问浏览器及其功能信息 eg:window.navigator.userAgent  </li>
+<li>浏览器提供的控制台提供了遍历的对象检索功能，只需输入想要查询的对象便可以查看该对象全部的成员（对于本节内容有不详之处打印大发伺候）<code>console.dir()</code></li>
+<li>location属性：用于存储当前载入页面URL信息的对象</li>
+<li>history属性：属性允许用户以有限权限操作同一个浏览器回话（session）中已访问的页面。</li>
+<li>frames属性为我们提供访问当前页所有框架的集合（一个类数组）</li>
+<li>screen属性提供的是操作浏览器意外环境的句柄，可访问PC屏幕信息</li>
+<li>BOM中的全局方法：<ul>
+<li><pre>var win=window.open(URL,target,’width:123,height:123,resizable:yes,status:no’)//status</pre>用于设置状态栏可见性,open方法返回打开的窗口句柄win,关闭及操作时使用win为当前环境，eg:<code>win.close();</code></li>
+<li>其他：moveTo()、moveBy()、alert()、prompt)()、confirm()</li>
+<li>window.setTimeout()及setInterval()在程序中经常会出现始料未及的结果，首先这两个函数的参数环境是eval环境，在使用时延时应尽量封装好回调函数直接引用函数名，而非在参数中使用可执行的字符串。由于浏览器处理事件是有队列的，时延间隔到了回调函数也要按秩序进队等待被调用，因此导致的时间不准确是应该在预料之中的。</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;你应该知道的：浏览器环境&quot;&gt;&lt;a href=&quot;#你应该知道的：浏览器环境&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：浏览器环境&quot;&gt;&lt;/a&gt;你应该知道的：浏览器环境&lt;/h1&gt;&lt;p&gt;&lt;div style=&quot;display:inline-blo
+    
+    </summary>
+    
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
+    
+      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>继承</title>
     <link href="http://zhangyan123.github.io/2016/09/30/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%885%EF%BC%89/"/>
     <id>http://zhangyan123.github.io/2016/09/30/javaScript语法基础（5）/</id>
     <published>2016-09-30T08:20:10.000Z</published>
-    <updated>2017-04-10T13:24:41.000Z</updated>
+    <updated>2017-04-12T07:07:35.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="你应该知道的：继承实现原理（从上到下由浅入深）"><a href="#你应该知道的：继承实现原理（从上到下由浅入深）" class="headerlink" title="你应该知道的：继承实现原理（从上到下由浅入深）"></a>你应该知道的：继承实现原理（从上到下由浅入深）</h1><ol>
 <li><p>原型链继承模式<br><pre>function Shape(){</pre></p>
@@ -138,9 +527,11 @@ this.height=height;
 <pre><code>return this.side*this.height/2;
 </code></pre><p>};<br>Triangle.prototype=new Shape();<br>Triangle.prototype.constructor=Triangle;</p>
 <blockquote>
-<p>这种继承模式除了共享了“父类”（模拟说法，后面部分均直白表示为父类和子类）原型中的属性和方法之外，在原型上父类个性拥有的name属性，造成不必要资源浪费。  </p>
+<p>这种继承模式除了共享了“父类”（模拟说法，后面部分均直白表示为父类和子类）原型中的属性和方法之外，在原型上父类个性拥有的name属性，造成不必要资源浪费。<br><div style="display:inline-block;"><img src="/images/prototypeChain.png" alt="myBlog">&lt;/div</div></p>
 </blockquote>
 </li>
+</ol>
+<ol>
 <li><p>临时构造器继承模式<br> 根据之前的分析知道<code>Triangle.prototype=new Shape();</code>语句造成了对多余父类属性的拷贝，为避免不共享的成员不被拷贝，我们可以启用临时“空”（只扮演传递父类原型指针的角色）构造器，并指定其原型属性指向父类原型。以此解决上述问题。</p>
   <pre>function Shape(){
     this.name='shape';
@@ -308,7 +699,9 @@ return n;
     
       <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9F%BA%E7%A1%80/"/>
+      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
+    
+      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/%E5%9F%BA%E7%A1%80/"/>
     
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
@@ -316,11 +709,11 @@ return n;
   </entry>
   
   <entry>
-    <title>javaScript 语法基础（4）</title>
+    <title>对象</title>
     <link href="http://zhangyan123.github.io/2016/09/20/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%884%EF%BC%89/"/>
     <id>http://zhangyan123.github.io/2016/09/20/javaScript语法基础（4）/</id>
     <published>2016-09-20T08:00:10.000Z</published>
-    <updated>2017-04-10T02:10:45.000Z</updated>
+    <updated>2017-04-11T09:19:11.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="你应该知道的-javaScript是基于原型-prototype-面向对象的动态语言（对象）"><a href="#你应该知道的-javaScript是基于原型-prototype-面向对象的动态语言（对象）" class="headerlink" title="你应该知道的: javaScript是基于原型(prototype)面向对象的动态语言（对象）"></a>你应该知道的: javaScript是基于原型(prototype)面向对象的动态语言（对象）</h1><ul>
 <li>JS对象中的属性可以 <strong>动态</strong> 得进行增、删(delete)、修改；</li>
@@ -358,7 +751,9 @@ return n;
     
       <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9F%BA%E7%A1%80/"/>
+      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
+    
+      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/%E5%9F%BA%E7%A1%80/"/>
     
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
@@ -366,11 +761,11 @@ return n;
   </entry>
   
   <entry>
-    <title>javaScript 语法基础（3）</title>
+    <title>函数</title>
     <link href="http://zhangyan123.github.io/2016/09/13/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%883%EF%BC%89/"/>
     <id>http://zhangyan123.github.io/2016/09/13/javaScript语法基础（3）/</id>
     <published>2016-09-13T08:18:10.000Z</published>
-    <updated>2017-04-09T07:25:58.000Z</updated>
+    <updated>2017-04-11T09:18:51.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="你应该知道的：函数"><a href="#你应该知道的：函数" class="headerlink" title="你应该知道的：函数"></a>你应该知道的：函数</h1><ul>
 <li>函数声明的组成部分：关键字function、函数名、参数、函数体、return（如果没有显示的返回值，JS默认返回undefined）</li>
@@ -419,7 +814,9 @@ return n;
     
       <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9F%BA%E7%A1%80/"/>
+      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
+    
+      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/%E5%9F%BA%E7%A1%80/"/>
     
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
@@ -427,11 +824,11 @@ return n;
   </entry>
   
   <entry>
-    <title>javaScript 语法基础（2）</title>
+    <title>基本数据类型（5）</title>
     <link href="http://zhangyan123.github.io/2016/09/11/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%882%EF%BC%89/"/>
     <id>http://zhangyan123.github.io/2016/09/11/javaScript语法基础（2）/</id>
     <published>2016-09-11T08:20:10.000Z</published>
-    <updated>2017-04-09T07:26:16.000Z</updated>
+    <updated>2017-04-11T09:18:38.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="你应该知道的：基本数据类型常用技巧"><a href="#你应该知道的：基本数据类型常用技巧" class="headerlink" title="你应该知道的：基本数据类型常用技巧"></a>你应该知道的：基本数据类型常用技巧</h1><ul>
 <li>5种基本数据类型 Number、String、Boolean、null、undefined剩下的都是复杂类型</li>
@@ -476,7 +873,9 @@ return n;
     
       <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9F%BA%E7%A1%80/"/>
+      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
+    
+      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/%E5%9F%BA%E7%A1%80/"/>
     
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
@@ -484,11 +883,11 @@ return n;
   </entry>
   
   <entry>
-    <title>javaScript 语法基础（1）</title>
+    <title>表达式与语句</title>
     <link href="http://zhangyan123.github.io/2016/09/10/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%881%EF%BC%89/"/>
     <id>http://zhangyan123.github.io/2016/09/10/javaScript语法基础（1）/</id>
     <published>2016-09-10T08:22:10.000Z</published>
-    <updated>2017-04-09T07:26:23.000Z</updated>
+    <updated>2017-04-11T09:18:08.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="你应该知道的：变量、表达式与语句"><a href="#你应该知道的：变量、表达式与语句" class="headerlink" title="你应该知道的：变量、表达式与语句"></a>你应该知道的：变量、表达式与语句</h1><h2 id="变量使用"><a href="#变量使用" class="headerlink" title="变量使用"></a>变量使用</h2><ul>
 <li><code>var a ;</code> 声明（分配栈空间命名为a）。</li>
@@ -521,7 +920,9 @@ return n;
     
       <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9F%BA%E7%A1%80/"/>
+      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
+    
+      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/%E5%9F%BA%E7%A1%80/"/>
     
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
@@ -533,7 +934,7 @@ return n;
     <link href="http://zhangyan123.github.io/2016/09/01/markdown%E4%B8%AA%E4%BA%BA%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"/>
     <id>http://zhangyan123.github.io/2016/09/01/markdown个人常用语法总结/</id>
     <published>2016-09-01T08:22:05.000Z</published>
-    <updated>2017-04-09T07:35:42.000Z</updated>
+    <updated>2017-04-11T09:07:11.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>为了方便写作查找，查阅文档之后总结出自己常用的markdown语法如下  </p>
@@ -665,6 +1066,7 @@ return n;
 </tr>
 </tbody>
 </table>
+<div style="color：white;background:#ccc;"><h2>备注<h2><em>markdown文档中可以直接使用html标签和css样式,你会发现写在markdown中的样式直接应用在了文档中</em></h2></h2></div> 
 ]]></content>
     
     <summary type="html">
