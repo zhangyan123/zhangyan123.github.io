@@ -1,0 +1,575 @@
+<!doctype html>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable"  content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    
+    
+    <!--Simple SEO-->
+
+<meta name="description" content=前端学习记录/>
+
+
+<meta name="robots" content=all />
+<meta name="google" content=all />
+<meta name="googlebot" content=all />
+<meta name="verify" content=all />
+    <!--Title-->
+
+<title>继承 | 张言的博客</title>
+
+<link rel="alternate" href="/atom.xml" title="张言的博客" type="application/atom+xml">
+
+
+<link rel="icon" href="/favicon.ico">
+
+    
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/pages/post.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
+    <!--script-->
+
+
+
+<script src="//cdn1.lncld.net/static/js/2.1.3/av-min.js"></script>
+<script>
+    var appId = "A5uFwcx8xbECYfSMRXiEUoVU-gzGzoHsz";
+    var appKey = "vIeiO5xV1mdSbzJxN48KSumD";
+    var region = 'null';
+    AV.init({
+        appId: appId,
+        appKey: appKey,
+        region: region
+    });
+</script>
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    
+    
+</head>
+
+<body>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<style>
+    header{ top: 71px; position: absolute!important;}
+    #container{padding-top: 151px!important;}
+</style>
+<div style="position:fixed;z-index:9999;left:0;top:0;width:100%;height:70px;background-color:#e0e0e0;color:#396CA5;border-bottom:1px solid #cecece;text-align:center;line-height:70px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<div id="wrap">
+    <header  style="position: absolute;" >
+    <div id="site-meta">
+        <a href="/" id="logo">
+            <h1 class="title">张言的博客</h1>
+        </a>
+        
+        <h2 class="subtitle">记录前端开发学习与积累</h2>
+        
+    </div>
+    <ul id="nav">
+        
+            <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+        
+            <li><a href="/demo"><i class="fa fa-code"></i>作品</a></li>
+        
+            <li><a href="/about"><i class="fa fa-user"></i>关于我</a></li>
+        
+        <li id="search"><a href="javascript:void(0)"><i class="fa fa-search"></i>搜索</a></li>
+    </ul>
+</header>
+
+    <div id="container">
+        
+<ul id="sidebar">
+    
+    
+<li class="widget notification">
+    <i class="fa fa-bell-o"></i>
+    <div>
+        <p>希望每周可以出两篇高质量文章</p>
+    </div>
+</li>
+
+    
+    
+<li class="widget widget-normal category">
+    <h3 class="fa fa-th widget-title">分类</h3>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/写作/"><i class="fa" aria-hidden="true">写作</i></a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/写作/markdown/"><i class="fa" aria-hidden="true">markdown</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/"><i class="fa" aria-hidden="true">前端开发</i></a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/"><i class="fa" aria-hidden="true">javaScript</i></a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/JS进步史/"><i class="fa" aria-hidden="true">JS进步史</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/内建对象的扩展/"><i class="fa" aria-hidden="true">内建对象的扩展</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/基础/"><i class="fa" aria-hidden="true">基础</i></a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/闭包/"><i class="fa" aria-hidden="true">闭包</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/兼容性问题/"><i class="fa" aria-hidden="true">兼容性问题</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/框架/"><i class="fa" aria-hidden="true">框架</i></a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/框架/Laravel/"><i class="fa" aria-hidden="true">Laravel</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/框架/React/"><i class="fa" aria-hidden="true">React</i></a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/正则表达式/"><i class="fa" aria-hidden="true">正则表达式</i></a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/正则表达式/方法/"><i class="fa" aria-hidden="true">方法</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/"><i class="fa" aria-hidden="true">设计模式</i></a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/策略模式/"><i class="fa" aria-hidden="true">策略模式</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/观察者模式/"><i class="fa" aria-hidden="true">观察者模式</i></a><span class="category-list-count">1</span></li></ul></li></ul>
+</li>
+
+
+    
+    
+<li class="widget widget-normal archive">
+  <h3 class="fa fa-archive widget-title">归档</h3>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/"><i class="fa" aria-hidden="true">October 2016</i></a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/"><i class="fa" aria-hidden="true">September 2016</i></a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/"><i class="fa" aria-hidden="true">August 2016</i></a><span class="archive-list-count">1</span></li></ul>
+</li>
+
+
+    
+    
+<li class="widget widget-normal popular-posts" id="popular-posts">
+    <h3 class="fa fa-thermometer-3 widget-title">热门文章</h3>
+    <ul id="popular-content">
+        <li class="load-first"><i class="fa fa-spinner fa-pulse"></i></li>
+    </ul>
+</li>
+
+    
+    
+<li class="widget widget-normal tags">
+  <h3 class="fa fa-tags widget-title">标签云</h3>
+  <div class="tagcloud-content">
+    
+      <a href="/tags/javaScript/" style="font-size: 0.2rem; color: #0a407c">javaScript</a> <a href="/tags/larabel/" style="font-size: 0.14rem; color: #69c">larabel</a> <a href="/tags/写作/" style="font-size: 0.14rem; color: #69c">写作</a>
+  </div>
+</li>
+
+    
+    
+<li class="widget widget-normal friends-link">
+    <h3 class="fa fa-globe widget-title">友链</h3><br/>
+
+    
+        <a href="http://geekaholiclin.github.io" class="fa" target="_blank">主题作者</a>
+
+    
+
+</li>
+
+    
+</ul>
+
+
+        <div id="main">
+    <article id="post">
+        <div id="post-header">
+
+            <h1 id="继承">
+                
+                继承
+                
+            </h1>
+            <div class="article-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+        <span>基础</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            javaScript
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta ">2016/09/30</span>
+    </span>
+    
+    <span  class=" fa-wrap">
+        <i class="fa fa-comment-o"></i>
+        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2016/09/30/继承/" data-thread-key="/2016/09/30/继承/"
+           data-count-type="comments"></span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+            <i class="fa fa-thermometer-three-quarters"></i>
+        <span class="hits hits-meta " data-leadcloud-title="继承"
+              data-leadcloud-url="/2016/09/30/继承/"><i class="fa fa-spinner fa-spin"></i></span>
+    </span>
+    
+    
+</div>
+
+            
+            
+        </div>
+        
+        <div id="post-body">
+            <h1 id="你应该知道的：继承实现原理（从上到下由浅入深）"><a href="#你应该知道的：继承实现原理（从上到下由浅入深）" class="headerlink" title="你应该知道的：继承实现原理（从上到下由浅入深）"></a>你应该知道的：继承实现原理（从上到下由浅入深）</h1><ol>
+<li><p>原型链继承模式<br><pre>function Shape(){</pre></p>
+<pre><code>this.name=&apos;shape&apos;;
+</code></pre><p>};</p>
+<p>Shape.prototype.toString=function(){</p>
+<pre><code>return this.name;
+</code></pre><p>};</p>
+<p>function Triangle(side,height){</p>
+<pre><code>this.name=&apos;triangle&apos;;
+this.side=side;
+this.height=height;
+</code></pre><p>}<br>Triangle.prototype.getArea=function(){</p>
+<pre><code>return this.side*this.height/2;
+</code></pre><p>};<br>Triangle.prototype=new Shape();<br>Triangle.prototype.constructor=Triangle;</p>
+<blockquote>
+<p>这种继承模式除了共享了“父类”（模拟说法，后面部分均直白表示为父类和子类）原型中的属性和方法之外，在原型上父类个性拥有的name属性，造成不必要资源浪费。<br><div style="display:inline-block;"><img src="/images/prototypeChain.png" alt="myBlog">&lt;/div</div></p>
+</blockquote>
+</li>
+</ol>
+<ol>
+<li><p>临时构造器继承模式<br> 根据之前的分析知道<code>Triangle.prototype=new Shape();</code>语句造成了对多余父类属性的拷贝，为避免不共享的成员不被拷贝，我们可以启用临时“空”（只扮演传递父类原型指针的角色）构造器，并指定其原型属性指向父类原型。以此解决上述问题。</p>
+  <pre>function Shape(){
+    this.name='shape';
+};
+
+Shape.prototype.toString=function(){
+    return this.name;
+};
+
+function Triangle(side,height){
+    this.name='triangle';
+    this.side=side;
+    this.height=height;
+}
+ <strong>var F=function (){};
+ F.prototype=Shape.prototype;
+ Triangle.prototype=new F();
+ Triangle.prototype.constructor=Triangle;
+ </strong>
+
+Triangle.prototype.getArea=function(){
+    return this.side*this.height/2;
+};</pre>进一步优化   
+
+   <pre>function Shape(){
+    this.name='shape';
+}
+
+Shape.prototype.toString=function(){
+    return this.name;
+};
+
+function Triangle(side,height){
+    this.name='triangle';
+    this.side=side;
+    this.height=height;
+}
+ <strong>var F=function (){
+     this.getArea=function(){
+         return this.side*this.height/2;
+     };
+ };
+ F.prototype=Shape.prototype;
+ Triangle.prototype=new F();
+ Triangle.prototype.constructor=Triangle;
+ </strong></pre>现在我们已经具备了一种比较良好的继承模式，既可以继承到父类的共享内容，又可以在子类中添加个性的成员而不对其父类造成影响，下面我们在核心功能的基础上增强继承的能力，增加子类访问父类成员的通道（模拟java super,super是js保留字故采用德语中的同义词uber替代）。            
+<pre>function Shape(){
+    this.name='shape';
+}
+
+Shape.prototype.toString=function(){
+    return this.name;
+};
+
+function Triangle(side,height){
+    this.name='triangle';
+    this.side=side;
+    this.height=height;
+}
+     var F=function (){
+         this.getArea=function(){
+         return this.side*this.height/2;
+         };
+         this.uber=Shape.prototype;
+     };
+     F.prototype=Shape.prototype;
+     F.uber=Shape.prototype;
+     Triangle.prototype=new F();
+     Triangle.prototype.constructor=Triangle;</pre>       
+
+<p> <strong>工具集:</strong>       </p>
+ <pre>function extend(Child,Parent){
+     var F=function(){};
+     F.prototype=Parent.prototype;
+     Child.prototype=new F();
+     Child.prototype.constructor=Child;
+     Child.uber=Parent.prototype;
+ }</pre>
+</li>
+<li><p>前面介绍了原型链继承模式，在模拟传统继承方式时还可以简单粗暴的将父类的原型中成员直接拷贝到子类原型中。<br><strong>工具集:</strong>     </p>
+<pre>function extend2(Child,Parent){
+    var c=Child.prototype,p=Parent.prototype;
+    for(var i in p){
+        c[i]=p[i]
+    }
+    c.uber=p;
+}</pre>        
+值得注意的是prototype中的constructor属性是不可枚举的，在for-in循环中不会被拷贝，子类保有自己正确的constructor指向。      
+以上拷贝很明显是浅拷贝，当父类中有对象成员，甚至对象成员中还有对象子成员时，以上拷贝会造成引用传递，子类在修改属性时引发父类属性同时变化，下面介绍深拷贝工具集。         
+<strong>工具集:</strong>
+<pre>function deepcopy(p,c){
+    c = c||{};
+    for(var i in p){
+        if(p.hasOwnProperty(i)){
+            if(typeOf p[i] ==== 'object'){
+                c[i] =Array.isArray(p[i])?[]:{};
+                deepCopy(p[i],c[i]);
+            }else{
+                c[i]=p[i];
+            }
+        }
+    }
+    return c;
+}</pre>       
+<pre>ES5中实现了isArray，为了向下兼容补充工具集如下(全局)：       
+if(Array.isArray !=='function'){
+    Array.isArray = function(args){
+        return Object.prototype.toString.call(args) === '[object Array]';
+    };
+}</pre>       </li>
+<li><p>前面介绍了原型链继承模型和简单的成员拷贝模式，我们在继承当中不仅要复用父类的方法还会有增加新方法的需求，因此结合两种方式模式增强我们的继承工具集如下：<br><strong>工具集(基于构造器模式):</strong>       </p>
+<pre>function extendX(P,stuff){
+var n;
+function F(){};
+F.prototype=P.prototype;
+n=new F();
+n.uber=P.prototype;
+
+for(var i in stuff){
+    n[i]=stuff[i]
+}
+return n;
+}</pre>             
+
+</li>
+</ol>
+<p><strong>工具集(基于对象模式):</strong>       </p>
+<pre>function extendX(o,stuff){
+    var n;
+    function F(){};
+    F.prototype=o;
+    n=new F();
+    n.uber=o;
+
+    for(var i in stuff){
+        n[i]=stuff[i]
+    }
+    return n;
+}</pre>   
+
+<ol>
+<li>借用构造器+原型复制 模式实现继承<br>借用构造器使得我们可以在子类构造器中调用福构造器，但是此处apply调用是方法调用，不会继承父类的原型属性，为了补充这块空缺，可以使用extend2或者deepCopy函数进行原型拷贝，让子类继承到父类的成员与原型成员。<br>借用构造器形式举例:        <pre>function Triangle(){
+    Shape.apply(this,arguments);
+}</pre>
+
+
+
+
+
+
+
+
+
+
+
+</li>
+</ol>
+
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="/images/author.png" alt="avatar"/>
+                
+                <a href="javascript:void(0)" class="high-song">high起来 &#128541;</a>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">赠我一杯 &#128536;</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>作者:
+                    
+                    <a href="/about">张言</a>
+                </li>
+                <li>发表日期: <span>2016-09-30  04:20:10</span></li>
+                
+                <li>最后编辑日期: <span>2017-04-13  05:00:09</span></li>
+                
+                <li class="post-category">
+                    文章分类:
+                    
+                    <a href="/categories/前端开发/">前端开发</a>
+                    
+                    <a href="/categories/前端开发/javaScript/">javaScript</a>
+                    
+                    <a href="/categories/前端开发/javaScript/基础/">基础</a>
+                    
+                </li>
+                <li class="post-tags">
+                    文章标签:
+                    
+                    <a href="/tags/javaScript/">javaScript</a>
+                    
+                </li>
+                
+                <li> 版权声明: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="/images/Ali-pay.png" alt="支付宝付款" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
+        
+        <a href="/2016/10/08/浏览器环境/" class="pre-post fa fa-caret-left">浏览器环境</a>
+        
+        
+        <a href="/2016/09/20/对象/" class="next-post fa">对象</a>
+        
+    </div>
+    
+    <div id="comments">
+        
+
+<section id="duoshuo_comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="/2016/09/30/继承/" data-title="继承" data-url="http://zhangyan123.github.io/2016/09/30/继承/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:'zhangyan123'};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';
+            ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</section>
+
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+    <footer id="footer">
+    
+    <div class="social">
+        
+        <a href="http://www.imooc.com/u/1974751" class="fa fa-free-code-camp" target="_blank" title="immoc"></a>
+        
+        <a href="https://github.com/zhangyan123" class="fa fa-github" target="_blank" title="github"></a>
+        
+        <a href="https://leetcode.com/problemset/algorithms/" class="fa fa-code" target="_blank" title="todo"></a>
+        
+    </div>
+    
+    <div>
+        
+        <a href="/" class="copyright-links">张言</a>&copy;2017 - 2017.All Rights
+        Reserved.
+    </div>
+    <p>Powered by <a href="https://hexo.io" class="copyright-links" target="_blank">Hexo</a> | Theme by <a
+                href="https://github.com/GeekaholicLin" class="copyright-links" target="_blank">GeekaholicLin</a>
+    </p>
+    
+    
+    <p>
+        <span id="busuanzi_container_site_uv" class="fa fa-bar-chart">
+        欢迎第<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>位小伙伴~
+        </span>
+    </p>
+    
+</footer>
+
+</div>
+    <ul id="tools">
+    <li class="totop-btn fa fa-angle-up"></li>
+    
+    <li class="toc-btn fa fa-list-ul"></li>
+    
+    
+
+    
+    <li class="comment-btn fa fa-comments-o">
+        <a href="#comments" title="comments"></a>
+    </li>
+    
+</ul>
+<p id="process"></p>
+<div id="search-overlay">
+    <div class="search-area-wrap">
+        <div id="search-area">
+            <div class="input-wrap focus">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input id="search-input" autofocus autocomplete="off" type="text"
+                       placeholder="search this website..."/>
+            </div>
+            <ul id="search-result">
+                <li class="load-first"><i class="fa fa-spinner fa-spin"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#你应该知道的：继承实现原理（从上到下由浅入深）"><span class="toc-number">1.</span> <span class="toc-text">你应该知道的：继承实现原理（从上到下由浅入深）</span></a></li></ol>
+
+
+    <script src="/js/highsong.js"></script>
+
+
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    //theme config datas
+    var copyrightObj = {};
+    copyrightObj.enable = 'true';
+    copyrightObj.triggerCopyLength = '200';
+    copyrightObj.appendText = '商业转载请联系作者获得授权,非商业转载请注明出处 © example';
+    var leancloudObj = {};
+    leancloudObj.enable = 'true';
+    leancloudObj.className = 'BlogCounter';
+    leancloudObj.limits = '10';
+</script>
+<script type="text/javascript">
+    var search = {};
+    var search_path = "search.xml";
+    if (!search_path) {
+        search_path = "search.xml";
+    }
+    search.path = "/" + search_path;
+    search.func =  _ajax.init();
+</script>
+<script src="/js/app.js"></script>
+
+
+</body>
+</html>

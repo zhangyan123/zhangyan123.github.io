@@ -3,8 +3,46 @@
     
     
     <entry>
+        <title><![CDATA[常见pollyfills]]></title>
+        <url>http://zhangyan123.github.io/2016/10/20/%E5%B8%B8%E8%A7%81pollyfills/</url>
+        <content type="html"><![CDATA[<h2 id="你应该知道的：常见内建对象扩展项"><a href="#你应该知道的：常见内建对象扩展项" class="headerlink" title="你应该知道的：常见内建对象扩展项"></a>你应该知道的：常见内建对象扩展项</h2><blockquote>
+<p>讨论：基于相关内建原型来增加自定义方法这种技术，最常用且最能被接受的例子，是实现让老式浏览器支持新功能，而且应该是已经被ECMAScript委员会标准化了的，为现代浏览器所实现的新功能，例如让老版IE支持ES5中的方法，这种扩展叫做shims或者pollyfills.<br><strong>注：</strong>使用自定义方法扩展内建对象原型时，一定要检查该方法是否已经存在，不存在情况下才扩展此方法。<br>下面罗列几个常见pollyfills：    </p>
+<ul>
+<li>trim()<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if(typeof String.prototype.trim !==&apos;function&apos;)&#123;</div><div class="line">  String.prototype.trim = function()&#123;</div><div class="line">    return this.replace(/^\s+|\s+$/g,&apos;&apos;);</div><div class="line">  &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>create()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">if(typeof Object.create !== &apos;function&apos;)&#123;</div><div class="line">  Object.create = function(o)&#123;</div><div class="line">    var F =function()&#123;&#125;;</div><div class="line">      F.prototype=o;</div><div class="line">      return new F（）;</div><div class="line">    </div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>isArray()<br>if(typeof Array.isArray !== ‘function’){<br>Array.isArray = function(o){<br> if(Object.prototype.toString.call(o)=== “[object Array]”){<br>   return true;<br> }else{<br>   return false;<br> }<br>}<br>}</p>
+</li>
+</ul>
+]]></content>
+        
+        <categories>
+            
+            <category> 前端开发 </category>
+            
+            <category> javaScript </category>
+            
+            <category> 内建对象的扩展 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> javaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
         <title><![CDATA[策略模式在前端开发中的应用]]></title>
-        <url>http://zhangyan123.github.io/2016/10/18/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%882%EF%BC%89/</url>
+        <url>http://zhangyan123.github.io/2016/10/18/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</url>
         <content type="html"><![CDATA[<h1 id="你应该知道的：JS闭包在开发实战中的应用"><a href="#你应该知道的：JS闭包在开发实战中的应用" class="headerlink" title="你应该知道的：JS闭包在开发实战中的应用"></a>你应该知道的：JS闭包在开发实战中的应用</h1>]]></content>
         
         <categories>
@@ -27,7 +65,8 @@
     <entry>
         <title><![CDATA[剖析闭包的战场]]></title>
         <url>http://zhangyan123.github.io/2016/10/17/%E9%97%AD%E5%8C%85%E5%BA%94%E7%94%A8%EF%BC%881%EF%BC%89/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：JS闭包在开发实战中的应用"><a href="#你应该知道的：JS闭包在开发实战中的应用" class="headerlink" title="你应该知道的：JS闭包在开发实战中的应用"></a>你应该知道的：JS闭包在开发实战中的应用</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="你应该知道的：JS闭包在开发实战中的应用"><a href="#你应该知道的：JS闭包在开发实战中的应用" class="headerlink" title="你应该知道的：JS闭包在开发实战中的应用"></a>你应该知道的：JS闭包在开发实战中的应用</h1><p>说在前面：函数可以被定义在其他函数里，一个内部函数除了可以访问自己的参数和变量，同时也可访问把她嵌套在其中的父函数的参数与变量，通过字面量创建的函数对象包含一个连接到外部上下文的连接，这被称为闭包（closure）。它是Javacript强大表现力的来源。</p>
+]]></content>
         
         <categories>
             
@@ -50,8 +89,15 @@
     
     <entry>
         <title><![CDATA[观察者模式在前端开发中的应用]]></title>
-        <url>http://zhangyan123.github.io/2016/10/16/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%881%EF%BC%89/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：前端开发中观察者模式实践"><a href="#你应该知道的：前端开发中观察者模式实践" class="headerlink" title="你应该知道的：前端开发中观察者模式实践"></a>你应该知道的：前端开发中观察者模式实践</h1>]]></content>
+        <url>http://zhangyan123.github.io/2016/10/16/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/</url>
+        <content type="html"><![CDATA[<h1 id="你应该知道的：前端开发中观察者模式实践"><a href="#你应该知道的：前端开发中观察者模式实践" class="headerlink" title="你应该知道的：前端开发中观察者模式实践"></a>你应该知道的：前端开发中观察者模式实践</h1><p>观察者模式又叫发布订阅模式（Publsih/Subscrbe）,它使得方法之间传递信息变得更加通畅，减少耦合性解耦，减少了状态判断。<br>功能：发布者有一个publish方法，将其参数传递给所有订阅者需要该状态作为参数的方法。为了使观察者模式在代码中更容易实现，我们还可以尝试来写一个将普对象改造为发布者的方法，但一定记得在发布者对象那个中调用<code>publish(message)</code></p>
+<blockquote>
+<p>观察者的使用场合就是：当一个对象的改变需要同时改变其它对象，并且它不知道具体有多少对象需要改变的时候，就应该考虑使用观察者模式。</p>
+</blockquote>
+<p> 总的来说，观察者模式所做的工作就是在解耦，让耦合的双方都依赖于抽象，而不是依赖于具体。从而使得各自的变化都不会影响到另一边的变化。</p>
+<p> 解析：观察者对象其实是一个混合类，它负责将观察到的状态变化同时通知给关注这一变化的对象<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"> //通用代码</div><div class="line">var observer = &#123;</div><div class="line">    //订阅</div><div class="line">    addSubscriber: function (callback) &#123;</div><div class="line">        this.subscribers[this.subscribers.length] = callback;</div><div class="line">    &#125;,</div><div class="line">    //退订</div><div class="line">    removeSubscriber: function (callback) &#123;</div><div class="line">        for (var i = 0; i &lt; this.subscribers.length; i++) &#123;</div><div class="line">            if (this.subscribers[i] === callback) &#123;</div><div class="line">                delete (this.subscribers[i]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    //发布</div><div class="line">    publish: function (what) &#123;</div><div class="line">        for (var i = 0; i &lt; this.subscribers.length; i++) &#123;</div><div class="line">            if (typeof this.subscribers[i] === &apos;function&apos;) &#123;</div><div class="line">                this.subscribers[i](what);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    // 将对象o具有观察者功能</div><div class="line">    make: function (o) &#123; </div><div class="line">        for (var i in this) &#123;</div><div class="line">            o[i] = this[i];</div><div class="line">            o.subscribers = [];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>根据jQuery1.7版新增的on/off功能，我们也可以定义jQuery版的观察者：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">(function ($) &#123;</div><div class="line"></div><div class="line">    var o = $(&#123;&#125;);</div><div class="line"></div><div class="line">    $.subscribe = function () &#123;</div><div class="line">        o.on.apply(o, arguments);</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    $.unsubscribe = function () &#123;</div><div class="line">        o.off.apply(o, arguments);</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    $.publish = function () &#123;</div><div class="line">        o.trigger.apply(o, arguments);</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">&#125; (jQuery));</div></pre></td></tr></table></figure></p>
+]]></content>
         
         <categories>
             
@@ -129,8 +175,42 @@
     </entry>
     
     <entry>
+        <title><![CDATA[React创新语法JSX]]></title>
+        <url>http://zhangyan123.github.io/2016/10/14/React%E8%AF%AD%E6%B3%95Jsx/</url>
+        <content type="html"><![CDATA[<ul>
+<li><h2 id="类似HTML"><a href="#类似HTML" class="headerlink" title="类似HTML"></a>类似HTML</h2>HTML标签可以相互嵌套,支持大部分符合HTML规范的属性,支持以<code>data-</code>为前缀的自定义属性(自定义属性不加此前缀时React不予显示);</li>
+<li><h2 id="javaScript表达式"><a href="#javaScript表达式" class="headerlink" title="javaScript表达式"></a>javaScript表达式</h2>JSX允许在闭合标签中使用JS表达式,但要被{}所包裹,js表达式必须有返回值,因此不能再{}中直接使用if-else语句,但可以使用||和&amp;&amp;这样的比较运算符,<br>如果确实要使用if-else语句,可以将其写在函数中,然后在{}中调用;</li>
+<li><h2 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h2><p>JSX内联样式也是用style属性定义的,但属性值是- 样式对象 -而非字符串,并且样式对象中的属性名需要使用驼峰命名法;<br>eg:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function demo()&#123;</div><div class="line">    return(</div><div class="line">        &lt;li&gt;</div><div class="line">            &lt;h3&gt;样式&lt;/h3&gt;</div><div class="line">            &lt;p style=&#123;&#123; color: &apos;red&apos;,fontSize:&apos;14px&apos;&#125;&#125;&gt;内联样式不是字符串,而是对象&lt;/p&gt;</div><div class="line">        &lt;/li&gt;</div><div class="line">    );</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>JSX中注释内容写法与html相同,但要包裹在{}中;<br>eg:{/<em>这里是注释内容</em>/}</p>
+</li>
+<li><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2>JSX中的数字会自动</li>
+</ul>
+]]></content>
+        
+        <categories>
+            
+            <category> 前端开发 </category>
+            
+            <category> 框架 </category>
+            
+            <category> React </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> javaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
         <title><![CDATA[ES5新增常用特性]]></title>
-        <url>http://zhangyan123.github.io/2016/10/12/JS%E5%8F%91%E5%B1%95%E5%8F%B2%EF%BC%881%EF%BC%89/</url>
+        <url>http://zhangyan123.github.io/2016/10/12/ES5%E6%96%B0%E5%A2%9E%E5%B8%B8%E7%94%A8%E7%89%B9%E6%80%A7/</url>
         <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>ECMAScript 5.1 (或仅 ES5) 是ECMAScript(基于JavaScript的规范)标准最新修正。 与HTML5规范进程本质类似，ES5通过对现有JavaScript方法添加语句和原生ECMAScript对象做合并实现标准化。ES5还引入了一个语法的严格变种，被称为”严格模式(strict mode)”。</p>
 <p>本文介绍一些有用的改变和添加。</p>
 <h2 id="浏览器支持"><a href="#浏览器支持" class="headerlink" title="浏览器支持"></a>浏览器支持</h2><p>随着Opera 11.60的发布, 所有5大浏览器都支持ES5, 除了一些实现的bugs. 除非另有说明，本文中提到的的一切可以用在以下浏览器版本（或更高）：</p>
@@ -206,8 +286,8 @@
     
     <entry>
         <title><![CDATA[啃掉IE低版本这块硬骨头（二）]]></title>
-        <url>http://zhangyan123.github.io/2016/10/11/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98%EF%BC%882%EF%BC%89/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：CSS浏览器兼容性处理"><a href="#你应该知道的：CSS浏览器兼容性处理" class="headerlink" title="你应该知道的：CSS浏览器兼容性处理"></a>你应该知道的：CSS浏览器兼容性处理</h1><p>一、document.formName.item(”itemName”) 问题 </p>
+        <url>http://zhangyan123.github.io/2016/10/11/JS%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E5%A4%84%E7%90%86(2)/</url>
+        <content type="html"><![CDATA[<h1 id="你应该知道的：JS浏览器兼容性处理"><a href="#你应该知道的：JS浏览器兼容性处理" class="headerlink" title="你应该知道的：JS浏览器兼容性处理"></a>你应该知道的：JS浏览器兼容性处理</h1><p>一、document.formName.item(”itemName”) 问题 </p>
 <p>问题说明：IE下，可以使用 document.formName.item(”itemName”) 或 document.formName.elements [“elementName”]；Firefox 下，只能使用document.formName.elements[“elementName”]。<br>解决方法：统一使用document.formName.elements[“elementName”]。 </p>
 <p>二、集合类对象问题 </p>
 <p>问题说明：IE下，可以使用 () 或 [] 获取集合类对象；Firefox下，只能使用 [ ]获取集合类对象。<br>解决方法：统一使用 [] 获取集合类对象。 </p>
@@ -242,8 +322,8 @@
 <p>十六、访问的父元素的区别 </p>
 <p>问题说明：在IE下，使用 obj.parentElement 或 obj.parentNode 访问obj的父结点；在firefox下，使用 obj.parentNode 访问obj的父结点。<br>解决方法：因为firefox与IE都支持DOM，因此统一使用obj.parentNode 来访问obj的父结点。 </p>
 <p>十七、innerText的问题. </p>
-<p>问题说明：innerText在IE中能正常工作，但是innerText在FireFox中却不行。<br>解决方法：在非IE浏览器中使用textContent代替innerText。<br>示例： </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if(navigator.appName.indexOf(&quot;Explorer&quot;) &gt;-1)&#123; </div><div class="line">document.getElementById(&apos;element&apos;).innerText = &quot;my text&quot;; </div><div class="line">&#125; else&#123; </div><div class="line">document.getElementById(&apos;element&apos;).textContent = &quot;;my text&quot;; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>问题说明：<strong> innerText在IE中能正常工作，但是innerText在FireFox中却不行。 </strong><br>解决方法：在非IE浏览器中使用textContent代替innerText。<br>示例： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if(navigator.appName.indexOf(&quot;Explorer&quot;) &gt;-1)&#123; </div><div class="line">document.getElementById(&apos;element&apos;).innerText = &quot;my text&quot;; </div><div class="line">&#125; else&#123; </div><div class="line">document.getElementById(&apos;element&apos;).textContent = &quot;my text&quot;; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>[注] innerHTML 同时被ie、firefox等浏览器支持，其他的，如outerHTML等只被ie支持，最好不用。 </p>
 <p>十八、Table操作问题 </p>
 <p>问题说明：ie、firefox以及其它浏览器对于 table 标签的操作都各不相同，在ie中不允许对table和tr的innerHTML赋值，使用js增加一个tr时，使用appendChild方法也不管用。document.appendChild在往表里插入行时FIREFOX支持，IE不支持<br>解决办法：把行插入到TBODY中，不要直接插入到表<br>解决方法： </p>
@@ -281,7 +361,7 @@
     
     <entry>
         <title><![CDATA[啃掉IE低版本这块硬骨头（一）]]></title>
-        <url>http://zhangyan123.github.io/2016/10/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98%EF%BC%881%EF%BC%89/</url>
+        <url>http://zhangyan123.github.io/2016/10/10/JS%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E5%A4%84%E7%90%86(1)/</url>
         <content type="html"><![CDATA[<h1 id="你应该知道的：JS浏览器兼容性处理"><a href="#你应该知道的：JS浏览器兼容性处理" class="headerlink" title="你应该知道的：JS浏览器兼容性处理"></a>你应该知道的：JS浏览器兼容性处理</h1><ul>
 <li><p>兼容事件处理</p>
 <blockquote>
@@ -437,7 +517,7 @@ display:inline;/*IE下再理解为5px*/
     
     <entry>
         <title><![CDATA[浏览器环境]]></title>
-        <url>http://zhangyan123.github.io/2016/10/08/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%886%EF%BC%89/</url>
+        <url>http://zhangyan123.github.io/2016/10/08/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83/</url>
         <content type="html"><![CDATA[<h1 id="你应该知道的：浏览器环境"><a href="#你应该知道的：浏览器环境" class="headerlink" title="你应该知道的：浏览器环境"></a>你应该知道的：浏览器环境</h1><p><div style="display:inline-block;"><img src="/images/browser.png" alt="myBlog"></div><br>我们所说的内建方法与内建对象都可以理解为是全局对象的方法与成员。我们之后将全局对象称为head对象，举例子来说，node.js中的head对象是global对象，而浏览器中的head对象则是window，在console控制台中打印window可以看到全局的方法和属性,从图中可以看出window对象中会包含js原生对象，会包含DOM对象集合，同时还会包含一个可访问浏览器和计算机屏幕的对象集合。</p>
 <p><strong> BOM能做哪些事情？</strong></p>
 <ul>
@@ -477,7 +557,7 @@ display:inline;/*IE下再理解为5px*/
     
     <entry>
         <title><![CDATA[继承]]></title>
-        <url>http://zhangyan123.github.io/2016/09/30/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%885%EF%BC%89/</url>
+        <url>http://zhangyan123.github.io/2016/09/30/%E7%BB%A7%E6%89%BF/</url>
         <content type="html"><![CDATA[<h1 id="你应该知道的：继承实现原理（从上到下由浅入深）"><a href="#你应该知道的：继承实现原理（从上到下由浅入深）" class="headerlink" title="你应该知道的：继承实现原理（从上到下由浅入深）"></a>你应该知道的：继承实现原理（从上到下由浅入深）</h1><ol>
 <li><p>原型链继承模式<br><pre>function Shape(){</pre></p>
 <pre><code>this.name=&apos;shape&apos;;
@@ -678,13 +758,19 @@ return n;
     
     <entry>
         <title><![CDATA[对象]]></title>
-        <url>http://zhangyan123.github.io/2016/09/20/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%884%EF%BC%89/</url>
+        <url>http://zhangyan123.github.io/2016/09/20/%E5%AF%B9%E8%B1%A1/</url>
         <content type="html"><![CDATA[<h1 id="你应该知道的-javaScript是基于原型-prototype-面向对象的动态语言（对象）"><a href="#你应该知道的-javaScript是基于原型-prototype-面向对象的动态语言（对象）" class="headerlink" title="你应该知道的: javaScript是基于原型(prototype)面向对象的动态语言（对象）"></a>你应该知道的: javaScript是基于原型(prototype)面向对象的动态语言（对象）</h1><ul>
 <li>JS对象中的属性可以 <strong>动态</strong> 得进行增、删(delete)、修改；</li>
 <li>JS中的数组实质为键值由0开始自增的特殊对象，数组一般用来存放有规律的一组数据，无需特殊的索引；</li>
 <li>对象与数组的不同在于键值可以自定义；</li>
+<li>对象属性枚举<ul>
+<li>使用for-in枚举对属性时候一般来属性都是方法为我们枚更加关注的是数据，舍弃类型为函链上出乎预料的方法，另一个只取本对象上的属性的方法是hasOwnProperty()。</li>
+<li>for-in遍历对象时候顺序是不定的，如果需要按照一定顺序遍历对象属性最好使用一个数组将需要的属性按顺序存入，在for循环中依次取出对象中排列的属性。</li>
+</ul>
+</li>
+<li>原型只在检索时候才被用到，如果我们尝试获取对象的某个属性值，但该对象属性名，那么Javascript会尝试从原型对象中寻找，如果原型对象没有再去该对象中去找，以此类推，知道终点Object.prototy如果想要的属性完全不存在原型链中，那么结果就是undefined这个称为<strong>委托</strong>。</li>
 <li>对象的创建：<ul>
-<li>使用字面量{}创建</li>
+<li>使用字面量{}创建<br>字面量对象中有属性和方法，属性名是标识符或者字符串，这些名字被当做字面量名而非变量名对待，所以对象的属性名在编译时才能知道，属性的值就是表达式（所以属性之间使用逗号分隔）。</li>
 <li>使用new+构造函数创建</li>
 <li>构造函数举例      <pre>function Constr(name){
           this.name=name;
@@ -728,8 +814,11 @@ return n;
     
     <entry>
         <title><![CDATA[函数]]></title>
-        <url>http://zhangyan123.github.io/2016/09/13/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%883%EF%BC%89/</url>
+        <url>http://zhangyan123.github.io/2016/09/13/%E5%87%BD%E6%95%B0/</url>
         <content type="html"><![CDATA[<h1 id="你应该知道的：函数"><a href="#你应该知道的：函数" class="headerlink" title="你应该知道的：函数"></a>你应该知道的：函数</h1><ul>
+<li>函数时对象，他的不同之在于可以被调用；</li>
+<li>除了声明的形参之外，每个函数还接收两个附加的参数：this和arguments.参数this在面向对象编程中非常重要，他的值取决于调用的模式，在javascript中一共有4种函数调用模式：方法调用、函数调用、构造器调用、apply调用。</li>
+<li>函数的参数使用逗号分隔，这些参数名称将被定义为函数中的变量，它们不像普通量那样被初始化为undefined，而是在函数被调用时初始化为实际提供的参数值。</li>
 <li>函数声明的组成部分：关键字function、函数名、参数、函数体、return（如果没有显示的返回值，JS默认返回undefined）</li>
 <li>函数声明与函数表达式区别在于声明会提升，而表达式在预编译中会被跳过，只有var a =function(){//函数体}中的变量a得到了变量声明提升，a===undefined;</li>
 <li>函数的参数分为形参和实参，eg:function add(a,b){return a+b;}  中形参的个数为add.length，而使用时传入实参的个数为arguments.length，arguments是函数内建变量，它是一个承装实际参数的类数组而非真正的数组，一般为了方便使用数组的方法我们会使用var args=Array.prototype.slice.call(arguments);将类数组转换为真正的数组。</li>
@@ -787,8 +876,8 @@ return n;
     </entry>
     
     <entry>
-        <title><![CDATA[基本数据类型（5）]]></title>
-        <url>http://zhangyan123.github.io/2016/09/11/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%882%EF%BC%89/</url>
+        <title><![CDATA[基本数据类型]]></title>
+        <url>http://zhangyan123.github.io/2016/09/11/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
         <content type="html"><![CDATA[<h1 id="你应该知道的：基本数据类型常用技巧"><a href="#你应该知道的：基本数据类型常用技巧" class="headerlink" title="你应该知道的：基本数据类型常用技巧"></a>你应该知道的：基本数据类型常用技巧</h1><ul>
 <li>5种基本数据类型 Number、String、Boolean、null、undefined剩下的都是复杂类型</li>
 <li>原生9种内建构造函数：<ul>
@@ -812,11 +901,11 @@ return n;
 <li>false<br>除以上falsy值之外的数据都是truthy值包括对象和falsy值字符串eg:”false”===true  </li>
 </ul>
 </li>
-<li>经常使用的惰性求值法：<ul>
-<li>||用于检测对象是否存在若不存在赋予初始值eg:  var a = b||{};</li>
-<li>a() &amp;&amp; b() :如果执行a()后返回true，则执行b()并返回b的值,此用法与？：三元运算符经常用于简化运算步骤；如果执行a()后返回false，则整个表达式返回a()的值，b()不执行；<br>a() || b() :如果执行a()后返回true，则整个表达式返回a()的值，b()不执行；如果执行a()后返回false，则执行b()并返回b()的值；<br>&amp;&amp; 优先级高于 ||</li>
+<li><strong>经常使用的惰性求值法：<strong><ul>
+<li>||用于检测对象是否存在若不存在赋予初始值eg:  var a = b||{}<strong>||运算符可以用来填充默认值</strong>;</li>
+<li><strong>尝试从undefined的成员属性中取值将会导致TypeError异常，这时可以通过&amp;&amp;运算符来避免错误，eg: <code>flight.equipment&amp;&amp;flight.equipment.model</code></strong>a() &amp;&amp; b() :如果执行a()后返回true，则执行b()并返回b的值,此用法与？：三元运算符经常用于简化运算步骤；如果执行a()后返回false，则整个表达式返回a()的值，b()不执行；<br>a() || b() :如果执行a()后返回true，则整个表达式返回a()的值，b()不执行；如果执行a()后返回false，则执行b()并返回b()的值；<br>&amp;&amp; 优先级高于 ||</li>
 </ul>
-</li>
+</strong></strong></li>
 <li>typeof null===object ;typeof undefined===undefined</li>
 <li>数组可以用于取字符串的某位字符’123’[1]===”2”,数组其实为key值从0开始递增的对象</li>
 <li>for-in方法是为了遍历对象而设计，会遍历原型链，注意使用hasOwnProperty()  </li>
@@ -844,7 +933,7 @@ return n;
     
     <entry>
         <title><![CDATA[表达式与语句]]></title>
-        <url>http://zhangyan123.github.io/2016/09/10/javaScript%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%EF%BC%881%EF%BC%89/</url>
+        <url>http://zhangyan123.github.io/2016/09/10/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E8%AF%AD%E5%8F%A5/</url>
         <content type="html"><![CDATA[<h1 id="你应该知道的：变量、表达式与语句"><a href="#你应该知道的：变量、表达式与语句" class="headerlink" title="你应该知道的：变量、表达式与语句"></a>你应该知道的：变量、表达式与语句</h1><h2 id="变量使用"><a href="#变量使用" class="headerlink" title="变量使用"></a>变量使用</h2><ul>
 <li><code>var a ;</code> 声明（分配栈空间命名为a）。</li>
 <li>定义（也称作初始化）<code>a = 1;</code>（为声明的变量赋【值】）。  </li>
@@ -1059,6 +1148,8 @@ return n;
             <category> 前端开发 </category>
             
             <category> 框架 </category>
+            
+            <category> Laravel </category>
             
         </categories>
         
