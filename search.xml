@@ -23,6 +23,7 @@
 <h1 id="HOW"><a href="#HOW" class="headerlink" title="HOW"></a>HOW</h1><p>参考：    </p>
 <ul>
 <li><a href="http://es6.ruanyifeng.com/#docs/promise#Promise-prototype-then" target="_blank" rel="external">promise</a></li>
+<li><a href="http://es6.ruanyifeng.com/#docs/generator-async" target="_blank" rel="external">generator-async</a></li>
 <li><a href="https://jakearchibald.com/2015/thats-so-fetch/" target="_blank" rel="external">Fetch</a><h1 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h1></li>
 <li>使用标准的ES6 Promise你无法收集进入信息或中断请求。</li>
 <li>使用XMLHttpRequest你可以模拟进度（监听progress事件），也可以取消请求（使用abort()方法）。 但是，如果有必要你也可以使用Promise来包裹它。</li>
