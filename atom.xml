@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangyan123.github.io/"/>
-  <updated>2017-05-11T10:19:25.000Z</updated>
+  <updated>2017-05-11T10:45:47.000Z</updated>
   <id>http://zhangyan123.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://zhangyan123.github.io/2016/11/01/%E6%B5%85%E6%9E%90XHR%E4%B8%8EFetch/"/>
     <id>http://zhangyan123.github.io/2016/11/01/浅析XHR与Fetch/</id>
     <published>2016-11-01T08:46:00.000Z</published>
-    <updated>2017-05-11T10:19:25.000Z</updated>
+    <updated>2017-05-11T10:45:47.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="WHAT"><a href="#WHAT" class="headerlink" title="WHAT"></a>WHAT</h1><p>  XMLHttpRequest与Fetch是两个实现客户端与服务器之间实现数据通信的API（由浏览器提供），他们以这样的顺序排放体现了js异步通信的进化。总之，就是两个发<strong>异步请求</strong>的工具。</p>
 <ul>
@@ -36,8 +36,11 @@
 <p>以上简单介绍了一个简单的异步请求。    </p>
 <h1 id="WHY"><a href="#WHY" class="headerlink" title="WHY"></a>WHY</h1><p>通过前面的演示我们看到发送一个异步请求有很多方式，那么为什么非要用fetch取代XHR呢？多大仇？<br>不想说起promise的，但是不讲Promise就讲不下去了。。。<br>promise的出现是为了解决<strong>回调地狱</strong><br>简化~<br>思考：假如func3执行的条件是func1和func2均执行完毕，其中func1和fun2均是异步请求，异步请求不确定什么时候结束。。。要么就定个定时器循环检测全局flag是否赋值，要么就是放进回调耦合在一起。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">(func1()&#123;   //纯纯的伪代码</div><div class="line">    $.ajax(&#123;</div><div class="line">      //...</div><div class="line">      success:function()&#123;</div><div class="line">//fun2</div><div class="line">      $.ajax(&#123;</div><div class="line">        //...</div><div class="line">        success:function()&#123;</div><div class="line">          func3;</div><div class="line">        &#125;</div><div class="line">      &#125;);</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
-<p>fetch(…).then(fun2)<br>          .then(fun3)//各依赖有序执行</p>
-<h1 id="HOW"><a href="#HOW" class="headerlink" title="HOW"></a>HOW</h1><h1 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h1><ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">fetch(...).then(fun2)</div><div class="line">          .then(fun3)//各依赖有序执行</div></pre></td></tr></table></figure>
+<h1 id="HOW"><a href="#HOW" class="headerlink" title="HOW"></a>HOW</h1><p>参考：    </p>
+<ul>
+<li><a href="http://es6.ruanyifeng.com/#docs/promise#Promise-prototype-then" target="_blank" rel="external">promise</a></li>
+<li><a href="https://jakearchibald.com/2015/thats-so-fetch/" target="_blank" rel="external">Fetch</a><h1 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h1></li>
 <li>使用标准的ES6 Promise你无法收集进入信息或中断请求。</li>
 <li>使用XMLHttpRequest你可以模拟进度（监听progress事件），也可以取消请求（使用abort()方法）。 但是，如果有必要你也可以使用Promise来包裹它。</li>
 <li>目前Chrome 42+, Opera 29+, 和Firefox 39+都支持Fetch。微软也考虑在未来的版本中支持Fetch。 讽刺的是，当IE浏览器终于微响应实现了progress事件的时候，XMLHttpRequest也走到了尽头。 目前，如果你需要支持IE的话，你需要使用一个<a href="https://github.com/github/fetch" target="_blank" rel="external">polyfill</a>库。</li>
