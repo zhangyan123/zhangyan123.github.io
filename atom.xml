@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangyan123.github.io/"/>
-  <updated>2017-04-26T12:09:10.000Z</updated>
+  <updated>2017-05-11T10:19:25.000Z</updated>
   <id>http://zhangyan123.github.io/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浅析 XMLHttPRequest API与Fetch API</title>
+    <link href="http://zhangyan123.github.io/2016/11/01/%E6%B5%85%E6%9E%90XHR%E4%B8%8EFetch/"/>
+    <id>http://zhangyan123.github.io/2016/11/01/浅析XHR与Fetch/</id>
+    <published>2016-11-01T08:46:00.000Z</published>
+    <updated>2017-05-11T10:19:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="WHAT"><a href="#WHAT" class="headerlink" title="WHAT"></a>WHAT</h1><p>  XMLHttpRequest与Fetch是两个实现客户端与服务器之间实现数据通信的API（由浏览器提供），他们以这样的顺序排放体现了js异步通信的进化。总之，就是两个发<strong>异步请求</strong>的工具。</p>
+<ul>
+<li>我们知道Ajax的出现更新了世人对js编程本领的认知，js不再是只会弹框而惹人厌小角色，网页局部更新的实现令前端工程师振奋，哪里要变点哪里，so easy!</li>
+<li>以往我们谈及Ajax使用的API都是XMLHttpRequest，这是一个以XML开头的单词，但是传输的格式不止于XML,目前使用较多的是JSON，HTML,或纯文本。</li>
+<li>IE5，IE6没有在他们的脚本语言中定义XMLHttpRequest对象的标识符，当时IE5，IE6发布时，XMLHttpRequest标识符本身还不是一个标准。如果XMLHttpRequest标识符不存在，通过对象检测可以获得向后兼容性。微软在2006年发布的IE7时，定义了XMLHttpRequest对象标识符。</li>
+<li>随着跨浏览器JS库(例如jQuery)流行，开发者再调用XMLHttpRequest功能时不用再直接接触底层API。</li>
+<li>先来看看直接使用XHR对象发请求的示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">    var xmlhttp,</div><div class="line">     data=new FormData();</div><div class="line">     data.append(&apos;mail&apos;,&apos;15527216125@163.com&apos;);</div><div class="line">     data.append(&apos;password&apos;,&apos;123456&apos;)</div><div class="line"></div><div class="line">    if (window.XMLHttpRequest) &#123;</div><div class="line">        xmlhttp = new XMLHttpRequest();</div><div class="line">       </div><div class="line">    &#125;else if(window.ActiveXObject)&#123;</div><div class="line">     var versions=[</div><div class="line">       &apos;MSXML2.XMLHTTP.3.0&apos;,</div><div class="line">       &apos;MSXML2.XMLHTTP&apos;,</div><div class="line">       &apos;Microsoft.XMLHTTP&apos;</div><div class="line">     ];</div><div class="line">     for(var i=0;i&lt; versions.length;i++)&#123;</div><div class="line">         try&#123;</div><div class="line">           xmlhttp=new ActiveXobject(versions[i]);</div><div class="line">           break;</div><div class="line">         &#125;catch(e)&#123;&#125;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">     xmlhttp.onreadystatechange = function () &#123;</div><div class="line">        if ( xmlhttp.readyState == 4 &amp;&amp; xmlhttp.status == 200 ) &#123;</div><div class="line">          console.log(JSON.parse(xmlhttp.responseText);</div><div class="line">　　　　&#125;</div><div class="line">    &#125;;</div><div class="line">        xmlhttp.open(&quot;post&quot;, &apos;/login&apos; , false);    //初始化XHR对象，readystate=1</div><div class="line">        xmlhttp.send(data);    //参数用于传输data readystate=2</div><div class="line">       // xmlhttp.abort();  //停止请求，用于</div><div class="line"></div><div class="line">```   </div><div class="line">``` </div><div class="line">var xhr = new XMLHttpRequest();</div><div class="line">xhr.open(&apos;post&apos;, &apos;/login&apos;);</div><div class="line">xhr.responseType = &apos;json&apos;;</div><div class="line"></div><div class="line">xhr.onload = function() &#123;</div><div class="line">  console.log(xhr.response);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">xhr.onerror = function() &#123;</div><div class="line">  console.log(&quot;Booo&quot;);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">xhr.send(data);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>封装之后：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"> function request(url,message,callback())&#123;</div><div class="line">  var versions=[</div><div class="line">    &apos;MSXML2.XMLHTTP.3.0&apos;,</div><div class="line">    &apos;MSXML2.XMLHTTP&apos;,</div><div class="line">    &apos;Microsoft.XMLHTTP&apos;</div><div class="line">  ];</div><div class="line">  var xhr;</div><div class="line">  if(XHRHttpRequest)&#123;</div><div class="line">    xhr=new XMLHttpRequest();</div><div class="line">  &#125;else&#123;</div><div class="line">    for(var i=0;i&lt; versions.length;i++)&#123;</div><div class="line">      try&#123;</div><div class="line">        xhr=new ActiveXobject(versions[i]);</div><div class="line">        break;</div><div class="line">      &#125;catch(e)&#123;&#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  xhr.onreadystatechange = (function(myxhr)&#123;</div><div class="line">     return function()&#123;</div><div class="line">       if(myxhr.readyState ====4 &amp;&amp; myxhr.status ===200)&#123;</div><div class="line">         callback(xhr);</div><div class="line">       &#125;</div><div class="line">     &#125;</div><div class="line">  &#125;)(xhr);</div><div class="line">  xhr.open(&apos;post&apos;,url,true);//true代表了异步请求</div><div class="line">  xhr.send(message);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>jQuery：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">  url: &apos;/login&apos;,</div><div class="line">  method: &apos;post&apos;,</div><div class="line">  data:&#123;mail:&apos;15527216125@163.com&apos;,password:&apos;123456&apos;&#125;,</div><div class="line">  success:function(res)&#123;console.log(res)&#125;</div><div class="line">  </div><div class="line">&#125;);</div><div class="line">```    </div><div class="line">fetch: </div><div class="line"></div><div class="line">```   </div><div class="line">fetch(&apos;/login&apos;,&#123;method:&apos;post&apos;,body:data&#125;)    //返回一个promise对象  返回的response对象需要使用response对象的方法转化为JSON对象或者text等类型供使用</div><div class="line">                                        .then(function(res)&#123;return res.text()&#125;)//同样返回一个promise，实现链式调用</div><div class="line">                                        .then(function(res2)&#123;console.log(res2)&#125;);</div></pre></td></tr></table></figure></p>
+<p>以上简单介绍了一个简单的异步请求。    </p>
+<h1 id="WHY"><a href="#WHY" class="headerlink" title="WHY"></a>WHY</h1><p>通过前面的演示我们看到发送一个异步请求有很多方式，那么为什么非要用fetch取代XHR呢？多大仇？<br>不想说起promise的，但是不讲Promise就讲不下去了。。。<br>promise的出现是为了解决<strong>回调地狱</strong><br>简化~<br>思考：假如func3执行的条件是func1和func2均执行完毕，其中func1和fun2均是异步请求，异步请求不确定什么时候结束。。。要么就定个定时器循环检测全局flag是否赋值，要么就是放进回调耦合在一起。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">(func1()&#123;   //纯纯的伪代码</div><div class="line">    $.ajax(&#123;</div><div class="line">      //...</div><div class="line">      success:function()&#123;</div><div class="line">//fun2</div><div class="line">      $.ajax(&#123;</div><div class="line">        //...</div><div class="line">        success:function()&#123;</div><div class="line">          func3;</div><div class="line">        &#125;</div><div class="line">      &#125;);</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<p>fetch(…).then(fun2)<br>          .then(fun3)//各依赖有序执行</p>
+<h1 id="HOW"><a href="#HOW" class="headerlink" title="HOW"></a>HOW</h1><h1 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h1><ul>
+<li>使用标准的ES6 Promise你无法收集进入信息或中断请求。</li>
+<li>使用XMLHttpRequest你可以模拟进度（监听progress事件），也可以取消请求（使用abort()方法）。 但是，如果有必要你也可以使用Promise来包裹它。</li>
+<li>目前Chrome 42+, Opera 29+, 和Firefox 39+都支持Fetch。微软也考虑在未来的版本中支持Fetch。 讽刺的是，当IE浏览器终于微响应实现了progress事件的时候，XMLHttpRequest也走到了尽头。 目前，如果你需要支持IE的话，你需要使用一个<a href="https://github.com/github/fetch" target="_blank" rel="external">polyfill</a>库。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;WHAT&quot;&gt;&lt;a href=&quot;#WHAT&quot; class=&quot;headerlink&quot; title=&quot;WHAT&quot;&gt;&lt;/a&gt;WHAT&lt;/h1&gt;&lt;p&gt;  XMLHttpRequest与Fetch是两个实现客户端与服务器之间实现数据通信的API（由浏览器提供），他们以这样的顺
+    
+    </summary>
+    
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
+    
+      <category term="异步编程" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>ES6声明声明变量的六种方法</title>
@@ -53,9 +99,9 @@
     <link href="http://zhangyan123.github.io/2016/10/22/%E5%88%9D%E8%AF%86Promise/"/>
     <id>http://zhangyan123.github.io/2016/10/22/初识Promise/</id>
     <published>2016-10-22T04:30:00.000Z</published>
-    <updated>2017-05-08T08:20:26.000Z</updated>
+    <updated>2017-05-11T10:19:22.000Z</updated>
     
-    <content type="html"><![CDATA[<p>功能：Promise是处理异步的优秀方案，它不仅可以通过链式操作帮助我们拜托回调地狱，还可以在链式操作中的任何时刻捕获异常。<br>promise支持链式调用：<br>！<a href="/images/promisePatern.png">promise</a></p>
+    <content type="html"><![CDATA[<p>功能：Promise是处理异步的优秀方案，它不仅可以通过链式操作帮助我们拜托回调地狱，还可以在链式操作中的任何时刻捕获异常。<br>promise支持链式调用：<br><img src="/images/promisePatern.png" alt="promise"></p>
 <p>举例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// 同步resolve</div><div class="line">var promise1 = new Promise(</div><div class="line">    (resolve, reject) =&gt; &#123;</div><div class="line">        resolve(&quot;this is promise1 resolve&quot;);</div><div class="line">    &#125;</div><div class="line">).then(</div><div class="line">    (msg) =&gt; &#123;</div><div class="line">        console.log(msg);</div><div class="line">    &#125;,</div><div class="line">    (err) =&gt; &#123;</div><div class="line">        console.log(err);</div><div class="line">    &#125;</div><div class="line">);</div></pre></td></tr></table></figure></p>
 <p>var promise = 这部分可以无视，我仅仅用于代码里标记一下demo的次序。这个例子体现了最基础用法，给resolve传入一个字符串终结当前的Promise的状态，因为Promise被终结，因此该字符串会被回调给then中的(msg) =&gt; {…}函数，从而实现串联。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// 同步reject</div><div class="line">var promise2 = new Promise(</div><div class="line">    (resolve, reject) =&gt; &#123;</div><div class="line">        reject(&quot;this is promise2 reject&quot;);</div><div class="line">    &#125;</div><div class="line">).then(</div><div class="line">    (msg) =&gt; &#123;</div><div class="line">        console.log(msg);</div><div class="line">    &#125;,</div><div class="line">    (err) =&gt; &#123;</div><div class="line">        console.log(err);</div><div class="line">    &#125;</div><div class="line">);</div></pre></td></tr></table></figure></p>
 <p>和上个例子差不多，只是调用了reject，这样会回调(err) =&gt; {….}。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">// 同步catch</div><div class="line">var promise3 = new Promise(</div><div class="line">    (resolve, reject) =&gt; &#123;</div><div class="line">        reject(&quot;this is promise3 reject catch&quot;);</div><div class="line">    &#125;</div><div class="line">).then(</div><div class="line">    (msg) =&gt; &#123;</div><div class="line">        console.log(msg);</div><div class="line">    &#125;</div><div class="line">).catch(</div><div class="line">    (err) =&gt; &#123;</div><div class="line">        console.log(err);</div><div class="line">    &#125;</div><div class="line">);</div></pre></td></tr></table></figure></p>
@@ -73,8 +119,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;功能：Promise是处理异步的优秀方案，它不仅可以通过链式操作帮助我们拜托回调地狱，还可以在链式操作中的任何时刻捕获异常。&lt;br&gt;promise支持链式调用：&lt;br&gt;！&lt;a href=&quot;/images/promisePatern.png&quot;&gt;promise&lt;/a&gt;&lt;/p&gt;
-
+      &lt;p&gt;功能：Promise是处理异步的优秀方案，它不仅可以通过链式操作帮助我们拜托回调地狱，还可以在链式操作中的任何时刻捕获异常。&lt;br&gt;promise支持链式调用：&lt;br&gt;&lt;img src=&quot;/images/promisePatern.png&quot; alt=&quot;promise&quot;&gt;&lt;/
     
     </summary>
     
@@ -1186,53 +1231,6 @@ return n;
     
       &lt;h1 id=&quot;你应该知道的：基本数据类型常用技巧&quot;&gt;&lt;a href=&quot;#你应该知道的：基本数据类型常用技巧&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：基本数据类型常用技巧&quot;&gt;&lt;/a&gt;你应该知道的：基本数据类型常用技巧&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;5种基本
-    
-    </summary>
-    
-      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
-    
-      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>表达式与语句</title>
-    <link href="http://zhangyan123.github.io/2016/09/10/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E8%AF%AD%E5%8F%A5/"/>
-    <id>http://zhangyan123.github.io/2016/09/10/表达式与语句/</id>
-    <published>2016-09-10T08:22:10.000Z</published>
-    <updated>2017-04-13T09:00:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="你应该知道的：变量、表达式与语句"><a href="#你应该知道的：变量、表达式与语句" class="headerlink" title="你应该知道的：变量、表达式与语句"></a>你应该知道的：变量、表达式与语句</h1><h2 id="变量使用"><a href="#变量使用" class="headerlink" title="变量使用"></a>变量使用</h2><ul>
-<li><code>var a ;</code> 声明（分配栈空间命名为a）。</li>
-<li>定义（也称作初始化）<code>a = 1;</code>（为声明的变量赋【值】）。  </li>
-</ul>
-<blockquote>
-<p><strong>注：</strong></p>
-<ul>
-<li>只声明未定义与未声明的变量在使用时均为undefined（JS的一种基本数据类型，JS是一段一段执行的（以script标签来分割），执行每一段之前，都有一个“预编译”，预编译干的活是：声明所有var变量（初始为undefined），解析定义式函数语句。）。</li>
-<li>最佳时间的声明语句发生在作用域（函数）最开始位置，且使用一个var及逗号分隔的一条语句，方便查看此作用域中变量也避免【变量提升】机制带来的意外事件。</li>
-<li>JS的变量名是区分大小写的，可包含字母，数字，下划线和$，但不能以数字开头。            </li>
-</ul>
-</blockquote>
-<h2 id="表达式与语句"><a href="#表达式与语句" class="headerlink" title="表达式与语句"></a>表达式与语句</h2><p>表达式中使用运算符产生结果值，多个表达式之间使用逗号分隔；语句是代码执行的最小单元组成，程序就是由一系列语句组成的代码执行块，语句之间使用分号分隔。</p>
-<blockquote>
-<p><strong>注：</strong>   </p>
-<ul>
-<li>表达式可以作为值出现在任何位置；</li>
-<li>表达式是求值运算个中变量在运行前不得而知，故在JS预编译期间不进行解释，直接跳过；语句中声明的部分是会在预编译中进行解释的，执行过程中不再理会已解释部分的语句；</li>
-<li>因为现在的JS有插入分号机制，已经不要求代码中的语句必须使用分号结尾了，为了方便区分表达式与表达式语句，JS规定，使用（）包裹以{}包裹或者以function开头的代码理解为表达式；以一元运算符，比如！或者+开头的代码被理解为表达式，与（）不之处是运算符会改变表达式结果。</li>
-</ul>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;你应该知道的：变量、表达式与语句&quot;&gt;&lt;a href=&quot;#你应该知道的：变量、表达式与语句&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：变量、表达式与语句&quot;&gt;&lt;/a&gt;你应该知道的：变量、表达式与语句&lt;/h1&gt;&lt;h2 id=&quot;变量使用&quot;&gt;&lt;a 
     
     </summary>
     

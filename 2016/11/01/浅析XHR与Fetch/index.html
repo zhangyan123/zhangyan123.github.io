@@ -22,7 +22,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>啃掉IE低版本这块硬骨头（一） | 张言的博客</title>
+<title>浅析 XMLHttPRequest API与Fetch API | 张言的博客</title>
 
 <link rel="alternate" href="/atom.xml" title="张言的博客" type="application/atom+xml">
 
@@ -161,9 +161,9 @@
     <article id="post">
         <div id="post-header">
 
-            <h1 id="啃掉IE低版本这块硬骨头（一）">
+            <h1 id="浅析 XMLHttPRequest API与Fetch API">
                 
-                啃掉IE低版本这块硬骨头（一）
+                浅析 XMLHttPRequest API与Fetch API
                 
             </h1>
             <div class="article-meta">
@@ -171,7 +171,7 @@
     
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-        <span>兼容性问题</span>
+        <span>异步编程</span>
     </span>
     
     
@@ -187,20 +187,20 @@
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2016/10/10</span>
+        <span class="date-meta ">2016/11/01</span>
     </span>
     
     <span  class=" fa-wrap">
         <i class="fa fa-comment-o"></i>
-        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2016/10/10/JS浏览器兼容处理(1)/" data-thread-key="/2016/10/10/JS浏览器兼容处理(1)/"
+        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2016/11/01/浅析XHR与Fetch/" data-thread-key="/2016/11/01/浅析XHR与Fetch/"
            data-count-type="comments"></span>
     </span>
     
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="啃掉IE低版本这块硬骨头（一）"
-              data-leadcloud-url="/2016/10/10/JS浏览器兼容处理(1)/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title="浅析 XMLHttPRequest API与Fetch API"
+              data-leadcloud-url="/2016/11/01/浅析XHR与Fetch/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
@@ -211,139 +211,25 @@
         </div>
         
         <div id="post-body">
-            <h1 id="你应该知道的：JS浏览器兼容性处理"><a href="#你应该知道的：JS浏览器兼容性处理" class="headerlink" title="你应该知道的：JS浏览器兼容性处理"></a>你应该知道的：JS浏览器兼容性处理</h1><ul>
-<li><p>兼容事件处理</p>
-<blockquote>
-<p>按照DOM Level2的建议，事件传播分三个阶段（现代浏览器统一实现了这三个阶段）：先是捕获标签，然后到达对象，再冒泡。document出发寻找到事件源之后再返回到document，但是实际捕获事件时我们使用冒泡机制，在<code>addEventListener()</code>方法中体现为第三个参数置为<code>false</code>。<br>由于绝大多数浏览器完全实现了DOM1标准,但事件方面的标准化是在DOM2中才完成的,导致IE9之前的版本与其他浏览器在这方面表现存在差异.      </p>
-</blockquote>
+            <h1 id="WHAT"><a href="#WHAT" class="headerlink" title="WHAT"></a>WHAT</h1><p>  XMLHttpRequest与Fetch是两个实现客户端与服务器之间实现数据通信的API（由浏览器提供），他们以这样的顺序排放体现了js异步通信的进化。总之，就是两个发<strong>异步请求</strong>的工具。</p>
 <ul>
-<li>IE9之前的事件监听<br>添加监听器：IE5开始使用attachEvent()方法，更早版本只能使用内嵌在html中的属性方法，eg:<code>element.onclick=function(){//这是事件处理器}</code></li>
-<li>事件源 <code>srcElement</code></li>
-<li>阻止冒泡 <code>cancelBubble=ture;</code>IE只支持冒泡机制</li>
-<li>阻止默认行为 <code>returnValue=false;</code></li>
-<li>取消事件监听 <code>detachEvent()</code>相对于现代浏览器中的<code>removeEventListener()</code><br>基于以上分析,整理跨浏览器事件处理器如下:     <pre>function callback(e){
-var e=e||window.event;
-var target=e.target||e.srcElement;
-console.log(target.nodeName);
-}
-if(document.addEventListener){
-document.addEventListener('click',callback,false);
-}else if(document.attachEvent){
-document.attachEvent('click',callback);
-}else{
-document.onclick=callback;
-}</pre>
-
-
+<li>我们知道Ajax的出现更新了世人对js编程本领的认知，js不再是只会弹框而惹人厌小角色，网页局部更新的实现令前端工程师振奋，哪里要变点哪里，so easy!</li>
+<li>以往我们谈及Ajax使用的API都是XMLHttpRequest，这是一个以XML开头的单词，但是传输的格式不止于XML,目前使用较多的是JSON，HTML,或纯文本。</li>
+<li>IE5，IE6没有在他们的脚本语言中定义XMLHttpRequest对象的标识符，当时IE5，IE6发布时，XMLHttpRequest标识符本身还不是一个标准。如果XMLHttpRequest标识符不存在，通过对象检测可以获得向后兼容性。微软在2006年发布的IE7时，定义了XMLHttpRequest对象标识符。</li>
+<li>随着跨浏览器JS库(例如jQuery)流行，开发者再调用XMLHttpRequest功能时不用再直接接触底层API。</li>
+<li>先来看看直接使用XHR对象发请求的示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">    var xmlhttp,</div><div class="line">     data=new FormData();</div><div class="line">     data.append(&apos;mail&apos;,&apos;15527216125@163.com&apos;);</div><div class="line">     data.append(&apos;password&apos;,&apos;123456&apos;)</div><div class="line"></div><div class="line">    if (window.XMLHttpRequest) &#123;</div><div class="line">        xmlhttp = new XMLHttpRequest();</div><div class="line">       </div><div class="line">    &#125;else if(window.ActiveXObject)&#123;</div><div class="line">     var versions=[</div><div class="line">       &apos;MSXML2.XMLHTTP.3.0&apos;,</div><div class="line">       &apos;MSXML2.XMLHTTP&apos;,</div><div class="line">       &apos;Microsoft.XMLHTTP&apos;</div><div class="line">     ];</div><div class="line">     for(var i=0;i&lt; versions.length;i++)&#123;</div><div class="line">         try&#123;</div><div class="line">           xmlhttp=new ActiveXobject(versions[i]);</div><div class="line">           break;</div><div class="line">         &#125;catch(e)&#123;&#125;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">     xmlhttp.onreadystatechange = function () &#123;</div><div class="line">        if ( xmlhttp.readyState == 4 &amp;&amp; xmlhttp.status == 200 ) &#123;</div><div class="line">          console.log(JSON.parse(xmlhttp.responseText);</div><div class="line">　　　　&#125;</div><div class="line">    &#125;;</div><div class="line">        xmlhttp.open(&quot;post&quot;, &apos;/login&apos; , false);    //初始化XHR对象，readystate=1</div><div class="line">        xmlhttp.send(data);    //参数用于传输data readystate=2</div><div class="line">       // xmlhttp.abort();  //停止请求，用于</div><div class="line"></div><div class="line">```   </div><div class="line">``` </div><div class="line">var xhr = new XMLHttpRequest();</div><div class="line">xhr.open(&apos;post&apos;, &apos;/login&apos;);</div><div class="line">xhr.responseType = &apos;json&apos;;</div><div class="line"></div><div class="line">xhr.onload = function() &#123;</div><div class="line">  console.log(xhr.response);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">xhr.onerror = function() &#123;</div><div class="line">  console.log(&quot;Booo&quot;);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">xhr.send(data);</div></pre></td></tr></table></figure>
 </li>
 </ul>
-</li>
-</ul>
-<ul>
-<li><p>异步请求<br>我们知道目前非常熟悉的Ajax是通过XMLHttpRequest对象来进行Http请求的，在IE7之前这个对象不存在，我们可以使用的类似对象是ActiveXobject,eq:<code>var xhr = new ActiveXobject(‘MSXML2.XMLHTTP.3.0’)</code>   参数中的字符串是一个版本标识符，实际上XHR对象有几个不同的版本，应该根据用户客户端对版本的支持情况创建不同的XHR对象.<br>根据以上分析编写异步请求AJAX工具集如下：     </p>
-<pre>function request(url,message,callback()){
-  var versions=[
-    'MSXML2.XMLHTTP.3.0',
-    'MSXML2.XMLHTTP',
-    'Microsoft.XMLHTTP'
-  ];
-  var xhr;
-  if(XHRHttpRequest){
-    xhr=new XMLHttpRequest();
-  }else{
-    for(var i=0;i< versions.length;i++){
-      try{
-        xhr=new ActiveXobject(versions[i]);
-        break;
-      }catch(e){}
-    }
-  }
-  xhr.onreadystatechange = (function(myxhr){
-     return function(){
-       if(myxhr.readyState ====4 && myxhr.status ===200){
-         callback(xhr);
-       }
-     }
-  })(xhr);
-  xhr.open('post',url,true);//true代表了异步请求
-  xhr.send(message);
-}</pre> 
-</li>
-<li><p>css机制      </p>
-<ul>
-<li><p><strong> 兼容性处理要点 ：</strong></p>
-<ol>
-<li><p>DOCTYPE 影响 CSS 处理 </p>
-</li>
-<li><p>FF: 设置 padding 后， div 会增加 height 和 width， 但 IE 不会， 故需要用 !important 多设一个 height 和 width </p>
-</li>
-<li><p>FF: 支持 !important， IE 则忽略， 可用 !important 为 FF 特别设置样式 </p>
-</li>
-<li><p>div 的垂直居中问题: vertical-align:middle; 将行距增加到和整个DIV一样高 line-height:200px; 然后插入文字，就垂直居中了。缺点是要控制内容不要换行 </p>
-</li>
-<li><p>在mozilla firefox和IE中的BOX模型解释不一致导致相差2px解决方法： </p>
-<p>div{margin:30px!important;margin:28px;} </p>
-<p>注意这两个margin的顺序一定不能写反，!important这个属性IE不能识别，但别的浏览器可以识别。所以在IE下其实解释成这样： </p>
-<p>div{maring:30px;margin:28px} </p>
-<p>重复定义的话按照最后一个来执行，所以不可以只写margin:XXpx!important; </p>
-</li>
-</ol>
-</li>
-<li><p><strong>浏览器差异:</strong> </p>
-<ol>
-<li><p>ul和ol列表缩进问题 </p>
-<p>消除ul、ol等列表的缩进时，样式应写成：list-style:none;margin:0px;padding:0px;<br>其中margin属性对IE有效，padding属性对FireFox有效。 </p>
-<p>[注]经验证，在IE中，设置margin:0px可以去除列表的上下左右缩进、空白以及列表编号或圆点，设置padding对样式没有影响；在 Firefox 中，设置margin:0px仅仅可以去除上下的空白，设置padding:0px后仅仅可以去掉左右缩进，还必须设置list- style:none才 能去除列表编号或圆点。也就是说，在IE中仅仅设置margin:0px即可达到最终效果，而在Firefox中必须同时设置margin:0px、 padding:0px以及list-style:none三项才能达到最终效果。 </p>
-</li>
-<li><p>CSS透明问题 </p>
-<p>IE：filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=60)。<br>FF：opacity:0.6。<br>[注] 最好两个都写，并将opacity属性放在下面。 </p>
-</li>
-<li><p>CSS圆角问题 </p>
-<p>IE：ie7以下版本不支持圆角。<br>FF： -moz-border-radius:4px，或者-moz-border-radius-topleft:4px;-moz- border- radius-topright:4px;-moz-border-radius-bottomleft:4px;-moz- border- radius- bottomright:4px;。<br>[注] 圆角问题是CSS中的经典问题，建议使用JQuery框架集来设置圆角，让这些复杂的问题留给别人去想吧。不过jQuery的圆角只看到支持整个区域的圆角，没有支持边框的圆角，不过这个边框的圆角可以通过一些简单的手段来实现，下次有机会介绍下。 </p>
-</li>
-<li><p>cursor:hand VS cursor:pointer </p>
-<p>问题说明：firefox不支持hand，但ie支持pointer ，两者都是手形指示。<br>解决方法：统一使用pointer。 </p>
-</li>
-<li><p>字体大小定义不同 </p>
-<p>对字体大小small的定义不同，Firefox中为13px，而IE中为16px，差别挺大。 </p>
-<p>解决方法：使用指定的字体大小如14px。 </p>
-<p>并列排列的多个元素（图片或者链接）的div和div之间，代码中的空格和回车在firefox中都会被忽略，而IE中却默认显示为空格（约3px）。 </p>
-</li>
-<li><p>CSS双线凹凸边框<br>IE：border:2px outset;。<br>FF： -moz-border-top-colors: #d4d0c8 white;-moz-border-left-colors: #d4d0c8 white;-moz-border-right-colors:#404040 #808080;-moz-border-bottom-colors:#404040 #808080; </p>
-</li>
-</ol>
-</li>
-<li><p><strong>浏览器bug:</strong> </p>
-<ol>
-<li><p>IE的双边距bug </p>
-<p>设置为float的div在ie下设置的margin会加倍。这是一个ie6都存在的bug。 </p>
-<p>解决方案：在这个div里面加上display:inline; </p>
-<p>例如： </p>
-<p><code>&lt;#div id=”imfloat”&gt;</code> </p>
-<p>相应的css为 </p>
-<pre>#IamFloat{ 
-float:left; 
-margin:5px;/*IE下理解为10px*/ 
-display:inline;/*IE下再理解为5px*/ 
-} 
-#IamFloat{ 
-float:left; 
-margin:5px;/*IE下理解为10px*/ 
-display:inline;/*IE下再理解为5px*/ 
-}</pre> 
-
-<p>关于CSS中的问题实在太多了，甚至同样的CSS定义在不同的页面标准中的显示效果都是不一样的。一个合乎发展的建议是，页面采用标准XHTML标准编写，较少使用table，CSS定义尽量依照标准DOM，同时兼顾IE、Firefox、Opera等主流浏览器。很多情况下，FF和 Opera的CSS解释标准更贴近CSS标准，也更具有规范性。 </p>
-</li>
-<li><p>IE选择符空格BUG<br>一个空格也可以使样式失效。 </p>
-<figure class="highlight plain"><figcaption><span>html PUBLIC "-//W3C//DTD XHTML 1.0</span><a href="/Transitional//EN//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">">link</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;html xmlns=&quot;//www.w3.org/1999/xhtml&quot;&gt; </div><div class="line">&lt;head&gt; </div><div class="line">&lt;title&gt;&lt;/title&gt; </div><div class="line">&lt;style type=&quot;text/css&quot;&gt; </div><div class="line">&lt;!-- </div><div class="line">p&#123;font-size:12px;&#125; </div><div class="line">p:first-letter&#123;font-size:300%&#125; </div><div class="line">--&gt; </div><div class="line">&lt;/style&gt; </div><div class="line">&lt;/head&gt; </div><div class="line">&lt;body&gt; </div><div class="line">&lt;p&gt;对于世界而言，你是一个人；但是对于某个人，你是他的整个世界。纵然伤心，也不要愁眉不展，因为你不知是谁会爱上你的笑容。&lt;/p&gt; </div><div class="line">&lt;/body&gt; </div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<p>这段代码对<code>&lt;p&gt;</code>的首字符样式定义在IE6上看是没有效果的（IE7没测试），而在p:first-letter和{font-size:300%}加上空格，也就是p:first-letter {font-size:300%}后，显示就正常了。但是同样的代码，在FireFox下看是正常的。按道理说，p:first-letter{font-size:300%}的写法是没错的。那么问题出在哪里呢？答案是伪类中的连字符”-”。IE有个BUG，在处理伪类时，如果伪类的名称中带有连字符”-”，伪类名称后面就得跟一个空格，不然样式的定义就无效。而在FF中，加不加空格都可以正常处理。</p>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>SSE(Server-sent Events)全新HTML5服务器推送事件技术，很明显只有现代浏览器才支持</p>
-</li>
+<p>封装之后：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"> function request(url,message,callback())&#123;</div><div class="line">  var versions=[</div><div class="line">    &apos;MSXML2.XMLHTTP.3.0&apos;,</div><div class="line">    &apos;MSXML2.XMLHTTP&apos;,</div><div class="line">    &apos;Microsoft.XMLHTTP&apos;</div><div class="line">  ];</div><div class="line">  var xhr;</div><div class="line">  if(XHRHttpRequest)&#123;</div><div class="line">    xhr=new XMLHttpRequest();</div><div class="line">  &#125;else&#123;</div><div class="line">    for(var i=0;i&lt; versions.length;i++)&#123;</div><div class="line">      try&#123;</div><div class="line">        xhr=new ActiveXobject(versions[i]);</div><div class="line">        break;</div><div class="line">      &#125;catch(e)&#123;&#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  xhr.onreadystatechange = (function(myxhr)&#123;</div><div class="line">     return function()&#123;</div><div class="line">       if(myxhr.readyState ====4 &amp;&amp; myxhr.status ===200)&#123;</div><div class="line">         callback(xhr);</div><div class="line">       &#125;</div><div class="line">     &#125;</div><div class="line">  &#125;)(xhr);</div><div class="line">  xhr.open(&apos;post&apos;,url,true);//true代表了异步请求</div><div class="line">  xhr.send(message);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>jQuery：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">  url: &apos;/login&apos;,</div><div class="line">  method: &apos;post&apos;,</div><div class="line">  data:&#123;mail:&apos;15527216125@163.com&apos;,password:&apos;123456&apos;&#125;,</div><div class="line">  success:function(res)&#123;console.log(res)&#125;</div><div class="line">  </div><div class="line">&#125;);</div><div class="line">```    </div><div class="line">fetch: </div><div class="line"></div><div class="line">```   </div><div class="line">fetch(&apos;/login&apos;,&#123;method:&apos;post&apos;,body:data&#125;)    //返回一个promise对象  返回的response对象需要使用response对象的方法转化为JSON对象或者text等类型供使用</div><div class="line">                                        .then(function(res)&#123;return res.text()&#125;)//同样返回一个promise，实现链式调用</div><div class="line">                                        .then(function(res2)&#123;console.log(res2)&#125;);</div></pre></td></tr></table></figure></p>
+<p>以上简单介绍了一个简单的异步请求。    </p>
+<h1 id="WHY"><a href="#WHY" class="headerlink" title="WHY"></a>WHY</h1><p>通过前面的演示我们看到发送一个异步请求有很多方式，那么为什么非要用fetch取代XHR呢？多大仇？<br>不想说起promise的，但是不讲Promise就讲不下去了。。。<br>promise的出现是为了解决<strong>回调地狱</strong><br>简化~<br>思考：假如func3执行的条件是func1和func2均执行完毕，其中func1和fun2均是异步请求，异步请求不确定什么时候结束。。。要么就定个定时器循环检测全局flag是否赋值，要么就是放进回调耦合在一起。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">(func1()&#123;   //纯纯的伪代码</div><div class="line">    $.ajax(&#123;</div><div class="line">      //...</div><div class="line">      success:function()&#123;</div><div class="line">//fun2</div><div class="line">      $.ajax(&#123;</div><div class="line">        //...</div><div class="line">        success:function()&#123;</div><div class="line">          func3;</div><div class="line">        &#125;</div><div class="line">      &#125;);</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<p>fetch(…).then(fun2)<br>          .then(fun3)//各依赖有序执行</p>
+<h1 id="HOW"><a href="#HOW" class="headerlink" title="HOW"></a>HOW</h1><h1 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h1><ul>
+<li>使用标准的ES6 Promise你无法收集进入信息或中断请求。</li>
+<li>使用XMLHttpRequest你可以模拟进度（监听progress事件），也可以取消请求（使用abort()方法）。 但是，如果有必要你也可以使用Promise来包裹它。</li>
+<li>目前Chrome 42+, Opera 29+, 和Firefox 39+都支持Fetch。微软也考虑在未来的版本中支持Fetch。 讽刺的是，当IE浏览器终于微响应实现了progress事件的时候，XMLHttpRequest也走到了尽头。 目前，如果你需要支持IE的话，你需要使用一个<a href="https://github.com/github/fetch" target="_blank" rel="external">polyfill</a>库。</li>
 </ul>
 
         </div>
@@ -362,16 +248,18 @@ display:inline;/*IE下再理解为5px*/
                     
                     <a href="/about">张言</a>
                 </li>
-                <li>Published Date: <span>2016-10-10  03:00:10</span></li>
+                <li>Published Date: <span>2016-11-01  04:46:00</span></li>
                 
-                <li>Updated Date: <span>2017-04-18  03:25:22</span></li>
+                <li>Updated Date: <span>2017-05-11  06:19:25</span></li>
                 
                 <li class="post-category">
                     Categories:
                     
                     <a href="/categories/前端开发/">前端开发</a>
                     
-                    <a href="/categories/前端开发/兼容性问题/">兼容性问题</a>
+                    <a href="/categories/前端开发/javaScript/">javaScript</a>
+                    
+                    <a href="/categories/前端开发/javaScript/异步编程/">异步编程</a>
                     
                 </li>
                 <li class="post-tags">
@@ -398,10 +286,8 @@ display:inline;/*IE下再理解为5px*/
     </article>
     <div class="article-nav">
         
-        <a href="/2016/10/11/JS浏览器兼容处理(2)/" class="pre-post fa fa-caret-left">啃掉IE低版本这块硬骨头（二）</a>
         
-        
-        <a href="/2016/10/08/浏览器环境/" class="next-post fa">浏览器环境</a>
+        <a href="/2016/10/22/ES6变量声明/" class="next-post fa">ES6声明声明变量的六种方法</a>
         
     </div>
     
@@ -410,7 +296,7 @@ display:inline;/*IE下再理解为5px*/
 
 <section id="duoshuo_comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="/2016/10/10/JS浏览器兼容处理(1)/" data-title="啃掉IE低版本这块硬骨头（一）" data-url="http://zhangyan123.github.io/2016/10/10/JS浏览器兼容处理(1)/"></div>
+    <div class="ds-thread" data-thread-key="/2016/11/01/浅析XHR与Fetch/" data-title="浅析 XMLHttPRequest API与Fetch API" data-url="http://zhangyan123.github.io/2016/11/01/浅析XHR与Fetch/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -495,7 +381,7 @@ display:inline;/*IE下再理解为5px*/
     </div>
 </div>
 
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#你应该知道的：JS浏览器兼容性处理"><span class="toc-number">1.</span> <span class="toc-text">你应该知道的：JS浏览器兼容性处理</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#WHAT"><span class="toc-number">1.</span> <span class="toc-text">WHAT</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#WHY"><span class="toc-number">2.</span> <span class="toc-text">WHY</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HOW"><span class="toc-number">3.</span> <span class="toc-text">HOW</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#问题："><span class="toc-number">4.</span> <span class="toc-text">问题：</span></a></li></ol>
 
 
     <script src="/js/highsong.js"></script>
