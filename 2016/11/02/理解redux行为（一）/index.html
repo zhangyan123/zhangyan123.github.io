@@ -22,7 +22,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>基本数据类型 | 张言的博客</title>
+<title>Redux原理 | 张言的博客</title>
 
 <link rel="alternate" href="/atom.xml" title="张言的博客" type="application/atom+xml">
 
@@ -161,9 +161,9 @@
     <article id="post">
         <div id="post-header">
 
-            <h1 id="基本数据类型">
+            <h1 id="Redux原理">
                 
-                基本数据类型
+                Redux原理
                 
             </h1>
             <div class="article-meta">
@@ -171,7 +171,7 @@
     
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-        <span>基础</span>
+        <span>React</span>
     </span>
     
     
@@ -187,20 +187,20 @@
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2016/09/11</span>
+        <span class="date-meta ">2016/11/02</span>
     </span>
     
     <span  class=" fa-wrap">
         <i class="fa fa-comment-o"></i>
-        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2016/09/11/基本数据类型/" data-thread-key="/2016/09/11/基本数据类型/"
+        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2016/11/02/理解redux行为（一）/" data-thread-key="/2016/11/02/理解redux行为（一）/"
            data-count-type="comments"></span>
     </span>
     
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="基本数据类型"
-              data-leadcloud-url="/2016/09/11/基本数据类型/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title="Redux原理"
+              data-leadcloud-url="/2016/11/02/理解redux行为（一）/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
@@ -211,37 +211,12 @@
         </div>
         
         <div id="post-body">
-            <h1 id="你应该知道的：基本数据类型常用技巧"><a href="#你应该知道的：基本数据类型常用技巧" class="headerlink" title="你应该知道的：基本数据类型常用技巧"></a>你应该知道的：基本数据类型常用技巧</h1><ul>
-<li>5种基本数据类型 Number、String、Boolean、null、undefined剩下的都是复杂类型</li>
-<li>原生9种内建构造函数：<ul>
-<li>数据封装类对象：Number、String、Boolean、Object、Array</li>
-<li>工具类对象：Math、Date、RegExp</li>
-<li>错误类对象：error</li>
-</ul>
-</li>
-<li>使用typeof操作符可以检测数据类型，new出来的任何种类的对象都呈现为[object object]，尽量使用字面量创建方式以便检测类型</li>
-<li>3e+3=3000</li>
-<li>数字中有两个特例 NaN!==NaN  Infinity+（-Infinity）===NaN  数字%0==Infinity</li>
-<li>字符串转为数字 parseInt(“10Shjksah”)===10  简便方式：  +”10”</li>
-<li>数字转字符串 “”+123===“123”</li>
-<li>双重取反操作可以取到任何值对应的布尔值 eg:！！1===true</li>
-<li>6种falsy值：<ul>
-<li>“”</li>
-<li>null</li>
-<li>undefined</li>
-<li>0</li>
-<li>NaN</li>
-<li>false<br>除以上falsy值之外的数据都是truthy值包括对象和falsy值字符串eg:”false”===true  </li>
-</ul>
-</li>
-<li><strong>经常使用的惰性求值法：<strong><ul>
-<li>||用于检测对象是否存在若不存在赋予初始值eg:  var a = b||{}<strong>||运算符可以用来填充默认值</strong>;</li>
-<li><strong>尝试从undefined的成员属性中取值将会导致TypeError异常，这时可以通过&amp;&amp;运算符来避免错误，eg: <code>flight.equipment&amp;&amp;flight.equipment.model</code></strong>a() &amp;&amp; b() :如果执行a()后返回true，则执行b()并返回b的值,此用法与？：三元运算符经常用于简化运算步骤；如果执行a()后返回false，则整个表达式返回a()的值，b()不执行；<br>a() || b() :如果执行a()后返回true，则整个表达式返回a()的值，b()不执行；如果执行a()后返回false，则执行b()并返回b()的值；<br>&amp;&amp; 优先级高于 ||</li>
-</ul>
-</strong></strong></li>
-<li>typeof null===object ;typeof undefined===undefined</li>
-<li>数组可以用于取字符串的某位字符’123’[1]===”2”,数组其实为key值从0开始递增的对象</li>
-<li>for-in方法是为了遍历对象而设计，会遍历原型链，注意使用hasOwnProperty()  </li>
+            <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ul>
+<li>reducer函数中判断分支复杂不易管理与阅读</li>
+<li>创建store时传入一个reducer意味着每一个reducer都需要一个store管理数据，后期store维护相当混乱<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1></li>
+<li>通过combineReducers将多个reducer合并成一个rootReducer，从而创建唯一的store管理众多action请求</li>
+<li>将一种类型的actionCreators（eq:用户登录状态login、logout）放在一个文件当中，导出集合</li>
+<li>将每一份actionCreators 文件对应的处理函数封装在Handlers对象里，触发action时检测action.type符合Handlers中的哪一项，便执行对应的函数体。*   </li>
 </ul>
 
         </div>
@@ -260,18 +235,18 @@
                     
                     <a href="/about">张言</a>
                 </li>
-                <li>Published Date: <span>2016-09-11  04:20:10</span></li>
+                <li>Published Date: <span>2016-11-02  04:44:05</span></li>
                 
-                <li>Updated Date: <span>2017-04-13  05:15:14</span></li>
+                <li>Updated Date: <span>2017-05-12  10:58:39</span></li>
                 
                 <li class="post-category">
                     Categories:
                     
                     <a href="/categories/前端开发/">前端开发</a>
                     
-                    <a href="/categories/前端开发/javaScript/">javaScript</a>
+                    <a href="/categories/前端开发/框架/">框架</a>
                     
-                    <a href="/categories/前端开发/javaScript/基础/">基础</a>
+                    <a href="/categories/前端开发/框架/React/">React</a>
                     
                 </li>
                 <li class="post-tags">
@@ -298,10 +273,8 @@
     </article>
     <div class="article-nav">
         
-        <a href="/2016/09/13/函数/" class="pre-post fa fa-caret-left">函数</a>
         
-        
-        <a href="/2016/09/10/表达式与语句/" class="next-post fa">表达式与语句</a>
+        <a href="/2016/11/01/浅析XHR与Fetch/" class="next-post fa">浅析 XMLHttPRequest API与Fetch API</a>
         
     </div>
     
@@ -310,7 +283,7 @@
 
 <section id="duoshuo_comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="/2016/09/11/基本数据类型/" data-title="基本数据类型" data-url="http://zhangyan123.github.io/2016/09/11/基本数据类型/"></div>
+    <div class="ds-thread" data-thread-key="/2016/11/02/理解redux行为（一）/" data-title="Redux原理" data-url="http://zhangyan123.github.io/2016/11/02/理解redux行为（一）/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -395,7 +368,7 @@
     </div>
 </div>
 
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#你应该知道的：基本数据类型常用技巧"><span class="toc-number">1.</span> <span class="toc-text">你应该知道的：基本数据类型常用技巧</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#问题"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解决"><span class="toc-number">2.</span> <span class="toc-text">解决</span></a></li></ol>
 
 
     <script src="/js/highsong.js"></script>

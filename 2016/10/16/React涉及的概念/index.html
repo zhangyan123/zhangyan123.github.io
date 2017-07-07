@@ -22,7 +22,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>基本数据类型 | 张言的博客</title>
+<title>React创新语法JSX | 张言的博客</title>
 
 <link rel="alternate" href="/atom.xml" title="张言的博客" type="application/atom+xml">
 
@@ -161,9 +161,9 @@
     <article id="post">
         <div id="post-header">
 
-            <h1 id="基本数据类型">
+            <h1 id="React创新语法JSX">
                 
-                基本数据类型
+                React创新语法JSX
                 
             </h1>
             <div class="article-meta">
@@ -171,7 +171,7 @@
     
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-        <span>基础</span>
+        <span>React</span>
     </span>
     
     
@@ -187,20 +187,20 @@
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2016/09/11</span>
+        <span class="date-meta ">2016/10/16</span>
     </span>
     
     <span  class=" fa-wrap">
         <i class="fa fa-comment-o"></i>
-        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2016/09/11/基本数据类型/" data-thread-key="/2016/09/11/基本数据类型/"
+        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2016/10/16/React涉及的概念/" data-thread-key="/2016/10/16/React涉及的概念/"
            data-count-type="comments"></span>
     </span>
     
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="基本数据类型"
-              data-leadcloud-url="/2016/09/11/基本数据类型/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title="React创新语法JSX"
+              data-leadcloud-url="/2016/10/16/React涉及的概念/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
@@ -211,38 +211,9 @@
         </div>
         
         <div id="post-body">
-            <h1 id="你应该知道的：基本数据类型常用技巧"><a href="#你应该知道的：基本数据类型常用技巧" class="headerlink" title="你应该知道的：基本数据类型常用技巧"></a>你应该知道的：基本数据类型常用技巧</h1><ul>
-<li>5种基本数据类型 Number、String、Boolean、null、undefined剩下的都是复杂类型</li>
-<li>原生9种内建构造函数：<ul>
-<li>数据封装类对象：Number、String、Boolean、Object、Array</li>
-<li>工具类对象：Math、Date、RegExp</li>
-<li>错误类对象：error</li>
-</ul>
-</li>
-<li>使用typeof操作符可以检测数据类型，new出来的任何种类的对象都呈现为[object object]，尽量使用字面量创建方式以便检测类型</li>
-<li>3e+3=3000</li>
-<li>数字中有两个特例 NaN!==NaN  Infinity+（-Infinity）===NaN  数字%0==Infinity</li>
-<li>字符串转为数字 parseInt(“10Shjksah”)===10  简便方式：  +”10”</li>
-<li>数字转字符串 “”+123===“123”</li>
-<li>双重取反操作可以取到任何值对应的布尔值 eg:！！1===true</li>
-<li>6种falsy值：<ul>
-<li>“”</li>
-<li>null</li>
-<li>undefined</li>
-<li>0</li>
-<li>NaN</li>
-<li>false<br>除以上falsy值之外的数据都是truthy值包括对象和falsy值字符串eg:”false”===true  </li>
-</ul>
-</li>
-<li><strong>经常使用的惰性求值法：<strong><ul>
-<li>||用于检测对象是否存在若不存在赋予初始值eg:  var a = b||{}<strong>||运算符可以用来填充默认值</strong>;</li>
-<li><strong>尝试从undefined的成员属性中取值将会导致TypeError异常，这时可以通过&amp;&amp;运算符来避免错误，eg: <code>flight.equipment&amp;&amp;flight.equipment.model</code></strong>a() &amp;&amp; b() :如果执行a()后返回true，则执行b()并返回b的值,此用法与？：三元运算符经常用于简化运算步骤；如果执行a()后返回false，则整个表达式返回a()的值，b()不执行；<br>a() || b() :如果执行a()后返回true，则整个表达式返回a()的值，b()不执行；如果执行a()后返回false，则执行b()并返回b()的值；<br>&amp;&amp; 优先级高于 ||</li>
-</ul>
-</strong></strong></li>
-<li>typeof null===object ;typeof undefined===undefined</li>
-<li>数组可以用于取字符串的某位字符’123’[1]===”2”,数组其实为key值从0开始递增的对象</li>
-<li>for-in方法是为了遍历对象而设计，会遍历原型链，注意使用hasOwnProperty()  </li>
-</ul>
+            <h1 id="解决什么问题"><a href="#解决什么问题" class="headerlink" title="解决什么问题"></a>解决什么问题</h1><p> 生来为了解决在开发中数据随时间变化的复杂用户界面，优化状态替换机制</p>
+<h1 id="主张"><a href="#主张" class="headerlink" title="主张"></a>主张</h1><p> 一次学习，随处可用</p>
+<h1 id="编写react组件"><a href="#编写react组件" class="headerlink" title="编写react组件"></a>编写react组件</h1><p> 编写react组件通常需要写一个继承自React.Component的类，并在render()中返回你要展示的视图<br> 但，如果这个组件只有一个render()方法，可以将其改为更为简洁的无状态函数，这也是<a href="https://github.com/libertyAlone/airbnb-javascript-style-guide-cn" target="_blank" rel="external">Airbnb编码规范</a>推荐的。</p>
 
         </div>
         <div id="post-footer">
@@ -260,18 +231,18 @@
                     
                     <a href="/about">张言</a>
                 </li>
-                <li>Published Date: <span>2016-09-11  04:20:10</span></li>
+                <li>Published Date: <span>2016-10-16  02:30:00</span></li>
                 
-                <li>Updated Date: <span>2017-04-13  05:15:14</span></li>
+                <li>Updated Date: <span>2017-06-14  10:45:42</span></li>
                 
                 <li class="post-category">
                     Categories:
                     
                     <a href="/categories/前端开发/">前端开发</a>
                     
-                    <a href="/categories/前端开发/javaScript/">javaScript</a>
+                    <a href="/categories/前端开发/框架/">框架</a>
                     
-                    <a href="/categories/前端开发/javaScript/基础/">基础</a>
+                    <a href="/categories/前端开发/框架/React/">React</a>
                     
                 </li>
                 <li class="post-tags">
@@ -298,10 +269,10 @@
     </article>
     <div class="article-nav">
         
-        <a href="/2016/09/13/函数/" class="pre-post fa fa-caret-left">函数</a>
+        <a href="/2016/10/16/观察者模式/" class="pre-post fa fa-caret-left">观察者模式在前端开发中的应用</a>
         
         
-        <a href="/2016/09/10/表达式与语句/" class="next-post fa">表达式与语句</a>
+        <a href="/2016/10/14/正则表达式（1）/" class="next-post fa">正则表达式是提高效率的利器（一）</a>
         
     </div>
     
@@ -310,7 +281,7 @@
 
 <section id="duoshuo_comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="/2016/09/11/基本数据类型/" data-title="基本数据类型" data-url="http://zhangyan123.github.io/2016/09/11/基本数据类型/"></div>
+    <div class="ds-thread" data-thread-key="/2016/10/16/React涉及的概念/" data-title="React创新语法JSX" data-url="http://zhangyan123.github.io/2016/10/16/React涉及的概念/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -395,7 +366,7 @@
     </div>
 </div>
 
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#你应该知道的：基本数据类型常用技巧"><span class="toc-number">1.</span> <span class="toc-text">你应该知道的：基本数据类型常用技巧</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#解决什么问题"><span class="toc-number">1.</span> <span class="toc-text">解决什么问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#主张"><span class="toc-number">2.</span> <span class="toc-text">主张</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#编写react组件"><span class="toc-number">3.</span> <span class="toc-text">编写react组件</span></a></li></ol>
 
 
     <script src="/js/highsong.js"></script>

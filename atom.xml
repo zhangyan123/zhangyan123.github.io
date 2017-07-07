@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangyan123.github.io/"/>
-  <updated>2017-05-11T13:15:33.000Z</updated>
+  <updated>2017-05-12T02:58:39.000Z</updated>
   <id>http://zhangyan123.github.io/</id>
   
   <author>
@@ -16,11 +16,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Redux原理</title>
+    <link href="http://zhangyan123.github.io/2016/11/02/%E7%90%86%E8%A7%A3redux%E8%A1%8C%E4%B8%BA%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2016/11/02/理解redux行为（一）/</id>
+    <published>2016-11-02T08:44:05.000Z</published>
+    <updated>2017-05-12T02:58:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ul>
+<li>reducer函数中判断分支复杂不易管理与阅读</li>
+<li>创建store时传入一个reducer意味着每一个reducer都需要一个store管理数据，后期store维护相当混乱<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1></li>
+<li>通过combineReducers将多个reducer合并成一个rootReducer，从而创建唯一的store管理众多action请求</li>
+<li>将一种类型的actionCreators（eq:用户登录状态login、logout）放在一个文件当中，导出集合</li>
+<li>将每一份actionCreators 文件对应的处理函数封装在Handlers对象里，触发action时检测action.type符合Handlers中的哪一项，便执行对应的函数体。*   </li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;reducer函数中判断分支复杂不易管理与阅读&lt;/li&gt;
+&lt;li&gt;创建store时传入一个reducer意味着每一个reduce
+    
+    </summary>
+    
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="框架" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="React" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%A1%86%E6%9E%B6/React/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>浅析 XMLHttPRequest API与Fetch API</title>
     <link href="http://zhangyan123.github.io/2016/11/01/%E6%B5%85%E6%9E%90XHR%E4%B8%8EFetch/"/>
     <id>http://zhangyan123.github.io/2016/11/01/浅析XHR与Fetch/</id>
     <published>2016-11-01T08:46:00.000Z</published>
-    <updated>2017-05-11T13:15:33.000Z</updated>
+    <updated>2017-05-11T13:18:57.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="WHAT"><a href="#WHAT" class="headerlink" title="WHAT"></a>WHAT</h1><p>  XMLHttpRequest与Fetch是两个实现客户端与服务器之间实现数据通信的API（由浏览器提供），他们以这样的顺序排放体现了js异步通信的进化。总之，就是两个发<strong>异步请求</strong>的工具。</p>
 <ul>
@@ -28,9 +63,9 @@
 <li>以往我们谈及Ajax使用的API都是XMLHttpRequest，这是一个以XML开头的单词，但是传输的格式不止于XML,目前使用较多的是JSON，HTML,或纯文本。</li>
 <li>IE5，IE6没有在他们的脚本语言中定义XMLHttpRequest对象的标识符，当时IE5，IE6发布时，XMLHttpRequest标识符本身还不是一个标准。如果XMLHttpRequest标识符不存在，通过对象检测可以获得向后兼容性。微软在2006年发布的IE7时，定义了XMLHttpRequest对象标识符。</li>
 <li>随着跨浏览器JS库(例如jQuery)流行，开发者再调用XMLHttpRequest功能时不用再直接接触底层API。</li>
-<li>先来看看直接使用XHR对象发请求的示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">var xmlhttp,</div><div class="line"> data=new FormData();</div><div class="line"> data.append(&apos;mail&apos;,&apos;15527216125@163.com&apos;);</div><div class="line"> data.append(&apos;password&apos;,&apos;123456&apos;)</div><div class="line"></div><div class="line">if (window.XMLHttpRequest) &#123;</div><div class="line">    xmlhttp = new XMLHttpRequest();</div><div class="line">   </div><div class="line">&#125;else if(window.ActiveXObject)&#123;</div><div class="line"> var versions=[</div><div class="line">   &apos;MSXML2.XMLHTTP.3.0&apos;,</div><div class="line">   &apos;MSXML2.XMLHTTP&apos;,</div><div class="line">   &apos;Microsoft.XMLHTTP&apos;</div><div class="line"> ];</div><div class="line"> for(var i=0;i&lt; versions.length;i++)&#123;</div><div class="line">     try&#123;</div><div class="line">       xmlhttp=new ActiveXobject(versions[i]);</div><div class="line">       break;</div><div class="line">     &#125;catch(e)&#123;&#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"> xmlhttp.onreadystatechange = function () &#123;</div><div class="line">    if ( xmlhttp.readyState == 4 &amp;&amp; xmlhttp.status == 200 ) &#123;</div><div class="line">      console.log(JSON.parse(xmlhttp.responseText);</div><div class="line">　　　　&#125;</div><div class="line">&#125;;</div><div class="line">    xmlhttp.open(&quot;post&quot;, &apos;/login&apos; , false);    //初始化XHR对象，readystate=1</div><div class="line">    xmlhttp.send(data);    //参数用于传输data readystate=2</div><div class="line">   // xmlhttp.abort();  //停止请求，用于多次连续点击处理及时禁止回调</div><div class="line"></div><div class="line">XHR2简易写法（不含兼容性检测）</div><div class="line">var xhr = new XMLHttpRequest();</div><div class="line">xhr.open(&apos;post&apos;, &apos;/login&apos;);</div><div class="line">xhr.responseType = &apos;json&apos;;</div><div class="line"></div><div class="line">xhr.onload = function() &#123;</div><div class="line">  console.log(xhr.response);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">xhr.onerror = function() &#123;</div><div class="line">  console.log(&quot;Booo&quot;);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">xhr.send(data);</div></pre></td></tr></table></figure>
-</li>
+<li>先来看看直接使用XHR对象发请求的示例</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">var xmlhttp,</div><div class="line"> data=new FormData();</div><div class="line"> data.append(&apos;mail&apos;,&apos;15527216125@163.com&apos;);</div><div class="line"> data.append(&apos;password&apos;,&apos;123456&apos;)</div><div class="line"></div><div class="line">if (window.XMLHttpRequest) &#123;</div><div class="line">    xmlhttp = new XMLHttpRequest();</div><div class="line">   </div><div class="line">&#125;else if(window.ActiveXObject)&#123;</div><div class="line"> var versions=[</div><div class="line">   &apos;MSXML2.XMLHTTP.3.0&apos;,</div><div class="line">   &apos;MSXML2.XMLHTTP&apos;,</div><div class="line">   &apos;Microsoft.XMLHTTP&apos;</div><div class="line"> ];</div><div class="line"> for(var i=0;i&lt; versions.length;i++)&#123;</div><div class="line">     try&#123;</div><div class="line">       xmlhttp=new ActiveXobject(versions[i]);</div><div class="line">       break;</div><div class="line">     &#125;catch(e)&#123;&#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"> xmlhttp.onreadystatechange = function () &#123;</div><div class="line">    if ( xmlhttp.readyState == 4 &amp;&amp; xmlhttp.status == 200 ) &#123;</div><div class="line">      console.log(JSON.parse(xmlhttp.responseText);</div><div class="line">　　　　&#125;</div><div class="line">&#125;;</div><div class="line">    xmlhttp.open(&quot;post&quot;, &apos;/login&apos; , false);    //初始化XHR对象，readystate=1</div><div class="line">    xmlhttp.send(data);    //参数用于传输data readystate=2</div><div class="line">   // xmlhttp.abort();  //停止请求，用于多次连续点击处理及时禁止回调</div><div class="line"></div><div class="line">XHR2简易写法（不含兼容性检测）</div><div class="line">var xhr = new XMLHttpRequest();</div><div class="line">xhr.open(&apos;post&apos;, &apos;/login&apos;);</div><div class="line">xhr.responseType = &apos;json&apos;;</div><div class="line"></div><div class="line">xhr.onload = function() &#123;</div><div class="line">  console.log(xhr.response);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">xhr.onerror = function() &#123;</div><div class="line">  console.log(&quot;Booo&quot;);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">xhr.send(data);</div></pre></td></tr></table></figure>
 <p>封装之后：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">    function request(url,message,callback())&#123;</div><div class="line">     var versions=[</div><div class="line">       &apos;MSXML2.XMLHTTP.3.0&apos;,</div><div class="line">       &apos;MSXML2.XMLHTTP&apos;,</div><div class="line">       &apos;Microsoft.XMLHTTP&apos;</div><div class="line">     ];</div><div class="line">     var xhr;</div><div class="line">     if(XHRHttpRequest)&#123;</div><div class="line">       xhr=new XMLHttpRequest();</div><div class="line">     &#125;else&#123;</div><div class="line">       for(var i=0;i&lt; versions.length;i++)&#123;</div><div class="line">         try&#123;</div><div class="line">           xhr=new ActiveXobject(versions[i]);</div><div class="line">           break;</div><div class="line">         &#125;catch(e)&#123;&#125;</div><div class="line">       &#125;</div><div class="line">     &#125;</div><div class="line">     xhr.onreadystatechange = (function(myxhr)&#123;</div><div class="line">        return function()&#123;</div><div class="line">          if(myxhr.readyState ====4 &amp;&amp; myxhr.status ===200)&#123;</div><div class="line">            callback(xhr);</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">     &#125;)(xhr);</div><div class="line">     xhr.open(&apos;post&apos;,url,true);//true代表了异步请求</div><div class="line">     xhr.send(message);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">jQuery：</div><div class="line"></div><div class="line">$.ajax(&#123;</div><div class="line">  url: &apos;/login&apos;,</div><div class="line">  method: &apos;post&apos;,</div><div class="line">  data:&#123;mail:&apos;15527216125@163.com&apos;,password:&apos;123456&apos;&#125;,</div><div class="line">  success:function(res)&#123;console.log(res)&#125;</div><div class="line">  </div><div class="line">&#125;);</div><div class="line">   </div><div class="line">fetch: </div><div class="line"></div><div class="line">fetch(&apos;/login&apos;,&#123;method:&apos;post&apos;,body:data&#125;)    //返回一个promise对象  返回的response对象需要使用response对象的方法转化为JSON对象或者text等类型供使用</div><div class="line">                                        .then(function(res)&#123;return res.text()&#125;)//同样返回一个promise，实现链式调用</div><div class="line">                                        .then(function(res2)&#123;console.log(res2)&#125;);</div></pre></td></tr></table></figure>
 <p>以上简单介绍了一个简单的异步请求。    </p>
@@ -105,7 +140,7 @@
     <link href="http://zhangyan123.github.io/2016/10/22/%E5%88%9D%E8%AF%86Promise/"/>
     <id>http://zhangyan123.github.io/2016/10/22/初识Promise/</id>
     <published>2016-10-22T04:30:00.000Z</published>
-    <updated>2017-05-11T10:19:22.000Z</updated>
+    <updated>2017-05-12T02:29:06.000Z</updated>
     
     <content type="html"><![CDATA[<p>功能：Promise是处理异步的优秀方案，它不仅可以通过链式操作帮助我们拜托回调地狱，还可以在链式操作中的任何时刻捕获异常。<br>promise支持链式调用：<br><img src="/images/promisePatern.png" alt="promise"></p>
 <p>举例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// 同步resolve</div><div class="line">var promise1 = new Promise(</div><div class="line">    (resolve, reject) =&gt; &#123;</div><div class="line">        resolve(&quot;this is promise1 resolve&quot;);</div><div class="line">    &#125;</div><div class="line">).then(</div><div class="line">    (msg) =&gt; &#123;</div><div class="line">        console.log(msg);</div><div class="line">    &#125;,</div><div class="line">    (err) =&gt; &#123;</div><div class="line">        console.log(err);</div><div class="line">    &#125;</div><div class="line">);</div></pre></td></tr></table></figure></p>
@@ -241,13 +276,9 @@
     <link href="http://zhangyan123.github.io/2016/10/18/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
     <id>http://zhangyan123.github.io/2016/10/18/策略模式/</id>
     <published>2016-10-18T08:50:04.000Z</published>
-    <updated>2017-04-13T09:01:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="你应该知道的：JS闭包在开发实战中的应用"><a href="#你应该知道的：JS闭包在开发实战中的应用" class="headerlink" title="你应该知道的：JS闭包在开发实战中的应用"></a>你应该知道的：JS闭包在开发实战中的应用</h1>]]></content>
+    <updated>2017-05-12T02:28:58.000Z</updated>
     
     <summary type="html">
-    
-      &lt;h1 id=&quot;你应该知道的：JS闭包在开发实战中的应用&quot;&gt;&lt;a href=&quot;#你应该知道的：JS闭包在开发实战中的应用&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：JS闭包在开发实战中的应用&quot;&gt;&lt;/a&gt;你应该知道的：JS闭包在开发实战中的应用&lt;/h1&gt;
     
     </summary>
     
@@ -342,6 +373,36 @@
       <category term="设计模式" scheme="http://zhangyan123.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
       <category term="观察者模式" scheme="http://zhangyan123.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React创新语法JSX</title>
+    <link href="http://zhangyan123.github.io/2016/10/16/React%E6%B6%89%E5%8F%8A%E7%9A%84%E6%A6%82%E5%BF%B5/"/>
+    <id>http://zhangyan123.github.io/2016/10/16/React涉及的概念/</id>
+    <published>2016-10-16T06:30:00.000Z</published>
+    <updated>2017-06-14T02:45:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="解决什么问题"><a href="#解决什么问题" class="headerlink" title="解决什么问题"></a>解决什么问题</h1><p> 生来为了解决在开发中数据随时间变化的复杂用户界面，优化状态替换机制</p>
+<h1 id="主张"><a href="#主张" class="headerlink" title="主张"></a>主张</h1><p> 一次学习，随处可用</p>
+<h1 id="编写react组件"><a href="#编写react组件" class="headerlink" title="编写react组件"></a>编写react组件</h1><p> 编写react组件通常需要写一个继承自React.Component的类，并在render()中返回你要展示的视图<br> 但，如果这个组件只有一个render()方法，可以将其改为更为简洁的无状态函数，这也是<a href="https://github.com/libertyAlone/airbnb-javascript-style-guide-cn" target="_blank" rel="external">Airbnb编码规范</a>推荐的。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;解决什么问题&quot;&gt;&lt;a href=&quot;#解决什么问题&quot; class=&quot;headerlink&quot; title=&quot;解决什么问题&quot;&gt;&lt;/a&gt;解决什么问题&lt;/h1&gt;&lt;p&gt; 生来为了解决在开发中数据随时间变化的复杂用户界面，优化状态替换机制&lt;/p&gt;
+&lt;h1 id=&quot;主张&quot;&gt;&lt;a 
+    
+    </summary>
+    
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="框架" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="React" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%A1%86%E6%9E%B6/React/"/>
     
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
@@ -1118,132 +1179,6 @@ return n;
       <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
     
       <category term="函数式编程" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
-    
-    
-      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>函数</title>
-    <link href="http://zhangyan123.github.io/2016/09/13/%E5%87%BD%E6%95%B0/"/>
-    <id>http://zhangyan123.github.io/2016/09/13/函数/</id>
-    <published>2016-09-13T08:18:10.000Z</published>
-    <updated>2017-04-17T01:26:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="你应该知道的：函数"><a href="#你应该知道的：函数" class="headerlink" title="你应该知道的：函数"></a>你应该知道的：函数</h1><ul>
-<li>函数时对象，他的不同之在于可以被调用；</li>
-<li>除了声明的形参之外，每个函数还接收两个附加的参数：this和arguments.参数this在面向对象编程中非常重要，他的值取决于调用的模式，在javascript中一共有4种函数调用模式：方法调用、函数调用、构造器调用、apply调用。</li>
-<li>函数的参数使用逗号分隔，这些参数名称将被定义为函数中的变量，它们不像普通量那样被初始化为undefined，而是在函数被调用时初始化为实际提供的参数值。</li>
-<li>函数声明的组成部分：关键字function、函数名、参数、函数体、return（如果没有显示的返回值，JS默认返回undefined）</li>
-<li>函数声明与函数表达式区别在于声明会提升，而表达式在预编译中会被跳过，只有var a =function(){//函数体}中的变量a得到了变量声明提升，a===undefined;</li>
-<li>函数的参数分为形参和实参，eg:function add(a,b){return a+b;}  中形参的个数为add.length，而使用时传入实参的个数为arguments.length，arguments是函数内建变量，它是一个承装实际参数的类数组而非真正的数组，一般为了方便使用数组的方法我们会使用var args=Array.prototype.slice.call(arguments);将类数组转换为真正的数组。</li>
-<li><p>枚举JS内建函数注意事项</p>
-<ul>
-<li>parseInt(requireArg,radix)第二个参数用于指定解析整数的进制，默认十进制，ES5之前有fix=0x||0时候易造成默认进制改变为十六或八导致的错误。ES5已经修复了八进制的默认表示法，但是使用此函数时仍需注意,不能解析为整数时返回NaN。</li>
-<li>parseFloat()只支持解析为十进制数,但parseFloat()可以识别指数型字符串parseFloat(‘1e1’)===10</li>
-<li>isNaN()确定输入值是否为可参与计算的数字，因此此函数可以用来检测parseInt()和parseFloat()返回调用成功与否。</li>
-<li>isFinite()用于检测既非Infinit又非NaN的数字</li>
-<li>URI的编码与反编码 encodeURI()/encodeURIComponent()/decodeURI()/decodeURIComponent</li>
-</ul>
-</li>
-<li><p>函数的两大特征：</p>
-<ul>
-<li>函数是对象，唯一的不同是它可以被调用；</li>
-<li>函数定义局部作用域；</li>
-</ul>
-</li>
-<li>强烈建议使用“单一var”模式在函数顶部声明函数用的局部变量，方便已近函数遍阅读到该区域所有用的变量的定义。避免变量声明提升带来的变量使用不恰当的混淆问题。</li>
-<li>将A函数作为参数传递给B函数,并由B函数来执行A(A承担B函数中的部分处理功能特别是在循环中调用同一种方法时常用回调函数节省循环次数)，此时A函数叫做B函数的回调函数。</li>
-<li>闭包实现：(将函数内部的函数暴露在全局环境中)<ul>
-<li>return inner();</li>
-<li>全局变量=inner();</li>
-</ul>
-</li>
-<li><p>使用闭包的注意事项：</p>
-<ul>
-<li>内部函数保存的是作用域本身，也不是定义函数时的快照，因此在外调用内部函数时多次调用结果可以不同；</li>
-<li>循环中使用闭包：要记住闭包记住的是变量而非定义闭包时的固定值，当调用闭包时其中的变量值为该变量最近被赋予的值；</li>
-<li>闭包可以用于访问私有变量，保证该变量的值只通过闭包进行访问，并保证在全局可以访问到此变量。</li>
-</ul>
-</li>
-<li><p>每个函数都一定有return值，没有显示返回的js自动补全为undefined，return false为终止执行，return true为执行默认操作，可以return局部变量的值（栈中的值）或者函数（闭包），但不能返回局部引用值（引用的对象存储在堆中，函数返回之后堆中对象被清理，引用值体现为无效）。</p>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;你应该知道的：函数&quot;&gt;&lt;a href=&quot;#你应该知道的：函数&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：函数&quot;&gt;&lt;/a&gt;你应该知道的：函数&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;函数时对象，他的不同之在于可以被调用；&lt;/li&gt;
-&lt;li&gt;除了声明的形参
-    
-    </summary>
-    
-      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
-    
-      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基本数据类型</title>
-    <link href="http://zhangyan123.github.io/2016/09/11/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>http://zhangyan123.github.io/2016/09/11/基本数据类型/</id>
-    <published>2016-09-11T08:20:10.000Z</published>
-    <updated>2017-04-13T09:15:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="你应该知道的：基本数据类型常用技巧"><a href="#你应该知道的：基本数据类型常用技巧" class="headerlink" title="你应该知道的：基本数据类型常用技巧"></a>你应该知道的：基本数据类型常用技巧</h1><ul>
-<li>5种基本数据类型 Number、String、Boolean、null、undefined剩下的都是复杂类型</li>
-<li>原生9种内建构造函数：<ul>
-<li>数据封装类对象：Number、String、Boolean、Object、Array</li>
-<li>工具类对象：Math、Date、RegExp</li>
-<li>错误类对象：error</li>
-</ul>
-</li>
-<li>使用typeof操作符可以检测数据类型，new出来的任何种类的对象都呈现为[object object]，尽量使用字面量创建方式以便检测类型</li>
-<li>3e+3=3000</li>
-<li>数字中有两个特例 NaN!==NaN  Infinity+（-Infinity）===NaN  数字%0==Infinity</li>
-<li>字符串转为数字 parseInt(“10Shjksah”)===10  简便方式：  +”10”</li>
-<li>数字转字符串 “”+123===“123”</li>
-<li>双重取反操作可以取到任何值对应的布尔值 eg:！！1===true</li>
-<li>6种falsy值：<ul>
-<li>“”</li>
-<li>null</li>
-<li>undefined</li>
-<li>0</li>
-<li>NaN</li>
-<li>false<br>除以上falsy值之外的数据都是truthy值包括对象和falsy值字符串eg:”false”===true  </li>
-</ul>
-</li>
-<li><strong>经常使用的惰性求值法：<strong><ul>
-<li>||用于检测对象是否存在若不存在赋予初始值eg:  var a = b||{}<strong>||运算符可以用来填充默认值</strong>;</li>
-<li><strong>尝试从undefined的成员属性中取值将会导致TypeError异常，这时可以通过&amp;&amp;运算符来避免错误，eg: <code>flight.equipment&amp;&amp;flight.equipment.model</code></strong>a() &amp;&amp; b() :如果执行a()后返回true，则执行b()并返回b的值,此用法与？：三元运算符经常用于简化运算步骤；如果执行a()后返回false，则整个表达式返回a()的值，b()不执行；<br>a() || b() :如果执行a()后返回true，则整个表达式返回a()的值，b()不执行；如果执行a()后返回false，则执行b()并返回b()的值；<br>&amp;&amp; 优先级高于 ||</li>
-</ul>
-</strong></strong></li>
-<li>typeof null===object ;typeof undefined===undefined</li>
-<li>数组可以用于取字符串的某位字符’123’[1]===”2”,数组其实为key值从0开始递增的对象</li>
-<li>for-in方法是为了遍历对象而设计，会遍历原型链，注意使用hasOwnProperty()  </li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;你应该知道的：基本数据类型常用技巧&quot;&gt;&lt;a href=&quot;#你应该知道的：基本数据类型常用技巧&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：基本数据类型常用技巧&quot;&gt;&lt;/a&gt;你应该知道的：基本数据类型常用技巧&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;5种基本
-    
-    </summary>
-    
-      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
-    
-      <category term="基础" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/%E5%9F%BA%E7%A1%80/"/>
     
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
