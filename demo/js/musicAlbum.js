@@ -76,7 +76,7 @@
                 $(".play").trigger("click");
             });
             $("#code").click(function(){
-                window.open(encodeURI("https://github.com/zhangyan123/tree/master/基于H5-audio模拟光盘播放插件"));
+                window.open('https://github.com/zhangyan123/study-log/tree/master/%E5%9F%BA%E4%BA%8EH5-audio%E6%A8%A1%E6%8B%9F%E5%85%89%E7%9B%98%E6%92%AD%E6%94%BE%E6%8F%92%E4%BB%B6');
             });
             $("#mute").click(function () {
                 if (audio.muted) {
