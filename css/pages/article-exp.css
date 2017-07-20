@@ -59,7 +59,7 @@
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  background-size: cover;
+  background-repeat: no-repeat;
 }
 #main > .article-excerpt-wrap .article-img .loading-img {
   width: 100%;
