@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangyan123.github.io/"/>
-  <updated>2017-05-12T02:58:39.000Z</updated>
+  <updated>2017-07-20T02:56:11.000Z</updated>
   <id>http://zhangyan123.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>剖析闭包的战场</title>
+    <link href="http://zhangyan123.github.io/2017/03/10/%E9%97%AD%E5%8C%85%E5%BA%94%E7%94%A8%EF%BC%881%EF%BC%89/"/>
+    <id>http://zhangyan123.github.io/2017/03/10/闭包应用（1）/</id>
+    <published>2017-03-10T08:46:04.000Z</published>
+    <updated>2017-07-20T02:56:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="你应该知道的：JS闭包在开发实战中的应用"><a href="#你应该知道的：JS闭包在开发实战中的应用" class="headerlink" title="你应该知道的：JS闭包在开发实战中的应用"></a>你应该知道的：JS闭包在开发实战中的应用</h1><p>函数内创建内部函数并将内部函数赋值给外部变量情况(没有被返回的内部函数[[Scopes]]同样指向外层函数的作用域链，单独说闭包时为因为其强大的灵活性)，外层函数执行结束后外部变量所指向的函数对象[[Scopes]]属性中包含了外部函数中执行产生的局部值。须知道函数的作用域实在创建时候确定的，this值是在运行时候才确定的。<br>都说闭包如此灵活，强大，我想知道它究竟有什么用处<br>-</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;你应该知道的：JS闭包在开发实战中的应用&quot;&gt;&lt;a href=&quot;#你应该知道的：JS闭包在开发实战中的应用&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：JS闭包在开发实战中的应用&quot;&gt;&lt;/a&gt;你应该知道的：JS闭包在开发实战中的应用&lt;/h1&gt;&lt;
+    
+    </summary>
+    
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
+    
+      <category term="闭包" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/%E9%97%AD%E5%8C%85/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>Redux原理</title>
@@ -291,33 +318,6 @@
       <category term="设计模式" scheme="http://zhangyan123.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
       <category term="策略模式" scheme="http://zhangyan123.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>剖析闭包的战场</title>
-    <link href="http://zhangyan123.github.io/2016/10/17/%E9%97%AD%E5%8C%85%E5%BA%94%E7%94%A8%EF%BC%881%EF%BC%89/"/>
-    <id>http://zhangyan123.github.io/2016/10/17/闭包应用（1）/</id>
-    <published>2016-10-17T08:46:04.000Z</published>
-    <updated>2017-07-20T02:37:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="你应该知道的：JS闭包在开发实战中的应用"><a href="#你应该知道的：JS闭包在开发实战中的应用" class="headerlink" title="你应该知道的：JS闭包在开发实战中的应用"></a>你应该知道的：JS闭包在开发实战中的应用</h1><p>函数内创建内部函数并将内部函数赋值给外部变量情况(没有被返回的内部函数[[Scopes]]同样指向外层函数的作用域链，单独说闭包时为因为其强大的灵活性)，外层函数执行结束后外部变量所指向的函数对象[[Scopes]]属性中包含了外部函数中执行产生的局部值。须知道函数的作用域实在创建时候确定的，this值是在运行时候才确定的。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;你应该知道的：JS闭包在开发实战中的应用&quot;&gt;&lt;a href=&quot;#你应该知道的：JS闭包在开发实战中的应用&quot; class=&quot;headerlink&quot; title=&quot;你应该知道的：JS闭包在开发实战中的应用&quot;&gt;&lt;/a&gt;你应该知道的：JS闭包在开发实战中的应用&lt;/h1&gt;&lt;
-    
-    </summary>
-    
-      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
-    
-      <category term="闭包" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/%E9%97%AD%E5%8C%85/"/>
     
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
