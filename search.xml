@@ -246,7 +246,8 @@
     <entry>
         <title><![CDATA[策略模式在前端开发中的应用]]></title>
         <url>http://zhangyan123.github.io/2016/10/18/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</url>
-        <content type="html"></content>
+        <content type="html"><![CDATA[<p>待更新。。。</p>
+]]></content>
         
         <categories>
             
@@ -268,7 +269,7 @@
     <entry>
         <title><![CDATA[剖析闭包的战场]]></title>
         <url>http://zhangyan123.github.io/2016/10/17/%E9%97%AD%E5%8C%85%E5%BA%94%E7%94%A8%EF%BC%881%EF%BC%89/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：JS闭包在开发实战中的应用"><a href="#你应该知道的：JS闭包在开发实战中的应用" class="headerlink" title="你应该知道的：JS闭包在开发实战中的应用"></a>你应该知道的：JS闭包在开发实战中的应用</h1><p>说在前面：函数可以被定义在其他函数里，一个内部函数除了可以访问自己的参数和变量，同时也可访问把她嵌套在其中的父函数的参数与变量，通过字面量创建的函数对象包含一个连接到外部上下文的连接，这被称为闭包（closure）。它是Javacript强大表现力的来源。</p>
+        <content type="html"><![CDATA[<h1 id="你应该知道的：JS闭包在开发实战中的应用"><a href="#你应该知道的：JS闭包在开发实战中的应用" class="headerlink" title="你应该知道的：JS闭包在开发实战中的应用"></a>你应该知道的：JS闭包在开发实战中的应用</h1><p>函数内创建内部函数并将内部函数赋值给外部变量情况(没有被返回的内部函数[[Scopes]]同样指向外层函数的作用域链，单独说闭包时为因为其强大的灵活性)，外层函数执行结束后外部变量所指向的函数对象[[Scopes]]属性中包含了外部函数中执行产生的局部值。须知道函数的作用域实在创建时候确定的，this值是在运行时候才确定的。</p>
 ]]></content>
         
         <categories>
