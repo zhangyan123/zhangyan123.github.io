@@ -139,7 +139,7 @@
     <link href="http://zhangyan123.github.io/2016/10/22/ES6%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E/"/>
     <id>http://zhangyan123.github.io/2016/10/22/ES6变量声明/</id>
     <published>2016-10-22T06:30:01.000Z</published>
-    <updated>2017-04-26T12:09:10.000Z</updated>
+    <updated>2017-07-22T03:21:20.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="你应该知道的：变量声明大法"><a href="#你应该知道的：变量声明大法" class="headerlink" title="你应该知道的：变量声明大法"></a>你应该知道的：变量声明大法</h2><p>ES5中只有两种声明变量的方法：var命令和function命令<br>ES6中增加四种特别的声明方式：    </p>
 <ul>
@@ -158,9 +158,9 @@
     
       <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
+      <category term="javascript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javascript/"/>
     
-      <category term="ES6" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/ES6/"/>
+      <category term="ES6" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javascript/ES6/"/>
     
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
