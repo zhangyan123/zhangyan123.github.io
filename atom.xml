@@ -139,7 +139,7 @@
     <link href="http://zhangyan123.github.io/2016/10/22/ES6%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E/"/>
     <id>http://zhangyan123.github.io/2016/10/22/ES6变量声明/</id>
     <published>2016-10-22T06:30:01.000Z</published>
-    <updated>2017-07-22T03:21:20.000Z</updated>
+    <updated>2017-07-22T03:24:40.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="你应该知道的：变量声明大法"><a href="#你应该知道的：变量声明大法" class="headerlink" title="你应该知道的：变量声明大法"></a>你应该知道的：变量声明大法</h2><p>ES5中只有两种声明变量的方法：var命令和function命令<br>ES6中增加四种特别的声明方式：    </p>
 <ul>
@@ -158,9 +158,9 @@
     
       <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="javascript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javascript/"/>
+      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
     
-      <category term="ES6" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javascript/ES6/"/>
+      <category term="ES6" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/ES6/"/>
     
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
@@ -172,7 +172,7 @@
     <link href="http://zhangyan123.github.io/2016/10/22/%E5%88%9D%E8%AF%86Promise/"/>
     <id>http://zhangyan123.github.io/2016/10/22/初识Promise/</id>
     <published>2016-10-22T04:30:00.000Z</published>
-    <updated>2017-05-12T02:29:06.000Z</updated>
+    <updated>2017-07-22T03:29:39.000Z</updated>
     
     <content type="html"><![CDATA[<p>功能：Promise是处理异步的优秀方案，它不仅可以通过链式操作帮助我们拜托回调地狱，还可以在链式操作中的任何时刻捕获异常。<br>promise支持链式调用：<br><img src="/images/promisePatern.png" alt="promise"></p>
 <p>举例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// 同步resolve</div><div class="line">var promise1 = new Promise(</div><div class="line">    (resolve, reject) =&gt; &#123;</div><div class="line">        resolve(&quot;this is promise1 resolve&quot;);</div><div class="line">    &#125;</div><div class="line">).then(</div><div class="line">    (msg) =&gt; &#123;</div><div class="line">        console.log(msg);</div><div class="line">    &#125;,</div><div class="line">    (err) =&gt; &#123;</div><div class="line">        console.log(err);</div><div class="line">    &#125;</div><div class="line">);</div></pre></td></tr></table></figure></p>
@@ -198,9 +198,9 @@
     
       <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="javascript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javascript/"/>
+      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
     
-      <category term="ES6" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javascript/ES6/"/>
+      <category term="ES6" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/ES6/"/>
     
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
