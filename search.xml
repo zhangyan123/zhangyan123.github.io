@@ -11,8 +11,9 @@
 <li>创建store时传入一个reducer意味着每一个reducer都需要一个store管理数据，后期store维护相当混乱<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1></li>
 <li>通过combineReducers将多个reducer合并成一个rootReducer，从而创建唯一的store管理众多action请求</li>
 <li>将一种类型的actionCreators（eq:用户登录状态login、logout）放在一个文件当中，导出集合</li>
-<li>将每一份actionCreators 文件对应的处理函数封装在Handlers对象里，触发action时检测action.type符合Handlers中的哪一项，便执行对应的函数体。*   </li>
+<li>将每一份actionCreators 文件对应的处理函数封装在Handlers对象里，触发action时检测action.type符合Handlers中的哪一项，便执行对应的函数体。</li>
 </ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>  以上解决方案在项目中得到了实践，还包括异步注入reducer等方案，为全局状态管理提供了清晰的思路，后续文章逐项具体讲解（记得带图）。</p>
 ]]></content>
         
         <categories>

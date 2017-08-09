@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangyan123.github.io/"/>
-  <updated>2017-08-09T13:16:44.000Z</updated>
+  <updated>2017-08-09T13:22:29.000Z</updated>
   <id>http://zhangyan123.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://zhangyan123.github.io/2017/08/02/%E7%90%86%E8%A7%A3redux%E8%A1%8C%E4%B8%BA%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://zhangyan123.github.io/2017/08/02/理解redux行为（一）/</id>
     <published>2017-08-02T08:50:05.000Z</published>
-    <updated>2017-08-09T13:16:44.000Z</updated>
+    <updated>2017-08-09T13:22:29.000Z</updated>
     
     <content type="html"><![CDATA[<p>为了方便在问题中总结提升，特劈【在问题中成长】类目，惟愿从哪里跌倒，就不再摔进去。</p>
 <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ul>
@@ -28,8 +28,9 @@
 <li>创建store时传入一个reducer意味着每一个reducer都需要一个store管理数据，后期store维护相当混乱<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1></li>
 <li>通过combineReducers将多个reducer合并成一个rootReducer，从而创建唯一的store管理众多action请求</li>
 <li>将一种类型的actionCreators（eq:用户登录状态login、logout）放在一个文件当中，导出集合</li>
-<li>将每一份actionCreators 文件对应的处理函数封装在Handlers对象里，触发action时检测action.type符合Handlers中的哪一项，便执行对应的函数体。*   </li>
+<li>将每一份actionCreators 文件对应的处理函数封装在Handlers对象里，触发action时检测action.type符合Handlers中的哪一项，便执行对应的函数体。</li>
 </ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>  以上解决方案在项目中得到了实践，还包括异步注入reducer等方案，为全局状态管理提供了清晰的思路，后续文章逐项具体讲解（记得带图）。</p>
 ]]></content>
     
     <summary type="html">
