@@ -3,6 +3,45 @@
     
     
     <entry>
+        <title><![CDATA[为面试整理思路]]></title>
+        <url>http://zhangyan123.github.io/2017/08/10/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/</url>
+        <content type="html"><![CDATA[<h1 id="基本算法"><a href="#基本算法" class="headerlink" title="基本算法"></a>基本算法</h1><ul>
+<li><p>快速排序：<br>注：快排的时间复杂度为O(nlgn)~O(n^2) ,由于使用递归调用栈空间复杂度为O(lgn)<br>` function quicksort(arr) {<br>  if (arr.length &lt;= 1) {</p>
+<pre><code>return arr;
+</code></pre><p>  } else {</p>
+<pre><code>var key = Math.floor(arr.length / 2), left = [], right = [];
+var key = arr.splice(key, 1)[0];
+for (var i = 0; i &lt; arr.length; i++) {
+    if (arr[i] &lt; key) {
+        left.push(arr[i]);
+    } else {
+        right.push(arr[i]);
+    }
+
+}
+return quicksort(left).concat([key], quicksort(right));
+</code></pre><p>  }</p>
+</li>
+</ul>
+<p>} `</p>
+]]></content>
+        
+        <categories>
+            
+            <category> 面试准备 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 面试 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
         <title><![CDATA[Redux使用篇]]></title>
         <url>http://zhangyan123.github.io/2017/08/02/%E7%90%86%E8%A7%A3redux%E8%A1%8C%E4%B8%BA%EF%BC%88%E4%B8%80%EF%BC%89/</url>
         <content type="html"><![CDATA[<p>为了方便在问题中总结提升，特劈【在问题中成长】类目，惟愿从哪里跌倒，就不再摔进去。</p>
