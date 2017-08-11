@@ -260,6 +260,7 @@ window.onload = function () {
         clickLink(e, false);
     }, false);
     /*search function*/
+    if($searchBtn){
     var extra = {flag: false, data: []};
     $searchBtn.addEventListener('click', function (e) {
         search.func(search.path, extra);
@@ -271,6 +272,7 @@ window.onload = function () {
             this.classList.remove('show');
         }
     }, false);
+    }
     /*fix bug*/
     if (!$tocWrap && $tocBtn) {
         $tocBtn.style.display = 'none';

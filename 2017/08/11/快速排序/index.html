@@ -22,9 +22,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>为面试整理思路 | 张言的博客</title>
-
-<link rel="alternate" href="/atom.xml" title="张言的博客" type="application/atom+xml">
+<title>快速排序 | 张言的博客</title>
 
 
 <link rel="icon" href="/favicon.ico">
@@ -90,7 +88,7 @@
         
             <li><a href="/about"><i class="fa fa-user"></i>About</a></li>
         
-        <li id="search"><a href="javascript:void(0)"><i class="fa fa-search"></i>Search</a></li>
+        <!--<li id="search"><a href="javascript:void(0)"><i class="fa fa-search"></i>Search</a></li>-->
     </ul>
 </header>
 
@@ -110,7 +108,7 @@
     
 <li class="widget widget-normal category">
     <h3 class="fa fa-th widget-title">Categories</h3>
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/写作/"><i class="fa" aria-hidden="true">写作</i></a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/写作/markdown/"><i class="fa" aria-hidden="true">markdown</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/"><i class="fa" aria-hidden="true">前端开发</i></a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/"><i class="fa" aria-hidden="true">javaScript</i></a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/ES6/"><i class="fa" aria-hidden="true">ES6</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/JS进步史/"><i class="fa" aria-hidden="true">JS进步史</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/内建对象的扩展/"><i class="fa" aria-hidden="true">内建对象的扩展</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/函数式编程/"><i class="fa" aria-hidden="true">函数式编程</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/基础/"><i class="fa" aria-hidden="true">基础</i></a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/异步编程/"><i class="fa" aria-hidden="true">异步编程</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/闭包/"><i class="fa" aria-hidden="true">闭包</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/兼容性问题/"><i class="fa" aria-hidden="true">兼容性问题</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/在项目中成长/"><i class="fa" aria-hidden="true">在项目中成长</i></a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/在项目中成长/React使用/"><i class="fa" aria-hidden="true">React使用</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/框架/"><i class="fa" aria-hidden="true">框架</i></a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/框架/Laravel/"><i class="fa" aria-hidden="true">Laravel</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/框架/React/"><i class="fa" aria-hidden="true">React</i></a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/浏览器工作原理/"><i class="fa" aria-hidden="true">浏览器工作原理</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/正则表达式/"><i class="fa" aria-hidden="true">正则表达式</i></a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/正则表达式/方法/"><i class="fa" aria-hidden="true">方法</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/"><i class="fa" aria-hidden="true">设计模式</i></a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/策略模式/"><i class="fa" aria-hidden="true">策略模式</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/观察者模式/"><i class="fa" aria-hidden="true">观察者模式</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试准备/"><i class="fa" aria-hidden="true">面试准备</i></a><span class="category-list-count">1</span></li></ul>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/写作/"><i class="fa" aria-hidden="true">写作</i></a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/写作/markdown/"><i class="fa" aria-hidden="true">markdown</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/"><i class="fa" aria-hidden="true">前端开发</i></a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/"><i class="fa" aria-hidden="true">javaScript</i></a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/ES6/"><i class="fa" aria-hidden="true">ES6</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/JS进步史/"><i class="fa" aria-hidden="true">JS进步史</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/内建对象的扩展/"><i class="fa" aria-hidden="true">内建对象的扩展</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/函数式编程/"><i class="fa" aria-hidden="true">函数式编程</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/基础/"><i class="fa" aria-hidden="true">基础</i></a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/异步编程/"><i class="fa" aria-hidden="true">异步编程</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/javaScript/闭包/"><i class="fa" aria-hidden="true">闭包</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/兼容性问题/"><i class="fa" aria-hidden="true">兼容性问题</i></a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/在项目中成长/"><i class="fa" aria-hidden="true">在项目中成长</i></a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/在项目中成长/React使用/"><i class="fa" aria-hidden="true">React使用</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/框架/"><i class="fa" aria-hidden="true">框架</i></a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/框架/Laravel/"><i class="fa" aria-hidden="true">Laravel</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/框架/React/"><i class="fa" aria-hidden="true">React</i></a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/浏览器工作原理/"><i class="fa" aria-hidden="true">浏览器工作原理</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/正则表达式/"><i class="fa" aria-hidden="true">正则表达式</i></a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/正则表达式/方法/"><i class="fa" aria-hidden="true">方法</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/"><i class="fa" aria-hidden="true">设计模式</i></a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/策略模式/"><i class="fa" aria-hidden="true">策略模式</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/观察者模式/"><i class="fa" aria-hidden="true">观察者模式</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试准备/"><i class="fa" aria-hidden="true">面试准备</i></a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/面试准备/基本算法/"><i class="fa" aria-hidden="true">基本算法</i></a><span class="category-list-count">1</span></li></ul></li></ul>
 </li>
 
 
@@ -137,7 +135,7 @@
   <h3 class="fa fa-tags widget-title">Tag Cloud</h3>
   <div class="tagcloud-content">
     
-      <a href="/tags/javaScript/" style="font-size: 0.2rem; color: #0a407c">javaScript</a> <a href="/tags/写作/" style="font-size: 0.14rem; color: #69c">写作</a> <a href="/tags/larabel/" style="font-size: 0.14rem; color: #69c">larabel</a> <a href="/tags/浏览器工作原理/" style="font-size: 0.14rem; color: #69c">浏览器工作原理</a> <a href="/tags/执行环境与作用域/" style="font-size: 0.14rem; color: #69c">执行环境与作用域</a> <a href="/tags/面试/" style="font-size: 0.14rem; color: #69c">面试</a>
+      <a href="/tags/javaScript/" style="font-size: 0.2rem; color: #0a407c">javaScript</a> <a href="/tags/larabel/" style="font-size: 0.14rem; color: #69c">larabel</a> <a href="/tags/写作/" style="font-size: 0.14rem; color: #69c">写作</a> <a href="/tags/浏览器工作原理/" style="font-size: 0.14rem; color: #69c">浏览器工作原理</a> <a href="/tags/执行环境与作用域/" style="font-size: 0.14rem; color: #69c">执行环境与作用域</a> <a href="/tags/面试/" style="font-size: 0.14rem; color: #69c">面试</a>
   </div>
 </li>
 
@@ -161,9 +159,9 @@
     <article id="post">
         <div id="post-header">
 
-            <h1 id="为面试整理思路">
+            <h1 id="快速排序">
                 
-                为面试整理思路
+                快速排序
                 
             </h1>
             <div class="article-meta">
@@ -171,7 +169,7 @@
     
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-        <span>面试准备</span>
+        <span>基本算法</span>
     </span>
     
     
@@ -187,20 +185,20 @@
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2017/08/10</span>
+        <span class="date-meta ">2017/08/11</span>
     </span>
     
     <span  class=" fa-wrap">
         <i class="fa fa-comment-o"></i>
-        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2017/08/10/面试准备/" data-thread-key="/2017/08/10/面试准备/"
+        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2017/08/11/快速排序/" data-thread-key="/2017/08/11/快速排序/"
            data-count-type="comments"></span>
     </span>
     
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="为面试整理思路"
-              data-leadcloud-url="/2017/08/10/面试准备/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title="快速排序"
+              data-leadcloud-url="/2017/08/11/快速排序/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
@@ -211,25 +209,15 @@
         </div>
         
         <div id="post-body">
-            <h1 id="基本算法"><a href="#基本算法" class="headerlink" title="基本算法"></a>基本算法</h1><ul>
-<li><p>快速排序：<br>注：快排的时间复杂度为O(nlgn)~O(n^2) ,由于使用递归调用栈空间复杂度为O(lgn)<br>` function quicksort(arr) {<br>  if (arr.length &lt;= 1) {</p>
-<pre><code>return arr;
-</code></pre><p>  } else {</p>
-<pre><code>var key = Math.floor(arr.length / 2), left = [], right = [];
-var key = arr.splice(key, 1)[0];
-for (var i = 0; i &lt; arr.length; i++) {
-    if (arr[i] &lt; key) {
-        left.push(arr[i]);
-    } else {
-        right.push(arr[i]);
-    }
-
-}
-return quicksort(left).concat([key], quicksort(right));
-</code></pre><p>  }</p>
-</li>
+            <h1 id="简单实现："><a href="#简单实现：" class="headerlink" title="简单实现："></a>简单实现：</h1><p>注：快排的时间复杂度为O(nlgn)~O(n^2) ,由于使用递归调用栈空间复杂度为O(lgn)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">function quicksort(arr) &#123;</div><div class="line">    if (arr.length &lt;= 1) &#123;</div><div class="line">        return arr;</div><div class="line">    &#125; else &#123;</div><div class="line">        var key = Math.floor(arr.length / 2), left = [], right = [];</div><div class="line">        var key = arr.splice(key, 1)[0];</div><div class="line">        for (var i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">            if (arr[i] &lt; key) &#123;</div><div class="line">                left.push(arr[i]);</div><div class="line">            &#125; else &#123;</div><div class="line">                right.push(arr[i]);</div><div class="line">            &#125;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">        return quicksort(left).concat([key], quicksort(right));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="背景与原理说明："><a href="#背景与原理说明：" class="headerlink" title="背景与原理说明："></a>背景与原理说明：</h1><p>它是图灵奖得主C. A. R. Hoare（1934–）于1960时提出来的。<br>排序的思路分为三步：  </p>
+<ul>
+<li>选择基准值；</li>
+<li>遍历整个数组，小于基准值的数放在基准左边，否则放在基准右边；</li>
+<li>左右两边的子集进一步分别进行以上两步，直到所有子集数组中只有一个数字为止。  </li>
 </ul>
-<p>} `</p>
+<p>上例中为方便起见选取了数据的中间值为基准，下图为网上下载图片，可见到基准值从左到右依次选择，个人还是觉得选择中间值更具有普遍意义，更易理解。</p>
+<h1 id="图解："><a href="#图解：" class="headerlink" title="图解："></a>图解：</h1><div style="display:inline-block;"><img src="/images/quicksort.gif" alt="myBlog"></div>
 
         </div>
         <div id="post-footer">
@@ -247,14 +235,16 @@ return quicksort(left).concat([key], quicksort(right));
                     
                     <a href="/about">张言</a>
                 </li>
-                <li>Published Date: <span>2017-08-10  03:50:05</span></li>
+                <li>Published Date: <span>2017-08-11  03:50:05</span></li>
                 
-                <li>Updated Date: <span>2017-08-11  11:49:40</span></li>
+                <li>Updated Date: <span>2017-08-11  04:18:04</span></li>
                 
                 <li class="post-category">
                     Categories:
                     
                     <a href="/categories/面试准备/">面试准备</a>
+                    
+                    <a href="/categories/面试准备/基本算法/">基本算法</a>
                     
                 </li>
                 <li class="post-tags">
@@ -288,25 +278,6 @@ return quicksort(left).concat([key], quicksort(right));
     
     <div id="comments">
         
-
-<section id="duoshuo_comments">
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="/2017/08/10/面试准备/" data-title="为面试整理思路" data-url="http://zhangyan123.github.io/2017/08/10/面试准备/"></div>
-    <!-- 多说评论框 end -->
-    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-    <script type="text/javascript">
-        var duoshuoQuery = {short_name:'zhangyan123'};
-        (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';
-            ds.async = true;
-            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
-    </script>
-    <!-- 多说公共JS代码 end -->
-</section>
 
 
 
@@ -355,10 +326,6 @@ return quicksort(left).concat([key], quicksort(right));
     
 
     
-    <li class="comment-btn fa fa-comments-o">
-        <a href="#comments" title="comments"></a>
-    </li>
-    
 </ul>
 <p id="process"></p>
 <div id="search-overlay">
@@ -376,7 +343,7 @@ return quicksort(left).concat([key], quicksort(right));
     </div>
 </div>
 
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基本算法"><span class="toc-number">1.</span> <span class="toc-text">基本算法</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简单实现："><span class="toc-number">1.</span> <span class="toc-text">简单实现：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#背景与原理说明："><span class="toc-number">2.</span> <span class="toc-text">背景与原理说明：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#图解："><span class="toc-number">3.</span> <span class="toc-text">图解：</span></a></li></ol>
 
 
     <script src="/js/highsong.js"></script>
