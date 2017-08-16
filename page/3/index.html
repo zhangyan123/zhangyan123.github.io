@@ -176,12 +176,12 @@
             </a>
             
             <p class="article-content">
-                你应该知道的：JS浏览器兼容性处理一、document.formName.item(”itemName”) 问题 
+                JS浏览器兼容性处理一、document.formName.item(”itemName”) 问题 
 问题说明：IE下，可以使用 document.formName.item(”itemName”) 或 document.formName.elements [“elementName”]；Firefox 下，只能使用document.formName.elements[“elementName”]。解决方法：统一使用document.formName.elements[“elementName”]。 
 二、集合类对象问题 
 问题说明：IE下，可以使用 () 或 [] 获取集合类对象；Firefox下，只能使用 [ ]获取集合类对象。解决方法：统一使用 [] 获取集合类对象。 
 三、自定义属性问题 
-问题说明：IE下，可以使用获取常规属性的方法来获取自定义属性，也可以使用...
+问题说明：IE下，可以使用获取常规属性的方法来获取自定义属性，也可以使用 getAtt...
             </p>
             <div class="article-meta">
     
@@ -235,7 +235,7 @@
             </a>
             
             <p class="article-content">
-                你应该知道的：JS浏览器兼容性处理
+                JS浏览器兼容性处理
 兼容事件处理
 
 按照DOM Level2的建议，事件传播分三个阶段（现代浏览器统一实现了这三个阶段）：先是捕获标签，然后到达对象，再冒泡。document出发寻找到事件源之后再返回到document，但是实际捕获事件时我们使用冒泡机制，在addEventListener()方法中体现为第三个参数置为false。由于绝大多数浏览器完全实现了DOM1标准,但事件方面的标准化是在DOM2中才完成的,导致IE9之前的版本与其他浏览器在这方面表现存在差异.      
@@ -243,7 +243,8 @@
 
 IE9之前的事件监听添加监听器：IE5开始使用attachEvent()方法，更早版本只能使用内嵌在html中的属性方法，eg:element.onclick=function(){//这是事件处理器}
 事件源 srcElement
-阻止冒泡 cancelBubble=ture;IE只支持...
+阻止冒泡 cancelBubble=ture;IE只支持冒泡机制
+阻止...
             </p>
             <div class="article-meta">
     
@@ -297,13 +298,13 @@ IE9之前的事件监听添加监听器：IE5开始使用attachEvent()方法，�
             </a>
             
             <p class="article-content">
-                你应该知道的：浏览器环境我们所说的内建方法与内建对象都可以理解为是全局对象的方法与成员。我们之后将全局对象称为head对象，举例子来说，node.js中的head对象是global对象，而浏览器中的head对象则是window，在console控制台中打印window可以看到全局的方法和属性,从图中可以看出window对象中会包含js原生对象，会包含DOM对象集合，同时还会包含一个可访问浏览器和计算机屏幕的对象集合。
+                浏览器环境我们所说的内建方法与内建对象都可以理解为是全局对象的方法与成员。我们之后将全局对象称为head对象，举例子来说，node.js中的head对象是global对象，而浏览器中的head对象则是window，在console控制台中打印window可以看到全局的方法和属性,从图中可以看出window对象中会包含js原生对象，会包含DOM对象集合，同时还会包含一个可访问浏览器和计算机屏幕的对象集合。
  BOM能做哪些事情？
 
 navigator属性：访问浏览器及其功能信息 eg:window.navigator.userAgent  
 浏览器提供的控制台提供了遍历的对象检索功能，只需输入想要查询的对象便可以查看该对象全部的成员（对于本节内容有不详之处打印大发伺候）console.dir()
 location属性：用于存储当前载入页面URL信息的对象
-history属...
+history属性：属性允许用...
             </p>
             <div class="article-meta">
     
@@ -357,7 +358,7 @@ history属...
             </a>
             
             <p class="article-content">
-                你应该知道的：继承实现原理（从上到下由浅入深）
+                继承实现原理（从上到下由浅入深）
 原型链继承模式function Shape(){
 this.name=&apos;shape&apos;;
 };
@@ -372,7 +373,7 @@ this.height=height;
 return this.side*this.height/2;
 };Triangle.prototype=new Shape();Triangle.prototype.constructor=Triangle;
 
-这种继承模式除了共享了...
+这种继承模式除了共享了“父类”（模拟...
             </p>
             <div class="article-meta">
     
@@ -426,7 +427,7 @@ return this.side*this.height/2;
             </a>
             
             <p class="article-content">
-                你应该知道的: javaScript是基于原型(prototype)面向对象的动态语言（对象）
+                javaScript是基于原型(prototype)面向对象的动态语言（对象）
 JS对象中的属性可以 动态 得进行增、删(delete)、修改；
 JS中的数组实质为键值由0开始自增的特殊对象，数组一般用来存放有规律的一组数据，无需特殊的索引；
 对象与数组的不同在于键值可以自定义；
@@ -435,7 +436,7 @@ JS中的数组实质为键值由0开始自增的特殊对象，数组一般用�
 for-in遍历对象时候顺序是不定的，如果需要按照一定顺序遍历对象属性最好使用一个数组将需要的属性按顺序存入，在for循环中依次取出对象中排列的属性。
 
 
-原型只在检索时候才被用到，如果我们尝试获取对象的某个属性值，但该对象属性名，那么Javascript会尝试从原型对象中寻找，如果原型对象没有再去该对象中...
+原型只在检索时候才被用到，如果我们尝试获取对象的某个属性值，但该对象属性名，那么Javascript会尝试从原型对象中寻找，如果原型对象没有再去该对象中去找，以此类推，...
             </p>
             <div class="article-meta">
     
@@ -558,13 +559,13 @@ map()
             </a>
             
             <p class="article-content">
-                你应该知道的：函数
+                函数
 函数时对象，他的不同之在于可以被调用；
 除了声明的形参之外，每个函数还接收两个附加的参数：this和arguments.参数this在面向对象编程中非常重要，他的值取决于调用的模式，在javascript中一共有4种函数调用模式：方法调用、函数调用、构造器调用、apply调用。
 函数的参数使用逗号分隔，这些参数名称将被定义为函数中的变量，它们不像普通量那样被初始化为undefined，而是在函数被调用时初始化为实际提供的参数值。
 函数声明的组成部分：关键字function、函数名、参数、函数体、return（如果没有显示的返回值，JS默认返回undefined）
 函数声明与函数表达式区别在于声明会提升，而表达式在预编译中会被跳过，只有var a =function(){//函数体}中的变量a得到了变量声明提升，a===undefined;
-函数的参数分为形参和实参...
+函数的参数分为形参和实参，eg:fun...
             </p>
             <div class="article-meta">
     
@@ -618,7 +619,7 @@ map()
             </a>
             
             <p class="article-content">
-                你应该知道的：基本数据类型常用技巧
+                基本数据类型常用技巧
 5种基本数据类型 Number、String、Boolean、null、undefined剩下的都是复杂类型
 原生9种内建构造函数：
 数据封装类对象：Number、String、Boolean、Object、Array
@@ -631,7 +632,7 @@ map()
 数字中有两个特例 NaN!==NaN  Infinity+（-Infinity）===NaN  数字%0==Infinity
 字符串转为数字 parseInt(“10Shjksah”)===10  简便方式：  +”10”
 数字转字符串 “”+123===“123”
-双重取反操作可以取到任何值对应的布...
+双重取反操作可以取到任何值对应的布尔值 eg:！...
             </p>
             <div class="article-meta">
     
@@ -685,7 +686,7 @@ map()
             </a>
             
             <p class="article-content">
-                你应该知道的：变量、表达式与语句变量使用
+                变量、表达式与语句变量使用
 var a ; 声明（分配栈空间命名为a）。
 定义（也称作初始化）a = 1;（为声明的变量赋【值】）。  
 
@@ -697,7 +698,7 @@ var a ; 声明（分配栈空间命名为a）。
 JS的变量名是区分大小写的，可包含字母，数字，下划线和$，但不能以数字开头。            
 
 
-表达式与语句表达式中使用运算符产生结果值，多个表达式之间使用逗号分隔；语句是代码执行的最小单元组成，程序就是由一系列...
+表达式与语句表达式中使用运算符产生结果值，多个表达式之间使用逗号分隔；语句是代码执行的最小单元组成，程序就是由一系列语句组成的代码...
             </p>
             <div class="article-meta">
     

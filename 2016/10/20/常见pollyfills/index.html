@@ -209,7 +209,7 @@
         </div>
         
         <div id="post-body">
-            <h2 id="你应该知道的：常见内建对象扩展项"><a href="#你应该知道的：常见内建对象扩展项" class="headerlink" title="你应该知道的：常见内建对象扩展项"></a>你应该知道的：常见内建对象扩展项</h2><blockquote>
+            <h2 id="常见内建对象扩展项"><a href="#常见内建对象扩展项" class="headerlink" title="常见内建对象扩展项"></a>常见内建对象扩展项</h2><blockquote>
 <p>讨论：基于相关内建原型来增加自定义方法这种技术，最常用且最能被接受的例子，是实现让老式浏览器支持新功能，而且应该是已经被ECMAScript委员会标准化了的，为现代浏览器所实现的新功能，例如让老版IE支持ES5中的方法，这种扩展叫做shims或者pollyfills.<br><strong>注：</strong>使用自定义方法扩展内建对象原型时，一定要检查该方法是否已经存在，不存在情况下才扩展此方法。<br>下面罗列几个常见pollyfills：    </p>
 <ul>
 <li>trim()<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if(typeof String.prototype.trim !==&apos;function&apos;)&#123;</div><div class="line">  String.prototype.trim = function()&#123;</div><div class="line">    return this.replace(/^\s+|\s+$/g,&apos;&apos;);</div><div class="line">  &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -242,7 +242,7 @@
                 </li>
                 <li>Published Date: <span>2016-10-20  04:30:09</span></li>
                 
-                <li>Updated Date: <span>2017-04-14  10:03:56</span></li>
+                <li>Updated Date: <span>2017-08-16  05:09:34</span></li>
                 
                 <li class="post-category">
                     Categories:
@@ -352,7 +352,7 @@
     </div>
 </div>
 
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#你应该知道的：常见内建对象扩展项"><span class="toc-number">1.</span> <span class="toc-text">你应该知道的：常见内建对象扩展项</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常见内建对象扩展项"><span class="toc-number">1.</span> <span class="toc-text">常见内建对象扩展项</span></a></li></ol>
 
 
     <script src="/js/highsong.js"></script>

@@ -246,9 +246,9 @@
     </entry>
     
     <entry>
-        <title><![CDATA[剖析闭包的战场]]></title>
+        <title><![CDATA[闭包应用场景]]></title>
         <url>http://zhangyan123.github.io/2017/03/10/%E9%97%AD%E5%8C%85%E5%BA%94%E7%94%A8%EF%BC%881%EF%BC%89/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：JS闭包在开发实战中的应用"><a href="#你应该知道的：JS闭包在开发实战中的应用" class="headerlink" title="你应该知道的：JS闭包在开发实战中的应用"></a>你应该知道的：JS闭包在开发实战中的应用</h1><p>函数内创建内部函数并将内部函数赋值给外部变量情况(没有被返回的内部函数[[Scopes]]同样指向外层函数的作用域链，单独说闭包时为因为其强大的灵活性)，外层函数执行结束后外部变量所指向的函数对象[[Scopes]]属性中包含了外部函数中执行产生的局部值。须知道函数的作用域实在创建时候确定的，this值是在运行时候才确定的。<br>都说闭包如此灵活，强大，我想知道它究竟有什么用处</p>
+        <content type="html"><![CDATA[<h1 id="JS闭包在开发实战中的应用"><a href="#JS闭包在开发实战中的应用" class="headerlink" title="JS闭包在开发实战中的应用"></a>JS闭包在开发实战中的应用</h1><p>函数内创建内部函数并将内部函数赋值给外部变量情况(没有被返回的内部函数[[Scopes]]同样指向外层函数的作用域链，单独说闭包时为因为其强大的灵活性)，外层函数执行结束后外部变量所指向的函数对象[[Scopes]]属性中包含了外部函数中执行产生的局部值。须知道函数的作用域实在创建时候确定的，this值是在运行时候才确定的。<br>都说闭包如此灵活，强大，我想知道它究竟有什么用处</p>
 <ul>
 <li>对象的构建<br>为对象设置私有变量、私有方法（在构造函数上建特权方法访问局部变量）或静态变量和方法(在原型上建公有特权方法访问构造函数上的局部变量)</li>
 <li>事件的回调函数<br>在回调函数中仍然可以访问到外层同步函数中的参数，变量或函数</li>
@@ -328,7 +328,7 @@
     <entry>
         <title><![CDATA[ES6声明声明变量的六种方法]]></title>
         <url>http://zhangyan123.github.io/2016/10/22/ES6%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E/</url>
-        <content type="html"><![CDATA[<h2 id="你应该知道的：变量声明大法"><a href="#你应该知道的：变量声明大法" class="headerlink" title="你应该知道的：变量声明大法"></a>你应该知道的：变量声明大法</h2><p>ES5中只有两种声明变量的方法：var命令和function命令<br>ES6中增加四种特别的声明方式：    </p>
+        <content type="html"><![CDATA[<h2 id="变量声明大法"><a href="#变量声明大法" class="headerlink" title="变量声明大法"></a>变量声明大法</h2><p>ES5中只有两种声明变量的方法：var命令和function命令<br>ES6中增加四种特别的声明方式：    </p>
 <ul>
 <li>let：声明的变量作用域在最近的代码块中，在作用域中不能重复声明同一个变量名，let变量不提升，先声明后使用，声明的全局变量不属于head对象；</li>
 <li>const：声明一个常量，不可重复声明同一个变量名，变量不提升，先声明后使用，声明的全局变量不属于head对象；</li>
@@ -397,7 +397,7 @@
     <entry>
         <title><![CDATA[常见pollyfills]]></title>
         <url>http://zhangyan123.github.io/2016/10/20/%E5%B8%B8%E8%A7%81pollyfills/</url>
-        <content type="html"><![CDATA[<h2 id="你应该知道的：常见内建对象扩展项"><a href="#你应该知道的：常见内建对象扩展项" class="headerlink" title="你应该知道的：常见内建对象扩展项"></a>你应该知道的：常见内建对象扩展项</h2><blockquote>
+        <content type="html"><![CDATA[<h2 id="常见内建对象扩展项"><a href="#常见内建对象扩展项" class="headerlink" title="常见内建对象扩展项"></a>常见内建对象扩展项</h2><blockquote>
 <p>讨论：基于相关内建原型来增加自定义方法这种技术，最常用且最能被接受的例子，是实现让老式浏览器支持新功能，而且应该是已经被ECMAScript委员会标准化了的，为现代浏览器所实现的新功能，例如让老版IE支持ES5中的方法，这种扩展叫做shims或者pollyfills.<br><strong>注：</strong>使用自定义方法扩展内建对象原型时，一定要检查该方法是否已经存在，不存在情况下才扩展此方法。<br>下面罗列几个常见pollyfills：    </p>
 <ul>
 <li>trim()<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">if(typeof String.prototype.trim !==&apos;function&apos;)&#123;</div><div class="line">  String.prototype.trim = function()&#123;</div><div class="line">    return this.replace(/^\s+|\s+$/g,&apos;&apos;);</div><div class="line">  &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -539,7 +539,7 @@
     <entry>
         <title><![CDATA[观察者模式在前端开发中的应用]]></title>
         <url>http://zhangyan123.github.io/2016/10/16/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：前端开发中观察者模式实践"><a href="#你应该知道的：前端开发中观察者模式实践" class="headerlink" title="你应该知道的：前端开发中观察者模式实践"></a>你应该知道的：前端开发中观察者模式实践</h1><p>观察者模式又叫发布订阅模式（Publsih/Subscrbe）,它使得方法之间传递信息变得更加通畅，减少耦合性解耦，减少了状态判断。<br>功能：发布者有一个publish方法，将其参数传递给所有订阅者需要该状态作为参数的方法。为了使观察者模式在代码中更容易实现，我们还可以尝试来写一个将普对象改造为发布者的方法，但一定记得在发布者对象那个中调用<code>publish(message)</code></p>
+        <content type="html"><![CDATA[<h1 id="前端开发中观察者模式实践"><a href="#前端开发中观察者模式实践" class="headerlink" title="前端开发中观察者模式实践"></a>前端开发中观察者模式实践</h1><p>观察者模式又叫发布订阅模式（Publsih/Subscrbe）,它使得方法之间传递信息变得更加通畅，减少耦合性解耦，减少了状态判断。<br>功能：发布者有一个publish方法，将其参数传递给所有订阅者需要该状态作为参数的方法。为了使观察者模式在代码中更容易实现，我们还可以尝试来写一个将普对象改造为发布者的方法，但一定记得在发布者对象那个中调用<code>publish(message)</code></p>
 <blockquote>
 <p>观察者的使用场合就是：当一个对象的改变需要同时改变其它对象，并且它不知道具体有多少对象需要改变的时候，就应该考虑使用观察者模式。</p>
 </blockquote>
@@ -595,7 +595,7 @@
     <entry>
         <title><![CDATA[正则表达式是提高效率的利器（一）]]></title>
         <url>http://zhangyan123.github.io/2016/10/14/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%881%EF%BC%89/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：RegExp"><a href="#你应该知道的：RegExp" class="headerlink" title="你应该知道的：RegExp"></a>你应该知道的：RegExp</h1><p>对于正则表达式，不同的语言有着不同的实现（每种语言的正则表达式互相之间的关系类似方言，同理不同表达），js采用的是Perl5的语法。</p>
+        <content type="html"><![CDATA[<h1 id="RegExp"><a href="#RegExp" class="headerlink" title="RegExp"></a>RegExp</h1><p>对于正则表达式，不同的语言有着不同的实现（每种语言的正则表达式互相之间的关系类似方言，同理不同表达），js采用的是Perl5的语法。</p>
 <ul>
 <li>构造正则对象的方式：<ul>
 <li>优选字面量方式：<code>var re = /^j.*t$/gim</code>     </li>
@@ -762,7 +762,7 @@
     <entry>
         <title><![CDATA[啃掉IE低版本这块硬骨头（二）]]></title>
         <url>http://zhangyan123.github.io/2016/10/11/JS%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E5%A4%84%E7%90%86(2)/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：JS浏览器兼容性处理"><a href="#你应该知道的：JS浏览器兼容性处理" class="headerlink" title="你应该知道的：JS浏览器兼容性处理"></a>你应该知道的：JS浏览器兼容性处理</h1><p>一、document.formName.item(”itemName”) 问题 </p>
+        <content type="html"><![CDATA[<h1 id="JS浏览器兼容性处理"><a href="#JS浏览器兼容性处理" class="headerlink" title="JS浏览器兼容性处理"></a>JS浏览器兼容性处理</h1><p>一、document.formName.item(”itemName”) 问题 </p>
 <p>问题说明：IE下，可以使用 document.formName.item(”itemName”) 或 document.formName.elements [“elementName”]；Firefox 下，只能使用document.formName.elements[“elementName”]。<br>解决方法：统一使用document.formName.elements[“elementName”]。 </p>
 <p>二、集合类对象问题 </p>
 <p>问题说明：IE下，可以使用 () 或 [] 获取集合类对象；Firefox下，只能使用 [ ]获取集合类对象。<br>解决方法：统一使用 [] 获取集合类对象。 </p>
@@ -837,7 +837,7 @@
     <entry>
         <title><![CDATA[啃掉IE低版本这块硬骨头（一）]]></title>
         <url>http://zhangyan123.github.io/2016/10/10/JS%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E5%A4%84%E7%90%86(1)/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：JS浏览器兼容性处理"><a href="#你应该知道的：JS浏览器兼容性处理" class="headerlink" title="你应该知道的：JS浏览器兼容性处理"></a>你应该知道的：JS浏览器兼容性处理</h1><ul>
+        <content type="html"><![CDATA[<h1 id="JS浏览器兼容性处理"><a href="#JS浏览器兼容性处理" class="headerlink" title="JS浏览器兼容性处理"></a>JS浏览器兼容性处理</h1><ul>
 <li><p>兼容事件处理</p>
 <blockquote>
 <p>按照DOM Level2的建议，事件传播分三个阶段（现代浏览器统一实现了这三个阶段）：先是捕获标签，然后到达对象，再冒泡。document出发寻找到事件源之后再返回到document，但是实际捕获事件时我们使用冒泡机制，在<code>addEventListener()</code>方法中体现为第三个参数置为<code>false</code>。<br>由于绝大多数浏览器完全实现了DOM1标准,但事件方面的标准化是在DOM2中才完成的,导致IE9之前的版本与其他浏览器在这方面表现存在差异.      </p>
@@ -993,7 +993,7 @@ display:inline;/*IE下再理解为5px*/
     <entry>
         <title><![CDATA[浏览器环境]]></title>
         <url>http://zhangyan123.github.io/2016/10/08/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：浏览器环境"><a href="#你应该知道的：浏览器环境" class="headerlink" title="你应该知道的：浏览器环境"></a>你应该知道的：浏览器环境</h1><p><div style="display:inline-block;"><img src="/images/browser.png" alt="myBlog"></div><br>我们所说的内建方法与内建对象都可以理解为是全局对象的方法与成员。我们之后将全局对象称为head对象，举例子来说，node.js中的head对象是global对象，而浏览器中的head对象则是window，在console控制台中打印window可以看到全局的方法和属性,从图中可以看出window对象中会包含js原生对象，会包含DOM对象集合，同时还会包含一个可访问浏览器和计算机屏幕的对象集合。</p>
+        <content type="html"><![CDATA[<h1 id="浏览器环境"><a href="#浏览器环境" class="headerlink" title="浏览器环境"></a>浏览器环境</h1><p><div style="display:inline-block;"><img src="/images/browser.png" alt="myBlog"></div><br>我们所说的内建方法与内建对象都可以理解为是全局对象的方法与成员。我们之后将全局对象称为head对象，举例子来说，node.js中的head对象是global对象，而浏览器中的head对象则是window，在console控制台中打印window可以看到全局的方法和属性,从图中可以看出window对象中会包含js原生对象，会包含DOM对象集合，同时还会包含一个可访问浏览器和计算机屏幕的对象集合。</p>
 <p><strong> BOM能做哪些事情？</strong></p>
 <ul>
 <li>navigator属性：访问浏览器及其功能信息 eg:window.navigator.userAgent  </li>
@@ -1033,7 +1033,7 @@ display:inline;/*IE下再理解为5px*/
     <entry>
         <title><![CDATA[继承]]></title>
         <url>http://zhangyan123.github.io/2016/09/30/%E7%BB%A7%E6%89%BF/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：继承实现原理（从上到下由浅入深）"><a href="#你应该知道的：继承实现原理（从上到下由浅入深）" class="headerlink" title="你应该知道的：继承实现原理（从上到下由浅入深）"></a>你应该知道的：继承实现原理（从上到下由浅入深）</h1><ol>
+        <content type="html"><![CDATA[<h1 id="继承实现原理（从上到下由浅入深）"><a href="#继承实现原理（从上到下由浅入深）" class="headerlink" title="继承实现原理（从上到下由浅入深）"></a>继承实现原理（从上到下由浅入深）</h1><ol>
 <li><p>原型链继承模式<br><pre>function Shape(){</pre></p>
 <pre><code>this.name=&apos;shape&apos;;
 </code></pre><p>};</p>
@@ -1234,7 +1234,7 @@ return n;
     <entry>
         <title><![CDATA[对象]]></title>
         <url>http://zhangyan123.github.io/2016/09/20/%E5%AF%B9%E8%B1%A1/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的-javaScript是基于原型-prototype-面向对象的动态语言（对象）"><a href="#你应该知道的-javaScript是基于原型-prototype-面向对象的动态语言（对象）" class="headerlink" title="你应该知道的: javaScript是基于原型(prototype)面向对象的动态语言（对象）"></a>你应该知道的: javaScript是基于原型(prototype)面向对象的动态语言（对象）</h1><ul>
+        <content type="html"><![CDATA[<h1 id="javaScript是基于原型-prototype-面向对象的动态语言（对象）"><a href="#javaScript是基于原型-prototype-面向对象的动态语言（对象）" class="headerlink" title="javaScript是基于原型(prototype)面向对象的动态语言（对象）"></a>javaScript是基于原型(prototype)面向对象的动态语言（对象）</h1><ul>
 <li>JS对象中的属性可以 <strong>动态</strong> 得进行增、删(delete)、修改；</li>
 <li>JS中的数组实质为键值由0开始自增的特殊对象，数组一般用来存放有规律的一组数据，无需特殊的索引；</li>
 <li>对象与数组的不同在于键值可以自定义；</li>
@@ -1347,7 +1347,7 @@ return n;
     <entry>
         <title><![CDATA[函数]]></title>
         <url>http://zhangyan123.github.io/2016/09/13/%E5%87%BD%E6%95%B0/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：函数"><a href="#你应该知道的：函数" class="headerlink" title="你应该知道的：函数"></a>你应该知道的：函数</h1><ul>
+        <content type="html"><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><ul>
 <li>函数时对象，他的不同之在于可以被调用；</li>
 <li>除了声明的形参之外，每个函数还接收两个附加的参数：this和arguments.参数this在面向对象编程中非常重要，他的值取决于调用的模式，在javascript中一共有4种函数调用模式：方法调用、函数调用、构造器调用、apply调用。</li>
 <li>函数的参数使用逗号分隔，这些参数名称将被定义为函数中的变量，它们不像普通量那样被初始化为undefined，而是在函数被调用时初始化为实际提供的参数值。</li>
@@ -1410,7 +1410,7 @@ return n;
     <entry>
         <title><![CDATA[基本数据类型]]></title>
         <url>http://zhangyan123.github.io/2016/09/11/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：基本数据类型常用技巧"><a href="#你应该知道的：基本数据类型常用技巧" class="headerlink" title="你应该知道的：基本数据类型常用技巧"></a>你应该知道的：基本数据类型常用技巧</h1><ul>
+        <content type="html"><![CDATA[<h1 id="基本数据类型常用技巧"><a href="#基本数据类型常用技巧" class="headerlink" title="基本数据类型常用技巧"></a>基本数据类型常用技巧</h1><ul>
 <li>5种基本数据类型 Number、String、Boolean、null、undefined剩下的都是复杂类型</li>
 <li>原生9种内建构造函数：<ul>
 <li>数据封装类对象：Number、String、Boolean、Object、Array</li>
@@ -1466,7 +1466,7 @@ return n;
     <entry>
         <title><![CDATA[表达式与语句]]></title>
         <url>http://zhangyan123.github.io/2016/09/10/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E8%AF%AD%E5%8F%A5/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：变量、表达式与语句"><a href="#你应该知道的：变量、表达式与语句" class="headerlink" title="你应该知道的：变量、表达式与语句"></a>你应该知道的：变量、表达式与语句</h1><h2 id="变量使用"><a href="#变量使用" class="headerlink" title="变量使用"></a>变量使用</h2><ul>
+        <content type="html"><![CDATA[<h1 id="变量、表达式与语句"><a href="#变量、表达式与语句" class="headerlink" title="变量、表达式与语句"></a>变量、表达式与语句</h1><h2 id="变量使用"><a href="#变量使用" class="headerlink" title="变量使用"></a>变量使用</h2><ul>
 <li><code>var a ;</code> 声明（分配栈空间命名为a）。</li>
 <li>定义（也称作初始化）<code>a = 1;</code>（为声明的变量赋【值】）。  </li>
 </ul>

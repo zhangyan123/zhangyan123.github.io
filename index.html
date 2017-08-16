@@ -591,11 +591,11 @@ IE5，IE6没有在他们的脚本语言中定义XMLHttpRequest对象的标识符
         <div class="article-excerpt">
             
             <a class="article-title-link" href="/2017/03/10/闭包应用（1）/">
-                <h2 class="article-title">剖析闭包的战场</h2>
+                <h2 class="article-title">闭包应用场景</h2>
             </a>
             
             <p class="article-content">
-                你应该知道的：JS闭包在开发实战中的应用函数内创建内部函数并将内部函数赋值给外部变量情况(没有被返回的内部函数[[Scopes]]同样指向外层函数的作用域链，单独说闭包时为因为其强大的灵活性)，外层函数执行结束后外部变量所指向的函数对象[[Scopes]]属性中包含了外部函数中执行产生的局部值。须知道函数的作用域实在创建时候确定的，this值是在运行时候才确定的。都说闭包如此灵活，强大，我想知道它究竟有什么用处
+                JS闭包在开发实战中的应用函数内创建内部函数并将内部函数赋值给外部变量情况(没有被返回的内部函数[[Scopes]]同样指向外层函数的作用域链，单独说闭包时为因为其强大的灵活性)，外层函数执行结束后外部变量所指向的函数对象[[Scopes]]属性中包含了外部函数中执行产生的局部值。须知道函数的作用域实在创建时候确定的，this值是在运行时候才确定的。都说闭包如此灵活，强大，我想知道它究竟有什么用处
 
 对象的构建为对象设置私有变量、私有方法（在构造函数上建特权方法访问局部变量）或静态变量和方法(在原型上建公有特权方法访问构造函数上的局部变量)
 事件的回调函数在回调函数中仍然可以访问到外层同步函数中的参数，变量或函数
@@ -630,7 +630,7 @@ IE5，IE6没有在他们的脚本语言中定义XMLHttpRequest对象的标识符
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="剖析闭包的战场"
+        <span class="hits hits-meta " data-leadcloud-title="闭包应用场景"
               data-leadcloud-url="/2017/03/10/闭包应用（1）/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
@@ -713,7 +713,7 @@ IE5，IE6没有在他们的脚本语言中定义XMLHttpRequest对象的标识符
             </a>
             
             <p class="article-content">
-                你应该知道的：变量声明大法ES5中只有两种声明变量的方法：var命令和function命令ES6中增加四种特别的声明方式：    
+                变量声明大法ES5中只有两种声明变量的方法：var命令和function命令ES6中增加四种特别的声明方式：    
 
 let：声明的变量作用域在最近的代码块中，在作用域中不能重复声明同一个变量名，let变量不提升，先声明后使用，声明的全局变量不属于head对象；
 const：声明一个常量，不可重复声明同一个变量名，变量不提升，先声明后使用，声明的全局变量不属于head对象；
