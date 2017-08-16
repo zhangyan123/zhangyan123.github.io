@@ -165,7 +165,7 @@
     <entry>
         <title><![CDATA[Redux使用篇]]></title>
         <url>http://zhangyan123.github.io/2017/08/02/%E7%90%86%E8%A7%A3redux%E8%A1%8C%E4%B8%BA%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-        <content type="html"><![CDATA[<p>为了方便在问题中总结提升，特劈【在问题中成长】类目，惟愿从哪里跌倒，就不再摔进去。</p>
+        <content type="html"><![CDATA[<p>为了方便在问题中总结提升，特辟【问题与解决】类目，惟愿从哪里跌倒，就不再摔进去。</p>
 <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ul>
 <li>reducer函数中判断分支复杂不易管理与阅读</li>
 <li>创建store时传入一个reducer意味着每一个reducer都需要一个store管理数据，后期store维护相当混乱<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1></li>
@@ -180,7 +180,7 @@
             
             <category> 前端开发 </category>
             
-            <category> 在项目中成长 </category>
+            <category> 问题及解决方案 </category>
             
             <category> React使用 </category>
             
@@ -190,28 +190,6 @@
         <tags>
             
             <tag> javaScript </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-        <title><![CDATA[浏览器工作原理（1）]]></title>
-        <url>http://zhangyan123.github.io/2017/07/27/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-        <content type="html"><![CDATA[<h1 id="你应该知道的：网页呈现过程"><a href="#你应该知道的：网页呈现过程" class="headerlink" title="你应该知道的：网页呈现过程"></a>你应该知道的：网页呈现过程</h1>]]></content>
-        
-        <categories>
-            
-            <category> 前端开发 </category>
-            
-            <category> 浏览器工作原理 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 浏览器工作原理 </tag>
             
         </tags>
         
