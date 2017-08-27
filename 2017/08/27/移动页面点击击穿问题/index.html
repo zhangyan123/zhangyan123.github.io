@@ -22,7 +22,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>基本数据类型 | 张言的博客</title>
+<title>移动页面点击击穿问题 | 张言的博客</title>
 
 
 <link rel="icon" href="/favicon.ico">
@@ -159,9 +159,9 @@
     <article id="post">
         <div id="post-header">
 
-            <h1 id="基本数据类型">
+            <h1 id="移动页面点击击穿问题">
                 
-                基本数据类型
+                移动页面点击击穿问题
                 
             </h1>
             <div class="article-meta">
@@ -169,7 +169,7 @@
     
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-        <span>基础</span>
+        <span>移动开发问题</span>
     </span>
     
     
@@ -185,20 +185,20 @@
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2016/09/11</span>
+        <span class="date-meta ">2017/08/27</span>
     </span>
     
     <span  class=" fa-wrap">
         <i class="fa fa-comment-o"></i>
-        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2016/09/11/基本数据类型/" data-thread-key="/2016/09/11/基本数据类型/"
+        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2017/08/27/移动页面点击击穿问题/" data-thread-key="/2017/08/27/移动页面点击击穿问题/"
            data-count-type="comments"></span>
     </span>
     
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="基本数据类型"
-              data-leadcloud-url="/2016/09/11/基本数据类型/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title="移动页面点击击穿问题"
+              data-leadcloud-url="/2017/08/27/移动页面点击击穿问题/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
@@ -209,37 +209,26 @@
         </div>
         
         <div id="post-body">
-            <h1 id="基本数据类型常用技巧"><a href="#基本数据类型常用技巧" class="headerlink" title="基本数据类型常用技巧"></a>基本数据类型常用技巧</h1><ul>
-<li>5种基本数据类型 Number、String、Boolean、null、undefined剩下的都是复杂类型</li>
-<li>原生9种内建构造函数：<ul>
-<li>数据封装类对象：Number、String、Boolean、Object、Array</li>
-<li>工具类对象：Math、Date、RegExp</li>
-<li>错误类对象：error</li>
+            <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在移动端，事件的触发顺序为：touchstart -&gt; touchmove -&gt; touchend，而 click 事件有 300ms 的延迟，当 touchstart 事件把上层元素隐藏之后，隔了300ms，浏览器触发了 click 事件，但是此时上层元素不见了，所以该事件被派发到了下层元素身上。如果下层对应的元素是一个链接，那页面就会意外地跳转，如果下层元素绑定了其他事件，此时更会有出乎意料的事情发生。</p>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><ul>
+<li>我们项目当中使用的antd推荐的Fastclick插件,意图解决300ms点击延迟问题，但实际开发当中，发现仍然存在点击穿透的情况（遮罩上方选择学校，遮罩消失之后对应下方的书籍卡片被意外点击，并展示了书籍中的乐谱信息。。。满眼的列表项），起初为了尽快解决问题，在遮罩下方又加了一层透明遮罩绑定click事件（点击消失）当肉盾，事后整理如下；</li>
+<li>fastclick使用touchstart/touchend事件模拟click触发，并将真正的click事件屏蔽掉，但在某些手机上仍然存在不能屏蔽原生click事件的bug，造成点击事件触发两次的问题。</li>
+<li><p>跨页穿透问题解决方案：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#preventClick &#123; width:100%; height:100%; position:absolute; z-index:1000; top:0; left:0; &#125;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=&quot;preventClick&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">function onDeviceReady() &#123;</div><div class="line">    setTimeout(function()&#123; $(&apos;#preventClick&apos;).hide(); &#125;, 300);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>本页穿透解决方案：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">#preventClick &#123; width:100%; height:100%; position:absolute; z-index:999; top:0; left:0; &#125;</div><div class="line">&lt;container&gt;</div><div class="line">    &lt;div class=&apos;mask&apos;&gt;&lt;/div&gt;</div><div class="line">    &lt;div id=&quot;preventClick&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/container&gt;</div><div class="line">&lt;script&gt;</div><div class="line">  document.getElementById(&apos;preventClick&apos;).onclick=function(e)&#123;</div><div class="line">    e.target.style.display=&quot;none&quot;;</div><div class="line">  &#125;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>由于穿透事件是click延迟造成的，只要将click事件用touch或者tap（由Zepto或KISSY库提供，同样由touch模拟出来的。）</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>用户碰触移动页面之后，需要等待一段时间来判断是不是双击（double tap）动作（双击放大），而不是立即响应单击click），等待的这段时间大约是300ms，因此移动端click有300ms延迟，较好解决方法是使用touchend替换click事件，但注意在手势检测中屏蔽掉对以上模拟的影响。</p>
+<h1 id="知识点补充："><a href="#知识点补充：" class="headerlink" title="知识点补充："></a>知识点补充：</h1></li>
+<li>pointer-events:none；由CSS3提出，不只是禁用链接hover，打开链接等效果，是真实意义上的将onlick事件去掉了，注意该样式只禁用了鼠标事件，对应的键盘事件并没有被禁用（tab选中，Enter提交等）。</li>
+<li><p>PC网页上的大部分操作都是用鼠标的，即响应的是鼠标事件，包括mousedown、mouseup、mousemove和click事件。一次点击行为，可被拆解成：mousedown -&gt; mouseup -&gt; click 三步。</p>
+</li>
+<li><p>手机上没有鼠标，所以就用触摸事件去实现类似的功能。touch事件包含touchstart、touchmove、touchend，注意手机上并没有tap事件。手指触发触摸事件的过程为：touchstart -&gt; touchmove -&gt; touchend -&gt;300ms-&gt;click。</p>
+</li>
 </ul>
 </li>
-<li>使用typeof操作符可以检测数据类型，new出来的任何种类的对象都呈现为[object object]，尽量使用字面量创建方式以便检测类型</li>
-<li>3e+3=3000</li>
-<li>数字中有两个特例 NaN!==NaN  Infinity+（-Infinity）===NaN  数字%0==Infinity</li>
-<li>字符串转为数字 parseInt(“10Shjksah”)===10  简便方式：  +”10”</li>
-<li>数字转字符串 “”+123===“123”</li>
-<li>双重取反操作可以取到任何值对应的布尔值 eg:！！1===true</li>
-<li>6种falsy值：<ul>
-<li>“”</li>
-<li>null</li>
-<li>undefined</li>
-<li>0</li>
-<li>NaN</li>
-<li>false<br>除以上falsy值之外的数据都是truthy值包括对象和falsy值字符串eg:”false”===true  </li>
-</ul>
-</li>
-<li><strong>经常使用的惰性求值法：<strong><ul>
-<li>||用于检测对象是否存在若不存在赋予初始值eg:  var a = b||{}<strong>||运算符可以用来填充默认值</strong>;</li>
-<li><strong>尝试从undefined的成员属性中取值将会导致TypeError异常，这时可以通过&amp;&amp;运算符来避免错误，eg: <code>flight.equipment&amp;&amp;flight.equipment.model</code></strong>a() &amp;&amp; b() :如果执行a()后返回true，则执行b()并返回b的值,此用法与？：三元运算符经常用于简化运算步骤；如果执行a()后返回false，则整个表达式返回a()的值，b()不执行；<br>a() || b() :如果执行a()后返回true，则整个表达式返回a()的值，b()不执行；如果执行a()后返回false，则执行b()并返回b()的值；<br>&amp;&amp; 优先级高于 ||</li>
-</ul>
-</strong></strong></li>
-<li>typeof null===object ;typeof undefined===undefined</li>
-<li>数组可以用于取字符串的某位字符’123’[1]===”2”,数组其实为key值从0开始递增的对象</li>
-<li>for-in方法是为了遍历对象而设计，会遍历原型链，注意使用hasOwnProperty()  </li>
 </ul>
 
         </div>
@@ -258,18 +247,18 @@
                     
                     <a href="/about">张言</a>
                 </li>
-                <li>发表日期: <span>2016-09-11  04:20:10</span></li>
+                <li>发表日期: <span>2017-08-27  02:50:05</span></li>
                 
-                <li>最后编辑日期: <span>2017-08-16  05:09:58</span></li>
+                <li>最后编辑日期: <span>2017-08-27  05:13:19</span></li>
                 
                 <li class="post-category">
                     文章分类:
                     
                     <a href="/categories/前端开发/">前端开发</a>
                     
-                    <a href="/categories/前端开发/javaScript/">javaScript</a>
+                    <a href="/categories/前端开发/问题及解决方案/">问题及解决方案</a>
                     
-                    <a href="/categories/前端开发/javaScript/基础/">基础</a>
+                    <a href="/categories/前端开发/问题及解决方案/移动开发问题/">移动开发问题</a>
                     
                 </li>
                 <li class="post-tags">
@@ -296,10 +285,8 @@
     </article>
     <div class="article-nav">
         
-        <a href="/2016/09/13/函数/" class="pre-post fa fa-caret-left">函数</a>
         
-        
-        <a href="/2016/09/10/表达式与语句/" class="next-post fa">表达式与语句</a>
+        <a href="/2017/08/16/归并排序/" class="next-post fa">归并排序</a>
         
     </div>
     
@@ -370,7 +357,7 @@
     </div>
 </div>
 
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基本数据类型常用技巧"><span class="toc-number">1.</span> <span class="toc-text">基本数据类型常用技巧</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#问题"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解决"><span class="toc-number">2.</span> <span class="toc-text">解决</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#知识点补充："><span class="toc-number">4.</span> <span class="toc-text">知识点补充：</span></a></li></ol>
 
 
     <script src="/js/highsong.js"></script>

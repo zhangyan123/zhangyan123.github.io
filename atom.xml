@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangyan123.github.io/"/>
-  <updated>2017-08-16T08:37:31.000Z</updated>
+  <updated>2017-08-27T09:13:19.000Z</updated>
   <id>http://zhangyan123.github.io/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>移动页面点击击穿问题</title>
+    <link href="http://zhangyan123.github.io/2017/08/27/%E7%A7%BB%E5%8A%A8%E9%A1%B5%E9%9D%A2%E7%82%B9%E5%87%BB%E5%87%BB%E7%A9%BF%E9%97%AE%E9%A2%98/"/>
+    <id>http://zhangyan123.github.io/2017/08/27/移动页面点击击穿问题/</id>
+    <published>2017-08-27T06:50:05.000Z</published>
+    <updated>2017-08-27T09:13:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在移动端，事件的触发顺序为：touchstart -&gt; touchmove -&gt; touchend，而 click 事件有 300ms 的延迟，当 touchstart 事件把上层元素隐藏之后，隔了300ms，浏览器触发了 click 事件，但是此时上层元素不见了，所以该事件被派发到了下层元素身上。如果下层对应的元素是一个链接，那页面就会意外地跳转，如果下层元素绑定了其他事件，此时更会有出乎意料的事情发生。</p>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><ul>
+<li>我们项目当中使用的antd推荐的Fastclick插件,意图解决300ms点击延迟问题，但实际开发当中，发现仍然存在点击穿透的情况（遮罩上方选择学校，遮罩消失之后对应下方的书籍卡片被意外点击，并展示了书籍中的乐谱信息。。。满眼的列表项），起初为了尽快解决问题，在遮罩下方又加了一层透明遮罩绑定click事件（点击消失）当肉盾，事后整理如下；</li>
+<li>fastclick使用touchstart/touchend事件模拟click触发，并将真正的click事件屏蔽掉，但在某些手机上仍然存在不能屏蔽原生click事件的bug，造成点击事件触发两次的问题。</li>
+<li><p>跨页穿透问题解决方案：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#preventClick &#123; width:100%; height:100%; position:absolute; z-index:1000; top:0; left:0; &#125;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=&quot;preventClick&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">function onDeviceReady() &#123;</div><div class="line">    setTimeout(function()&#123; $(&apos;#preventClick&apos;).hide(); &#125;, 300);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>本页穿透解决方案：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">#preventClick &#123; width:100%; height:100%; position:absolute; z-index:999; top:0; left:0; &#125;</div><div class="line">&lt;container&gt;</div><div class="line">    &lt;div class=&apos;mask&apos;&gt;&lt;/div&gt;</div><div class="line">    &lt;div id=&quot;preventClick&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/container&gt;</div><div class="line">&lt;script&gt;</div><div class="line">  document.getElementById(&apos;preventClick&apos;).onclick=function(e)&#123;</div><div class="line">    e.target.style.display=&quot;none&quot;;</div><div class="line">  &#125;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>由于穿透事件是click延迟造成的，只要将click事件用touch或者tap（由Zepto或KISSY库提供，同样由touch模拟出来的。）</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>用户碰触移动页面之后，需要等待一段时间来判断是不是双击（double tap）动作（双击放大），而不是立即响应单击click），等待的这段时间大约是300ms，因此移动端click有300ms延迟，较好解决方法是使用touchend替换click事件，但注意在手势检测中屏蔽掉对以上模拟的影响。</p>
+<h1 id="知识点补充："><a href="#知识点补充：" class="headerlink" title="知识点补充："></a>知识点补充：</h1></li>
+<li>pointer-events:none；由CSS3提出，不只是禁用链接hover，打开链接等效果，是真实意义上的将onlick事件去掉了，注意该样式只禁用了鼠标事件，对应的键盘事件并没有被禁用（tab选中，Enter提交等）。</li>
+<li><p>PC网页上的大部分操作都是用鼠标的，即响应的是鼠标事件，包括mousedown、mouseup、mousemove和click事件。一次点击行为，可被拆解成：mousedown -&gt; mouseup -&gt; click 三步。</p>
+</li>
+<li><p>手机上没有鼠标，所以就用触摸事件去实现类似的功能。touch事件包含touchstart、touchmove、touchend，注意手机上并没有tap事件。手指触发触摸事件的过程为：touchstart -&gt; touchmove -&gt; touchend -&gt;300ms-&gt;click。</p>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h1&gt;&lt;p&gt;在移动端，事件的触发顺序为：touchstart -&amp;gt; touchmove -&amp;gt; touchend，而 click 事件有 30
+    
+    </summary>
+    
+      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="问题及解决方案" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    
+      <category term="移动开发问题" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98/"/>
+    
+    
+      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>归并排序</title>
@@ -752,84 +799,6 @@
       <category term="框架" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%A1%86%E6%9E%B6/"/>
     
       <category term="React" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%A1%86%E6%9E%B6/React/"/>
-    
-    
-      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ES5新增常用特性</title>
-    <link href="http://zhangyan123.github.io/2016/10/12/ES5%E6%96%B0%E5%A2%9E%E5%B8%B8%E7%94%A8%E7%89%B9%E6%80%A7/"/>
-    <id>http://zhangyan123.github.io/2016/10/12/ES5新增常用特性/</id>
-    <published>2016-10-12T08:47:09.000Z</published>
-    <updated>2017-04-13T08:54:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>ECMAScript 5.1 (或仅 ES5) 是ECMAScript(基于JavaScript的规范)标准最新修正。 与HTML5规范进程本质类似，ES5通过对现有JavaScript方法添加语句和原生ECMAScript对象做合并实现标准化。ES5还引入了一个语法的严格变种，被称为”严格模式(strict mode)”。</p>
-<p>本文介绍一些有用的改变和添加。</p>
-<h2 id="浏览器支持"><a href="#浏览器支持" class="headerlink" title="浏览器支持"></a>浏览器支持</h2><p>随着Opera 11.60的发布, 所有5大浏览器都支持ES5, 除了一些实现的bugs. 除非另有说明，本文中提到的的一切可以用在以下浏览器版本（或更高）：</p>
-<ul>
-<li>Opera 11.60</li>
-<li>Internet Explorer 9*</li>
-<li>Firefox 4</li>
-<li>Safari 5.1**</li>
-<li>Chrome 13</li>
-<li>IE9不支持严格模式 — IE10 添加</li>
-<li>Safari 5.1 仍不支持 Function.prototype.bind, 尽管 Function.prototype.bind现在已经被Webkit所支持。</li>
-</ul>
-<h2 id="ES5的严格模式"><a href="#ES5的严格模式" class="headerlink" title="ES5的严格模式"></a>ES5的严格模式</h2><p>严格模式给作者提供了选择一个限制性更强语言变种的方式——给作者提供额外的可靠性给用户提供额外的安全性。在JS文件或是函数的顶部添加”use strict”即可启用严格模式。因为”use strict”就是个字符串，因此其会被旧版浏览器安全地忽视。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&quot;use strict&quot;;</div><div class="line">function strict()&#123;</div><div class="line">  &quot;use strict&quot;;</div><div class="line">  //...</div><div class="line">&#125;</div><div class="line"></div><div class="line">function sloppy()&#123;</div><div class="line">  eval(&quot;window.foo = &apos;bar&apos;&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>在严格模式下运行脚本，不少导致提醒或buggy行为的事情会抛出错误，例如：</p>
-<p>未声明的变量赋值抛出一个ReferenceError, 而不是创建一个全局变量。<br>不止一次对对象字面量分配相同的属性会抛出SyntaxError.<br>使用with语句抛出SyntaxError.<br>MDSN的严格模式文章有个关于所有这些差异很有用的总结表格。</p>
-<h2 id="新增JSON"><a href="#新增JSON" class="headerlink" title="新增JSON"></a>新增JSON</h2><p>ES5提供一个全局的JSON对象，用来序列化(JSON.stringify)和反序列化(JSON.parse)对象为JSON格式。</p>
-<p>对于老的浏览器，可以考虑使用Douglas Crockford的json2.js, 可以让旧的浏览器实现同样的功能（原始支持功能测试后）。</p>
-<p>JSON.parse(text [, reviver])</p>
-<p>JSON.parse接受文本(JSON格式)并转换成一个ECMAScript值。该可选的reviver参数是有带有key和value两个参数的函数，其作用于结果——让过滤和转换返回值成为可能。</p>
-<figure class="highlight plain"><figcaption><span>result = JSON.parse('&#123;"a": 1, "b": "2"&#125;');</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//Object</div><div class="line"> result.b</div><div class="line">//&quot;2&quot;</div></pre></td></tr></table></figure>
-<p>如果我们想确保解析的值是个整数，我们可以使用reviver方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var result = JSON.parse(&apos;&#123;&quot;a&quot;: 1, &quot;b&quot;: &quot;2&quot;&#125;&apos;, function(key, value)&#123;</div><div class="line">  if (typeof value == &apos;string&apos;)&#123;</div><div class="line">    return parseInt(value);</div><div class="line">  &#125; else &#123;</div><div class="line">    return value; </div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line">&gt;&gt; result.b</div><div class="line">2</div><div class="line">JSON.stringify(value [, replacer [, space]])</div></pre></td></tr></table></figure></p>
-<p>JSON.stringify允许作者接受一个ECMAScript值然后转换成JSON格式的字符串。 在其最简单的形式中，JSON.stringify接受一个值返回一个字符串，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> var mike = JSON.stringify(&#123;mike: &quot;taylor&quot;&#125;)</div><div class="line">//undefined</div><div class="line"></div><div class="line">mike</div><div class="line">//&apos;&#123;&quot;mike&quot;: &quot;taylor&quot;&#125;&apos;</div><div class="line"></div><div class="line">typeof mike</div><div class="line">//&quot;string&quot;</div></pre></td></tr></table></figure></p>
-<p>如果我们需要改变值字符串化的方式，或是对我们选择的提供过滤，我们可以将其传给replacer函数。例如，我们想过滤出即将被字符串化的对象中值为13的属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var nums = &#123;</div><div class="line">  &quot;first&quot;: 7,</div><div class="line">  &quot;second&quot;: 14,</div><div class="line">  &quot;third&quot;: 13</div><div class="line">&#125;</div><div class="line"></div><div class="line">var luckyNums = JSON.stringify(nums, function(key, value)&#123;</div><div class="line">  if (value == 13) &#123;</div><div class="line">    return undefined;</div><div class="line">  &#125; else &#123;</div><div class="line">    return value;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">&gt;&gt; luckyNums</div><div class="line">&apos;&#123;&quot;first&quot;: 7, &quot;second&quot;: 14&#125;&apos;</div></pre></td></tr></table></figure></p>
-<p>如果replacer方法返回undefined, 则键值对就不会包含在最终的JSON中。我们同样可以传递一个space参数以便获得返回结果的可读性帮助。space参数可以是个数字，表明了作缩进的JSON字符串或字符串每个水平上缩进的空格数。如果参数是个超过10的数值，或是超过10个字符的字符串，将导致取数值10或是截取前10个字符。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var luckyNums = JSON.stringify(nums, function(key, value) &#123;</div><div class="line">  if (value == 13) &#123;</div><div class="line">    return undefined;</div><div class="line">  &#125; else &#123;</div><div class="line">    return value;</div><div class="line">  &#125;</div><div class="line">&#125;, 2);</div><div class="line"></div><div class="line">&gt;&gt; luckyNums</div><div class="line">&apos;&#123;</div><div class="line">  &quot;first&quot;:7,</div><div class="line">  &quot;second&quot;:14</div><div class="line">&#125;&apos;</div></pre></td></tr></table></figure></p>
-<h2 id="对象新增方法"><a href="#对象新增方法" class="headerlink" title="对象新增方法"></a>对象新增方法</h2><p>下面的方法是添加到Object上的构造器：</p>
-<p>Object.getPrototypeOf<br>Object.getOwnPropertyDescriptor<br>Object.getOwnPropertyNames<br>Object.create<br>Object.defineProperty(定义属性描述)</p>
-<ul>
-<li>在ES3中，除了一些内置属性（例如Math.PI），对象的属性是可以在任何时候都进行增删改查的，在ES5中，这种原本内建属性才有的特权被普适话，ES5引入属性描述符的概念，我们可以通过它对定义的属性有更大的控制权。属性描述符是每个属性都具备的一个描述对象，是对象就可以有属性和方法，但属性描述符对象的成员是确定的，为避免歧义，我们可以叫这些成员为特性；</li>
-<li>了解下属性描述符中的特性：<ul>
-<li>value 存放属性值</li>
-<li>writable  是否可写</li>
-<li>enumberable 是否可枚举</li>
-<li>configurable 是否可删除</li>
-<li>set() 更新属性时调用</li>
-<li>get() 获取属性时调用</li>
-</ul>
-</li>
-<li><p>举例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var person=&#123;&#125;;</div><div class="line">person.leds=2;</div></pre></td></tr></table></figure>
-<p>以上ES3风格的代码等价为     </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var person=&#123;&#125;;</div><div class="line">Object.defineProperty(person,&quot;legs&quot;,&#123;</div><div class="line">  value:2,</div><div class="line">  writable:true,</div><div class="line">  configurable:true,</div><div class="line">  enumrable:true</div><div class="line"></div><div class="line">&#125;);如上所示，除了value默认为undefined其他特性均默认为false,这意味着，通过这种方式定义属性时需显示设定他们值为true。</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>Object.defineProperties<br>Object.seal<br>Object.freeze<br>Object.preventExtensions<br>Object.isSealed<br>Object.isFrozen<br>Object.isExtensible<br>Object.keys<br>这些新增的好处之一是对象的属性有了更多控制，例如哪些是允许被修改的，哪些是可以枚举的，哪些是可以删除的等。这个的实现通过程序访问对象的属性描述符(property descriptors). 例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var cat = &#123;&#125;;</div><div class="line"></div><div class="line">Object.defineProperty(cat, &quot;name&quot;, &#123;</div><div class="line">  value: &quot;Maru&quot;,</div><div class="line">  writable: false,</div><div class="line">  enumerable: true,</div><div class="line">  configurable: false</div><div class="line">&#125;);</div><div class="line"></div><div class="line">Object.defineProperty(cat, &quot;skill&quot;, &#123;</div><div class="line">  value: &quot;exploring boxes&quot;,</div><div class="line">  writable: true,</div><div class="line">  enumerable: true,</div><div class="line">  configurable: true</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>对于我们的cat对象, 其名字name不能被改变，但是会出现在for-in循环中。在其他方面，Maru擅长探索盒子(exploring boxes), 但是可以在将来改变，因为skill属性是writable和configurable的。</p>
-<p>在之后的文章我们将详细探讨所有附加的对象。</p>
-<h2 id="数组新增方法"><a href="#数组新增方法" class="headerlink" title="数组新增方法"></a>数组新增方法</h2><p>以下方法添加到了Arrayprototype对象上:<br>Array.prototype.indexOf<br>Array.prototype.lastIndexOf<br>Array.prototype.every<br>Array.prototype.some<br>Array.prototype.forEach<br>Array.prototype.map<br>Array.prototype.filter<br>Array.prototype.reduce<br>Array.prototype.reduceRight<br>关于ES5数组”extras” Dmitry Soshnikov写过一篇有深度的参考文章。</p>
-<p>Dmitry的文章中有一个没有提到，就是Array.isArray, 正如你看到的，这厮直接写在了Array构造器上，而不是prototype对象上。Array.isArray会按照你所期待的那样去做 — 这是一个根据参数的[[Class]]内部属性是否是”Array”返回true或false.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Array.isArray(&quot;NO U&quot;)</div><div class="line">&gt;&gt; false</div><div class="line"></div><div class="line">Array.isArray([&quot;NO&quot;, &quot;U&quot;])</div><div class="line">&gt;&gt; true</div></pre></td></tr></table></figure></p>
-<p>在ES3中，唯一可靠的确定一个值是数组的方式就是使用“the Miller Device”, 即比对一个数组其内在的[[Class]]属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">Object.prototype.toString.apply(value) === &apos;[object Array]&apos;</div><div class="line">Function.prototype.bind(thisArg [, arg1 [, arg2, …]])</div><div class="line">Function.prototype.bind返回一个新的函数对象，该函数对象的this绑定到了thisArg参数上。从本质上讲，这允许你在其他对象链中执行一个函数。</div><div class="line"></div><div class="line">function locate()&#123;</div><div class="line">  console.log(this.location);</div><div class="line">&#125;</div><div class="line"></div><div class="line">function Maru(location)&#123;</div><div class="line">  this.location = location;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var kitty = new Maru(&quot;cardboard box&quot;);</div><div class="line"></div><div class="line">var locateMaru = locate.bind(kitty);</div><div class="line"></div><div class="line">locateMaru();</div></pre></td></tr></table></figure></p>
-<p>在这个例子中，我们将Maru对象的上下文应用在location函数中。因为location是个全局对象的属性，其this值就是全局对象(window)。在这种情况下，我们向上寻找cat, 并不是Location对象，因为我们可以通过绑定的总是kitty的this值创建一个新方法locateMaru.</p>
-<h2 id="补充参考"><a href="#补充参考" class="headerlink" title="补充参考"></a>补充参考</h2><p>ECMAScript 5 对象和属性 by John Resig<br>理解JavaScript函数调用和”this” by Yehuda Katz<br>JavaScript严格模式 by Angus Croll<br>ECMA-262-5详细 介绍 by Dmitry Soshnikov<br>ECMAScript 5 兼容性表 by Juriy Zaytsev<br>本文许可自Creative Commons Attribution 3.0 Unported许可。</p>
-<p>本文转载自张鑫旭-鑫空间-鑫生活<a href="http://www.zhangxinxu.com/wordpress/?p=2148" target="_blank" rel="external">http://www.zhangxinxu.com</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;ECMAScript 5.1 (或仅 ES5) 是ECMAScript(基于JavaScript的规范)标准最新修正。 与HTML5规范进程
-    
-    </summary>
-    
-      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="javaScript" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/"/>
-    
-      <category term="JS进步史" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/javaScript/JS%E8%BF%9B%E6%AD%A5%E5%8F%B2/"/>
     
     
       <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
