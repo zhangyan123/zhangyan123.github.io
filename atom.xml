@@ -46,21 +46,21 @@
     <link href="http://zhangyan123.github.io/2017/08/27/%E7%A7%BB%E5%8A%A8%E9%A1%B5%E9%9D%A2%E7%82%B9%E5%87%BB%E5%87%BB%E7%A9%BF%E9%97%AE%E9%A2%98/"/>
     <id>http://zhangyan123.github.io/2017/08/27/移动页面点击击穿问题/</id>
     <published>2017-08-27T06:50:05.000Z</published>
-    <updated>2017-08-27T09:13:19.000Z</updated>
+    <updated>2017-08-27T09:21:34.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在移动端，事件的触发顺序为：touchstart -&gt; touchmove -&gt; touchend，而 click 事件有 300ms 的延迟，当 touchstart 事件把上层元素隐藏之后，隔了300ms，浏览器触发了 click 事件，但是此时上层元素不见了，所以该事件被派发到了下层元素身上。如果下层对应的元素是一个链接，那页面就会意外地跳转，如果下层元素绑定了其他事件，此时更会有出乎意料的事情发生。</p>
-<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><ul>
-<li>我们项目当中使用的antd推荐的Fastclick插件,意图解决300ms点击延迟问题，但实际开发当中，发现仍然存在点击穿透的情况（遮罩上方选择学校，遮罩消失之后对应下方的书籍卡片被意外点击，并展示了书籍中的乐谱信息。。。满眼的列表项），起初为了尽快解决问题，在遮罩下方又加了一层透明遮罩绑定click事件（点击消失）当肉盾，事后整理如下；</li>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>   我们项目当中使用的antd推荐的Fastclick插件,意图解决300ms点击延迟问题，但实际开发当中，发现仍然存在点击穿透的情况（遮罩上方选择学校，遮罩消失之后对应下方的书籍卡片被意外点击，并展示了书籍中的乐谱信息。。。满眼的列表项），起初为了尽快解决问题，在遮罩下方又加了一层透明遮罩绑定click事件（点击消失）当肉盾，事后整理如下：</p>
+<ul>
 <li>fastclick使用touchstart/touchend事件模拟click触发，并将真正的click事件屏蔽掉，但在某些手机上仍然存在不能屏蔽原生click事件的bug，造成点击事件触发两次的问题。</li>
 <li><p>跨页穿透问题解决方案：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#preventClick &#123; width:100%; height:100%; position:absolute; z-index:1000; top:0; left:0; &#125;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=&quot;preventClick&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">function onDeviceReady() &#123;</div><div class="line">    setTimeout(function()&#123; $(&apos;#preventClick&apos;).hide(); &#125;, 300);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
+</li>
 <li><p>本页穿透解决方案：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">#preventClick &#123; width:100%; height:100%; position:absolute; z-index:999; top:0; left:0; &#125;</div><div class="line">&lt;container&gt;</div><div class="line">    &lt;div class=&apos;mask&apos;&gt;&lt;/div&gt;</div><div class="line">    &lt;div id=&quot;preventClick&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/container&gt;</div><div class="line">&lt;script&gt;</div><div class="line">  document.getElementById(&apos;preventClick&apos;).onclick=function(e)&#123;</div><div class="line">    e.target.style.display=&quot;none&quot;;</div><div class="line">  &#125;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 </li>
 <li><p>由于穿透事件是click延迟造成的，只要将click事件用touch或者tap（由Zepto或KISSY库提供，同样由touch模拟出来的。）</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>用户碰触移动页面之后，需要等待一段时间来判断是不是双击（double tap）动作（双击放大），而不是立即响应单击click），等待的这段时间大约是300ms，因此移动端click有300ms延迟，较好解决方法是使用touchend替换click事件，但注意在手势检测中屏蔽掉对以上模拟的影响。</p>
-<h1 id="知识点补充："><a href="#知识点补充：" class="headerlink" title="知识点补充："></a>知识点补充：</h1></li>
+<h1 id="知识点补充："><a href="#知识点补充：" class="headerlink" title="知识点补充："></a>知识点补充：</h1><ul>
 <li>pointer-events:none；由CSS3提出，不只是禁用链接hover，打开链接等效果，是真实意义上的将onlick事件去掉了，注意该样式只禁用了鼠标事件，对应的键盘事件并没有被禁用（tab选中，Enter提交等）。</li>
 <li><p>PC网页上的大部分操作都是用鼠标的，即响应的是鼠标事件，包括mousedown、mouseup、mousemove和click事件。一次点击行为，可被拆解成：mousedown -&gt; mouseup -&gt; click 三步。</p>
 </li>
