@@ -135,7 +135,7 @@
   <h3 class="fa fa-tags widget-title">Tag Cloud</h3>
   <div class="tagcloud-content">
     
-      <a href="/tags/javaScript/" style="font-size: 0.2rem; color: #0a407c">javaScript</a> <a href="/tags/larabel/" style="font-size: 0.14rem; color: #69c">larabel</a> <a href="/tags/写作/" style="font-size: 0.14rem; color: #69c">写作</a> <a href="/tags/笔试/" style="font-size: 0.17rem; color: #386da4">笔试</a> <a href="/tags/执行环境与作用域/" style="font-size: 0.14rem; color: #69c">执行环境与作用域</a>
+      <a href="/tags/javaScript/" style="font-size: 0.2rem; color: #0a407c">javaScript</a> <a href="/tags/larabel/" style="font-size: 0.14rem; color: #69c">larabel</a> <a href="/tags/笔试/" style="font-size: 0.17rem; color: #386da4">笔试</a> <a href="/tags/写作/" style="font-size: 0.14rem; color: #69c">写作</a> <a href="/tags/执行环境与作用域/" style="font-size: 0.14rem; color: #69c">执行环境与作用域</a>
   </div>
 </li>
 
@@ -233,7 +233,7 @@
                 问题在移动端，click 事件有 300ms 的延迟，当 touchend 事件把上层元素隐藏之后，隔了300ms，浏览器触发了 click 事件，但是此时上层元素不见了，所以该事件被派发到了下层元素身上。如果下层对应的元素是一个链接，那页面就会意外地跳转，如果下层元素绑定了其他事件，此时更会有出乎意料的事情发生。
 解决   我们项目当中使用的antd推荐的Fastclick插件,意图解决300ms点击延迟问题，但实际开发当中，发现仍然存在点击穿透的情况（遮罩上方选择学校，遮罩消失之后对应下方的书籍卡片被意外点击，并展示了书籍中的乐谱信息。。。满眼的列表项），起初为了尽快解决问题，在遮罩下方又加了一层透明遮罩绑定click事件（点击消失）当肉盾，事后整理如下：
 
-fastclick使用touchend事件模拟click触发，并将真正的click事件屏蔽掉，但在某些手机上仍然存在不能屏...
+fastclick使用touchend事件模拟click触发，并将真正的click事件屏蔽掉，但在某些（Android）手...
             </p>
             <div class="article-meta">
     
@@ -773,7 +773,7 @@ IE5，IE6没有在他们的脚本语言中定义XMLHttpRequest对象的标识符
     
     <div>
         
-        <a href="/" class="copyright-links">张言</a>&copy;2017 - 2017.All Rights
+        <a href="/" class="copyright-links">张言</a>&copy;2017 - 2018.All Rights
         Reserved.
     </div>
     <p>Powered by <a href="https://hexo.io" class="copyright-links" target="_blank">Hexo</a> | Theme by <a
