@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangyan123.github.io/"/>
-  <updated>2018-01-15T08:00:45.000Z</updated>
+  <updated>2018-01-15T14:12:54.000Z</updated>
   <id>http://zhangyan123.github.io/</id>
   
   <author>
@@ -16,16 +16,99 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Py键值索引集合类型</title>
-    <link href="http://zhangyan123.github.io/2018/01/15/Py%E9%94%AE%E5%80%BC%E7%B4%A2%E5%BC%95%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B/"/>
-    <id>http://zhangyan123.github.io/2018/01/15/Py键值索引集合类型/</id>
+    <title>Py切片</title>
+    <link href="http://zhangyan123.github.io/2018/01/15/Py%E5%88%87%E7%89%87/"/>
+    <id>http://zhangyan123.github.io/2018/01/15/Py切片/</id>
+    <published>2018-01-15T13:45:05.000Z</published>
+    <updated>2018-01-15T14:12:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>list、tuple、str都可以使用切片快速有效的得到新的子集合（或子字符串）；</p>
+<ul>
+<li>【开始位置：结束位置：步长】</li>
+<li>创建的新子串包括开始位置元素，不包括结束位置元素</li>
+<li><code>[-3,-1,2]</code>意思为从倒数第三个元素开始取，取到倒数第一个时刻结束，不存储倒数第一个元素，得到的子串取第一个元素，之后每间隔4个元素存一个。</li>
+<li><code>[::2]</code>省略写法，第一个参数不写表示从0索引开始取值，第二个参数不写表示一直取值到最后一个。可见想取到最后一个元素的方法是第二个参数不写。</li>
+<li>返回的数据保持原数据的数据类型</li>
+<li>复制一个新数组与原数据数据一致的简单方法 <code>new_arr = old_arr[::]</code>(第三个参数为可选参数，不写时默认步长为1)</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;list、tuple、str都可以使用切片快速有效的得到新的子集合（或子字符串）；&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;【开始位置：结束位置：步长】&lt;/li&gt;
+&lt;li&gt;创建的新子串包括开始位置元素，不包括结束位置元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[-3,-1,2]&lt;/code&gt;意思
+    
+    </summary>
+    
+      <category term="后端学习" scheme="http://zhangyan123.github.io/categories/%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Python" scheme="http://zhangyan123.github.io/categories/%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0/Python/"/>
+    
+      <category term="基本语法" scheme="http://zhangyan123.github.io/categories/%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0/Python/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+    
+    
+      <category term="python" scheme="http://zhangyan123.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Py函数</title>
+    <link href="http://zhangyan123.github.io/2018/01/15/Py%E5%87%BD%E6%95%B0/"/>
+    <id>http://zhangyan123.github.io/2018/01/15/Py函数/</id>
+    <published>2018-01-15T13:40:05.000Z</published>
+    <updated>2018-01-15T12:37:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="定义方法"><a href="#定义方法" class="headerlink" title="定义方法"></a>定义方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">def func_name(*args):</div><div class="line">    #something about args</div><div class="line">    return sth  #默认return None</div></pre></td></tr></table></figure>
+<h1 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h1><ul>
+<li>必选参数在左，默认参数在右，因为解释器对命名参数变量赋值的顺序是从左至右的；</li>
+</ul>
+<h1 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h1><ul>
+<li>args为存储了tuple实例的局部变量</li>
+</ul>
+<h1 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h1><ul>
+<li>python以函数为作用域 </li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;定义方法&quot;&gt;&lt;a href=&quot;#定义方法&quot; class=&quot;headerlink&quot; title=&quot;定义方法&quot;&gt;&lt;/a&gt;定义方法&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pr
+    
+    </summary>
+    
+      <category term="后端学习" scheme="http://zhangyan123.github.io/categories/%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Python" scheme="http://zhangyan123.github.io/categories/%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0/Python/"/>
+    
+      <category term="基本语法" scheme="http://zhangyan123.github.io/categories/%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0/Python/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+    
+    
+      <category term="python" scheme="http://zhangyan123.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Py无序集合类型</title>
+    <link href="http://zhangyan123.github.io/2018/01/15/Py%E6%97%A0%E5%BA%8F%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://zhangyan123.github.io/2018/01/15/Py无序集合类型/</id>
     <published>2018-01-15T12:40:05.000Z</published>
-    <updated>2018-01-15T08:00:45.000Z</updated>
+    <updated>2018-01-15T09:25:09.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="dict-字典类型"><a href="#dict-字典类型" class="headerlink" title="dict(字典类型)"></a>dict(字典类型)</h1><ul>
 <li>dict是一种用空间换取时间的无序列表结构，查询速度快，key值不可重复；</li>
 <li>key值不可变</li>
-<li></li>
+<li>dict也继承自interable,可使用for循环迭代遍历</li>
+</ul>
+<h1 id="set"><a href="#set" class="headerlink" title="set"></a>set</h1><ul>
+<li>调用方式向set()构造函数中传入一个list</li>
+<li>set使用无序的存储方式，不能用数字索引查找元素，可以使用<code>in</code>查看元素是否在set实例中,set也继承自interable类，可使用for迭代遍历</li>
+<li>set中的元素无重复项</li>
+<li>使用：将有限的有效值存储进set中，对用户输入进行验证（in）</li>
+<li>添加add</li>
+<li>删除remove</li>
 </ul>
 ]]></content>
     
@@ -95,11 +178,11 @@
   </entry>
   
   <entry>
-    <title>Py数字索引集合类型</title>
-    <link href="http://zhangyan123.github.io/2018/01/14/Py%E6%95%B0%E5%AD%97%E7%B4%A2%E5%BC%95%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B/"/>
-    <id>http://zhangyan123.github.io/2018/01/14/Py数字索引集合类型/</id>
+    <title>Py有序集合类型</title>
+    <link href="http://zhangyan123.github.io/2018/01/14/Py%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://zhangyan123.github.io/2018/01/14/Py有序集合类型/</id>
     <published>2018-01-14T12:20:20.000Z</published>
-    <updated>2018-01-15T08:00:42.000Z</updated>
+    <updated>2018-01-15T12:30:46.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="List（可变）"><a href="#List（可变）" class="headerlink" title="List（可变）"></a>List（可变）</h1><p>常用方法参数与返回值表格：<br><code>L=[3,4,5]</code></p>
 <table>
@@ -128,11 +211,19 @@
 </tr>
 </tbody>
 </table>
+<ul>
+<li>可以使用L[i]赋值方式更新原有元素，但不能用此方法增加新元素，会报outof range的错误，增加新元素使用append或者insert方法</li>
+</ul>
 <h1 id="Tuple（不可变）"><a href="#Tuple（不可变）" class="headerlink" title="Tuple（不可变）"></a>Tuple（不可变）</h1><p><code>T =(3,4,5)</code></p>
 <ul>
 <li>T一旦被创建就不可变；</li>
 <li>只有一个元素的tuple写法 <code>t = (3,)</code>;</li>
 <li><p style="color:red">tuple中元素若为可变对象，如list或dict，set,则tuple仍有不确定因素，需格外注意</p></li>
+<li>tuple在python中有非常重要的地位<ul>
+<li>多个变量可以同时接收一个tuple，按位置赋给对应的值，所以，Python的函数返回多值其实就是返回一个tuple，但写起来更方便。</li>
+<li>可变参数*args也是，在函数内部声明args局部变量存储了输入参数组成的tuple实例。</li>
+</ul>
+</li>
 </ul>
 ]]></content>
     
@@ -799,62 +890,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;为什么要react-redux&quot;&gt;&lt;a href=&quot;#为什么要react-redux&quot; class=&quot;headerlink&quot; title=&quot;为什么要react-redux?&quot;&gt;&lt;/a&gt;为什么要react-redux?&lt;/h1&gt;&lt;p&gt;理解使用action创建函数封装
-    
-    </summary>
-    
-      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="框架" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="React" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%A1%86%E6%9E%B6/React/"/>
-    
-    
-      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>策略模式在前端开发中的应用</title>
-    <link href="http://zhangyan123.github.io/2016/10/18/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://zhangyan123.github.io/2016/10/18/策略模式/</id>
-    <published>2016-10-18T08:50:04.000Z</published>
-    <updated>2017-07-20T02:32:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>待更新。。。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;待更新。。。&lt;/p&gt;
-
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://zhangyan123.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="策略模式" scheme="http://zhangyan123.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React状态(state)</title>
-    <link href="http://zhangyan123.github.io/2016/10/17/React%E7%8A%B6%E6%80%81/"/>
-    <id>http://zhangyan123.github.io/2016/10/17/React状态/</id>
-    <published>2016-10-17T06:30:09.000Z</published>
-    <updated>2017-05-03T02:14:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="State-工作原理"><a href="#State-工作原理" class="headerlink" title="State 工作原理"></a>State 工作原理</h2><p>React.js是把UI当状态的函数,通知React数据变化的方法时调用setState(data,callback)。这个方法会合并data到this.state,<br>并重新渲染组件。渲染完成后,调用可选的callback回调。大部分情况下不需要提供callback,因为只要组件的状态改变了,React 调用<br>可选的callback回调。大部分情况下不需要提供callback,因为只要组件的状态改变了,React调用render()负责把界面更新到最新状态。</p>
-<h2 id="getInitialState"><a href="#getInitialState" class="headerlink" title="getInitialState"></a>getInitialState</h2><p>getInitialState()在整个组件的生命周期中只会执行一次,用来设置组件的初始state,也就是一个对象,这个对象可以通过this.state属性读取。当用户<br>点击组件,导致状态变化,this.setState方法就修改状态值,自动调用this.render方法,再次渲染组件。</p>
-<h2 id="replaceState"><a href="#replaceState" class="headerlink" title="replaceState()"></a>replaceState()</h2><p>replaceState()与setState()的区别在于它会用第一个参数去替代原状态而非进行合并。</p>
-<h2 id="哪些组件应该有State"><a href="#哪些组件应该有State" class="headerlink" title="哪些组件应该有State"></a>哪些组件应该有State</h2><p>大部分组件的工作应该是从props里取数据并渲染出来,但是有时需要对用户输入、服务器请求或者时间变化等做出响应,这时有需要对用户输入、服务器请求<br>或者时间变化等做出响应,这时才需要使用State。<br>尝试把尽可能多的组件无状态化,这样做可以可以隔离state,把它放在最合理的地方,也能减少冗余,同时易于解释程序运作过程。<br>常用的模式时创建多个只负责渲染数据的无状态组件,在它们的上层创建一个有状态组件并把它的状态通过props传给子级,这个有状态的组件封装了所有用户<br>的交互逻辑,而这些无状态组件则负责声明式的渲染数据。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;State-工作原理&quot;&gt;&lt;a href=&quot;#State-工作原理&quot; class=&quot;headerlink&quot; title=&quot;State 工作原理&quot;&gt;&lt;/a&gt;State 工作原理&lt;/h2&gt;&lt;p&gt;React.js是把UI当状态的函数,通知React数据变化的方法时调用se
     
     </summary>
     

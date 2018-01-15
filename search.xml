@@ -3,12 +3,87 @@
     
     
     <entry>
-        <title><![CDATA[Py键值索引集合类型]]></title>
-        <url>http://zhangyan123.github.io/2018/01/15/Py%E9%94%AE%E5%80%BC%E7%B4%A2%E5%BC%95%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B/</url>
+        <title><![CDATA[Py切片]]></title>
+        <url>http://zhangyan123.github.io/2018/01/15/Py%E5%88%87%E7%89%87/</url>
+        <content type="html"><![CDATA[<p>list、tuple、str都可以使用切片快速有效的得到新的子集合（或子字符串）；</p>
+<ul>
+<li>【开始位置：结束位置：步长】</li>
+<li>创建的新子串包括开始位置元素，不包括结束位置元素</li>
+<li><code>[-3,-1,2]</code>意思为从倒数第三个元素开始取，取到倒数第一个时刻结束，不存储倒数第一个元素，得到的子串取第一个元素，之后每间隔4个元素存一个。</li>
+<li><code>[::2]</code>省略写法，第一个参数不写表示从0索引开始取值，第二个参数不写表示一直取值到最后一个。可见想取到最后一个元素的方法是第二个参数不写。</li>
+<li>返回的数据保持原数据的数据类型</li>
+<li>复制一个新数组与原数据数据一致的简单方法 <code>new_arr = old_arr[::]</code>(第三个参数为可选参数，不写时默认步长为1)</li>
+</ul>
+]]></content>
+        
+        <categories>
+            
+            <category> 后端学习 </category>
+            
+            <category> Python </category>
+            
+            <category> 基本语法 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[Py函数]]></title>
+        <url>http://zhangyan123.github.io/2018/01/15/Py%E5%87%BD%E6%95%B0/</url>
+        <content type="html"><![CDATA[<h1 id="定义方法"><a href="#定义方法" class="headerlink" title="定义方法"></a>定义方法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">def func_name(*args):</div><div class="line">    #something about args</div><div class="line">    return sth  #默认return None</div></pre></td></tr></table></figure>
+<h1 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h1><ul>
+<li>必选参数在左，默认参数在右，因为解释器对命名参数变量赋值的顺序是从左至右的；</li>
+</ul>
+<h1 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h1><ul>
+<li>args为存储了tuple实例的局部变量</li>
+</ul>
+<h1 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h1><ul>
+<li>python以函数为作用域 </li>
+</ul>
+]]></content>
+        
+        <categories>
+            
+            <category> 后端学习 </category>
+            
+            <category> Python </category>
+            
+            <category> 基本语法 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[Py无序集合类型]]></title>
+        <url>http://zhangyan123.github.io/2018/01/15/Py%E6%97%A0%E5%BA%8F%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B/</url>
         <content type="html"><![CDATA[<h1 id="dict-字典类型"><a href="#dict-字典类型" class="headerlink" title="dict(字典类型)"></a>dict(字典类型)</h1><ul>
 <li>dict是一种用空间换取时间的无序列表结构，查询速度快，key值不可重复；</li>
 <li>key值不可变</li>
-<li></li>
+<li>dict也继承自interable,可使用for循环迭代遍历</li>
+</ul>
+<h1 id="set"><a href="#set" class="headerlink" title="set"></a>set</h1><ul>
+<li>调用方式向set()构造函数中传入一个list</li>
+<li>set使用无序的存储方式，不能用数字索引查找元素，可以使用<code>in</code>查看元素是否在set实例中,set也继承自interable类，可使用for迭代遍历</li>
+<li>set中的元素无重复项</li>
+<li>使用：将有限的有效值存储进set中，对用户输入进行验证（in）</li>
+<li>添加add</li>
+<li>删除remove</li>
 </ul>
 ]]></content>
         
@@ -76,8 +151,8 @@
     </entry>
     
     <entry>
-        <title><![CDATA[Py数字索引集合类型]]></title>
-        <url>http://zhangyan123.github.io/2018/01/14/Py%E6%95%B0%E5%AD%97%E7%B4%A2%E5%BC%95%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B/</url>
+        <title><![CDATA[Py有序集合类型]]></title>
+        <url>http://zhangyan123.github.io/2018/01/14/Py%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B/</url>
         <content type="html"><![CDATA[<h1 id="List（可变）"><a href="#List（可变）" class="headerlink" title="List（可变）"></a>List（可变）</h1><p>常用方法参数与返回值表格：<br><code>L=[3,4,5]</code></p>
 <table>
 <thead>
@@ -105,11 +180,19 @@
 </tr>
 </tbody>
 </table>
+<ul>
+<li>可以使用L[i]赋值方式更新原有元素，但不能用此方法增加新元素，会报outof range的错误，增加新元素使用append或者insert方法</li>
+</ul>
 <h1 id="Tuple（不可变）"><a href="#Tuple（不可变）" class="headerlink" title="Tuple（不可变）"></a>Tuple（不可变）</h1><p><code>T =(3,4,5)</code></p>
 <ul>
 <li>T一旦被创建就不可变；</li>
 <li>只有一个元素的tuple写法 <code>t = (3,)</code>;</li>
 <li><p style="color:red">tuple中元素若为可变对象，如list或dict，set,则tuple仍有不确定因素，需格外注意</p></li>
+<li>tuple在python中有非常重要的地位<ul>
+<li>多个变量可以同时接收一个tuple，按位置赋给对应的值，所以，Python的函数返回多值其实就是返回一个tuple，但写起来更方便。</li>
+<li>可变参数*args也是，在函数内部声明args局部变量存储了输入参数组成的tuple实例。</li>
+</ul>
+</li>
 </ul>
 ]]></content>
         

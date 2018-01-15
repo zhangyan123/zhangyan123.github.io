@@ -22,14 +22,14 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>Tag: larabel | 张言的博客</title>
+<title>Py切片 | 张言的博客</title>
 
 
 <link rel="icon" href="/favicon.ico">
 
     
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/pages/archive.css">
+<link rel="stylesheet" href="/css/pages/post.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
     <!--script-->
@@ -156,45 +156,136 @@
 
 
         <div id="main">
-    <div id="post-list">
-        <ul class="archives-post-list">
-            
-            <li class="post-items" _href="/2016/08/31/laravel环境搭建/">
+    <article id="post">
+        <div id="post-header">
+
+            <h1 id="Py切片">
                 
-                <p class="info">larabel</p>
-                <h2 class="post-item-title">lavarel&lt;一&gt;环境搭建</h2>
-                <div class="article-meta">
+                Py切片
+                
+            </h1>
+            <div class="article-meta">
     
     
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-        <span>Laravel</span>
+        <span>基本语法</span>
     </span>
     
+    
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            python
+            
+        </span>
+    </span>
     
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2016/08/31</span>
+        <span class="date-meta ">2018/01/15</span>
+    </span>
+    
+    <span  class=" fa-wrap">
+        <i class="fa fa-comment-o"></i>
+        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2018/01/15/Py切片/" data-thread-key="/2018/01/15/Py切片/"
+           data-count-type="comments"></span>
     </span>
     
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="lavarel&lt;一&gt;环境搭建"
-              data-leadcloud-url="/2016/08/31/laravel环境搭建/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title="Py切片"
+              data-leadcloud-url="/2018/01/15/Py切片/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
 </div>
 
-            </li>
             
-        </ul>
+            
+        </div>
+        
+        <div id="post-body">
+            <p>list、tuple、str都可以使用切片快速有效的得到新的子集合（或子字符串）；</p>
+<ul>
+<li>【开始位置：结束位置：步长】</li>
+<li>创建的新子串包括开始位置元素，不包括结束位置元素</li>
+<li><code>[-3,-1,2]</code>意思为从倒数第三个元素开始取，取到倒数第一个时刻结束，不存储倒数第一个元素，得到的子串取第一个元素，之后每间隔4个元素存一个。</li>
+<li><code>[::2]</code>省略写法，第一个参数不写表示从0索引开始取值，第二个参数不写表示一直取值到最后一个。可见想取到最后一个元素的方法是第二个参数不写。</li>
+<li>返回的数据保持原数据的数据类型</li>
+<li>复制一个新数组与原数据数据一致的简单方法 <code>new_arr = old_arr[::]</code>(第三个参数为可选参数，不写时默认步长为1)</li>
+</ul>
+
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="/images/author.png" alt="avatar"/>
+                
+                <a href="javascript:void(0)" class="high-song">high起来 &#128541;</a>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">赠我一杯 &#128536;</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>Author:
+                    
+                    <a href="/about">张言</a>
+                </li>
+                <li>Published Date: <span>2018-01-15  09:45:05</span></li>
+                
+                <li>Updated Date: <span>2018-01-15  10:12:54</span></li>
+                
+                <li class="post-category">
+                    Categories:
+                    
+                    <a href="/categories/后端学习/">后端学习</a>
+                    
+                    <a href="/categories/后端学习/Python/">Python</a>
+                    
+                    <a href="/categories/后端学习/Python/基本语法/">基本语法</a>
+                    
+                </li>
+                <li class="post-tags">
+                    Tags:
+                    
+                    <a href="/tags/python/">python</a>
+                    
+                </li>
+                
+                <li> License: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="/images/Ali-pay.png" alt="支付宝付款" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
+        
+        
+        <a href="/2018/01/15/Py函数/" class="next-post fa">Py函数</a>
+        
     </div>
+    
+    <div id="comments">
+        
+
+
+
+    </div>
+    
 </div>
-
-
 
 
     </div>
@@ -232,6 +323,8 @@
     <ul id="tools">
     <li class="totop-btn fa fa-angle-up"></li>
     
+    <li class="toc-btn fa fa-list-ul"></li>
+    
     
 
     
@@ -251,6 +344,8 @@
         </div>
     </div>
 </div>
+
+    
 
 
     <script src="/js/highsong.js"></script>

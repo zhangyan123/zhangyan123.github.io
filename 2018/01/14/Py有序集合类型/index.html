@@ -22,14 +22,14 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>Tag: larabel | 张言的博客</title>
+<title>Py有序集合类型 | 张言的博客</title>
 
 
 <link rel="icon" href="/favicon.ico">
 
     
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/pages/archive.css">
+<link rel="stylesheet" href="/css/pages/post.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
     <!--script-->
@@ -156,45 +156,170 @@
 
 
         <div id="main">
-    <div id="post-list">
-        <ul class="archives-post-list">
-            
-            <li class="post-items" _href="/2016/08/31/laravel环境搭建/">
+    <article id="post">
+        <div id="post-header">
+
+            <h1 id="Py有序集合类型">
                 
-                <p class="info">larabel</p>
-                <h2 class="post-item-title">lavarel&lt;一&gt;环境搭建</h2>
-                <div class="article-meta">
+                Py有序集合类型
+                
+            </h1>
+            <div class="article-meta">
     
     
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-        <span>Laravel</span>
+        <span>基本语法</span>
     </span>
     
+    
+    <span class="fa-wrap">
+         <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            python
+            
+        </span>
+    </span>
     
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2016/08/31</span>
+        <span class="date-meta ">2018/01/14</span>
+    </span>
+    
+    <span  class=" fa-wrap">
+        <i class="fa fa-comment-o"></i>
+        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2018/01/14/Py有序集合类型/" data-thread-key="/2018/01/14/Py有序集合类型/"
+           data-count-type="comments"></span>
     </span>
     
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="lavarel&lt;一&gt;环境搭建"
-              data-leadcloud-url="/2016/08/31/laravel环境搭建/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title="Py有序集合类型"
+              data-leadcloud-url="/2018/01/14/Py有序集合类型/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
 </div>
 
-            </li>
             
-        </ul>
+            
+        </div>
+        
+        <div id="post-body">
+            <h1 id="List（可变）"><a href="#List（可变）" class="headerlink" title="List（可变）"></a>List（可变）</h1><p>常用方法参数与返回值表格：<br><code>L=[3,4,5]</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法</th>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">append</td>
+<td style="text-align:left">L.append(ele)</td>
+<td style="text-align:left">None</td>
+</tr>
+<tr>
+<td style="text-align:left">insert</td>
+<td style="text-align:left">L.insert(index,ele)</td>
+<td style="text-align:left">None</td>
+</tr>
+<tr>
+<td style="text-align:left">pop</td>
+<td style="text-align:left">L.pop([index])</td>
+<td style="text-align:left">removedValue</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>可以使用L[i]赋值方式更新原有元素，但不能用此方法增加新元素，会报outof range的错误，增加新元素使用append或者insert方法</li>
+</ul>
+<h1 id="Tuple（不可变）"><a href="#Tuple（不可变）" class="headerlink" title="Tuple（不可变）"></a>Tuple（不可变）</h1><p><code>T =(3,4,5)</code></p>
+<ul>
+<li>T一旦被创建就不可变；</li>
+<li>只有一个元素的tuple写法 <code>t = (3,)</code>;</li>
+<li><p style="color:red">tuple中元素若为可变对象，如list或dict，set,则tuple仍有不确定因素，需格外注意</p></li>
+<li>tuple在python中有非常重要的地位<ul>
+<li>多个变量可以同时接收一个tuple，按位置赋给对应的值，所以，Python的函数返回多值其实就是返回一个tuple，但写起来更方便。</li>
+<li>可变参数*args也是，在函数内部声明args局部变量存储了输入参数组成的tuple实例。</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="/images/author.png" alt="avatar"/>
+                
+                <a href="javascript:void(0)" class="high-song">high起来 &#128541;</a>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">赠我一杯 &#128536;</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>Author:
+                    
+                    <a href="/about">张言</a>
+                </li>
+                <li>Published Date: <span>2018-01-14  08:20:20</span></li>
+                
+                <li>Updated Date: <span>2018-01-15  08:30:46</span></li>
+                
+                <li class="post-category">
+                    Categories:
+                    
+                    <a href="/categories/后端学习/">后端学习</a>
+                    
+                    <a href="/categories/后端学习/Python/">Python</a>
+                    
+                    <a href="/categories/后端学习/Python/基本语法/">基本语法</a>
+                    
+                </li>
+                <li class="post-tags">
+                    Tags:
+                    
+                    <a href="/tags/python/">python</a>
+                    
+                </li>
+                
+                <li> License: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="/images/Ali-pay.png" alt="支付宝付款" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
+        
+        <a href="/2018/01/15/Py语句/" class="pre-post fa fa-caret-left">Py语句注意事项</a>
+        
+        
+        <a href="/2018/01/13/Py基本数据类型/" class="next-post fa">Py基本数据类型</a>
+        
     </div>
+    
+    <div id="comments">
+        
+
+
+
+    </div>
+    
 </div>
-
-
 
 
     </div>
@@ -232,6 +357,8 @@
     <ul id="tools">
     <li class="totop-btn fa fa-angle-up"></li>
     
+    <li class="toc-btn fa fa-list-ul"></li>
+    
     
 
     
@@ -251,6 +378,8 @@
         </div>
     </div>
 </div>
+
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#List（可变）"><span class="toc-number">1.</span> <span class="toc-text">List（可变）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tuple（不可变）"><span class="toc-number">2.</span> <span class="toc-text">Tuple（不可变）</span></a></li></ol>
 
 
     <script src="/js/highsong.js"></script>
