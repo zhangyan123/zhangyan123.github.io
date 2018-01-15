@@ -22,7 +22,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>实现合理的跨域请求 | 张言的博客</title>
+<title>Py语句注意事项 | 张言的博客</title>
 
 
 <link rel="icon" href="/favicon.ico">
@@ -159,9 +159,9 @@
     <article id="post">
         <div id="post-header">
 
-            <h1 id="实现合理的跨域请求">
+            <h1 id="Py语句注意事项">
                 
-                实现合理的跨域请求
+                Py语句注意事项
                 
             </h1>
             <div class="article-meta">
@@ -169,7 +169,7 @@
     
     <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-        <span>安全问题</span>
+        <span>基本语法</span>
     </span>
     
     
@@ -177,7 +177,7 @@
          <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
-            javaScript
+            python
             
         </span>
     </span>
@@ -185,20 +185,20 @@
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2017/08/27</span>
+        <span class="date-meta ">2018/01/15</span>
     </span>
     
     <span  class=" fa-wrap">
         <i class="fa fa-comment-o"></i>
-        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2017/08/27/跨域资源共享/" data-thread-key="/2017/08/27/跨域资源共享/"
+        <span id="comments-count" class="comments-meta disqus-comment-count ds-thread-count comments" data-disqus-url="http://zhangyan123.github.io/2018/01/15/Py语句/" data-thread-key="/2018/01/15/Py语句/"
            data-count-type="comments"></span>
     </span>
     
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="实现合理的跨域请求"
-              data-leadcloud-url="/2017/08/27/跨域资源共享/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title="Py语句注意事项"
+              data-leadcloud-url="/2018/01/15/Py语句/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
@@ -209,7 +209,27 @@
         </div>
         
         <div id="post-body">
-            <h1 id="原内容已删除，待补充与更新。。。"><a href="#原内容已删除，待补充与更新。。。" class="headerlink" title="原内容已删除，待补充与更新。。。"></a>原内容已删除，待补充与更新。。。</h1>
+            <h1 id="if分支语句"><a href="#if分支语句" class="headerlink" title="if分支语句"></a>if分支语句</h1><ul>
+<li><span style="color:red">注意Python代码的缩进规则。</span>具有相同缩进的代码被视为代码块构成一个代码块。缩进请严格按照Python的习惯写法：4个空格，不要使用Tab，更不要混合Tab和空格，否则很容易造成因为缩进引起的语法错误。</li>
+</ul>
+<ul>
+<li><p>注意: if 语句后接表达式，然后用<code>:</code>表示代码块开始.else及<span style="color:red">elif(注意写法与其他语言中else if的区别)语句表达式之后也都带<code>:</code>,之后讲到的循环语句中的for表达式及while表达式后面都要跟<code>:</code>，如果忘记加<code>:</code>会报语义错误，不能正常解释表达式。</span></p>
+</li>
+<li><p>如果你在Python交互环境下敲代码，还要特别留意缩进，并且退出缩进需要多敲一行回车</p>
+</li>
+<li>表达式中涉及到逻辑运算符，需注意，Python中逻辑运算符与其他语言不同之处，不实用 <code>&amp;  ！ ||</code>符号，而使用对应单词<code>and not or</code>   </li>
+</ul>
+<h1 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h1><h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><ul>
+<li>Python中的for循环用法与php很像，只要L是继承自iterable类，便可以用for循环遍历L中的各项元素。[interable类在collections(集合)模块中，使用时声明 from collections import interable]</li>
+<li>写法<pre><code>for x in L:
+    xxx
+</code></pre><h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3></li>
+<li>注意在循环外初始化控制变量；</li>
+<li><span style="color:red">python中无++运算符</span>;</li>
+<li>break跳出循环</li>
+<li>continue 跳过当次循环体之后的内容，直接进入下一次循环。</li>
+</ul>
+
         </div>
         <div id="post-footer">
             <div class="avatar" >
@@ -226,24 +246,24 @@
                     
                     <a href="/about">张言</a>
                 </li>
-                <li>Published Date: <span>2017-08-27  04:30:00</span></li>
+                <li>Published Date: <span>2018-01-15  08:15:03</span></li>
                 
-                <li>Updated Date: <span>2017-08-27  05:19:54</span></li>
+                <li>Updated Date: <span>2018-01-15  03:55:43</span></li>
                 
                 <li class="post-category">
                     Categories:
                     
-                    <a href="/categories/前端开发/">前端开发</a>
+                    <a href="/categories/后端学习/">后端学习</a>
                     
-                    <a href="/categories/前端开发/问题及解决方案/">问题及解决方案</a>
+                    <a href="/categories/后端学习/Python/">Python</a>
                     
-                    <a href="/categories/前端开发/问题及解决方案/安全问题/">安全问题</a>
+                    <a href="/categories/后端学习/Python/基本语法/">基本语法</a>
                     
                 </li>
                 <li class="post-tags">
                     Tags:
                     
-                    <a href="/tags/javaScript/">javaScript</a>
+                    <a href="/tags/python/">python</a>
                     
                 </li>
                 
@@ -264,10 +284,10 @@
     </article>
     <div class="article-nav">
         
-        <a href="/2018/01/13/Py基本数据类型/" class="pre-post fa fa-caret-left">Py基本数据类型</a>
+        <a href="/2018/01/15/Py键值索引集合类型/" class="pre-post fa fa-caret-left">Py键值索引集合类型</a>
         
         
-        <a href="/2017/08/27/移动页面点击击穿问题/" class="next-post fa">移动页面点击击穿问题</a>
+        <a href="/2018/01/14/Py数字索引集合类型/" class="next-post fa">Py数字索引集合类型</a>
         
     </div>
     
@@ -338,7 +358,7 @@
     </div>
 </div>
 
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#原内容已删除，待补充与更新。。。"><span class="toc-number">1.</span> <span class="toc-text">原内容已删除，待补充与更新。。。</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#if分支语句"><span class="toc-number">1.</span> <span class="toc-text">if分支语句</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#循环语句"><span class="toc-number">2.</span> <span class="toc-text">循环语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#for循环"><span class="toc-number">2.0.1.</span> <span class="toc-text">for循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#while循环"><span class="toc-number">2.0.2.</span> <span class="toc-text">while循环</span></a></li></ol></li></ol></li></ol>
 
 
     <script src="/js/highsong.js"></script>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhangyan123.github.io/"/>
-  <updated>2018-01-13T14:11:01.000Z</updated>
+  <updated>2018-01-15T08:00:45.000Z</updated>
   <id>http://zhangyan123.github.io/</id>
   
   <author>
@@ -16,13 +16,92 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Py列表类的数据类型</title>
-    <link href="http://zhangyan123.github.io/2018/01/14/Py%E5%88%97%E8%A1%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>http://zhangyan123.github.io/2018/01/14/Py列表数据类型/</id>
-    <published>2018-01-14T12:20:20.000Z</published>
-    <updated>2018-01-13T14:11:01.000Z</updated>
+    <title>Py键值索引集合类型</title>
+    <link href="http://zhangyan123.github.io/2018/01/15/Py%E9%94%AE%E5%80%BC%E7%B4%A2%E5%BC%95%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://zhangyan123.github.io/2018/01/15/Py键值索引集合类型/</id>
+    <published>2018-01-15T12:40:05.000Z</published>
+    <updated>2018-01-15T08:00:45.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="List"><a href="#List" class="headerlink" title="List"></a>List</h1><p>常用方法参数与返回值表格：<br><code>L=[3,4,5]</code></p>
+    <content type="html"><![CDATA[<h1 id="dict-字典类型"><a href="#dict-字典类型" class="headerlink" title="dict(字典类型)"></a>dict(字典类型)</h1><ul>
+<li>dict是一种用空间换取时间的无序列表结构，查询速度快，key值不可重复；</li>
+<li>key值不可变</li>
+<li></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;dict-字典类型&quot;&gt;&lt;a href=&quot;#dict-字典类型&quot; class=&quot;headerlink&quot; title=&quot;dict(字典类型)&quot;&gt;&lt;/a&gt;dict(字典类型)&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;dict是一种用空间换取时间的无序列表结构，查询速度快，key值不可
+    
+    </summary>
+    
+      <category term="后端学习" scheme="http://zhangyan123.github.io/categories/%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Python" scheme="http://zhangyan123.github.io/categories/%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0/Python/"/>
+    
+      <category term="基本语法" scheme="http://zhangyan123.github.io/categories/%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0/Python/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+    
+    
+      <category term="python" scheme="http://zhangyan123.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Py语句注意事项</title>
+    <link href="http://zhangyan123.github.io/2018/01/15/Py%E8%AF%AD%E5%8F%A5/"/>
+    <id>http://zhangyan123.github.io/2018/01/15/Py语句/</id>
+    <published>2018-01-15T12:15:03.000Z</published>
+    <updated>2018-01-15T07:55:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="if分支语句"><a href="#if分支语句" class="headerlink" title="if分支语句"></a>if分支语句</h1><ul>
+<li><span style="color:red">注意Python代码的缩进规则。</span>具有相同缩进的代码被视为代码块构成一个代码块。缩进请严格按照Python的习惯写法：4个空格，不要使用Tab，更不要混合Tab和空格，否则很容易造成因为缩进引起的语法错误。</li>
+</ul>
+<ul>
+<li><p>注意: if 语句后接表达式，然后用<code>:</code>表示代码块开始.else及<span style="color:red">elif(注意写法与其他语言中else if的区别)语句表达式之后也都带<code>:</code>,之后讲到的循环语句中的for表达式及while表达式后面都要跟<code>:</code>，如果忘记加<code>:</code>会报语义错误，不能正常解释表达式。</span></p>
+</li>
+<li><p>如果你在Python交互环境下敲代码，还要特别留意缩进，并且退出缩进需要多敲一行回车</p>
+</li>
+<li>表达式中涉及到逻辑运算符，需注意，Python中逻辑运算符与其他语言不同之处，不实用 <code>&amp;  ！ ||</code>符号，而使用对应单词<code>and not or</code>   </li>
+</ul>
+<h1 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h1><h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><ul>
+<li>Python中的for循环用法与php很像，只要L是继承自iterable类，便可以用for循环遍历L中的各项元素。[interable类在collections(集合)模块中，使用时声明 from collections import interable]</li>
+<li>写法<pre><code>for x in L:
+    xxx
+</code></pre><h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3></li>
+<li>注意在循环外初始化控制变量；</li>
+<li><span style="color:red">python中无++运算符</span>;</li>
+<li>break跳出循环</li>
+<li>continue 跳过当次循环体之后的内容，直接进入下一次循环。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;if分支语句&quot;&gt;&lt;a href=&quot;#if分支语句&quot; class=&quot;headerlink&quot; title=&quot;if分支语句&quot;&gt;&lt;/a&gt;if分支语句&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;span style=&quot;color:red&quot;&gt;注意Python代码的缩进规则。&lt;/span&gt;具
+    
+    </summary>
+    
+      <category term="后端学习" scheme="http://zhangyan123.github.io/categories/%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Python" scheme="http://zhangyan123.github.io/categories/%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0/Python/"/>
+    
+      <category term="基本语法" scheme="http://zhangyan123.github.io/categories/%E5%90%8E%E7%AB%AF%E5%AD%A6%E4%B9%A0/Python/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+    
+    
+      <category term="python" scheme="http://zhangyan123.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Py数字索引集合类型</title>
+    <link href="http://zhangyan123.github.io/2018/01/14/Py%E6%95%B0%E5%AD%97%E7%B4%A2%E5%BC%95%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://zhangyan123.github.io/2018/01/14/Py数字索引集合类型/</id>
+    <published>2018-01-14T12:20:20.000Z</published>
+    <updated>2018-01-15T08:00:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="List（可变）"><a href="#List（可变）" class="headerlink" title="List（可变）"></a>List（可变）</h1><p>常用方法参数与返回值表格：<br><code>L=[3,4,5]</code></p>
 <table>
 <thead>
 <tr>
@@ -49,7 +128,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="Tuple"><a href="#Tuple" class="headerlink" title="Tuple"></a>Tuple</h1><p><code>T =(3,4,5)</code></p>
+<h1 id="Tuple（不可变）"><a href="#Tuple（不可变）" class="headerlink" title="Tuple（不可变）"></a>Tuple（不可变）</h1><p><code>T =(3,4,5)</code></p>
 <ul>
 <li>T一旦被创建就不可变；</li>
 <li>只有一个元素的tuple写法 <code>t = (3,)</code>;</li>
@@ -59,9 +138,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;List&quot;&gt;&lt;a href=&quot;#List&quot; class=&quot;headerlink&quot; title=&quot;List&quot;&gt;&lt;/a&gt;List&lt;/h1&gt;&lt;p&gt;常用方法参数与返回值表格：&lt;br&gt;&lt;code&gt;L=[3,4,5]&lt;/code&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
+      &lt;h1 id=&quot;List（可变）&quot;&gt;&lt;a href=&quot;#List（可变）&quot; class=&quot;headerlink&quot; title=&quot;List（可变）&quot;&gt;&lt;/a&gt;List（可变）&lt;/h1&gt;&lt;p&gt;常用方法参数与返回值表格：&lt;br&gt;&lt;code&gt;L=[3,4,5]&lt;/code&gt;&lt;/p&gt;
 &lt;t
     
     </summary>
@@ -778,67 +855,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;State-工作原理&quot;&gt;&lt;a href=&quot;#State-工作原理&quot; class=&quot;headerlink&quot; title=&quot;State 工作原理&quot;&gt;&lt;/a&gt;State 工作原理&lt;/h2&gt;&lt;p&gt;React.js是把UI当状态的函数,通知React数据变化的方法时调用se
-    
-    </summary>
-    
-      <category term="前端开发" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="框架" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="React" scheme="http://zhangyan123.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%A1%86%E6%9E%B6/React/"/>
-    
-    
-      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>观察者模式在前端开发中的应用</title>
-    <link href="http://zhangyan123.github.io/2016/10/16/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://zhangyan123.github.io/2016/10/16/观察者模式/</id>
-    <published>2016-10-16T08:45:09.000Z</published>
-    <updated>2017-08-16T09:09:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前端开发中观察者模式实践"><a href="#前端开发中观察者模式实践" class="headerlink" title="前端开发中观察者模式实践"></a>前端开发中观察者模式实践</h1><p>观察者模式又叫发布订阅模式（Publsih/Subscrbe）,它使得方法之间传递信息变得更加通畅，减少耦合性解耦，减少了状态判断。<br>功能：发布者有一个publish方法，将其参数传递给所有订阅者需要该状态作为参数的方法。为了使观察者模式在代码中更容易实现，我们还可以尝试来写一个将普对象改造为发布者的方法，但一定记得在发布者对象那个中调用<code>publish(message)</code></p>
-<blockquote>
-<p>观察者的使用场合就是：当一个对象的改变需要同时改变其它对象，并且它不知道具体有多少对象需要改变的时候，就应该考虑使用观察者模式。</p>
-</blockquote>
-<p> 总的来说，观察者模式所做的工作就是在解耦，让耦合的双方都依赖于抽象，而不是依赖于具体。从而使得各自的变化都不会影响到另一边的变化。</p>
-<p> 解析：观察者对象其实是一个混合类，它负责将观察到的状态变化同时通知给关注这一变化的对象<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"> //通用代码</div><div class="line">var observer = &#123;</div><div class="line">    //订阅</div><div class="line">    addSubscriber: function (callback) &#123;</div><div class="line">        this.subscribers[this.subscribers.length] = callback;</div><div class="line">    &#125;,</div><div class="line">    //退订</div><div class="line">    removeSubscriber: function (callback) &#123;</div><div class="line">        for (var i = 0; i &lt; this.subscribers.length; i++) &#123;</div><div class="line">            if (this.subscribers[i] === callback) &#123;</div><div class="line">                delete (this.subscribers[i]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    //发布</div><div class="line">    publish: function (what) &#123;</div><div class="line">        for (var i = 0; i &lt; this.subscribers.length; i++) &#123;</div><div class="line">            if (typeof this.subscribers[i] === &apos;function&apos;) &#123;</div><div class="line">                this.subscribers[i](what);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    // 将对象o具有观察者功能</div><div class="line">    make: function (o) &#123; </div><div class="line">        for (var i in this) &#123;</div><div class="line">            o[i] = this[i];</div><div class="line">            o.subscribers = [];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-<p>根据jQuery1.7版新增的on/off功能，我们也可以定义jQuery版的观察者：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">(function ($) &#123;</div><div class="line"></div><div class="line">    var o = $(&#123;&#125;);</div><div class="line"></div><div class="line">    $.subscribe = function () &#123;</div><div class="line">        o.on.apply(o, arguments);</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    $.unsubscribe = function () &#123;</div><div class="line">        o.off.apply(o, arguments);</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    $.publish = function () &#123;</div><div class="line">        o.trigger.apply(o, arguments);</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">&#125; (jQuery));</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前端开发中观察者模式实践&quot;&gt;&lt;a href=&quot;#前端开发中观察者模式实践&quot; class=&quot;headerlink&quot; title=&quot;前端开发中观察者模式实践&quot;&gt;&lt;/a&gt;前端开发中观察者模式实践&lt;/h1&gt;&lt;p&gt;观察者模式又叫发布订阅模式（Publsih/Subscrbe
-    
-    </summary>
-    
-      <category term="设计模式" scheme="http://zhangyan123.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="观察者模式" scheme="http://zhangyan123.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="javaScript" scheme="http://zhangyan123.github.io/tags/javaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React创新语法JSX</title>
-    <link href="http://zhangyan123.github.io/2016/10/16/React%E6%B6%89%E5%8F%8A%E7%9A%84%E6%A6%82%E5%BF%B5/"/>
-    <id>http://zhangyan123.github.io/2016/10/16/React涉及的概念/</id>
-    <published>2016-10-16T06:30:00.000Z</published>
-    <updated>2017-06-14T02:45:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="解决什么问题"><a href="#解决什么问题" class="headerlink" title="解决什么问题"></a>解决什么问题</h1><p> 生来为了解决在开发中数据随时间变化的复杂用户界面，优化状态替换机制</p>
-<h1 id="主张"><a href="#主张" class="headerlink" title="主张"></a>主张</h1><p> 一次学习，随处可用</p>
-<h1 id="编写react组件"><a href="#编写react组件" class="headerlink" title="编写react组件"></a>编写react组件</h1><p> 编写react组件通常需要写一个继承自React.Component的类，并在render()中返回你要展示的视图<br> 但，如果这个组件只有一个render()方法，可以将其改为更为简洁的无状态函数，这也是<a href="https://github.com/libertyAlone/airbnb-javascript-style-guide-cn" target="_blank" rel="external">Airbnb编码规范</a>推荐的。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;解决什么问题&quot;&gt;&lt;a href=&quot;#解决什么问题&quot; class=&quot;headerlink&quot; title=&quot;解决什么问题&quot;&gt;&lt;/a&gt;解决什么问题&lt;/h1&gt;&lt;p&gt; 生来为了解决在开发中数据随时间变化的复杂用户界面，优化状态替换机制&lt;/p&gt;
-&lt;h1 id=&quot;主张&quot;&gt;&lt;a 
     
     </summary>
     
