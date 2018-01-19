@@ -3,6 +3,202 @@
     
     
     <entry>
+        <title><![CDATA[Py定制类]]></title>
+        <url>http://zhangyan123.github.io/2018/01/20/Py%E5%AE%9A%E5%88%B6%E7%B1%BB/</url>
+        <content type="html"><![CDATA[<h1 id="特殊方法（魔术方法）"><a href="#特殊方法（魔术方法）" class="headerlink" title="特殊方法（魔术方法）"></a>特殊方法（魔术方法）</h1><ul>
+<li>特殊方法定义在class中，不需要直接调用，Python的某些函数或操作符会自动调用对应的特殊方法。</li>
+<li><p><strong>str</strong> 在print打印时调用对象的<strong>str</strong>函数并打印返回值，<strong>repr</strong>是class中自带的方法，不需要声明，当直接打印类名是调用<strong>repr</strong>返回值。通常为保持一致，我们会令<code>__repr__=__str__</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">class Person(object):</div><div class="line">    def __init__(self, name, gender):</div><div class="line">        self.name = name</div><div class="line">        self.gender = gender</div><div class="line">    def __str__(self):</div><div class="line">        return &apos;(Person: %s, %s)&apos; % (self.name, self.gender)</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>len</strong>,只要正确实现了<strong>len</strong>()方法，就可以用len()函数返回实例的“长度”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">class Students(object):</div><div class="line">    def __init__(self, *args):</div><div class="line">        self.names = args</div><div class="line">    def __len__(self):</div><div class="line">        return len(self.names)</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>cmp</strong>,对 int、str 等内置数据类型排序时，Python的 sorted() 按照默认的比较函数 cmp 排序，但是，如果对一组 Student 类的实例排序时，就必须提供我们自己的特殊方法 <strong>cmp</strong>() ,注意return 1 表示交换位置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">class Student(object):</div><div class="line">    def __init__(self, name, score):</div><div class="line">        self.name = name</div><div class="line">        self.score = score</div><div class="line">    def __str__(self):</div><div class="line">        return &apos;(%s: %s)&apos; % (self.name, self.score)</div><div class="line">    __repr__ = __str__</div><div class="line"></div><div class="line">    def __cmp__(self, s):</div><div class="line">        if self.name &lt; s.name:</div><div class="line">            return -1</div><div class="line">        elif self.name &gt; s.name:</div><div class="line">            return 1</div><div class="line">        else:</div><div class="line">            return 0</div></pre></td></tr></table></figure>
+</li>
+<li><p>@property举例说明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">class Student(object):</div><div class="line">    def __init__(self, name, score):</div><div class="line">        self.name = name</div><div class="line">        self.__score = score</div><div class="line">    @property</div><div class="line">    def score(self):</div><div class="line">        return self.__score</div><div class="line">    @score.setter</div><div class="line">    def score(self, score):</div><div class="line">        if score &lt; 0 or score &gt; 100:</div><div class="line">            raise ValueError(&apos;invalid score&apos;)</div><div class="line">        self.__score = score</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>slots</strong>,如果要限制添加的属性，例如，Student类只允许添加 name、gender和score 这3个属性，就可以利用Python的一个特殊的<strong>slots</strong>来实现。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">class Student(object):</div><div class="line">    __slots__ = (&apos;name&apos;, &apos;gender&apos;, &apos;score&apos;)</div><div class="line">    def __init__(self, name, gender, score):</div><div class="line">        self.name = name</div><div class="line">        self.gender = gender</div><div class="line">        self.score = score</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>call</strong>，python中函数其实只是一个对象，它的不同之处在于可以被<code>（）</code>操作符调用，执行<code>（）</code>操作符时候实际执行了<strong>call</strong>定义的代码块。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">class Person(object):</div><div class="line">    def __init__(self, name, gender):</div><div class="line">        self.name = name</div><div class="line">        self.gender = gender</div><div class="line"></div><div class="line">    def __call__(self, friend):</div><div class="line">        print &apos;My name is %s...&apos; % self.name</div><div class="line">        print &apos;My friend is %s...&apos; % friend</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p></p><p style="color:red">注意：根据例子可以看出定制类中不同方法的使用还是存在明显差异的，大部分要求返回值，<strong>call</strong>只是定义需要执行的代码块。大部分特殊方法是在class中声明的，但是<strong>repr</strong>和<strong>slots</strong>很明显是class生来就有的，不需要声明，只做赋值即可。</p>
+]]></content>
+        
+        <categories>
+            
+            <category> 后端学习 </category>
+            
+            <category> Python </category>
+            
+            <category> 基本语法 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[Py函数式编程]]></title>
+        <url>http://zhangyan123.github.io/2018/01/18/Py%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/</url>
+        <content type="html"><![CDATA[<h1 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">class Person(object):</div><div class="line">    def __init__(self,name,gender):</div><div class="line">        self.name = name</div><div class="line">        self.__gender = gender</div><div class="line">        print(&apos;I am a Person&apos;)</div><div class="line">    def get_gender(self):</div><div class="line">        return self.__gender</div></pre></td></tr></table></figure>
+<p>其中<strong>init</strong>()方法是构造函数必须的方法，用于实例初始化，生成一个新的对象并绑定对象上的属性，第一个参数必须是self指向新的对象；其余实例方法定义中第一个参数保证是self即可，实例方法可以访问class中的私有变量（<code>__</code>开头的变量）；</p>
+<ul>
+<li><p>继承超类的子类想要继承超类的方法与属性需要在初始化函数中调用super().<strong>init</strong>()方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">class Teacher(Person):</div><div class="line">    def __init__(self,name,gender,teacherCode):</div><div class="line">        super(Teacher,self).__init__(name,gender)</div><div class="line">        self.teacherCode = teacherCode</div><div class="line">        print(&apos;I am a Teacher!&apos;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>Python 支持多继承，一个子类可以继承多个超类的属性和方法，如果超类之间有共同的超类，重合部分只初始化一次</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">class FootballSkilled(Person):</div><div class="line">    def __init__(self,name,gender):</div><div class="line">       super(FootballSkilled,self).__init__(name,gender)</div><div class="line">       print(&apos;I can play football!&apos;)</div><div class="line">class FootballSkilledTeacher(FootballSkilled,Teacher):</div><div class="line">    def __init__(self,*args):</div><div class="line">        super(FootballSkilledTeacher,self).__init__(*args)</div><div class="line">        super(FootballSkilled,self).__init__(*args)</div><div class="line">        print(&apos;I am a FootballSkilledTeacher!&apos;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在继承多类中传递参数时报错，待解决。</p>
+]]></content>
+        
+        <categories>
+            
+            <category> 后端学习 </category>
+            
+            <category> Python </category>
+            
+            <category> 基本语法 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[Py函数式编程]]></title>
+        <url>http://zhangyan123.github.io/2018/01/16/Py%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</url>
+        <content type="html"><![CDATA[<h1 id="数组操作高阶函数介绍"><a href="#数组操作高阶函数介绍" class="headerlink" title="数组操作高阶函数介绍"></a>数组操作高阶函数介绍</h1><ul>
+<li><p>map()</p>
+</li>
+<li><p>reduce()</p>
+</li>
+<li><p>filter()</p>
+</li>
+<li><p>sorted() 可以应用于任何iterable 数据类型，不止于数组类型</p>
+</li>
+</ul>
+<h1 id="lambda表达式介绍（有限制的匿名函数支持）"><a href="#lambda表达式介绍（有限制的匿名函数支持）" class="headerlink" title="lambda表达式介绍（有限制的匿名函数支持）"></a>lambda表达式介绍（有限制的匿名函数支持）</h1><h1 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h1><ul>
+<li><p>无参数装饰器</p>
+</li>
+<li><p>带参数装饰器</p>
+</li>
+<li><p>functools.wraps(f)应用</p>
+</li>
+</ul>
+<h1 id="偏函数-functools-partials-func-propName-XXX"><a href="#偏函数-functools-partials-func-propName-XXX" class="headerlink" title="偏函数 functools.partials(func,propName = XXX)"></a>偏函数 functools.partials(func,propName = XXX)</h1><p>注意： python安装模块式要在cmd环境下，而非python交互模式下。</p>
+]]></content>
+        
+        <categories>
+            
+            <category> 后端学习 </category>
+            
+            <category> Python </category>
+            
+            <category> 基本语法 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[Py列表生成器]]></title>
+        <url>http://zhangyan123.github.io/2018/01/16/Py%E5%88%97%E8%A1%A8%E7%94%9F%E6%88%90%E5%99%A8/</url>
+        <content type="html"><![CDATA[<p>列表生成器是Python特有的生成list的便捷方式</p>
+<ul>
+<li><code>[x*x for x in range(1,101)]</code>生成了1到100每个数值平方组成的list集合，可见首先写的迭代返回值表达式，之后是for迭代表达式；</li>
+<li><p>zip()函数可以把两个 list 变成一个 list：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; zip([10, 20, 30], [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;])</div><div class="line">[(10, &apos;A&apos;), (20, &apos;B&apos;), (30, &apos;C&apos;)]</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>[x * x for x in range(1, 11) if x % 2 == 0]</code>可以生成1到10中偶数的list集合,方法是在for迭代表达式后面加一句if表达式进行过滤。</p>
+</li>
+<li><code>[m + n for m in &#39;ABC&#39; for n in &#39;123&#39;]</code>可以生成[‘A1’, ‘A2’, ‘A3’, ‘B1’, ‘B2’, ‘B3’, ‘C1’, ‘C2’, ‘C3’]，叫做多层表达式，可以结合if表达式生成极其复杂的list集合。</li>
+</ul>
+]]></content>
+        
+        <categories>
+            
+            <category> 后端学习 </category>
+            
+            <category> Python </category>
+            
+            <category> 基本语法 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[Py迭代]]></title>
+        <url>http://zhangyan123.github.io/2018/01/16/Py%E8%BF%AD%E4%BB%A3/</url>
+        <content type="html"><![CDATA[<ul>
+<li>注意: 集合是指包含一组元素的数据结构，我们已经介绍的包括：<ol>
+<li>有序集合：list，tuple，str和unicode；</li>
+<li>无序集合：set</li>
+<li>无序集合并且具有 key-value 对：dict</li>
+</ol>
+</li>
+<li><code>enumerate()</code>函数把简单元素集合转化为tuple集合，每个tuple第一个元素为索引号，第二个元素为元素值；</li>
+<li><span style="color:red">注意</span><code>range(1,4)</code>产生的结果只有3个元素（[1,2,3]）,可以与切片规律一起记为起始位置包括，结束位置不包括;</li>
+<li><p>我们发现python中的dict比其他语言更易于被操作，<code>d.values()</code>和<code>d.itervalues()</code>，可以帮助我们获取到dict的值，应用for迭代就可以取到每一个属性值并应用于计算。<code>items()</code>方法可以将对象的每一组键值对封装成为一个tuple,可想而知我们就可以使用两个变量依次获取到每一组键值对中的key和value。和 values() 有一个 itervalues() 类似， items() 也有一个对应的 iteritems()，iteritems() 不把dict转换成list，而是在迭代过程中不断给出 tuple，所以， iteritems() 不占用额外的内存。</p>
+</li>
+<li><p>本节主要讲的如何遍历获取集合中的属性和值，以便进行计算筛选等。</p>
+</li>
+</ul>
+]]></content>
+        
+        <categories>
+            
+            <category> 后端学习 </category>
+            
+            <category> Python </category>
+            
+            <category> 基本语法 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
         <title><![CDATA[Py切片]]></title>
         <url>http://zhangyan123.github.io/2018/01/15/Py%E5%88%87%E7%89%87/</url>
         <content type="html"><![CDATA[<p>list、tuple、str都可以使用切片快速有效的得到新的子集合（或子字符串）；</p>
@@ -76,6 +272,7 @@
 <li>dict是一种用空间换取时间的无序列表结构，查询速度快，key值不可重复；</li>
 <li>key值不可变</li>
 <li>dict也继承自interable,可使用for循环迭代遍历</li>
+<li>向dict中添加属性 setattr(obj,key,value)</li>
 </ul>
 <h1 id="set"><a href="#set" class="headerlink" title="set"></a>set</h1><ul>
 <li>调用方式向set()构造函数中传入一个list</li>
