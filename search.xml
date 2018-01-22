@@ -3,6 +3,31 @@
     
     
     <entry>
+        <title><![CDATA[PythonCrawler思路总结]]></title>
+        <url>http://zhangyan123.github.io/2018/01/22/pythonCrawler%E8%AF%A6%E8%A7%A3/</url>
+        <content type="html"><![CDATA[<p>待更新。。。</p>
+]]></content>
+        
+        <categories>
+            
+            <category> 后端学习 </category>
+            
+            <category> Python </category>
+            
+            <category> 小练习 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
         <title><![CDATA[Py定制类]]></title>
         <url>http://zhangyan123.github.io/2018/01/20/Py%E5%AE%9A%E5%88%B6%E7%B1%BB/</url>
         <content type="html"><![CDATA[<h1 id="特殊方法（魔术方法）"><a href="#特殊方法（魔术方法）" class="headerlink" title="特殊方法（魔术方法）"></a>特殊方法（魔术方法）</h1><ul>
